@@ -273,3 +273,47 @@ St Thomas The Apostle Catholic Church, **5 Fiorelli Blvd, Clyde North** (Google 
 |---|---|---|---|---|
 | Endeavour Hills | Yes for the central and northern streets: Casuarina Forest / James Alexander Reserve is 1.1 km from the suburb centre (Checked distance); walkability from a given street is an Estimate | Yes: reserve 3 min; Churchill National Park 8–10 min (Checked) | No for the reserve; Churchill NP and Lysterfield are weekend-type visits | **Both**: nature and community (Indian grocer 8–12 min, Hindu temple 8–14, church 2) are realistic weekly |
 | Wheelers Hill | Only from the eastern streets near Jells Rd: Jells Park is 2.6 km from the centre (Checked distance; walkability an Estimate) | Yes: 6 min (Checked) | Partly: a 127 ha park reached mostly by car | **Both, community-lighter**: grocer 6–9 min and church 4 min are everyday; nearest Hindu temple 16–35 min; diversity band Medium |
+
+## Approval pack (second check round, 27 Oct 2026 UTC = 28 Oct AEDT)
+
+Workbook not modified. All Google Maps reads: headless, `en-AU`, Melbourne time zone; listings via Google Maps category searches (URLs below), drives "Depart at" Wed 28 Oct 2026 10:00 unless marked 08:00.
+
+### A. Facility verification (Google Business Profiles)
+"Confirmed" = current Google listing in the right category with opening hours and/or phone and reviews.
+
+| Suburb | Indian grocery (drive) | Hindu temple (drive) | Church (drive) |
+|---|---|---|---|
+| Springvale | India Town, 11b/310 Springvale Rd — Confirmed (4 min) | Sankat Mochan Hanuman Mandir, 4 Margaret St, Oakleigh South — Confirmed, 602 reviews (10–20 min) | St Joseph's Catholic, cnr Buckingham Ave & 7 St James Ave — Confirmed (4 min) |
+| Clayton South | Sarawan Spices, 335 Clayton Rd, Clayton — Confirmed (5–8 min); Little India Mart, 2/1310 Centre Rd — Confirmed (4–6 min) | Sankat Mochan Hanuman Mandir — Confirmed (7–12 min) | St Andrews Catholic, 76 Springs Rd — Confirmed, 51 reviews (5 min) |
+| Keysborough | India at Home, Parkmore Shopping Centre — Confirmed (4–6 min) | Shri Shiva Vishnu, 52 Boundary Rd, Carrum Downs — Confirmed, 6,483 reviews (14–20 min); Sankat Mochan 16–35 min | Resurrection Parish, 402 Corrigan Rd — Confirmed (5–6 min) |
+| Clyde North | Wirsa Indian Groceries, 13/16 Selandra Blvd — Confirmed (2 min) | Shrinathji Haveli, 3-5 Princes Domain Dr, Hallam — Confirmed (16–30 min). BAPS Mandir, 175-177 Smiths Ln — Confirmed listing; 8–12 min is an Estimate (suburb not printed in listing, Google geocoded my "Clyde North" address) | St Thomas The Apostle, 5 Fiorelli Blvd — Confirmed, 68 reviews (4 min) |
+| Endeavour Hills | India At Home – Dandenong, Dandenong Plaza, 49 McCrae St — Confirmed (8–12 min). Endeavour Spices — **Needs verification** (not on Google Maps) | Shrinathji Haveli, Hallam — Confirmed (8–14 min). Shri Sanatan Dharam Society, 126/128 Hallam N Rd — listing has no hours: **Needs verification** (4–6 min if open) | St Paul Apostle Catholic, 5 William Hovell Dr — Confirmed (2 min) |
+| Wheelers Hill | The Heritage Spices, G15/580 Ferntree Gully Rd — Confirmed (6–9 min) | Shree Swaminarayan Temple, 69 Wadhurst Dr, Boronia — Confirmed, 253 reviews (10–20 min); Sankat Mochan 14–28 min; Vakrathunda (918 reviews) 16–35 min | St Justin's Catholic, 48 Whalley Dr — Confirmed (4 min) |
+| Point Cook (conditional) | GROCERZ, 2/22-30 Wallace Ave — Confirmed (6–10 min) | Wyndham Hare Krishna, 11/22-30 Wallace Ave — Confirmed, 34 reviews, Fri evening hours; same complex as GROCERZ (≈6–10 min, Estimate). Sri Durga, Rockbank 24–45 min (not re-verified) | CrossCulture Church of Christ, 7 Adelphi Blvd — Confirmed (drive not checked, Estimate <10 min); FaithLife 4 min (council directory only) |
+| Tarneit (excluded) | Not re-verified | Not re-verified | Not re-verified |
+
+Listing searches: https://www.google.com/maps/search/Indian%20grocery%20store%20Springvale%20VIC · …Clayton%20South · …Keysborough · …Clyde%20North · …Endeavour%20Hills%20VIC · …Wheelers%20Hill · …Point%20Cook · https://www.google.com/maps/search/Hindu%20temple%20Clayton%20VIC · https://www.google.com/maps/search/Hindu%20temple%20Glen%20Waverley · https://www.google.com/maps/search/Hindu%20temple%20Dandenong%20VIC · https://www.google.com/maps/search/Hindu%20temple%20Cranbourne%20Narre%20Warren · https://www.google.com/maps/search/Hindu%20temple%20Point%20Cook%20Werribee · https://www.google.com/maps/search/Catholic%20church%20Clayton%20South · https://www.google.com/maps/search/Catholic%20church%20Keysborough · https://www.google.com/maps/search/church%20Endeavour%20Hills%20VIC · https://www.google.com/maps/search/church%20Wheelers%20Hill%20VIC · https://www.google.com/maps/search/church%20Clyde%20North%20VIC · https://www.google.com/maps/search/church%20Point%20Cook%20VIC
+
+### B. Property under the cap (median alone not relied on)
+Evidence that houses list or sell under $1.5M, from SOIs returned by search:
+
+| Suburb | Evidence | Status |
+|---|---|---|
+| Springvale | 24 Phillip Ave SOI and a second SOI: house range $720k–$790k; comparable sales 34 View Rd $730k (3 May 2026), 13 Acacia Mews $790k (27 Mar 2026) | Checked |
+| Clayton South | 85 Osborne Ave SOI range $1.00–1.08M; comparables 37 Glenmorgan Cl $1.0M, 15 Clarevale St $1.033M, 3 Hadkinson St $1.045M (May 2026) | Checked |
+| Keysborough | 45 Weston St SOI range $1.05–1.155M; comparables 15 Petunia Dr $1.11M, 9 Annabelle Blvd $1.06M, 13 Sunflower Ct $1.128M (Feb–Jun 2026). https://s3-ap-southeast-2.amazonaws.com/zenu/soi/7b6728e4-a512-4e2d-b761-4e7595257093.pdf | Checked |
+| Clyde North | SOI range $790–860k; comparables 20 & 100 Deoro Pde, 55 Bazadaise Dr $810–827.5k (Feb–May 2026) | Checked |
+| Endeavour Hills | 6 Isaac Smith Cres SOI range $760–820k | Checked |
+| Wheelers Hill | 10 Dalkeith Cl $1.28–1.38M (SOI Aug 2026); 22 Darlington Ave single price $1.32M (SOI 19 Sep 2026). PDFs returned 403 — figures from search text only. Newer medians in search text $1.46–1.494M (0.4–2.7% under cap) | **Estimate / Needs verification** |
+| Point Cook | SOI range under cap (65 Innisfail Dr) | Checked (earlier) |
+
+Whether a *suitable* house (single-level or adaptable, bedrooms, stairs filter) exists under the cap is **Needs data** for every suburb — that is a Listings-stage check.
+
+### C. Draft column-Z notes (to be written only after approval)
+Format: `COMMUNITY COMPARATOR added <date> (display-only; not ranked). CHECKED: … ESTIMATE: … NEEDS VERIFICATION: … SOURCES: …`
+- Springvale: CHECKED GW 08:00 10–35 min (top 35, pass), 10:00 10–26; ED Monash Medical Centre Clayton 10–18; SOI house median $942,500 (1 Jul 2025–30 Jun 2026, pricefinder) + under-cap listings; India Town 4; Sankat Mochan 10–20; St Joseph's 4. ESTIMATE: train (Springvale station, recall). NEEDS: suitable-property check; median outlier $600k on a 6-month SOI.
+- Clayton South: CHECKED GW 08:00 16–40 (pass); MMC 8–12; SOI $985,000 (Apr 2025–Mar 2026) + comparables ~$1.0M; Sarawan 5–8 / Little India Mart 4–6; Sankat Mochan 7–12; St Andrews 5. ESTIMATE: Little India Mart suburb (not printed); train (recall). NEEDS: suitable property.
+- Keysborough: CHECKED GW 08:00 18–30 (pass); Dandenong 12–18; SOI $975,000 + 45 Weston St range $1.05–1.155M; India at Home 4–6; Shiva Vishnu 14–20; Resurrection 5–6. ESTIMATE: no train (recall). NEEDS: suitable property.
+- Clyde North: CHECKED GW 08:00 35–70 (pass; over 60-min preference); Casey 12–24; SOI $752,932 (PropTrack) + comparables ~$810k; Wirsa 2; Shrinathji Haveli 16–30; St Thomas 5 Fiorelli Blvd 4. ESTIMATE: BAPS Smiths Ln 8–12; no train (recall). NEEDS: suitable property.
+- Endeavour Hills: CHECKED GW 08:00 18–35 (pass); Dandenong 7–12; SOI $857,000 + range $760–820k; India At Home Dandenong 8–12; Shrinathji Haveli 8–14; St Paul Apostle 2; James Alexander Reserve 1.1 km / 3 min; Churchill NP 8–10. ESTIMATE: walkability from central/northern streets; no train (recall). NEEDS: Endeavour Spices; Sanatan Dharam opening; suitable property.
+- Wheelers Hill: CHECKED GW 08:00 4–12 (pass); Dandenong 12–18; SOI $1,475,000 (Property Data); Heritage Spices 6–9; Swaminarayan Boronia 10–20; St Justin's 4; Jells Park 2.6 km / 6 min. ESTIMATE: under-cap listings $1.28–1.38M and $1.32M (search text); walkability eastern streets only; no train (recall). NEEDS: open an under-cap SOI; suitable property.
