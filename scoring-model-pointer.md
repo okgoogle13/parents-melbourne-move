@@ -77,6 +77,9 @@ Rule: one session edits the workbook at a time. Re-read the file immediately bef
 - **Suburb source runs (C1):** done for all 51 passing rows (27 Oct). **Demography (C2):** cols AK–AW done (27 Oct). Next: C3 (re-check N, P, R, V against this evidence; change only with a source and log it).
 
 
+## 28 Oct 2026 (foundation report: comparator alignment)
+- `Suburb shortlist foundation report.md` / `.pdf` updated to the approved Community comparators: new comparator section (6 approved, Point Cook conditional, Tarneit and Mount Waverley excluded, anchors Frankston/Mordialloc/Seaford, reference Rowville), 2 comparators added to each viewing option (A: Endeavour Hills, Springvale; B: Endeavour Hills, Wheelers Hill; C: Endeavour Hills, Keysborough; now 14 per option), update box, Q13d note. Scores, ranks and weights in the report are still the 27 Oct provisional calculation (C7 remains open). Workbook unchanged. Previous .md/.pdf in Archive.
+
 ## 27 Oct 2026 (report + prompt v2)
 - Added `Suburb shortlist foundation report.pdf` / `.md` (printable report: master table, 3 viewing shortlists, profile cards, discrepancies). Scores in it are researcher ESTIMATES and a separate calculation; the workbook still has no entered scores and is unchanged.
 - `Claude_in_Chrome_prompt — close research gaps.md` rewritten as v2 (Tasks 1–7: under-$1.5M searches, consistent drive times, ED facts, price conflicts, trains, bushfire/flood overlays, Indian grocery/worship access). v1 archived.

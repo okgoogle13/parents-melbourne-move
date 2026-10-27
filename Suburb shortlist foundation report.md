@@ -1,8 +1,16 @@
-# View twelve varied suburbs before deciding
+# View fourteen varied suburbs before deciding
 
-**Start viewing with twelve suburbs, not one.** Three options are offered below (A balanced, B nature-first, C coast-led). Each spans the Dandenong hills, the north-east, the bay, Macedon or Geelong, and Gippsland, plus two control suburbs (Croydon and Berwick) that show what the family gives up for convenience. Fifty-one suburbs in the research notes pass the family's hard filters (price up to $1.5M, Glen Waverley drive up to 90 min, ED drive up to 90 min); only **15 of them meet Mum's own 25-minute Glen Waverley and 20-minute ED answers**, and **11 are beyond the preferred 60 minutes**. The provisional weighted score (built from the workbook's current weights) puts **Frankston, Berwick, Ferntree Gully, Seaford and Upper Ferntree Gully** on top, because the weights favour distance, price, trains and services. The greenest places (Sassafras, Warburton, Warrandyte, Macedon) sit lower, so the viewing list is deliberately *not* the top 12 by score. The biggest open issue is the weights themselves: the workbook cut Nature to 9% although **all three family members rated Nature "Essential"**, using a shift typed in from earlier answers. Round 2 (Q13 and Q15) should settle that. **The workbook has no scores entered yet; nothing here replaces it.** Every figure below is labelled CHECKED, ESTIMATE or DATA-DERIVED.
+**Start viewing with fourteen suburbs, not one.** Three options are offered below (A balanced, B nature-first, C coast-led). Each spans the Dandenong hills, the north-east, the bay, Macedon or Geelong, and Gippsland, plus two control suburbs (Croydon and Berwick) that show what the family gives up for convenience, plus **two Community comparators** (diverse suburbs with Indian groceries, temples and churches close by) so the nature-versus-community trade-off is seen in person. Fifty-one suburbs in the research notes pass the family's hard filters (price up to $1.5M, Glen Waverley drive up to 90 min, ED drive up to 90 min); only **15 of them meet Mum's own 25-minute Glen Waverley and 20-minute ED answers**, and **11 are beyond the preferred 60 minutes**. The provisional weighted score (built from the workbook's current weights) puts **Frankston, Berwick, Ferntree Gully, Seaford and Upper Ferntree Gully** on top, because the weights favour distance, price, trains and services. The greenest places (Sassafras, Warburton, Warrandyte, Macedon) sit lower, so the viewing list is deliberately *not* the top 12 by score. The biggest open issue is the weights themselves: the workbook cut Nature to 9% although **all three family members rated Nature "Essential"**, using a shift typed in from earlier answers. Round 2 (Q13 and Q15) should settle that. **The workbook is canonical; nothing here replaces it.** Every figure below is labelled CHECKED, ESTIMATE or DATA-DERIVED.
 
-*Read-date 27 Oct 2026. Workbook = "Our Next Home — Family Relocation Scoring Model.xlsx". Print the master table in landscape.*
+*Read-date 27 Oct 2026; comparator update 28 Oct 2026. Workbook = "Our Next Home — Family Relocation Scoring Model.xlsx". Print the master table in landscape.*
+
+| Update, 28 Oct 2026: what changed since the 27 Oct version |
+|---|
+| 1. **Six Community comparators added** (workbook SuburbScorecard rows 67–72, display-only, not ranked): Springvale, Clayton South, Keysborough, Clyde North ("Diverse / lower-green"); Endeavour Hills, Wheelers Hill ("Potential both"; Wheelers Hill community-lighter). All meet the price cap, the 90-min Glen Waverley limit at 08:00 and the public 24-hour ED rule on checked evidence. New section below. |
+| 2. **Point Cook is conditional** (family decision on distance: 45–70 min off-peak, up to 1 hr 40 at 08:00, which fails the 90-min cap at peak). **Tarneit is excluded** (up to 1 hr 50 at 08:00). **Mount Waverley is excluded** (median over the $1.5M cap). None of the three is in the workbook. |
+| 3. **Nature-first anchors** for the comparison are Frankston, Mordialloc and Seaford (the workbook's top 3 after the C3 re-scoring); **Rowville** is the reference point only. |
+| 4. **Proposed viewing rule** (family to confirm): at least 2 Community comparators, at least 1 nature-first suburb, at least 1 verified "Potential both" suburb. Each option below now meets it. |
+| 5. **Not yet redone (open work C7):** the scores, ranks and weights in this report are still the 27 Oct provisional calculation. The workbook now has its own entered scores (top 3 after C3: Frankston 7.00, Mordialloc 6.90, Seaford 6.89), which differ from the figures here. Use the workbook for any rank. |
 
 | Label | Meaning |
 |---|---|
@@ -12,7 +20,7 @@
 
 ## One-page summary: three shortlists that share a core
 
-All three options contain the same five anchors: **Eltham** (green village, rail), **Frankston South** (creek bush plus bay), **Warragul** (Gippsland, cheapest) and the two controls **Croydon** and **Berwick**. They differ in how much weight they give to forest, to the bay and to being close to family.
+All three options contain the same six anchors: **Eltham** (green village, rail), **Frankston South** (creek bush plus bay), **Warragul** (Gippsland, cheapest), the two controls **Croydon** and **Berwick**, and the comparator **Endeavour Hills** (bush reserve plus Indian grocer, temple and church within about 15 min). They differ in how much weight they give to forest, to the bay and to being close to family. The comparator picks per option are a proposal (judgement), chosen from the six approved.
 
 | Type | A. Balanced (start here) | B. Nature-first | C. Coast-led |
 |---|---|---|---|
@@ -22,21 +30,57 @@ All three options contain the same five anchors: **Eltham** (green village, rail
 | Macedon / Geelong | Woodend, Highton | Woodend | Highton, Torquay |
 | Gippsland | Warragul | Warragul | Warragul |
 | Controls | Croydon, Berwick | Croydon, Berwick | Croydon, Berwick |
-| Glen Waverley drive (min) | 16 to 74; 9 of 12 have a train | 17 to 68; 7 of 12 have a train | 17 to 88; 6 of 12 have a train |
-| Avg Nature score (ESTIMATE) | 7.2 | 8.0 | 6.7 |
+| Community comparators (new) | Endeavour Hills, Springvale | Endeavour Hills, Wheelers Hill | Endeavour Hills, Keysborough |
+| Glen Waverley drive (min), original 12 | 16 to 74; 9 of 12 have a train | 17 to 68; 7 of 12 have a train | 17 to 88; 6 of 12 have a train |
+| Comparators: Glen Waverley at 08:00, top of range (CHECKED) | 35 and 35 | 35 and 12 | 35 and 30 |
+| Avg Nature score, original 12 (ESTIMATE; comparators unscored) | 7.2 | 8.0 | 6.7 |
 | Suburbs with Beach 8+ | 2 | 1 | 6 |
 | Suburbs flagged high bushfire (F-H) | 6 | 8 | 3 |
-| Best for | Testing every idea once with the shortest drives | Honouring "Priority 1: green and hilly" | Mum's and Y's bay-greenery answers (Q13c) |
-| Gives up | Few beach days; two long drives (Woodend 68, Highton 74) | Highest fire and insurance exposure; weakest on Indian community and shops | Least forest; Torquay is 88 min, near the hard limit |
+| Best for | Testing every idea once with the shortest drives | Honouring "Priority 1: green and hilly"; both comparators keep real nature (Churchill NP, Jells Park) | Mum's and Y's bay-greenery answers (Q13c); Keysborough sits between Glen Waverley and the bay |
+| Gives up | Few beach days; two long drives (Woodend 68, Highton 74) | Highest fire and insurance exposure; no "Diverse / lower-green" comparator, so the strongest community contrast is not seen | Least forest; Torquay is 88 min, near the hard limit. Point Cook (coast plus diversity) would fit here only if the family accepts its distance |
 
-**How to choose.** If the family can only do one round of viewings, take A. If Round 2 confirms Nature as Essential for everyone, switch to B. If Mum's and Y's bay answers carry the day (Q13c: Mum "coastal or bay town with greenery", Y the same, Dad "inland forest, hills"), switch to C. Each option holds 12 suburbs; the union is 21 (cards below). Mount Eliza is the obvious Peninsula add-on but is **over the cap** (see below) and so is not on any list.
+**How to choose.** If the family can only do one round of viewings, take A. If Round 2 confirms Nature as Essential for everyone, switch to B. If Mum's and Y's bay answers carry the day (Q13c: Mum "coastal or bay town with greenery", Y the same, Dad "inland forest, hills"), switch to C. Each option holds 14 suburbs (12 plus 2 comparators); the union is 25 (cards below: 21 original, plus the comparators in their own section). The nature-first requirement of the viewing rule is met by the green suburbs already in each option; if the family reads it strictly as "one of Frankston, Mordialloc or Seaford", add Seaford to A and B (it is already in C). Mount Eliza is the obvious Peninsula add-on but is **over the cap** (see below) and so is not on any list.
 
 | Four things to know before reading on |
 |---|
 | 1. **Prices are mostly AVMs.** 38 of 51 workbook prices are automated estimates, not sale medians (7 are sale medians, 5 are 3-bed medians, 1 is a 5-sale median). |
 | 2. **Hazard overlays are unchecked for every suburb.** Only council-wide lists and news items were read; none at property level. |
-| 3. **Indian groceries and temples are unverified** almost everywhere. Named exceptions are listed in the unverified section. |
+| 3. **Indian groceries and temples are unverified** for the 51 scored suburbs. They are **checked for the six Community comparators** (current Google listings and drive times, 28 Oct). |
 | 4. **Four suburbs were left out of the ranking as over the cap:** Blackburn ($1.60M sale median), Glen Waverley ($1.7635M, baseline only), Williamstown ($1.64M AVM; sale medians $1.49M to $1.58M) and Mount Eliza ($1.61M AVM; Jellis Craig median $1.72M). The workbook marks all four "needs data". Eight more fail the 90-minute Glen Waverley limit (Ocean Grove 92, Clifton Springs 95, Inverloch 96, Trentham 97, Curlewis 104, Ballarat 111, Castlemaine 114, Bendigo 140). |
+
+## Community comparators: the other side of the trade-off (added 28 Oct 2026)
+
+**Why they are here.** The 51 scored suburbs are almost all Low on community: after C3, only Berwick in the workbook's top 15 has an India-born share of 4% or more. The comparators let the family see what "Indian shops and community in your own suburb, less green" (Q13 option A) looks like before Round 2 weights are final. They are **not ranked and not meant to win**: Nature, Beach and Village carry about 44% of the weight. No overall winner is declared.
+
+**Community band (display-only, family to confirm; workbook column AX).** High: other language at home 50% or more, or India-born 8% or more. Medium: 30–49%, or India-born 4–7.9%. Low: everything else. These ABS 2021 shares describe who lives in a suburb; they do not measure belonging or community quality. The band is not used by any score or weight.
+
+**Basis.** All figures CHECKED unless marked. Drives: Google Maps "Depart at" Wed 28 Oct 2026, typical-traffic range, suburb centre to destination; the **top of the range** is tested against the 90-min cap. ED: public hospital (Victorian Department of Health list) and open 24 hours (healthdirect, Mercy Health). Price: "Median price, house" from a Victorian Statement of Information (SOI). Places: current Google Business listings with hours, phone or reviews. The 08:00 basis is stricter than the 27 Oct "leave now" midday figures used for the 51, so the two are not directly comparable.
+
+| Suburb | Corner | Band (India-born / other language) | House price (SOI median) | Glen Waverley 08:00 (10:00) | Public 24-hour ED | Indian grocery | Hindu temple | Church | Nature |
+|---|---|---|---|---|---|---|---|---|---|
+| Springvale | Diverse / lower-green | High (7.4% / 76%) | $942,500 (Jul 2025–Jun 2026) | 10–35 (10–26) | Monash Medical Centre Clayton 10–18 | India Town, 11b/310 Springvale Rd, 4 | Sankat Mochan Hanuman Mandir, Oakleigh South, 10–20 | St Joseph's Catholic, 4 | None of size |
+| Clayton South | Diverse / lower-green | High (14.9% / 67%) | $985,000 (Apr 2025–Mar 2026) | 16–40 (14–35) | Monash Medical Centre Clayton 8–12 | Little India Mart, 2/1310 Centre Rd, 4–6; Sarawan Spices, Clayton, 5–8 | Sankat Mochan, 7–12 | St Andrew's Catholic, 76 Springs Rd, 5 | Golf courses, landfill; no reserve named |
+| Keysborough | Diverse / lower-green | High (6.6% / 61%) | $975,000 (Jul 2025–Jun 2026) | 18–30 (18–24) | Dandenong Hospital 12–18 | India at Home, Parkmore SC, 4–6 | Shri Shiva Vishnu, Carrum Downs, 14–20 (gurdwara in suburb) | Church of the Resurrection, 5–6 | Market gardens to the south; no reserve named |
+| Clyde North | Diverse / lower-green | High (18.2% / 54%) | $752,932 (Jun 2025–May 2026) | 35–70 (28–50) | Casey Hospital, Berwick 12–24 | Wirsa Indian Groceries, Selandra Blvd, 2 | Shrinathji Haveli, Hallam, 16–30 (BAPS, Smiths Ln, 8–12 ESTIMATE) | St Thomas the Apostle, 5 Fiorelli Blvd, 4 | Farmland; regional park only proposed |
+| Endeavour Hills | Potential both | High (4.6% / 51%) | $857,000 (Aug 2025–Aug 2026) | 18–35 (16–26) | Dandenong Hospital 7–12 | India At Home, Dandenong Plaza, 8–12 | Shrinathji Haveli, Hallam, 8–14 | St Paul Apostle Catholic, 2 | James Alexander Reserve (Casuarina Forest) 1.1 km / 3 min; Churchill NP 8–10; Lysterfield Park 12 |
+| Wheelers Hill | Potential both (community lighter) | Medium (4.1% / 46%) | $1,475,000 (Jun 2025–Jun 2026), 1.7% under cap | 4–12 (7–12) | Dandenong Hospital 12–18 | The Heritage Spices, 580 Ferntree Gully Rd, 6–9 | Shree Swaminarayan, Boronia, 10–20 | St Justin's Catholic, 4 | Jells Park (~127 ha) 2.6 km / 6 min |
+| *Point Cook (conditional)* | Potential both | High (14.9% / 51%) | $832,750 (Feb–Apr 2026) | 55–100, **fails at peak** (45–70) | Werribee Mercy 10–16 | GROCERZ, Wallace Ave, 6–10 | Wyndham Hare Krishna, same complex (ESTIMATE ~6–10) | FaithLife, 4 | Point Cook Coastal Park 3 min; Cheetham Wetlands ~420 ha |
+| *Tarneit (excluded)* | Diverse / lower-green | High (28.8% / 64%) | $677,018 (Feb–Apr 2026) | 60–110, **fails at peak** (50–80) | Werribee Mercy 14–24 | Yes Yes Indian Supermarket, 4–7 | Sri Durga, Rockbank, 16–20 | Lutheran, Tarneit Rd, 4–7 (site may have moved) | Basalt plains |
+
+Drive figures are minutes. Anchors for comparison (workbook): Frankston (India-born 1.1%, other language 12.1%), Mordialloc (1.4% / 18.7%) and Seaford (0.6% / 9.6%), all **Low**. Reference: Rowville (3.2% / 32%, Medium); Churchill National Park edge; drives and ED not checked.
+
+**Under-cap evidence (not the median alone).** SOI ranges or comparable sales under $1.5M are CHECKED for Springvale ($720k–$790k), Clayton South ($1.00–1.08M), Keysborough ($1.05–1.155M), Clyde North ($790–860k) and Endeavour Hills ($760–820k). Wheelers Hill: Jellis Craig sold results to 6 Sep 2026 show 3–4 bed houses sold at $1.12M–$1.225M (e.g. 8 Bottlebrush Ct, 4-bed, $1,215,000, 27 Aug 2026; report median $1.46M) ([Jellis Craig](https://helpers.jelliscraig.com.au/suburbreportsdownloads/Wheelers_Hill_Suburb_Reports_Sep_2026.pdf)). Whether a *suitable* house (single level or adaptable, enough bedrooms) exists under the cap is **not yet checked for any comparator**; that is a listings-stage job.
+
+**One line each (trade-off).**
+- **Springvale:** the most diverse (76% other language), grocer and church in walking range, 10–35 min to family; little nature.
+- **Clayton South:** high India-born share and the closest major ED (8–12 min); a sand-belt suburb with little nature.
+- **Keysborough:** grocer, church and gurdwara local, the large Shiva Vishnu temple 14–20 min; on the side towards the bay; little bush.
+- **Clyde North:** cheapest, grocer 2 min; new estates, and the furthest of the six (up to 70 min at 08:00, over a 60-min preference).
+- **Endeavour Hills:** the best "both" option: bush reserve walkable from central streets, national park 10 min, grocer, temple and church within about 15 min, ED 7–12.
+- **Wheelers Hill:** next to family (4–12 min) and a 127 ha park; dearest, and only Medium on community.
+- **Point Cook:** the only coast-plus-diversity option; whether 45–70 min off-peak to Glen Waverley is acceptable is a family decision. Exclude it if the 60-min preference becomes a working limit.
+
+**Still to verify.** Endeavour Spices (Endeavour Hills) is not on Google Maps, so India At Home in Dandenong is used instead. Shri Sanatan Dharam Society (Hallam North Rd) has no opening hours listed, and its registered address is Narre Warren North, so the 4–6 min drive is an ESTIMATE. Train access for the comparators is from recall (Springvale and Clayton South yes; the other four no). Hazard overlays are unchecked, as for every suburb. Full evidence and links: `Community comparators — research (28 Oct 2026).md`.
 
 ## Master comparison: 51 suburbs that pass, grouped by region
 
@@ -106,7 +150,7 @@ All three options contain the same five anchors: **Eltham** (green village, rail
 | Wonthaggi | GIP | – | $588k A † | 88 | 3 | N | 5 | 5 | 7 | 9 | 1 | 4.40 (#51) | C-M, F-M |
 
 
-Scores within 0.05 of each other are ties in practice (Ringwood and Upwey are both 7.58). Sources for the workbook columns are the workbook itself (drive times: Google Maps "leave now", not peak hour; prices: OnTheHouse/Cotality, Domain and similar, mostly 30 Sep 2026). Sources for the five estimate columns are the cards and region notes below.
+The six Community comparators are not in this table: they are display-only and unscored (see the section above). Scores within 0.05 of each other are ties in practice (Ringwood and Upwey are both 7.58). Sources for the workbook columns are the workbook itself (drive times: Google Maps "leave now", not peak hour; prices: OnTheHouse/Cotality, Domain and similar, mostly 30 Sep 2026). Sources for the five estimate columns are the cards and region notes below.
 
 ## Provisional scores: how they work and why they do not replace the workbook
 
@@ -160,9 +204,9 @@ Five suburbs (Frankston, Berwick, Ferntree Gully, Seaford, Upper Ferntree Gully)
 
 **Researcher limits.** Seven researchers scored with one rubric but no cross-calibration (for example, inland Beach is 0 in some notes and 1 in others). Each score is one person's judgement from thin sources. Treat gaps under about 0.5 points as noise.
 
-## Profile cards: the 21 suburbs in the three options
+## Profile cards: the 21 original suburbs in the three options
 
-Each card separates **Checked** facts (with links) from **Estimate**. Workbook figures are tagged as such. Header shows region, options, price and basis, Glen Waverley minutes (GW), ED minutes, train, score and rank. "Not found" means the notes did not have it.
+The six comparators are summarised in their own section above. Each card separates **Checked** facts (with links) from **Estimate**. Workbook figures are tagged as such. Header shows region, options, price and basis, Glen Waverley minutes (GW), ED minutes, train, score and rank. "Not found" means the notes did not have it.
 
 ### Option A suburbs
 
@@ -300,8 +344,8 @@ Items 1 to 9 can move a ranking or a hard filter; 10 to 18 are smaller. "Effect"
 | Gap | What is known | How to close it |
 |---|---|---|
 | **Hazard overlays** (bushfire, flood, coastal) | Not read at property level for any suburb. Only council-wide lists (the 2017 Yarra Ranges overlay list for Belgrave, Montrose, Mount Evelyn, Tecoma, Upper Ferntree Gully and Upwey), local history and news | Check each address on VicPlan ([VicPlan](https://mapshare.vic.gov.au/vicplan/)), ask for a planning certificate, get an insurance quote before offering. |
-| **Indian groceries, temples, gurdwaras** | Named in the notes: Sri Vakrathunda Vinayagar temple (The Basin); Shiva Vishnu Temple (Carrum Downs) and Keysborough Gurdwara ([Faith Victoria](https://www.faithvictoria.org.au/upcoming-events/event/292-frankston-interfaith-network-tour-to-places-of-worship)); a temple association in Geelong (address not found). Named grocers: **not found** for any suburb. India-born share exact only where India is in the census top five | Build a short list of named shops and temples; time the drive from each shortlisted suburb. |
-| **Drive times at one consistent time** | Midday "leave now" only; not peak, not weekend | Re-time the 12 on a weekday 8am, Saturday 10am and Sunday 5pm, to Glen Waverley and to the ED. |
+| **Indian groceries, temples, gurdwaras** | **Checked for the six Community comparators** (named places and drive times in the comparator section; Endeavour Spices and Shri Sanatan Dharam still need verification). For the 51 scored suburbs, named in the notes: Sri Vakrathunda Vinayagar temple (The Basin); Shiva Vishnu Temple (Carrum Downs) and Keysborough Gurdwara ([Faith Victoria](https://www.faithvictoria.org.au/upcoming-events/event/292-frankston-interfaith-network-tour-to-places-of-worship)); a temple association in Geelong (address not found). Named grocers: **not found** for any suburb. India-born share exact only where India is in the census top five | Build a short list of named shops and temples; time the drive from each shortlisted suburb. |
+| **Drive times at one consistent time** | Midday "leave now" only for the 51; the comparators are checked at 08:00 and 10:00 weekday, so the two sets differ in basis | Re-time the 12 on a weekday 8am, Saturday 10am and Sunday 5pm, to Glen Waverley and to the ED. |
 | **Sale medians vs AVMs** | 38 of 51 prices are AVMs | Pull sold listings for 3+ bedroom houses in each shortlisted suburb. |
 | **Train Yes/No and frequency** | From recall; V/Line frequency only system-wide | Check PTV and V/Line timetables; ask about Croydon and Gisborne stations. |
 | **ED status and waits** | Read and confirmed 24-hour: Wonthaggi, Rosebud, Frankston, Footscray. Angliss and West Gippsland are marked verified in the workbook (Eastern Health site, shire directory) but the Angliss notes are mixed. Casey, Northern, Sunshine, Maroondah, Bendigo and Ballarat are from recall | Confirm and check typical waits. |
@@ -323,6 +367,9 @@ Items 1 to 9 can move a ranking or a hard filter; 10 to 18 are smaller. "Effect"
 
 ### What Round 2 (Q13 and Q15) will settle
 
+The comparator viewings make Q13 concrete: Endeavour Hills and Wheelers Hill test whether "both" is possible; Springvale, Clayton South, Keysborough and Clyde North show option A at full strength. Round 4 adds **Q13d** (5-point scale: green village with community about 30 min away, or a multicultural neighbourhood with community close by). Q13d is reference-only: it feeds no weight and is not yet in the workbook.
+
+
 Q13 asks: "Indian shops and community in your own suburb, less green" (A) or "very green, community a 30-minute drive away" (B). Q15 re-asks all ten priority ratings with a cap of two Essentials. I recalculated the top 10 under each possible answer using the workbook's current shifts (so these are **illustrative**).
 
 | Answer | What changes in the weights | Effect on ranking |
@@ -338,6 +385,9 @@ Q13 asks: "Indian shops and community in your own suburb, less green" (A) or "ve
 Two questions Round 2 does not cover but the ranking depends on: whether **Mum's 25-minute and 20-minute limits** are hard (only 15 suburbs survive), and whether the **90-minute filter** should drop to the 60-minute preference (11 suburbs go: Warburton, Rye, Kyneton, Woodend, Macedon, Gisborne, Riddells Creek, Newtown, Highton, Torquay, Wonthaggi). Y's beach preference also bears on the Beach weight, which every scenario above holds at 8.8%.
 
 ## Conclusion
+
+**Update, 28 Oct.** The family now has a fair test of the community side. Six comparators that meet every hard filter on checked evidence sit beside the nature-first anchors (Frankston, Mordialloc, Seaford, all Low on community). Endeavour Hills is the one suburb found so far that scores on both sides (bush reserve walkable, Indian grocer, temple and church within about 15 min), so it is in all three options. If the family comes back from Springvale or Clyde North preferring them, the Indian-community weight is understated; if they come back preferring Belgrave or Eltham, the 27 Oct finding below stands. The paragraphs below are unchanged from 27 Oct; their ranks predate the workbook's entered scores (see the update box at the top).
+
 
 The research does not name a winner; it shows that **the answer turns on one number the family has not yet agreed: how much Nature weighs.** At 9% the formula rewards Frankston, Berwick and the two Ferntree Gullys. At 30% it puts Belgrave and Upper Ferntree Gully first and brings Eltham and Tecoma into the top eight. Frankston South, Eltham, Warragul, Croydon and Berwick sit on every shortlist, so those viewings are worth doing whichever way Round 2 lands. Berwick is in the top two under every weight set tested and Croydon between 9th and 12th, so seeing them is the quickest test of whether the family's love of forest survives contact with convenience.
 
@@ -357,3 +407,4 @@ Sources are the researchers' notes (Dandenong foothills, ridge and Yarra Valley,
 | Prices | Jellis Craig suburb reports, PRD, Microburbs, Property.com.au, Domain, Collings (linked above) |
 | Bush and flood history | Wikipedia pages for each suburb; Star Mail; Manningham Council; VICSES; Mornington News |
 | Drive times and the family's rules | Workbook, Filters and SuburbScorecard tabs (Google Maps "leave now" readings, 26 and 27 Oct 2026) |
+| Community comparators | `Community comparators — research (28 Oct 2026).md`: Google Maps directions and place listings (28 Oct 2026), Victorian Statements of Information, Jellis Craig Wheelers Hill report (Sep 2026), healthdirect, Victorian Department of Health, Mercy Health, ABS 2021 General Community Profile; workbook SuburbScorecard rows 67–72 and DiscussionSummary A31:B38 |

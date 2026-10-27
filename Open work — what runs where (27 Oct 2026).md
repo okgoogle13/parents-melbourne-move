@@ -13,7 +13,7 @@ Rule: one session edits the workbook at a time. Commit and push before a cloud s
 | C4 | ED facts (Chrome prompt Task 3) and "major ED" column for the Peninsula (report item 3) | Hospital websites are readable without Chrome |
 | C5 | Train facts (Task 5a–c): station open, frequency, time to Southern Cross | PTV / V/Line / Wikipedia |
 | C6 | Price conflicts (Task 4) from PRD, property.com.au, Microburbs where readable | realestate.com.au rows stay for Chrome |
-| C7 | Rewrite the foundation report: it predates round 2/3, final weights and entered scores ("workbook has no scores" is now wrong). Add demography, prices, stations, ED, top-15 under final weights; .md + .pdf; old version to Archive | Do last, after C1–C6 |
+| C7 | Rewrite the foundation report: it predates round 2/3, final weights and entered scores ("workbook has no scores" is now wrong). Add demography, prices, stations, ED, top-15 under final weights; .md + .pdf; old version to Archive. **Partly done 28 Oct:** comparator suburbs, viewing options (now 14) and stale "no scores" line updated; scores/ranks/weights still the 27 Oct calculation | Do last, after C1–C6 |
 | C8 | Update scoring-model-pointer.md (stale lines: Mum's 3 Essentials resolved in round 2; status counts) | Every session |
 
 ## Claude in Chrome (needs your signed-in browser or live Maps)
