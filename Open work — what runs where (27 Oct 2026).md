@@ -54,5 +54,5 @@ Rule: one session edits the workbook at a time. Commit and push before a cloud s
 | Tarneit | Excluded — family decision 28 Oct 2026 (stated reasons: safety concerns and not enough going for it) |
 | AX band | Done on every row with ABS data |
 | Q13d | Rows added; answers pending |
-| Reports | Foundation report (branch claude/inspiring-lovelace-cflq1z) and parent report draft still show comparator drives on the 08:00 basis; refresh before use |
+| Reports | Parent report draft refreshed 28 Oct (comparator drives = workbook J/K, 10:00 basis; marked "Draft — requires family review; not for publication or distribution"). Foundation report (branch claude/inspiring-lovelace-cflq1z) still shows comparator drives on the 08:00 basis; refresh before use |
 
