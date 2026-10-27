@@ -22,7 +22,7 @@ Rule: one session edits the workbook at a time. Commit and push before a cloud s
 | B1 | Task 1: realestate.com.au under-$1.5M searches (Williamstown, Blackburn, Glen Waverley) |
 | B2 | Task 2: Google Maps "Depart at" drive times (10:00 and 08:00) |
 | B3 | Task 6: VicPlan bushfire/flood overlays for 23 listing addresses |
-| B4 | Task 7: nearest Indian grocery, Hindu temple **and** church with drive minutes (all passing suburbs, plus community comparators once approved). Feeds the P decision |
+| B4 | Task 7: nearest Indian grocery, Hindu temple **and** church with drive minutes (all passing suburbs, community comparators done 28 Oct for the 6 added rows; still open: Endeavour Spices, Shri Sanatan Dharam opening hours, a Wheelers Hill under-cap SOI). Feeds the P decision |
 | B5 | Listings tab refresh from the "Parents." collection |
 
 ## People, not Claude
