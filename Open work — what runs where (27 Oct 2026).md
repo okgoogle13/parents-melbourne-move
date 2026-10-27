@@ -13,7 +13,7 @@ Rule: one session edits the workbook at a time. Commit and push before a cloud s
 | C4 | ED facts (Chrome prompt Task 3) and "major ED" column for the Peninsula (report item 3) | Hospital websites are readable without Chrome |
 | C5 | Train facts (Task 5a–c): station open, frequency, time to Southern Cross | PTV / V/Line / Wikipedia |
 | C6 | Price conflicts (Task 4) from PRD, property.com.au, Microburbs where readable | realestate.com.au rows stay for Chrome |
-| C7 | Rewrite the foundation report: it predates round 2/3, final weights and entered scores ("workbook has no scores" is now wrong). Add demography, prices, stations, ED, top-15 under final weights; .md + .pdf; old version to Archive. **Done 28 Oct:** aligned to workbook commit 7de29d5 (ranks, scores, final weights, top 15); three four-suburb viewing options (each meets the viewing-shortlist rule); drive bases labelled per row; Point Cook Conditional, Tarneit and Mount Waverley Excluded; previous .md/.pdf in Archive. Needs a refresh if the comparator J basis changes | Done |
+| C7 | Rewrite the foundation report: it predates round 2/3, final weights and entered scores ("workbook has no scores" is now wrong). Add demography, prices, stations, ED, top-15 under final weights; .md + .pdf; old version to Archive. **Done 28 Oct:** aligned to workbook commit 7de29d5 (ranks, scores, final weights, top 15); three four-suburb viewing options (each meets the viewing-shortlist rule); drive bases labelled per row; Point Cook Conditional, Tarneit and Mount Waverley Excluded; previous .md/.pdf in Archive. Refreshed 28 Oct to the 10:00 comparator basis (workbook 387763a) | Done |
 | C8 | Update scoring-model-pointer.md (stale lines: Mum's 3 Essentials resolved in round 2; status counts) | Every session |
 
 ## Claude in Chrome (needs your signed-in browser or live Maps)
@@ -54,5 +54,5 @@ Rule: one session edits the workbook at a time. Commit and push before a cloud s
 | Tarneit | Excluded — family decision 28 Oct 2026 (stated reasons: safety concerns and not enough going for it) |
 | AX band | Done on every row with ABS data |
 | Q13d | Rows added; answers pending |
-| Reports | Parent report draft refreshed 28 Oct (comparator drives = workbook J/K, 10:00 basis; marked "Draft — requires family review; not for publication or distribution"). Foundation report (branch claude/inspiring-lovelace-cflq1z) still shows comparator drives on the 08:00 basis; refresh before use |
+| Reports | Parent report draft refreshed 28 Oct (comparator drives = workbook J/K, 10:00 basis; marked "Draft — requires family review; not for publication or distribution"). Foundation report (branch claude/inspiring-lovelace-cflq1z) refreshed 28 Oct to the same 10:00 workbook basis (commit 387763a) |
 
