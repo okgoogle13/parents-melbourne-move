@@ -43,4 +43,16 @@ Rule: one session edits the workbook at a time. Commit and push before a cloud s
 
 **Phase 2 rules:** use only approved workbook data; no substantial new research; no location status changes without approval; agree the report structure before building the print-friendly parent report.
 
-**Carried-forward open items (not blocking):** suitable-property checks (all six comparators); P definition (B4); Q13d use (reference-only); Point Cook travel decision; whether a 60-min preference becomes a filter (not a filter now); train access for comparators (recall only).
+**Carried-forward open items (not blocking):** suitable-property checks (all six comparators); P definition (B4); Q13d use (reference-only; rows now in RawResponses AN / CleanedAnswers 40, answers pending); Point Cook travel decision; whether a 60-min preference becomes a filter (not a filter now); train access for comparators (recall only).
+
+## Comparator fixes (28 Oct 2026)
+
+| Item | Status |
+|---|---|
+| Comparator J basis | Done: J67–J72 = top of 10:00 weekday range (26, 35, 24, 50, 26, 12); 08:00 kept in Z as peak, not used in J |
+| Comparator K (ED) basis | No change needed: K67–K72 were already the top of the 10:00 range |
+| Tarneit | Excluded — family decision 28 Oct 2026 (stated reasons: safety concerns and not enough going for it) |
+| AX band | Done on every row with ABS data |
+| Q13d | Rows added; answers pending |
+| Reports | Foundation report (branch claude/inspiring-lovelace-cflq1z) and parent report draft still show comparator drives on the 08:00 basis; refresh before use |
+
