@@ -1,6 +1,6 @@
 # Community comparators — research proposal (28 Oct 2026)
 
-Status: **PROPOSAL — not in the workbook.** Nothing is added to SuburbScorecard until the family approves the list (prompt section 3c).
+Status: **PROPOSAL — not in the workbook.** See the "Verification pass" section at the end for the checked figures, which supersede the estimates in the first two tables. Nothing is added to SuburbScorecard until the family approves the list (prompt section 3c).
 Purpose: show the nature-versus-community trade-off side by side. Comparators are not meant to win the main rank, and by design they won't: Nature, Beach and Village carry about 44% of the weight. **No overall winner is declared.**
 The ABS shares describe who lives in a suburb. They do not measure belonging or community quality.
 
@@ -75,3 +75,162 @@ The ABS shares describe who lives in a suburb. They do not measure belonging or 
 - The band thresholds.
 - How Q13d answers will be used.
 - The proposed rule "Viewing shortlist includes at least 2 Community comparators".
+
+---
+
+# Verification pass (28 Oct 2026, cloud session) — supersedes the estimates above
+
+The family approved six core comparators and two conditional ones (Tarneit, Point Cook). They also excluded Mount Waverley, kept Frankston, Mordialloc and Seaford as anchors, and kept Rowville as the reference only. **Workbook unchanged.**
+
+**How drives were checked:**
+- Google Maps directions in a headless browser, "Depart at" **Wed 28 Oct 2026 10:00** (plus 08:00 for the far suburbs).
+- Google's "typically X–Y min" range, suburb centre to destination.
+- The **upper end** of the range is used against the 90-min cap.
+- The Filters tab basis is "leave now, typical traffic" (midday). At this session's hour, "leave now" means about 5 a.m., so 10:00 was used instead.
+
+**ED status:**
+- **Public:** Victorian Department of Health list of public hospitals (Monash Health: Monash Medical Centre Clayton, Dandenong, Casey; Mercy Public Hospitals: Werribee Mercy).
+- **24-hour:** healthdirect service finder (government-funded), "Open 24 hours" and "Mixed billing" for Casey, Dandenong, Monash Medical Centre (246 Clayton Rd) and Angliss. The private hospitals on the same list are marked "Fees apply". Werribee Mercy: Mercy Health's own ED page, "open 24 hours a day, seven days a week".
+
+**Prices:** each is a "Median price … Property Type House" from a Victorian Statement of Information (SOI) returned by search, read from the PDF text.
+
+## 1. Revised comparator table (8 candidates)
+
+| Location | Proposed status | Comparator corner | Price basis | Price source | Price as-at date | Glen Waverley drive | Drive evidence status | Public 24-hour ED | ED drive | ED evidence status | Indian grocery | Hindu temple | Church | Nature evidence | Hard-filter result | Main trade-off | Unresolved issues |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Springvale | Approve | Diverse / lower-green | SOI "Median price", house: $942,500 | SOI 24 Phillip Ave (pricefinder) | 1 Jul 2025–30 Jun 2026 | 10–26 min (8.3 km, Springvale Rd) | Checked | Monash Medical Centre Clayton, 246 Clayton Rd | 10–18 min (Dandenong 12–20) | Checked | India Town, 11b/310 Springvale Rd: 4 min | Shri Shiva Vishnu Temple, 52 Boundary Rd, Carrum Downs: 20–30 min | St Joseph's Catholic, cnr Buckingham Ave & 7 St James Ave: 4 min | None of size (Wikipedia) | Pass (price, GW, ED all checked) | Community-first: very diverse, grocer and church in walking range, 10–26 min to family; little nature | Another SOI (6-month period) gives $600k, an outlier |
+| Clayton South | Approve | Diverse / lower-green | SOI "Median price", house: $985,000 | SOI 85 Osborne Ave (pricefinder) | 1 Apr 2025–31 Mar 2026 | 14–35 min (11.4 km) | Checked | Monash Medical Centre Clayton | 8–12 min | Checked | Sarawan Spices, 335 Clayton Rd, Clayton: 5–8 min | Shri Shiva Vishnu, Carrum Downs: 20–28 min | Church of St Andrew (Catholic), 76 Springs Rd: 5 min | Golf courses and landfill; no reserve named (Victorian Places) | Pass (checked) | Community-first: high India-born share, closest major ED; sand-belt suburb with little nature | Grocer source is a directory; confirm trading |
+| Keysborough | Approve | Diverse / lower-green | SOI "Median price", house: $975,000 | SOI 7-9 Cascade Pl (pricefinder) | 1 Jul 2025–30 Jun 2026 | 18–24 min (21.0 km, M3) | Checked | Dandenong Hospital, 135 David St | 12–18 min | Checked | India at Home, Parkmore Shopping Centre: 4–6 min | Shri Shiva Vishnu, Carrum Downs: 14–20 min (gurdwara at 198-206 Perry Rd in suburb) | Church of the Resurrection, 402 Corrigan Rd: 5–6 min | Market gardens to the south; no reserve named | Pass (checked) | Community-first: grocer, church and gurdwara local, the big Hindu temple 14–20 min; little bush | — |
+| Clyde North | Approve | Diverse / lower-green | SOI "Median price", house: $752,932 | SOI 24 Hollywell Rd (PropTrack) | 1 Jun 2025–31 May 2026 | 28–50 min at 10:00 (33.9 km); 35 min–1 hr 10 at 08:00 | Checked | Casey Hospital, 62-70 Kangan Dr, Berwick | 12–24 min | Checked | Wirsa Indian Groceries, Shop 13/16 Selandra Blvd: 2 min | Shrinathji Haveli, 3-5 Princes Domain Dr, Hallam: 16–30 min (Shiva Vishnu 18–35) | St Thomas the Apostle, Heather Grove (location approximate): ~1–2 min | Green-wedge farmland; regional park only proposed | Pass (checked) | Community-first: cheapest, grocer next door; new estates, furthest of the six from family | Haveli source is a directory; church location approximate |
+| Endeavour Hills | Approve | Potential both | SOI "Median price", house: $857,000 | SOI 6 Isaac Smith Cres (Price Finder) | 1 Aug 2025–1 Aug 2026 | 16–26 min (18.6 km, M3) | Checked | Dandenong Hospital | 7–12 min | Checked | Endeavour Spices, Shop 6-7, 2 Raymond McMahon Blvd: 2 min | Shrinathji Haveli, Hallam: 8–14 min | St Paul Apostle Catholic, 5 William Hovell Dr: 2 min | Casuarina Forest, James Alexander Reserve: 3 min / 1.1 km; Churchill NP: 8–10 min; Lysterfield Park: 12 min | Pass (checked) | Potential balanced option: bush reserve walkable, national park 10 min, grocer and church 2 min, ED 7–12 min | Grocer source is a directory |
+| Wheelers Hill | Approve | Potential both | SOI "Median price", house: $1,475,000 | SOI 9 Sunnybrook Dr (Property Data) | 22 Jun 2025–21 Jun 2026 | 7–12 min (5.8 km) | Checked | Dandenong Hospital (MMC 14–30) | 12–18 min | Checked | The Heritage Spices, G15/580 Ferntree Gully Rd: 6–9 min | Sri Vakrathunda Vinayagar, 1292 Mountain Hwy, The Basin: 16–35 min | St Justin's Catholic, 48 Whalley Dr: 4 min | Jells Park (~127 ha): 6 min / 2.6 km | Pass, but only 1.7% under the cap | Potential balanced option: next to family and a 127 ha park; dearest; Medium (not High) diversity | Median $1.475M leaves little room; OnTheHouse median value $1.36M |
+| Tarneit | Exclude | Diverse / lower-green | SOI "Median price", house: $677,018 | SOI 108 Lansdowne Pde (PropTrack) | 1 Feb–30 Apr 2026 | 50 min–1 hr 20 at 10:00 (52.4 km, M1); 1 hr–1 hr 50 at 08:00 | Checked | Werribee Mercy Hospital, 300 Princes Hwy | 14–24 min | Checked | Yes Yes Indian Supermarket, shop 2a/540 Derrimut Rd: 4–7 min | Sri Durga Temple, 705 Neales Rd, Rockbank: 16–20 min | Wyndham Hobsons Bay Lutheran, 580 Tarneit Rd: 4–7 min | Basalt plains; no reserve named | Passes the 90-min cap at 10:00 (upper 80); fails at 08:00 (upper 110); over the 60-min preference | Community-first: strongest Indian community, but a peak trip to family of up to 1 hr 50 | Church site may have moved (college relocated 2025) |
+| Point Cook | Conditional (family decision on distance) | Potential both | SOI "Median price", house: $832,750 | SOI 65 Innisfail Dr (PropTrack) | 1 Feb–30 Apr 2026 | 45 min–1 hr 10 at 10:00 (48.5 km, M1); 55 min–1 hr 40 at 08:00 | Checked | Werribee Mercy Hospital | 10–16 min | Checked | GROCERZ Point Cook, Unit 2/22-30 Wallace Ave: 6–10 min | Sri Durga, Rockbank: 24–45 min | FaithLife church, 454 Point Cook Rd: 4 min | Point Cook Coastal Park: 3 min / 2.3 km to nearest point; Cheetham Wetlands (~420 ha) | Passes at 10:00 (upper 70); fails at 08:00 (upper 100); over the 60-min preference | Potential balanced option: only coastal-plus-diverse option, ED 10–16 min; but 45–70 min from family off-peak | Grocer from a Google Maps listing only |
+
+Drive times to the grocery, temple and church are Checked (Google Maps, same basis). Short trips show a single figure because Google gave no range.
+
+## 2. Recommendation (7 comparators)
+- **Approve 6:** Springvale, Clayton South, Keysborough, Clyde North ("Diverse / lower-green"); Endeavour Hills, Wheelers Hill ("Potential both"). All pass price, Glen Waverley drive and ED on checked evidence.
+- **Point Cook:** conditional, as the 7th.
+- **Tarneit:** excluded.
+- **Anchors:** Frankston, Mordialloc, Seaford. **Reference:** Rowville.
+
+## 3. Tarneit and Point Cook
+- **Tarneit — Exclude.** The drive is now checked. It passes the 90-min cap only off-peak; the upper end of the 08:00 range is 1 hr 50. Its role ("Diverse / lower-green", strong Indian community) is already covered by Clyde North, Springvale and Clayton South at about half the distance.
+- **Point Cook — Conditional.** The drive is checked, so this is no longer pending drive-time verification. The condition is a family decision: is 45–70 min off-peak (up to 1 hr 40 at peak) to Glen Waverley acceptable? It is the only option combining coast and diversity. If the family keeps the 60-min preference as a working limit, exclude it.
+
+## 4. Proposed viewing-shortlist rule
+Viewing shortlist includes:
+- at least **two Community comparators**;
+- at least **one nature-first (green / lower-diversity) suburb**;
+- at least **one Potential-both comparator** that passed verification (Endeavour Hills or Wheelers Hill now; Point Cook only if approved).
+
+Proposed; family to confirm.
+
+## 5. Checked facts, estimates, needs-data, sources
+
+**Checked:**
+- All 8 Glen Waverley drives.
+- All 8 ED drives, plus public and 24-hour status.
+- All 8 house prices (SOI text: figure, period and data source).
+- Grocery, temple and church drives from each suburb centre.
+- Nature-area drives for the three "Potential both" suburbs.
+- ABS AQ and AU shares.
+
+**Estimates:**
+- Whether a nature area is "walkable" from a given street: suburb-centre drives only. Endeavour Hills reserve 1.1 km and Jells Park 2.6 km look walkable from parts of each suburb.
+- The Clyde North church location: GCatholic marks it approximate.
+
+**Needs data / to confirm in Chrome (B4):**
+- That the directory-only places are still trading or operating: Sarawan Spices, Endeavour Spices, Shrinathji Haveli, GROCERZ.
+- The Tarneit Lutheran church site.
+- A peak (08:00) Glen Waverley time for the six approved suburbs (only Clyde North was checked at peak: up to 1 hr 10).
+
+**Sources (all accessed 28 Oct 2026 AEDT):**
+- **Google Maps directions:** URLs below.
+- **Google Maps place search:** India Town, India at Home Keysborough, The Heritage Spices, Yes Yes Indian Supermarket, GROCERZ Point Cook, St Joseph's Springvale.
+- **healthdirect ED finder:** https://www.healthdirect.gov.au/australian-health-services/search/berwick-3806-vic/emergency-department-service/310000008
+- **Victorian public hospitals list:** https://health.vic.gov.au/hospitals-and-health-services/public-hospitals-health-services-vic
+- **Werribee Mercy ED:** https://health-services.mercyhealth.com.au/our-health-services/werribee-mercy-hospital/emergency-department-wmh/
+- **Monash Health ED locations:** https://monashhealth.org/patients-visitors/emergency-departments/
+- **SOIs:**
+  - Springvale: https://s3-ap-southeast-2.amazonaws.com/zenu/soi/b0b62daa-8691-4f3f-b21b-fc0a629845ff.pdf
+  - Clayton South: https://s3-ap-southeast-2.amazonaws.com/zenu/soi/daf40c18-47a7-4907-9f9a-1801cc782a35.pdf
+  - Keysborough: https://s3-ap-southeast-2.amazonaws.com/zenu/soi/ca8cd377-fe5e-42cd-a3d6-525992dc0a9d.pdf
+  - Clyde North: https://s3-ap-southeast-2.amazonaws.com/zenu/soi/a24be22a-1f37-4f59-820a-aeb288704b8c.pdf
+  - Endeavour Hills: https://s3-ap-southeast-2.amazonaws.com/zenu/soi/8fc3f19f-6ab3-47ea-b801-9bbd2d72885f.pdf
+  - Wheelers Hill: https://s3-ap-southeast-2.amazonaws.com/attach-property-clientvault-com/3868/11973436/S-13799066/1782296638-118760-9-Sunnybrook-WheelersHillSOI220626.pdf
+  - Tarneit: https://s3-ap-southeast-2.amazonaws.com/zenu/soi/889cb942-47ae-494d-9ff8-61e960dc6240.pdf
+  - Point Cook: https://s3-ap-southeast-2.amazonaws.com/zenu/soi/a3f77979-c81c-4ced-9fa3-0619f1a1b9b6.pdf
+- **Temples:**
+  - Shri Shiva Vishnu: Hindu Society of Victoria PDF.
+  - Sri Vakrathunda Vinayagar: Hinduism Today / TravelTriangle.
+  - Sri Durga, 705 Neales Rd Rockbank: Indian Down Under / Indian Link.
+  - Shrinathji Haveli: cylex directory.
+- **Churches:**
+  - St Andrew's, Church of the Resurrection, St Thomas the Apostle: GCatholic.
+  - St Paul Apostle: Melbourne Catholic directory.
+  - St Justin's: churchhistories.net.au.
+  - Wyndham Hobsons Bay Lutheran: goodnews.vic.edu.au.
+  - FaithLife: Wyndham council directory.
+- **Groceries (web):**
+  - Wirsa: Google Business.
+  - Sarawan Spices: cylex.
+  - Endeavour Spices: onlymelbourne directory.
+  - Yes Yes: Westbrook Estate (2020).
+
+### Google Maps evidence URLs (Depart at, Wed 28 Oct 2026)
+- Springvale -> Glen Waverley VIC 3150 10:00 | https://www.google.com/maps/dir/Springvale%20VIC%203171/Glen%20Waverley%20VIC%203150/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Clayton South -> Glen Waverley VIC 3150 10:00 | https://www.google.com/maps/dir/Clayton%20South%20VIC%203169/Glen%20Waverley%20VIC%203150/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Keysborough -> Glen Waverley VIC 3150 10:00 | https://www.google.com/maps/dir/Keysborough%20VIC%203173/Glen%20Waverley%20VIC%203150/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Clyde North -> Glen Waverley VIC 3150 10:00 | https://www.google.com/maps/dir/Clyde%20North%20VIC%203978/Glen%20Waverley%20VIC%203150/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Endeavour Hills -> Glen Waverley VIC 3150 10:00 | https://www.google.com/maps/dir/Endeavour%20Hills%20VIC%203802/Glen%20Waverley%20VIC%203150/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Wheelers Hill -> Glen Waverley VIC 3150 10:00 | https://www.google.com/maps/dir/Wheelers%20Hill%20VIC%203150/Glen%20Waverley%20VIC%203150/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Tarneit -> Glen Waverley VIC 3150 10:00 | https://www.google.com/maps/dir/Tarneit%20VIC%203029/Glen%20Waverley%20VIC%203150/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Point Cook -> Glen Waverley VIC 3150 10:00 | https://www.google.com/maps/dir/Point%20Cook%20VIC%203030/Glen%20Waverley%20VIC%203150/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Tarneit -> Glen Waverley VIC 3150  8:00 | https://www.google.com/maps/dir/Tarneit%20VIC%203029/Glen%20Waverley%20VIC%203150/data=!4m6!4m5!2m3!6e0!7e2!8j1793174400!3e0
+- Point Cook -> Glen Waverley VIC 3150  8:00 | https://www.google.com/maps/dir/Point%20Cook%20VIC%203030/Glen%20Waverley%20VIC%203150/data=!4m6!4m5!2m3!6e0!7e2!8j1793174400!3e0
+- Clyde North -> Glen Waverley VIC 3150  8:00 | https://www.google.com/maps/dir/Clyde%20North%20VIC%203978/Glen%20Waverley%20VIC%203150/data=!4m6!4m5!2m3!6e0!7e2!8j1793174400!3e0
+- Springvale -> 135 David Street 10:00 | https://www.google.com/maps/dir/Springvale%20VIC%203171/135%20David%20Street%2C%20Dandenong%20VIC%203175/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Springvale -> 246 Clayton Road 10:00 | https://www.google.com/maps/dir/Springvale%20VIC%203171/246%20Clayton%20Road%2C%20Clayton%20VIC%203168/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Clayton South -> 246 Clayton Road 10:00 | https://www.google.com/maps/dir/Clayton%20South%20VIC%203169/246%20Clayton%20Road%2C%20Clayton%20VIC%203168/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Keysborough -> 135 David Street 10:00 | https://www.google.com/maps/dir/Keysborough%20VIC%203173/135%20David%20Street%2C%20Dandenong%20VIC%203175/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Clyde North -> 62-70 Kangan Drive 10:00 | https://www.google.com/maps/dir/Clyde%20North%20VIC%203978/62-70%20Kangan%20Drive%2C%20Berwick%20VIC%203806/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Endeavour Hills -> 135 David Street 10:00 | https://www.google.com/maps/dir/Endeavour%20Hills%20VIC%203802/135%20David%20Street%2C%20Dandenong%20VIC%203175/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Wheelers Hill -> 246 Clayton Road 10:00 | https://www.google.com/maps/dir/Wheelers%20Hill%20VIC%203150/246%20Clayton%20Road%2C%20Clayton%20VIC%203168/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Wheelers Hill -> 39 Albert Street 10:00 | https://www.google.com/maps/dir/Wheelers%20Hill%20VIC%203150/39%20Albert%20Street%2C%20Upper%20Ferntree%20Gully%20VIC%203156/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Wheelers Hill -> 135 David Street 10:00 | https://www.google.com/maps/dir/Wheelers%20Hill%20VIC%203150/135%20David%20Street%2C%20Dandenong%20VIC%203175/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Tarneit -> 300 Princes Highway 10:00 | https://www.google.com/maps/dir/Tarneit%20VIC%203029/300%20Princes%20Highway%2C%20Werribee%20VIC%203030/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Point Cook -> 300 Princes Highway 10:00 | https://www.google.com/maps/dir/Point%20Cook%20VIC%203030/300%20Princes%20Highway%2C%20Werribee%20VIC%203030/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Springvale -> 11b/310 Springvale Road 10:00 | https://www.google.com/maps/dir/Springvale%20VIC%203171/11b%2F310%20Springvale%20Road%2C%20Springvale%20VIC%203171/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Springvale -> 52 Boundary Road 10:00 | https://www.google.com/maps/dir/Springvale%20VIC%203171/52%20Boundary%20Road%2C%20Carrum%20Downs%20VIC%203201/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Springvale -> 7 St James Avenue 10:00 | https://www.google.com/maps/dir/Springvale%20VIC%203171/7%20St%20James%20Avenue%2C%20Springvale%20VIC%203171/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Clayton South -> 335 Clayton Road 10:00 | https://www.google.com/maps/dir/Clayton%20South%20VIC%203169/335%20Clayton%20Road%2C%20Clayton%20VIC%203168/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Clayton South -> 52 Boundary Road 10:00 | https://www.google.com/maps/dir/Clayton%20South%20VIC%203169/52%20Boundary%20Road%2C%20Carrum%20Downs%20VIC%203201/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Clayton South -> 76 Springs Road 10:00 | https://www.google.com/maps/dir/Clayton%20South%20VIC%203169/76%20Springs%20Road%2C%20Clayton%20South%20VIC%203169/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Keysborough -> Parkmore Shopping Centre 10:00 | https://www.google.com/maps/dir/Keysborough%20VIC%203173/Parkmore%20Shopping%20Centre%2C%20Keysborough%20VIC%203173/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Keysborough -> 52 Boundary Road 10:00 | https://www.google.com/maps/dir/Keysborough%20VIC%203173/52%20Boundary%20Road%2C%20Carrum%20Downs%20VIC%203201/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Keysborough -> 402 Corrigan Road 10:00 | https://www.google.com/maps/dir/Keysborough%20VIC%203173/402%20Corrigan%20Road%2C%20Keysborough%20VIC%203173/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Clyde North -> 16 Selandra Boulevard 10:00 | https://www.google.com/maps/dir/Clyde%20North%20VIC%203978/16%20Selandra%20Boulevard%2C%20Clyde%20North%20VIC%203978/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Clyde North -> 3-5 Princes Domain Drive 10:00 | https://www.google.com/maps/dir/Clyde%20North%20VIC%203978/3-5%20Princes%20Domain%20Drive%2C%20Hallam%20VIC%203803/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Clyde North -> Heather Grove 10:00 | https://www.google.com/maps/dir/Clyde%20North%20VIC%203978/Heather%20Grove%2C%20Clyde%20North%20VIC%203978/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Clyde North -> 52 Boundary Road 10:00 | https://www.google.com/maps/dir/Clyde%20North%20VIC%203978/52%20Boundary%20Road%2C%20Carrum%20Downs%20VIC%203201/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Endeavour Hills -> 2 Raymond McMahon Boulevard 10:00 | https://www.google.com/maps/dir/Endeavour%20Hills%20VIC%203802/2%20Raymond%20McMahon%20Boulevard%2C%20Endeavour%20Hills%20VIC%203802/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Endeavour Hills -> 3-5 Princes Domain Drive 10:00 | https://www.google.com/maps/dir/Endeavour%20Hills%20VIC%203802/3-5%20Princes%20Domain%20Drive%2C%20Hallam%20VIC%203803/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Endeavour Hills -> 5 William Hovell Drive 10:00 | https://www.google.com/maps/dir/Endeavour%20Hills%20VIC%203802/5%20William%20Hovell%20Drive%2C%20Endeavour%20Hills%20VIC%203802/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Endeavour Hills -> 1292 Mountain Highway 10:00 | https://www.google.com/maps/dir/Endeavour%20Hills%20VIC%203802/1292%20Mountain%20Highway%2C%20The%20Basin%20VIC%203154/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Wheelers Hill -> 580 Ferntree Gully Road 10:00 | https://www.google.com/maps/dir/Wheelers%20Hill%20VIC%203150/580%20Ferntree%20Gully%20Road%2C%20Wheelers%20Hill%20VIC%203150/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Wheelers Hill -> 1292 Mountain Highway 10:00 | https://www.google.com/maps/dir/Wheelers%20Hill%20VIC%203150/1292%20Mountain%20Highway%2C%20The%20Basin%20VIC%203154/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Wheelers Hill -> 48 Whalley Drive 10:00 | https://www.google.com/maps/dir/Wheelers%20Hill%20VIC%203150/48%20Whalley%20Drive%2C%20Wheelers%20Hill%20VIC%203150/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Tarneit -> 540 Derrimut Road 10:00 | https://www.google.com/maps/dir/Tarneit%20VIC%203029/540%20Derrimut%20Road%2C%20Tarneit%20VIC%203029/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Tarneit -> 705 Neales Road 10:00 | https://www.google.com/maps/dir/Tarneit%20VIC%203029/705%20Neales%20Road%2C%20Rockbank%20VIC%203335/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Tarneit -> 580 Tarneit Road 10:00 | https://www.google.com/maps/dir/Tarneit%20VIC%203029/580%20Tarneit%20Road%2C%20Tarneit%20VIC%203029/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Point Cook -> 22-30 Wallace Avenue 10:00 | https://www.google.com/maps/dir/Point%20Cook%20VIC%203030/22-30%20Wallace%20Avenue%2C%20Point%20Cook%20VIC%203030/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Point Cook -> 705 Neales Road 10:00 | https://www.google.com/maps/dir/Point%20Cook%20VIC%203030/705%20Neales%20Road%2C%20Rockbank%20VIC%203335/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Point Cook -> 454 Point Cook Road 10:00 | https://www.google.com/maps/dir/Point%20Cook%20VIC%203030/454%20Point%20Cook%20Road%2C%20Point%20Cook%20VIC%203030/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Point Cook -> Point Cook Coastal Park 10:00 | https://www.google.com/maps/dir/Point%20Cook%20VIC%203030/Point%20Cook%20Coastal%20Park%2C%20Point%20Cook%20VIC/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Point Cook -> Cheetham Wetlands 10:00 | https://www.google.com/maps/dir/Point%20Cook%20VIC%203030/Cheetham%20Wetlands%2C%20Point%20Cook%20VIC/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Endeavour Hills -> Churchill National Park 10:00 | https://www.google.com/maps/dir/Endeavour%20Hills%20VIC%203802/Churchill%20National%20Park%2C%20Rowville%20VIC/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Endeavour Hills -> Lysterfield Park 10:00 | https://www.google.com/maps/dir/Endeavour%20Hills%20VIC%203802/Lysterfield%20Park%2C%20Lysterfield%20South%20VIC/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Endeavour Hills -> James Alexander Reserve 10:00 | https://www.google.com/maps/dir/Endeavour%20Hills%20VIC%203802/James%20Alexander%20Reserve%2C%20Endeavour%20Hills%20VIC/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+- Wheelers Hill -> Jells Park 10:00 | https://www.google.com/maps/dir/Wheelers%20Hill%20VIC%203150/Jells%20Park%2C%20Wheelers%20Hill%20VIC/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
