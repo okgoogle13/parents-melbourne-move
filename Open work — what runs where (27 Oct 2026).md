@@ -7,8 +7,8 @@ Rule: one session edits the workbook at a time. Commit and push before a cloud s
 ## Cloud session (claude.ai/code)
 | # | Task | Notes |
 |---|---|---|
-| C1 | Finish suburb source runs (col Z, CHECKED): Sassafras, The Basin, Mount Evelyn, Warrandyte, Hurstbridge, Seaford, Mount Martha, Dromana, Torquay; then the rest of the 51 | 19 of 65 rows have CHECKED notes. ABS QuickStats, Wikipedia, healthdirect, shire sites |
-| C2 | Demography + migrants: new columns from ABS 2021 QuickStats (median age, % 65+, % overseas-born, % India-born, Indian ancestry, Hinduism/Sikhism, top languages) | Not in the workbook today; only scattered in col Z. Fix the overseas-born definition issue (report item 11) |
+| C1 | **DONE 27 Oct (cloud): all 51 passing rows CHECKED; flags in pointer change log.** Finish suburb source runs (col Z, CHECKED): Sassafras, The Basin, Mount Evelyn, Warrandyte, Hurstbridge, Seaford, Mount Martha, Dromana, Torquay; then the rest of the 51 | 19 of 65 rows have CHECKED notes. ABS QuickStats, Wikipedia, healthdirect, shire sites |
+| C2 | **DONE 27 Oct (cloud): SuburbScorecard cols AK–AW.** Demography + migrants: new columns from ABS 2021 QuickStats (median age, % 65+, % overseas-born, % India-born, Indian ancestry, Hinduism/Sikhism, top languages) | Not in the workbook today; only scattered in col Z. Fix the overseas-born definition issue (report item 11) |
 | C3 | Re-check estimate scores N (nature), P (Indian community), R (village), V (city trip) against C1/C2 evidence | Change only with a source; log every change |
 | C4 | ED facts (Chrome prompt Task 3) and "major ED" column for the Peninsula (report item 3) | Hospital websites are readable without Chrome |
 | C5 | Train facts (Task 5a–c): station open, frequency, time to Southern Cross | PTV / V/Line / Wikipedia |
