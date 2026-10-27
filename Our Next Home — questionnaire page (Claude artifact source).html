@@ -43,6 +43,7 @@ fieldset{border:0;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;
 legend{font-weight:600;padding:0;margin-bottom:6px}
 .tag{font:500 12px var(--body);color:var(--muted);margin-right:6px;font-variant-numeric:tabular-nums}
 .help{font-size:14px;color:var(--muted);margin:-4px 0 4px}
+.case{font-size:15px;margin:0 0 4px;padding:8px 12px;border-left:3px solid var(--line);background:var(--bg);border-radius:0 6px 6px 0}
 .decided{font-size:14px;background:var(--warn-soft);color:var(--warn);border-radius:6px;padding:6px 10px;margin:0 0 4px}
 label.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:8px;cursor:pointer}
 label.opt:has(input:checked){border-color:var(--accent);background:var(--accent-soft)}
@@ -72,7 +73,7 @@ textarea{min-height:70px;resize:vertical}
   <header>
     <h1>Our Next Home: family priorities</h1>
     <p class="lede">One person per submission: Mum, Dad or Me. There are no right or wrong answers. “E — None of these / depends” is a real answer; if you pick it, write what was said in that section's notes.</p>
-    <p class="lede">Round 3: thanks for your priorities. Last step: three quick “which would you choose?” questions, about 2 minutes each.</p>
+    <p class="lede">Round 4: one more “which would you prefer?” question (Q13d), about 2 minutes. Your earlier answers are already saved.</p>
   </header>
 
   <div class="strip">
@@ -111,7 +112,7 @@ textarea{min-height:70px;resize:vertical}
 const E = "E — None of these / depends (see notes)";
 const withE = a => a.concat([E]);
 const LEVELS = ["A — Not needed","B — Nice to have","C — Important","D — Essential"];
-// gap:true = round 3 (27 Oct 2026): Q10-Q12 trade-offs, re-asked because the earlier answers look like placeholders. Shown in "still needed" mode.
+// gap:true = round 4 (28 Oct 2026): Q13d only, shown in "still needed" mode. Q13d is reference-only; it feeds no weight. Round 3 (Q10-Q12) is complete.
 const SECTIONS = [
  {title:"Coorabell", help:"Thinking back to daily life in Coorabell.", items:[
   {tag:"Q1", q:"What did you love most about daily life in Coorabell?", opts:withE(["A — Green views and quiet","B — Being near the beach","C — The village and its people","D — The space and the garden"])},
@@ -137,10 +138,14 @@ const SECTIONS = [
   {tag:"Q9", q:"Which one thing would make you feel most at home in the community?", opts:withE(["A — A church or place of worship nearby","B — Indian groceries and restaurants","C — Friends who share your language or culture","D — Friendly neighbours of any background"])},
   {tag:"Q8-Q9 Notes", notes:true}]},
  {title:"Pick one", help:"Real places force trade-offs. Pick the one you'd actually choose.", items:[
-  {tag:"Q10", q:"Which would you choose?", opts:withE(["A — A forest street, 35 min from Glen Waverley","B — A leafy suburban street, 15 min from Glen Waverley"]), gap:true},
-  {tag:"Q11", q:"Which would you choose?", opts:withE(["A — Flat suburban streets, beach 10 min away","B — Hills and bush, beach an hour away"]), gap:true},
-  {tag:"Q12", q:"Which would you choose?", opts:withE(["A — A quiet street, driving 15 min to the shops and doctor","B — A busier street, walking to the shops, doctor and station"]), gap:true},
+  {tag:"Q10", q:"Which would you choose?", opts:withE(["A — A forest street, 35 min from Glen Waverley","B — A leafy suburban street, 15 min from Glen Waverley"])},
+  {tag:"Q11", q:"Which would you choose?", opts:withE(["A — Flat suburban streets, beach 10 min away","B — Hills and bush, beach an hour away"])},
+  {tag:"Q12", q:"Which would you choose?", opts:withE(["A — A quiet street, driving 15 min to the shops and doctor","B — A busier street, walking to the shops, doctor and station"])},
   {tag:"Q13", q:"Which would you choose?", opts:withE(["A — Indian shops and community in your own suburb, less green","B — Very green, community a 30-min drive away"])},
+  {tag:"Q13d", q:"If both options were within 30 minutes of family, which would you prefer for everyday living?", cases:[
+    "A. A very green, peaceful village or bushland-edge suburb with trails and natural scenery nearby. Most neighbours would not share your background. Indian groceries, a Hindu temple, and churches would be about 30 minutes' drive away.",
+    "B. A more multicultural neighbourhood where many neighbours are from Indian and other migrant backgrounds. Indian groceries, Hindu temples, and churches would be close by, but with fewer trees, trails, and natural views nearby."],
+   opts:["A strongly","A slightly","No strong preference","B slightly","B strongly"], gap:true},
   {tag:"Q13b", q:"Which would you choose?", opts:withE(["A — Scenic country or coastal town, 60–90 min from family","B — Leafy metropolitan suburb within 35 min of family"])},
   {tag:"Q13c", q:"Which would you choose?", opts:withE(["A — Inland forest, hills and gardens","B — Coastal or bay town with greenery and water walks"])},
   {tag:"Q10-Q13c Notes", notes:true, gap:true}]},
@@ -190,6 +195,7 @@ SECTIONS.forEach((s,si)=>{
       fs.append(lg);
       if(it.decided) fs.append(el("p",{className:"decided",textContent:it.decided}));
       if(it.help) fs.append(el("p",{className:"help",textContent:it.help}));
+      if(it.cases) it.cases.forEach(t=>fs.append(el("p",{className:"case",textContent:t})));
       const box = el("div",{className:it.scale?"scale":""}); if(!it.scale) box.style.cssText="display:flex;flex-direction:column;gap:6px";
       it.opts.forEach((o,oi)=>{
         const inp = el("input",{type:"radio",name:it.tag,value:o,id:id+"_"+oi});
@@ -258,7 +264,7 @@ function textFor(rec){return ["Person: "+rec.person,"Saved: "+rec.savedAt,"Mode:
 document.getElementById("save").addEventListener("click",async()=>{
   const {a,miss}=update();
   if(miss.length){ setStatus("Still to answer: "+miss.join(", ")+".",false); const f=form.querySelector(`fieldset[data-tag="${CSS.escape(miss[0])}"]`); f&&f.scrollIntoView({behavior:"smooth",block:"center"}); return; }
-  const rec={person:who, savedAt:new Date().toISOString(), mode:document.getElementById("gapsOnly").checked?"round 3 (Q10-Q12)":"full", answers:a, answeredCount:Object.keys(a).length};
+  const rec={person:who, savedAt:new Date().toISOString(), mode:document.getElementById("gapsOnly").checked?"round 4 (Q13d)":"full", answers:a, answeredCount:Object.keys(a).length};
   if(!db){ document.getElementById("fallback").hidden=false; document.getElementById("copyText").value=textFor(rec); setStatus("Saving isn't available here. Copy the answers below.",false); return; }
   const btn=document.getElementById("save"); btn.disabled=true; setStatus("Saving…",true);
   try{

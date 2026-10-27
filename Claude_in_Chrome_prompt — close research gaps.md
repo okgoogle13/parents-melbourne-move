@@ -48,11 +48,13 @@ Look up each address below. Record whether it is in a Bushfire Management Overla
 Addresses (from my saved listings): 67 Donna Buang Road Warburton; 24 Monbulk Road, 16 Forest Road, 3 Forest Road, 11 Dalkeith Crescent, 84 Belgrave Gembrook Road Belgrave; 7 Gordon Avenue and 85 Terrys Avenue Tecoma; 29 Campbell Street Diamond Creek; 28 Stradbroke Avenue, 2 Bader Court, 35 Mountain Avenue Frankston South; 54 Granya Grove, 110 Koornalla Crescent, 1374 Nepean Highway Mount Eliza; 4 McArthur Street Dromana; 36 Arthurs Avenue McCrae; 23 Sherwood Crescent Mount Martha; 6 Beales Street and 13 Harcombe Crescent Torquay; 1/192 Nepean Highway Seaford; 3 Fiocchi Avenue Frankston.
 Table: Address | Suburb | BMO yes/no | Bushfire prone area yes/no | Flood overlay (type or none) | URL | Tag
 
-TASK 7 — Community access (Google Maps search, Driving, "Leave now")
-For each suburb, search from the suburb centre and record the nearest of each, with name and drive minutes:
-a) "Indian grocery" b) "Indian restaurant" c) "Hindu temple" or "gurdwara" d) "church"
-Suburbs: Upwey, Belgrave, Upper Ferntree Gully, Eltham, Diamond Creek, Frankston South, Mornington, Woodend, Highton, Warragul, Croydon, Berwick, Sassafras, The Basin, Mount Evelyn, Warrandyte, Hurstbridge, Seaford, Mount Martha, Dromana, Torquay.
-Table: Suburb | Type | Nearest name | Min drive | Map URL | Tag
+TASK 7 — Community access (Google Maps search, Driving, "Leave now") [updated 28 Oct 2026]
+For each suburb, search from the suburb centre and record the NEAREST of each, with name, address and drive minutes. Required for every suburb (all three):
+a) "Indian grocery" b) "Hindu temple" c) "church"
+Use the generic nearest result of each type, not one particular institution. Optional extras if quick: "Indian restaurant", "gurdwara".
+Suburbs (start with these; then the rest of the passing rows in SuburbScorecard): Frankston, Mordialloc, Seaford, Mentone, Altona, Chelsea, Mornington, Newport, Berwick, Upwey, Rosebud, Belgrave, Rye, Dromana, Torquay, Upper Ferntree Gully, Eltham, Diamond Creek, Frankston South, Woodend, Highton, Warragul, Croydon, Sassafras, The Basin, Mount Evelyn, Warrandyte, Hurstbridge, Mount Martha.
+Community comparator suburbs: to be added here once the family approves the comparator list (proposal in "Community comparators — research (28 Oct 2026).md").
+Table: Suburb | Type | Nearest name | Address | Min drive | Map URL | Tag
 
 FINAL REPLY
 All seven tables as markdown pipe tables, then a short "Problems" list (skipped sites, not-found values, anything ambiguous).
