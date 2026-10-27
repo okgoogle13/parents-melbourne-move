@@ -1,1 +1,5 @@
 .DS_Store
+
+# handoff-doc plugin state (auto-generated per session)
+.claude/handoff-nudge-state.json
+.claude/handoffs/
