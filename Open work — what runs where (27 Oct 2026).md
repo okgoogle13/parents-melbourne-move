@@ -9,7 +9,7 @@ Rule: one session edits the workbook at a time. Commit and push before a cloud s
 |---|---|---|
 | C1 | **DONE 27 Oct (cloud): all 51 passing rows CHECKED; flags in pointer change log.** Finish suburb source runs (col Z, CHECKED): Sassafras, The Basin, Mount Evelyn, Warrandyte, Hurstbridge, Seaford, Mount Martha, Dromana, Torquay; then the rest of the 51 | 19 of 65 rows have CHECKED notes. ABS QuickStats, Wikipedia, healthdirect, shire sites |
 | C2 | **DONE 27 Oct (cloud): SuburbScorecard cols AK–AW.** Demography + migrants: new columns from ABS 2021 QuickStats (median age, % 65+, % overseas-born, % India-born, Indian ancestry, Hinduism/Sikhism, top languages) | Not in the workbook today; only scattered in col Z. Fix the overseas-born definition issue (report item 11) |
-| C3 | Re-check estimate scores N (nature), P (Indian community), R (village), V (city trip) against C1/C2 evidence | Change only with a source; log every change |
+| C3 | **DONE 28 Oct (cloud): 13 N/R/V changes; P unchanged pending family decision.** Re-check estimate scores N (nature), P (Indian community), R (village), V (city trip) against C1/C2 evidence | Change only with a source; log every change |
 | C4 | ED facts (Chrome prompt Task 3) and "major ED" column for the Peninsula (report item 3) | Hospital websites are readable without Chrome |
 | C5 | Train facts (Task 5a–c): station open, frequency, time to Southern Cross | PTV / V/Line / Wikipedia |
 | C6 | Price conflicts (Task 4) from PRD, property.com.au, Microburbs where readable | realestate.com.au rows stay for Chrome |
@@ -22,7 +22,7 @@ Rule: one session edits the workbook at a time. Commit and push before a cloud s
 | B1 | Task 1: realestate.com.au under-$1.5M searches (Williamstown, Blackburn, Glen Waverley) |
 | B2 | Task 2: Google Maps "Depart at" drive times (10:00 and 08:00) |
 | B3 | Task 6: VicPlan bushfire/flood overlays for 23 listing addresses |
-| B4 | Task 7: nearest Indian grocery / temple / church with drive minutes |
+| B4 | Task 7: nearest Indian grocery, Hindu temple **and** church with drive minutes (all passing suburbs, plus community comparators once approved). Feeds the P decision |
 | B5 | Listings tab refresh from the "Parents." collection |
 
 ## People, not Claude
