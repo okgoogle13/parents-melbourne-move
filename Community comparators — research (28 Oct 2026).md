@@ -234,3 +234,42 @@ Proposed; family to confirm.
 - Endeavour Hills -> Lysterfield Park 10:00 | https://www.google.com/maps/dir/Endeavour%20Hills%20VIC%203802/Lysterfield%20Park%2C%20Lysterfield%20South%20VIC/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
 - Endeavour Hills -> James Alexander Reserve 10:00 | https://www.google.com/maps/dir/Endeavour%20Hills%20VIC%203802/James%20Alexander%20Reserve%2C%20Endeavour%20Hills%20VIC/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
 - Wheelers Hill -> Jells Park 10:00 | https://www.google.com/maps/dir/Wheelers%20Hill%20VIC%203150/Jells%20Park%2C%20Wheelers%20Hill%20VIC/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+
+## Final checks before workbook entry (27 Oct 2026 UTC)
+
+Status: approved 6 still research-only. Point Cook conditional (not to be added). Tarneit excluded. Workbook not modified.
+
+### 1. 08:00 weekday Glen Waverley drive (Checked)
+Basis: Google Maps driving, "Depart at" Wed 28 Oct 2026 08:00, typical-traffic range, suburb centre → Glen Waverley VIC 3150. Read headlessly on 27 Oct 2026 14:38 UTC (28 Oct 01:38 Melbourne). Pass = top of range ≤ 90 min.
+
+| Suburb | Typical range | Top of range | Distance / route | 90-min cap at 08:00 | Link |
+|---|---|---|---|---|---|
+| Springvale | 10–35 min | 35 | 8.3 km, Springvale Rd | Pass | https://www.google.com/maps/dir/Springvale%20VIC%203171/Glen%20Waverley%20VIC%203150/data=!4m6!4m5!2m3!6e0!7e2!8j1793174400!3e0 |
+| Clayton South | 16–40 min | 40 | 11.4 km, Springvale Rd | Pass | https://www.google.com/maps/dir/Clayton%20South%20VIC%203169/Glen%20Waverley%20VIC%203150/data=!4m6!4m5!2m3!6e0!7e2!8j1793174400!3e0 |
+| Keysborough | 18–30 min | 30 | 21.0 km, M3 | Pass | https://www.google.com/maps/dir/Keysborough%20VIC%203173/Glen%20Waverley%20VIC%203150/data=!4m6!4m5!2m3!6e0!7e2!8j1793174400!3e0 |
+| Clyde North | 35 min–1 hr 10 | 70 | 42.0 km, Thompsons Rd and M3 | Pass (over a 60-min preference) | https://www.google.com/maps/dir/Clyde%20North%20VIC%203978/Glen%20Waverley%20VIC%203150/data=!4m6!4m5!2m3!6e0!7e2!8j1793174400!3e0 |
+| Endeavour Hills | 18–35 min | 35 | 18.6 km, M3 | Pass | https://www.google.com/maps/dir/Endeavour%20Hills%20VIC%203802/Glen%20Waverley%20VIC%203150/data=!4m6!4m5!2m3!6e0!7e2!8j1793174400!3e0 |
+| Wheelers Hill | 4–12 min | 12 | 2.6 km, Springvale Rd | Pass | https://www.google.com/maps/dir/Wheelers%20Hill%20VIC%203150/Glen%20Waverley%20VIC%203150/data=!4m6!4m5!2m3!6e0!7e2!8j1793174400!3e0 |
+
+Point Cook (conditional, earlier check): 55 min–1 hr 40 at 08:00 → top 100 min, **fails** the 90-min cap at peak; 45 min–1 hr 10 at 10:00.
+
+### 2. Community listings (Google Maps place listings, read 27 Oct 2026 UTC)
+| Place | Result | Evidence |
+|---|---|---|
+| Sarawan Spices, 335 Clayton Rd, Clayton | Confirmed operating | Google Business Profile: "Indian grocery store", rating 4.5, opening hours shown, phone +61 3 9544 6766. https://www.google.com/maps/search/Indian%20grocery%20store%20Clayton%20South |
+| Shrinathji Haveli (Vaishnav Sangh of Melbourne), 3-5 Princes Domain Dr, Hallam | Confirmed operating | Two Google listings at this address, "Hindu temple", 57 and 64 reviews, hours shown. https://www.google.com/maps/search/Hindu%20temple%20Hallam |
+| GROCERZ Point Cook, Unit 2/22-30 Wallace Ave | Confirmed operating | Google Business Profile: "Indian grocery store", hours and phone +61 469 380 912 shown. https://www.google.com/maps/search/Indian%20grocery%20store%20Point%20Cook |
+| Endeavour Spices, 2 Raymond McMahon Blvd, Endeavour Hills | **Needs verification** | Not found on Google Maps by name or in an "Indian grocery store Endeavour Hills" search; only a directory listing. Replaced as the access measure (below). |
+
+Replacement for Endeavour Hills: India At Home – Dandenong, Shop 343, Dandenong Plaza, 49 McCrae St (Google Business Profile, "Indian grocery store", hours shown). Drive 8–12 min, 5.5 km (Depart at 10:00). https://www.google.com/maps/search/Indian%20grocery%20store%20Endeavour%20Hills%20VIC ; https://www.google.com/maps/dir/Endeavour%20Hills%20VIC%203802/49%20McCrae%20Street%2C%20Dandenong%20VIC%203175/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+
+Extra for Clayton South: Little India Mart, 2/1310 Centre Rd (Google Business Profile, hours shown), 4–6 min, 2.5 km. The listing does not print the suburb; Google placed the address in Clayton South. https://www.google.com/maps/dir/Clayton%20South%20VIC%203169/1310%20Centre%20Road%2C%20Clayton%20South%20VIC%203169/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+
+### 3. Clyde North church (Checked)
+St Thomas The Apostle Catholic Church, **5 Fiorelli Blvd, Clyde North** (Google listing, "Catholic church", 68 reviews, hours shown). Replaces the approximate GCatholic location. Drive 4 min, 1.9 km. https://www.google.com/maps/search/church%20Clyde%20North%20VIC ; https://www.google.com/maps/dir/Clyde%20North%20VIC%203978/5%20Fiorelli%20Boulevard%2C%20Clyde%20North%20VIC%203978/data=!4m6!4m5!2m3!6e0!7e2!8j1793181600!3e0
+
+### 4. Everyday nature access (Potential both suburbs)
+| Suburb | Walkable from typical streets | Short drive | Mainly a destination? | Verdict |
+|---|---|---|---|---|
+| Endeavour Hills | Yes for the central and northern streets: Casuarina Forest / James Alexander Reserve is 1.1 km from the suburb centre (Checked distance); walkability from a given street is an Estimate | Yes: reserve 3 min; Churchill National Park 8–10 min (Checked) | No for the reserve; Churchill NP and Lysterfield are weekend-type visits | **Both**: nature and community (Indian grocer 8–12 min, Hindu temple 8–14, church 2) are realistic weekly |
+| Wheelers Hill | Only from the eastern streets near Jells Rd: Jells Park is 2.6 km from the centre (Checked distance; walkability an Estimate) | Yes: 6 min (Checked) | Partly: a 127 ha park reached mostly by car | **Both, community-lighter**: grocer 6–9 min and church 4 min are everyday; nearest Hindu temple 16–35 min; diversity band Medium |
