@@ -253,7 +253,7 @@ indicators:
 
   - id: rba_next_move
     name: Next RBA decision outlook
-    value: Further rise highly likely on 3 November 2026
+    value: Further rise highly likely on 3 November
     unit: null
     as_at: 2026-10-28
     scope: Australia
@@ -459,7 +459,7 @@ scenarios:
       source_attribution: null
       pdf_quote: "Remain patient; buy only a genuinely suitable, well-priced house"
     probability_language:
-      value: most_likely_current_path
+      value: The most likely outcome follows NAB’s October forecast
       kind: statement
       label: Estimate
       provenance: pdf
@@ -560,10 +560,10 @@ market_timing_tiers:
       three_month_change_pct: {value: 0.0, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "flat over three months"}
       annual_sales: {value: 532, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
       active_listings: {value: 38, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
-      why: {value: "Strongest recent momentum. Beach, reserves, hospital and train access.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Beach, reserves, hospital and train access."}
+      why: {value: "Strongest recent momentum: $860,000 house median, +9.6% annually, flat over three months. Beach, reserves, hospital and train access.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Beach, reserves, hospital and train access."}
       watch_outs: {value: "Large suburb with variable streets; community infrastructure less concentrated.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Large suburb with variable streets; community infrastructure less concentrated."}
       buyer_approach: {value: "Inspect broadly; act only for a well-located, sound house supported by recent settled sales.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Inspect broadly; act only for a well-located, sound house supported by recent settled sales."}
-      modelled_forecast: {three_month_pct: [-4, -2], six_month_pct: [-5, -3], nine_month_pct: [-6, -3], twelve_month_pct: [-5, -2], twenty_four_month_pct: [-3, 6], confidence: moderate, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
+      modelled_forecast: {three_month_pct: {low: -4, high: -2}, six_month_pct: {low: -5, high: -3}, nine_month_pct: {low: -6, high: -3}, twelve_month_pct: {low: -5, high: -2}, twenty_four_month_pct: {low: -3, high: 6}, confidence: moderate, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
 
     - name: Endeavour Hills
       tier: {value: priority, kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Priority targets"}
@@ -572,10 +572,10 @@ market_timing_tiers:
       annual_change_pct: {value: 5.3, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "+5.3% annually"}
       annual_sales: {value: 278, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "278 annual sales"}
       active_listings: {value: 28, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
-      why: {value: "Best \"both\" option: strong bush and park access.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "plus strong bush and park access"}
+      why: {value: "Best “both” option: $853,000 median, +5.3% annually, 278 annual sales, plus strong bush and park access.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "plus strong bush and park access"}
       watch_outs: {value: "Less coastal or village character; property condition and street location matter.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Less coastal or village character; property condition and street location matter."}
       buyer_approach: {value: "High-conviction suburb; move for a suitable low-maintenance house near recent comparables.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "High-conviction suburb; move for a suitable low-maintenance house near recent comparables."}
-      modelled_forecast: {three_month_pct: [-4, -2], six_month_pct: [-5, -2], nine_month_pct: [-5, -2], twelve_month_pct: [-4, -1], twenty_four_month_pct: [-2, 7], confidence: moderate, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
+      modelled_forecast: {three_month_pct: {low: -4, high: -2}, six_month_pct: {low: -5, high: -2}, nine_month_pct: {low: -5, high: -2}, twelve_month_pct: {low: -4, high: -1}, twenty_four_month_pct: {low: -2, high: 7}, confidence: moderate, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
 
     - name: Springvale
       tier: {value: priority, kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Priority targets"}
@@ -584,10 +584,10 @@ market_timing_tiers:
       annual_change_pct: {value: 6.2, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "+6.2% annually"}
       annual_sales: {value: 164, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
       active_listings: {value: 13, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "only 13 active listings"}
-      why: {value: "Resilient momentum; strong Indian-community infrastructure.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "strong Indian-community infrastructure"}
+      why: {value: "Resilient momentum: $924,000 median, +6.2% annually, only 13 active listings; strong Indian-community infrastructure.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "strong Indian-community infrastructure"}
       watch_outs: {value: "Limited nature and green space; less traditional leafy family-suburb feel.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Limited nature and green space; less traditional leafy family-suburb feel."}
       buyer_approach: {value: "Target only if the house offers genuine long-term suitability and good access to priority amenities.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Target only if the house offers genuine long-term suitability and good access to priority amenities."}
-      modelled_forecast: {three_month_pct: [-4, -2], six_month_pct: [-5, -2], nine_month_pct: [-5, -2], twelve_month_pct: [-4, -1], twenty_four_month_pct: [-2, 6], confidence: moderate, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
+      modelled_forecast: {three_month_pct: {low: -4, high: -2}, six_month_pct: {low: -5, high: -2}, nine_month_pct: {low: -5, high: -2}, twelve_month_pct: {low: -4, high: -1}, twenty_four_month_pct: {low: -2, high: 6}, confidence: moderate, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
 
     - name: Seaford
       tier: {value: priority, kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Priority targets"}
@@ -596,10 +596,10 @@ market_timing_tiers:
       annual_change_pct: {value: 4.7, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "+4.7% annually"}
       annual_sales: {value: 241, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "241 annual sales"}
       active_listings: {value: 20, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
-      why: {value: "Good balance of affordability, coastal amenity and family appeal.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Good balance of affordability, coastal amenity and family appeal"}
+      why: {value: "Good balance of affordability, coastal amenity and family appeal: $885,000 median, +4.7% annually, 241 annual sales.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Good balance of affordability, coastal amenity and family appeal"}
       watch_outs: {value: "Less concentrated Indian-community infrastructure; coastal, flood and drainage checks matter.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "coastal, flood and drainage checks matter"}
       buyer_approach: {value: "Inspect actively; negotiate from recent settled sales rather than paying a coastal premium.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "negotiate from recent settled sales rather than paying a coastal premium"}
-      modelled_forecast: {three_month_pct: [-4, -2], six_month_pct: [-5, -3], nine_month_pct: [-6, -3], twelve_month_pct: [-5, -2], twenty_four_month_pct: [-3, 6], confidence: moderate, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
+      modelled_forecast: {three_month_pct: {low: -4, high: -2}, six_month_pct: {low: -5, high: -3}, nine_month_pct: {low: -6, high: -3}, twelve_month_pct: {low: -5, high: -2}, twenty_four_month_pct: {low: -3, high: 6}, confidence: moderate, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
 
     - name: Keysborough
       tier: {value: conditional, kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Conditional targets"}
@@ -608,10 +608,10 @@ market_timing_tiers:
       annual_change_pct: {value: 3.2, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "+3.2% annually"}
       annual_sales: {value: 355, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
       active_listings: {value: 25, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
-      why: {value: "Reasonable family and community access, but ample listings and rental stock.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "but ample listings and rental stock"}
+      why: {value: "Reasonable family and community access; $960,000 median, +3.2% annually, but ample listings and rental stock.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "but ample listings and rental stock"}
       when_to_prioritise: {value: "When a well-located, well-configured house appears.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "When a well-located, well-configured house appears."}
       buyer_approach: {value: "Monitor and be selective; no need to compete for a generic house.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Monitor and be selective; no need to compete for a generic house."}
-      modelled_forecast: {three_month_pct: [-4, -2], six_month_pct: [-5, -2], nine_month_pct: [-6, -3], twelve_month_pct: [-5, -2], twenty_four_month_pct: [-3, 6], confidence: moderate, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
+      modelled_forecast: {three_month_pct: {low: -4, high: -2}, six_month_pct: {low: -5, high: -2}, nine_month_pct: {low: -6, high: -3}, twelve_month_pct: {low: -5, high: -2}, twenty_four_month_pct: {low: -3, high: 6}, confidence: moderate, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
 
     - name: Mordialloc
       tier: {value: conditional, kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Conditional targets"}
@@ -621,10 +621,10 @@ market_timing_tiers:
       quarterly_change_pct: {value: -2.88, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "−2.88% quarterly house change"}
       annual_sales: {value: 58, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
       active_listings: {value: 8, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
-      why: {value: "Strong beach, pier, train and village appeal, but prices are falling.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Strong beach, pier, train and village appeal"}
+      why: {value: "Strong beach, pier, train and village appeal, but $1,252,500 median, −9.1% annually and −2.88% quarterly house change.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Strong beach, pier, train and village appeal"}
       when_to_prioritise: {value: "Only for an exceptional, correctly priced house.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Only for an exceptional, correctly priced house."}
       buyer_approach: {value: "Wait for evidence or negotiate hard; do not chase a scarcity premium.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Wait for evidence or negotiate hard; do not chase a scarcity premium."}
-      modelled_forecast: {three_month_pct: [-5, -2], six_month_pct: [-7, -3], nine_month_pct: [-7, -3], twelve_month_pct: [-6, -2], twenty_four_month_pct: [-3, 5], confidence: low_moderate, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
+      modelled_forecast: {three_month_pct: {low: -5, high: -2}, six_month_pct: {low: -7, high: -3}, nine_month_pct: {low: -7, high: -3}, twelve_month_pct: {low: -6, high: -2}, twenty_four_month_pct: {low: -3, high: 5}, confidence: low_moderate, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
 
     - name: Wheelers Hill
       tier: {value: conditional, kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Conditional targets"}
@@ -635,10 +635,10 @@ market_timing_tiers:
       six_month_change_pct: {value: -2.5, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
       annual_sales: {value: 212, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
       active_listings: {value: 23, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
-      why: {value: "Excellent family proximity and Jells Park, but the median is near the $1.5m ceiling and prices have fallen recently.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Excellent family proximity and Jells Park"}
+      why: {value: "Excellent family proximity and Jells Park, but $1,455,000 median is near the $1.5m ceiling and prices have fallen recently.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Excellent family proximity and Jells Park"}
       when_to_prioritise: {value: "Only for an exceptional house with a clear discount.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "with a clear discount"}
       buyer_approach: {value: "Wait or negotiate firmly; near-cap price limits the buyer pool.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Wait or negotiate firmly; near-cap price limits the buyer pool."}
-      modelled_forecast: {three_month_pct: [-5, -2], six_month_pct: [-6, -3], nine_month_pct: [-7, -3], twelve_month_pct: [-6, -2], twenty_four_month_pct: [-3, 5], confidence: moderate, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
+      modelled_forecast: {three_month_pct: {low: -5, high: -2}, six_month_pct: {low: -6, high: -3}, nine_month_pct: {low: -7, high: -3}, twelve_month_pct: {low: -6, high: -2}, twenty_four_month_pct: {low: -3, high: 5}, confidence: moderate, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
 
     - name: Clayton South
       tier: {value: opportunistic_only, kind: statement, label: Estimate, provenance: user_decision, source_id: null, source_attribution: null, note: "User decision 3 (28 Oct 2026) adopts the handover tier; the PDF lists Clayton South under Conditional targets (gap G05)"}
@@ -647,18 +647,18 @@ market_timing_tiers:
       annual_change_pct: {value: 0.3, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "+0.3% annually"}
       annual_sales: {value: 100, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
       active_listings: {value: 14, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
-      why: {value: "Flat momentum and limited green space.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "and limited green space"}
+      why: {value: "Flat momentum—$982,500 median, +0.3% annually—and limited green space.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "and limited green space"}
       when_to_prioritise: {value: "Only for a specific, well-priced property near family, transport, hospital or community facilities.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Only for a specific, well-priced property near family, transport, hospital or community facilities."}
       buyer_approach: {value: "Opportunistic only; negotiate firmly.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Opportunistic only; negotiate firmly."}
-      modelled_forecast: {three_month_pct: [-4, -2], six_month_pct: [-5, -2], nine_month_pct: [-5, -2], twelve_month_pct: [-4, -1], twenty_four_month_pct: [-2, 6], confidence: moderate, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
+      modelled_forecast: {three_month_pct: {low: -4, high: -2}, six_month_pct: {low: -5, high: -2}, nine_month_pct: {low: -5, high: -2}, twelve_month_pct: {low: -4, high: -1}, twenty_four_month_pct: {low: -2, high: 6}, confidence: moderate, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
 
   groupings:
     nature_first:
       suburbs: [Frankston, Seaford, Mordialloc]
       value: >
-        Beaches, reserves, water access and a more relaxed coastal feel, but Indian-community
-        infrastructure is generally less concentrated and some bayside suburbs are expensive or
-        already showing weakness.
+        Nature-first areas — Frankston, Seaford and Mordialloc — offer beaches, reserves, water
+        access and a more relaxed coastal feel, but Indian-community infrastructure is generally less
+        concentrated and some bayside suburbs are expensive or already showing weakness.
       kind: statement
       label: Estimate
       provenance: pdf
@@ -668,8 +668,9 @@ market_timing_tiers:
     community_first:
       suburbs: [Springvale, Clayton South, Keysborough]
       value: >
-        Stronger access to Indian groceries, temples, cultural networks and familiar services, but
-        generally less access to large natural spaces, beaches and leafy surroundings.
+        Community-first areas — Springvale, Clayton South and Keysborough — offer stronger access to
+        Indian groceries, temples, cultural networks and familiar services, but generally less access
+        to large natural spaces, beaches and leafy surroundings.
       kind: statement
       label: Estimate
       provenance: pdf
@@ -679,8 +680,8 @@ market_timing_tiers:
     potential_both:
       suburbs: [Endeavour Hills, Wheelers Hill]
       value: >
-        Endeavour Hills has strong bush and park access plus community infrastructure; Wheelers Hill
-        has excellent family proximity and Jells Park but sits close to the $1.5 million ceiling.
+        Endeavour Hills has strong bush and park access plus community infrastructure, while Wheelers
+        Hill has excellent family proximity and Jells Park but sits close to the $1.5 million ceiling.
       kind: statement
       label: Estimate
       provenance: pdf
@@ -729,7 +730,7 @@ gaps:
   - {id: G11, topic: suburb_order_vs_workbook, status: open, description: "PDF market-timing order (Frankston, Endeavour Hills, Springvale, Seaford...) differs from workbook ranks (Frankston #1, Mordialloc #2, Seaford #3; comparators unranked). The PDF's eight suburbs omit the Clyde North comparator.", pdf_value: null, handover_value: null, resolution: "Tiers kept as market-timing priority only; workbook unchanged. Raised in macro-impact-review.md."}
   - {id: G12, topic: unused_sources, status: open, description: "CBA is in the PDF source log but not cited in the PDF body. Handover lists AFR, Westpac, ANZ, KPMG and Oxford Economics with no values used.", pdf_value: null, handover_value: null, resolution: "Listed in sources.yaml; validator reports them as unreferenced."}
   - {id: G13, topic: circular_source, status: open, description: "The PDF cites this repo's own foundation report as a source.", pdf_value: null, handover_value: null, resolution: "Not treated as independent evidence."}
-  - {id: G14, topic: forecast_horizons, status: open, description: "Handover 9-month horizon (2027-07: -7% to -3%) is wider than the PDF's further fall of about 4%–6% to the trough.", pdf_value: "4%–6% further fall", handover_value: "-7% to -3% at 2027-07", resolution: "PDF governs the trough; horizons shown as handover modelled path only."}
+  - {id: G14, topic: forecast_horizons, status: open, description: "Handover horizons conflict with the PDF trough in three ways: (1) the 9-month (2027-07) and 12-month (2027-10) ranges of -7% to -3% reach below the PDF's further fall of about 4%–6% to the mid-2027 trough; (2) the handover's own mid-2027 path point (about -5% to -4%) does not match its 9-month range; (3) baselines differ: horizons start from PropTrack 2026-09 / Domain 2026-Q3, the PDF from today's prices (28 Oct 2026).", pdf_value: "4%–6% further fall to mid-2027 trough", handover_value: "-7% to -3% at 2027-07 and 2027-10; path -5% to -4% at 2027-06", resolution: "PDF governs the trough; horizons shown as handover modelled path only."}
   - {id: G15, topic: budget_wording, status: open, description: "PDF target is 'below approximately $1.5 million'; workbook Filters!B2 is a confirmed hard cap of $1,500,000 purchase price excluding costs (27 Oct 2026).", pdf_value: "approximately $1.5 million", handover_value: "approximately $1.5m", resolution: "Workbook governs budget."}
   - {id: G16, topic: indicator_dates, status: open, description: "Several indicator dates (auction 2026-10-25, days on market 2026-09, rental vacancy 2026-09) come only from the handover; the PDF gives 'late October' or no date.", pdf_value: null, handover_value: null, resolution: "as_at_provenance recorded per value."}
   - {id: G17, topic: rate_expectations, status: open, description: "The PDF says a further rise is 'highly likely on 3 November' without saying who expects it or by how much. The handover lists an AFR source on two more rises but gives no value.", pdf_value: "further rise highly likely on 3 November", handover_value: null, resolution: "Kept as PDF wording; no size or count added."}

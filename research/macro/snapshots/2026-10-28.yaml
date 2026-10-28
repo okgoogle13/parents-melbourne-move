@@ -251,7 +251,7 @@ indicators:
   pdf_quote: 4.60%; further rise highly likely on 3 November
 - id: rba_next_move
   name: Next RBA decision outlook
-  value: Further rise highly likely on 3 November 2026
+  value: Further rise highly likely on 3 November
   unit: null
   as_at: '2026-10-28'
   scope: Australia
@@ -524,7 +524,7 @@ scenarios:
     source_attribution: null
     pdf_quote: Remain patient; buy only a genuinely suitable, well-priced house
   probability_language:
-    value: most_likely_current_path
+    value: The most likely outcome follows NAB’s October forecast
     kind: statement
     label: Estimate
     provenance: pdf

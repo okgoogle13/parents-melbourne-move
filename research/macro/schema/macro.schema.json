@@ -62,7 +62,16 @@
             "required": ["name", "tier", "rank", "house_median_aud", "buyer_approach", "modelled_forecast"],
             "properties": {
               "tier": {"allOf": [{"$ref": "#/$defs/valueObject"}, {"properties": {"value": {"enum": ["priority", "conditional", "opportunistic_only"]}}}]},
-              "modelled_forecast": {"allOf": [{"$ref": "#/$defs/valueObject"}, {"properties": {"kind": {"const": "modelled_estimate"}}}]}
+              "modelled_forecast": {"allOf": [{"$ref": "#/$defs/valueObject"}, {
+                "required": ["three_month_pct", "six_month_pct", "nine_month_pct", "twelve_month_pct", "twenty_four_month_pct", "confidence"],
+                "properties": {
+                  "kind": {"const": "modelled_estimate"},
+                  "three_month_pct": {"$ref": "#/$defs/range"},
+                  "six_month_pct": {"$ref": "#/$defs/range"},
+                  "nine_month_pct": {"$ref": "#/$defs/range"},
+                  "twelve_month_pct": {"$ref": "#/$defs/range"},
+                  "twenty_four_month_pct": {"$ref": "#/$defs/range"}
+                }}]}
             }
           }
         }

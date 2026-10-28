@@ -65,6 +65,21 @@ def numbers_in(value):
     return []
 
 
+def pdf_urls(pdf_path):
+    """Rebuild URLs from the source-log table: a wrapped URL continues on the next line at the same column."""
+    lines = subprocess.run(["pdftotext", "-layout", str(pdf_path), "-"], capture_output=True, text=True,
+                           check=True).stdout.splitlines()
+    urls = set()
+    for i, line in enumerate(lines):
+        m = re.search(r"https://\S+", line)
+        if not m:
+            continue
+        nxt = lines[i + 1] if i + 1 < len(lines) else ""
+        frag = nxt[m.start():].split()[0] if nxt[m.start():m.start() + 1].strip() else ""
+        urls.add(m.group(0) + frag)
+    return urls
+
+
 def status_for(rule, today):
     d = lambda s: dt.date.fromisoformat(s) if s else None
     if d(rule.get("historical_after")) and today > d(rule["historical_after"]):
@@ -118,9 +133,15 @@ def main():
         if quote and norm(quote) not in pdf_text:
             errors.append(f"pdf_quote not found in PDF at {path}: {quote!r}")
         if vo.get("provenance") == "pdf" and quote:
-            for n in numbers_in(vo.get("value")):
+            for n in numbers_in(vo.get("value")) + numbers_in(vo.get("pct_lower")):
                 if n != 0 and not any(f in norm(quote) for f in number_forms(n)):
                     errors.append(f"value {n} not in its pdf_quote at {path}")
+            # Parent-facing text must be verbatim PDF wording; misses are listed for human review.
+            texts = [vo.get("value"), vo.get("meaning")]
+            texts += [c for row in vo.get("indicators", []) for c in row.values()]
+            for s in texts:
+                if isinstance(s, str) and " " in s and norm(s) not in pdf_text:
+                    info.append(f"paraphrase (not verbatim PDF) at {path}: {s.strip()[:90]!r}")
         sid = vo.get("source_id")
         if sid is None:
             continue
@@ -138,7 +159,11 @@ def main():
         if s["status"] == "superseded":
             errors.append(f"{path} cites superseded source {sid}")
 
-    # 3. Source coverage
+    # 3. Source coverage; PDF-listed URLs must match the PDF exactly
+    in_pdf_urls = pdf_urls(pdf_path)
+    for s in sources["sources"]:
+        if s["in_pdf"] and s["url"] not in in_pdf_urls:
+            errors.append(f"url of {s['id']} does not match any URL in the PDF source log")
     for s in sources["sources"]:
         if s["id"] not in used:
             info.append(f"unreferenced source: {s['id']} (in_pdf={s['in_pdf']})")
