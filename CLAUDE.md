@@ -10,6 +10,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working in this
 
 This is not a software project. It is the research record for choosing suburbs in or around Melbourne for the user's parents (and the user, who lives with them). `main` is the consolidated baseline and mirrors the user's local Mac folder. Work from it. Inspect other branches only if `PROJECT_STATE.md` disagrees with the files on `main`, or a canonical file it names is missing.
 
+## Precedence over global instructions
+
+- If project CLAUDE.md conflicts with global instructions, follow project CLAUDE.md for this repository.
+- Project overrides global defaults where they conflict: use system `python3`, not `.venv`/`uv`; labelled **Estimate** values are allowed; the workbook recalculation check is the project's test/check step.
+
 ## Canonical files (when sources disagree)
 
 1. `Our Next Home — Family Relocation Scoring Model.xlsx`: canonical for suburbs, scores, weights, filters, budget and family responses. The **Filters** tab is the family decision record.
