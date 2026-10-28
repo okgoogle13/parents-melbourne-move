@@ -1,53 +1,40 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Research record for choosing a suburb in or around Melbourne for the user's parents (the user lives with them). Not software. `main` is the baseline; `PROJECT_STATE.md` records when it was last verified against the local Mac folder.
 
-## Start here
+## Read on demand
+- Always: `PROJECT_STATE.md` (canonical versions, next task).
+- Research, reports, scoring or interpreting results: `PROJECT_INSTRUCTIONS.md` (the family brief; overrides this file).
+- Editing the workbook, column map, recalc test, research blockers: `docs/workflow.md`.
+- Status counts, ranks, change log: `scoring-model-pointer.md`.
 
-1. Read `PROJECT_STATE.md`: current baseline, canonical file versions, next task.
-2. Read `PROJECT_INSTRUCTIONS.md`: the user's standing brief. It overrides this file.
-3. For workbook structure, editing procedure and research method, read `docs/workflow.md`.
+## Sources (when they disagree)
+1. `Our Next Home — Family Relocation Scoring Model.xlsx`: canonical for suburbs, scores, weights, filters, budget, responses. **Filters** tab = family decision record.
+2. `scoring-model-pointer.md`.
+3. Other root files. Reports are built from the workbook at a named commit and lag it.
+4. `Archive/`: never a source unless asked.
 
-This is not a software project. It is the research record for choosing suburbs in or around Melbourne for the user's parents (and the user, who lives with them). `main` is the consolidated baseline and mirrors the user's local Mac folder. Work from it. Inspect other branches only if `PROJECT_STATE.md` disagrees with the files on `main`, or a canonical file it names is missing.
-
-## Canonical files (when sources disagree)
-
-1. `Our Next Home — Family Relocation Scoring Model.xlsx`: canonical for suburbs, scores, weights, filters, budget and family responses. The **Filters** tab is the family decision record.
-2. `scoring-model-pointer.md`: tab map, status counts and the workbook change log.
-3. Other root files. Reports (`Suburb shortlist foundation report.*`, `Our Next Home — parent report (…).html`) are derived from the workbook at a named commit and lag it.
-4. `Archive/`: superseded. Never a source unless the user asks.
-
-Read the workbook before answering anything about suburbs, scores, filters or responses. Don't answer from memory or from the reports.
+Answer suburb, score, filter and response questions from the workbook, not memory or reports. Read only the tabs/ranges needed; never dump whole sheets. Currently the file stores no cached formula values, so computed cells (I, M, O, T, X, Y) read as `None`; take them from a recalculated temp copy.
 
 ## Permanent rules
+- No Google Drive, Sheets, Docs or Forms, even if connectors exist. Approved Google Maps drive-time research is fine.
+- Archive, never delete: copy to `Archive/` as `(superseded YYYY-MM-DD, before <change>)`, then edit the root file in place. No near-duplicates in root.
+- One session edits the workbook at a time. Re-read it just before writing; run the recalc test after.
+- Excel-compatible only: no `XMATCH`, `REGEXEXTRACT`, `ARRAYFORMULA`.
 
-- **No Google.** No Drive, Sheets, Docs or Forms, even if connectors exist. An old Google Sheet copy is stale and not a source.
-- **Archive, never delete.** Before changing a file, copy it to `Archive/` with a suffix such as `(superseded 2026-10-28, before <change>)`, then edit the root file in place. No near-duplicates in the root.
-- **One session edits the workbook at a time.** Re-read it immediately before writing.
-- **Keep it Excel-compatible.** No Google-only functions (`XMATCH`, `REGEXEXTRACT`, `ARRAYFORMULA`).
-- **Reports are drafts until the family approves them.** Don't publish or distribute them.
+## Needs the user's explicit approval
+- Weights (PriorityWeights, ForcedChoiceCorrections), the Filters tab, the definition of score P.
+- SuburbScorecard C (shortlist status) and L (hard filter status); adding or removing locations. Check row-1 headers before writing.
+- Substantive report changes (findings, numbers, recommendations) and any publication or distribution. Routine formatting within approved scope doesn't need it.
 
-## Approval boundaries (need the user's explicit approval)
+Display-only, never feeding X, Y or any weight: AX (community band), Q13d, Community comparator rows, ABS demography (AK–AW).
 
-- Family weights (PriorityWeights, ForcedChoiceCorrections), the Filters tab, and the definition of score P (Indian community).
-- Any location status change (SuburbScorecard col L), adding or removing locations, and approved report content.
-- Display-only items stay display-only: col AX (community band), Q13d, the Community comparator rows and ABS demography (AK–AW) never feed X, Y or any weight.
+## Evidence
+- Source every researched fact in SuburbScorecard col Z (plus AC, AE–AJ where relevant).
+- Label values **Checked**, **Estimate**, **Needs verification**, **Needs data** or **N/A**, in the workbook and in answers.
+- Judgement scores (N, P–S, U, V) change only with a cited source, logged in Z. A source supports a judgement; it doesn't make it Checked.
+- State the basis of each drive time ("10:00 weekday, top of range") and price (OnTheHouse AVM ≠ sale median).
 
-## Evidence standards
-
-- Every researched fact gets its source in the suburb's SuburbScorecard col Z (and AC or AE–AJ where relevant).
-- Label every value **Checked** or **Estimate**, in the workbook and in answers. Judgement scores change only with a cited source, logged in col Z.
-- State the basis for every drive time (e.g. "10:00 weekday, top of range") and price (e.g. OnTheHouse "median value" AVM ≠ sale median).
-
-## Recalculation check (run after any workbook change)
-
-Never recalculate the canonical file in place. Work on a temporary copy:
-
-```bash
-T=$(mktemp -d); mkdir "$T/in" "$T/out"
-python3 -I -c 'import openpyxl,sys; openpyxl.load_workbook(sys.argv[1]).save(sys.argv[2])' \
-  "Our Next Home — Family Relocation Scoring Model.xlsx" "$T/in/wb.xlsx"   # strips cached values -> forces full recalc
-soffice --headless --calc --convert-to xlsx --outdir "$T/out" "$T/in/wb.xlsx"
-```
-
-Then load `$T/out/wb.xlsx` with `openpyxl` (`data_only=True`) and check for zero error values (`#REF!`, `#VALUE!`, `#NAME?`, `#DIV/0!`, `#N/A`, `#NUM!`, `#NULL!`). Check that SuburbScorecard X/Y and the passing count change only where intended. Diff against a recalculated pre-change copy; the canonical file stores no cached values. Log the result in `scoring-model-pointer.md` (details in `docs/workflow.md`).
+## Closing and compaction
+- When a task is finished: update `PROJECT_STATE.md` (last completed, next task).
+- On compaction keep: task, branch, canonical file commits, changed files, approvals given, blockers, next action. Drop superseded plans, logs and file dumps.

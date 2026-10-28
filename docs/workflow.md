@@ -1,6 +1,6 @@
 # Workflow and workbook reference
 
-Detail behind `CLAUDE.md`. Status counts, ranks and the change history live in `scoring-model-pointer.md`; this file covers structure and procedure only.
+Procedures loaded on demand from `CLAUDE.md`. Status counts, ranks and the change history live in `scoring-model-pointer.md`; this file covers structure and procedure only.
 
 ## Workbook structure
 
@@ -39,8 +39,36 @@ Ten tabs. Data flows roughly in this order:
 1. Read `PROJECT_STATE.md`, then re-read the workbook immediately before writing.
 2. Copy the workbook to `Archive/` with a `(superseded YYYY-MM-DD, before <change>)` suffix.
 3. Edit with `openpyxl` (keeps formulas). It saves without cached values; Excel and LibreOffice recalculate on open.
-4. Run the recalculation check in `CLAUDE.md` on temporary copies of both the pre-change and post-change files, then diff the recalculated values. Expect 0 errors, and changes only in the intended cells and their dependants (X/Y, passing count).
+4. Run the recalc test below on the pre-change (Archive) and post-change files, then diff the recalculated values. Changes should appear only in the intended cells and their dependants (X/Y, passing count).
+
 5. Add a change-log entry to `scoring-model-pointer.md`: what changed, which cells, sources, the recalc result, and "Pre-change copy in Archive". Update status counts, `Open work — what runs where (27 Oct 2026).md` and `PROJECT_STATE.md`.
+
+
+### Recalc test
+
+Recalculates a temporary copy; never the canonical file. Needs LibreOffice (`brew install --cask libreoffice`; not installed on the Mac as of 28 Oct 2026). Set `WB` to the file under test.
+
+```bash
+WB="Our Next Home — Family Relocation Scoring Model.xlsx"
+SOFFICE=$(command -v soffice || echo /Applications/LibreOffice.app/Contents/MacOS/soffice)
+[ -x "$SOFFICE" ] || echo "LibreOffice not found: test cannot run"
+H0=$(shasum -a 256 "$WB")
+T=$(mktemp -d); mkdir "$T/in" "$T/out"
+python3 -I -c 'import openpyxl,sys; openpyxl.load_workbook(sys.argv[1]).save(sys.argv[2])' "$WB" "$T/in/wb.xlsx"   # strips any cached values -> full recalc
+"$SOFFICE" --headless --calc --convert-to xlsx --outdir "$T/out" "$T/in/wb.xlsx"
+python3 -I -c '
+import openpyxl,sys
+wb=openpyxl.load_workbook(sys.argv[1],data_only=True)
+E={"#REF!","#VALUE!","#NAME?","#DIV/0!","#N/A","#NUM!","#NULL!"}
+err=[(ws.title,c.coordinate) for ws in wb for r in ws.iter_rows() for c in r if c.value in E]
+ws=wb["SuburbScorecard"]
+num=lambda col:sum(isinstance(ws[f"{col}{r}"].value,(int,float)) for r in range(2,ws.max_row+1))
+print("errors:",len(err),err[:10],"| X numeric:",num("X"),"| Y ranked:",num("Y"))
+sys.exit(1 if err or not num("Y") else 0)' "$T/out/wb.xlsx" && echo "RECALC OK"
+[ "$H0" = "$(shasum -a 256 "$WB")" ] && echo "canonical unchanged" || echo "CANONICAL CHANGED"
+```
+
+Pass = `RECALC OK` (0 errors, populated X/Y; Y ranked should match the count in `PROJECT_STATE.md`) and `canonical unchanged`. Log the result in `scoring-model-pointer.md`.
 
 Survey import rule: a new RawResponses row per person = their previous latest row + the new round's answers. Store forced-choice answers as the full option text, because the engine reads the "A —"/"B —" prefix.
 
