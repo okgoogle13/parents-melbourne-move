@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Claude Code (claude.ai/code) when working in this repository.
 
 ## Start here
 
@@ -26,6 +26,7 @@ Read the workbook before answering anything about suburbs, scores, filters or re
 - **One session edits the workbook at a time.** Re-read it immediately before writing.
 - **Keep it Excel-compatible.** No Google-only functions (`XMATCH`, `REGEXEXTRACT`, `ARRAYFORMULA`).
 - **Reports are drafts until the family approves them.** Don't publish or distribute them.
+- **Touch only what the request needs.** Don't tidy adjacent cells, formulas, wording or formatting; mention problems instead of fixing them unasked.
 
 ## Approval boundaries (need the user's explicit approval)
 
@@ -41,7 +42,7 @@ Read the workbook before answering anything about suburbs, scores, filters or re
 
 ## Recalculation check (run after any workbook change)
 
-Never recalculate the canonical file in place. Work on a temporary copy:
+Before the change, state which cells, X/Y values and counts should move. Never recalculate the canonical file in place. Work on a temporary copy:
 
 ```bash
 T=$(mktemp -d); mkdir "$T/in" "$T/out"
@@ -51,11 +52,3 @@ soffice --headless --calc --convert-to xlsx --outdir "$T/out" "$T/in/wb.xlsx"
 ```
 
 Then load `$T/out/wb.xlsx` with `openpyxl` (`data_only=True`) and check for zero error values (`#REF!`, `#VALUE!`, `#NAME?`, `#DIV/0!`, `#N/A`, `#NUM!`, `#NULL!`). Check that SuburbScorecard X/Y and the passing count change only where intended. Diff against a recalculated pre-change copy; the canonical file stores no cached values. Log the result in `scoring-model-pointer.md` (details in `docs/workflow.md`).
-
-## Working habits
-
-Adapted from Andrej Karpathy's guidelines (forrestchang/andrej-karpathy-skills).
-
-- **State assumptions; don't pick silently.** If a request has more than one reading, or a source is ambiguous, say so and ask before acting. Push back when the evidence or reasoning is weak.
-- **Touch only what you must.** Every changed cell, line or file should trace to the request. Don't tidy adjacent cells, formulas, wording or formatting. Mention problems you notice; don't fix them unasked.
-- **Define "done" and check it.** Before a workbook or report change, say what should change (which X/Y values, which counts) and confirm it with the recalculation check above.
