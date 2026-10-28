@@ -1,8 +1,9 @@
-# Claude in Chrome prompt — close research gaps (v2, 27 Oct 2026)
+# Claude in Chrome prompt — close research gaps (v2, 27 Oct 2026; Task 8 added 28 Oct 2026)
 
 Replaces v1 (in Archive/). v1 Tasks 1–3 (collection read, drive times, prices) are DONE and already in the workbook; they are removed here.
 v2 covers the gaps found by the 27 Oct research report ("Suburb shortlist foundation report.pdf"): property searches, ED/drive-time errors, price conflicts, train checks, hazard overlays, Indian grocery / worship access.
 Paste everything below the line into Claude in Chrome. It only collects facts; results are written into the workbook afterwards, with sources. Run Tasks 1–3 first (they need realestate.com.au / Maps and go stale); 4–7 can follow.
+Task 8 (added 28 Oct 2026, register B8) checks the 5 Northam St summary before the auction on Sat 14 Nov 2026; run it first if time is short.
 Mount Eliza is no longer searched: the Parents. collection already holds 3 listings under $1.5M there (54 Granya Grove, 110 Koornalla Crescent, 1374 Nepean Highway).
 
 ---
@@ -56,5 +57,13 @@ Suburbs (start with these; then the rest of the passing rows in SuburbScorecard)
 Community comparator suburbs: to be added here once the family approves the comparator list (proposal in "Community comparators — research (28 Oct 2026).md").
 Table: Suburb | Type | Nearest name | Address | Min drive | Map URL | Tag
 
+TASK 8 — Is Glen Waverley a family-and-school buyer market? (5 Northam Street, Glen Waverley) [added 28 Oct 2026]
+Collect evidence for or against this claim: "Glen Waverley is primarily a family-and-school market, so expect competition from school-motivated buyers at auction." Record what the pages say, including evidence against it.
+a) ABS 2021 QuickStats, Glen Waverley (SAL21013): https://abs.gov.au/census/find-census-data/quickstats/2021/SAL21013 . Record: family composition (couple family with children, without children, one parent; % of families), % aged 0–14 and 5–19 if shown, median age, and the same measures for Greater Melbourne or Victoria shown on the page.
+b) School zones, findmyschool.vic.gov.au: search "5 Northam Street, Glen Waverley VIC 3150" for the 2027 school year (or the latest shown). Record the zoned government primary and secondary schools. Is it in the Mount View Primary School zone? Is it in the Glen Waverley Secondary College zone?
+c) Who buys in Glen Waverley: the realestate.com.au and Domain suburb profiles (household or demographic panels, e.g. family households, owner-occupiers, long-term residents), and an agency suburb report if one is easy to find (e.g. Jellis Craig Glen Waverley). Record any statement about buyer types or school-driven demand, quoted exactly.
+d) Listing check, 5 Northam Street (realestate.com.au listing 152636156): https://www.realestate.com.au/property-house-vic-glen+waverley-152636156 . Confirm or correct: price guide $1,550,000–$1,650,000; auction Sat 14 Nov 2026, 11:00 am; 581 m²; 4 bed, 2 bath, 2 car; the exact school wording ("close to" or "zoned"). Record floor area, year built, auction location, and whether a Statement of Information or vendor statement is linked (read only; don't download anything that needs a sign-up or enquiry).
+Table: Item | Value | Comparison (if any) | Quote (for c) | URL | Date read | Tag
+
 FINAL REPLY
-All seven tables as markdown pipe tables, then a short "Problems" list (skipped sites, not-found values, anything ambiguous).
+All eight tables as markdown pipe tables, then a short "Problems" list (skipped sites, not-found values, anything ambiguous).

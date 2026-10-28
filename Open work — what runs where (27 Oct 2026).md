@@ -1,6 +1,6 @@
 # Open work: task register (the only list of open tasks; reviewed 28 Oct 2026)
 
-**Now:** Ready: P4. Blocked: P7 (waits on B4). Awaiting your approval: none outstanding.
+**Now:** Ready: B8, then P8 (auction 14 Nov 2026), then P4. Blocked: P7 (waits on B4). Awaiting your approval: P8.
 When a task finishes, mark it here and set the next task ID in `PROJECT_STATE.md`.
 
 Source: scoring-model-pointer.md, workbook headers, Claude_in_Chrome_prompt v2, foundation report, Talking with Mum.
@@ -18,6 +18,7 @@ Rule: one session edits the workbook at a time. Commit and push before a cloud s
 | C6 | Price conflicts (Task 4) from PRD, property.com.au, Microburbs where readable. Status unverified — confirm before closing | realestate.com.au rows stay for Chrome |
 | C7 | Rewrite the foundation report: it predates round 2/3, final weights and entered scores ("workbook has no scores" is now wrong). Add demography, prices, stations, ED, top-15 under final weights; .md + .pdf; old version to Archive. **Done 28 Oct:** aligned to workbook commit 7de29d5 (ranks, scores, final weights, top 15); three four-suburb viewing options (each meets the viewing-shortlist rule); drive bases labelled per row; Point Cook Conditional, Tarneit and Mount Waverley Excluded; previous .md/.pdf in Archive. Refreshed 28 Oct to the 10:00 comparator basis (workbook 387763a) | Done |
 | C8 | Update scoring-model-pointer.md (stale lines: Mum's 3 Essentials resolved in round 2; status counts) | Every session |
+| C9 | **DONE 28 Oct (cloud): draft built.** One-page decision summary and YAML record for 5 Northam St, Glen Waverley (`research/properties/5-northam-street-glen-waverley.md` / `.yaml`), from workbook 387763a and the buying summary PDF (d46e819). One A4 page via `tools/build_property_pdf.sh`. Not added to Listings (user decision). | Gaps in the YAML; review is P8 |
 
 ## Claude in Chrome (needs your signed-in browser or live Maps)
 | # | Task |
@@ -29,6 +30,7 @@ Rule: one session edits the workbook at a time. Commit and push before a cloud s
 | B5 | Listings tab refresh from the "Parents." collection |
 | B6 | Suitable-property checks for the 6 Community comparators |
 | B7 | Comparator train access — recall-only check of train access for the six Community comparators. Distinct from C5, which covers train facts for passing suburbs |
+| B8 | Task 8 (added 28 Oct 2026): evidence on whether Glen Waverley is a family-and-school buyer market (ABS family composition, school zones for 5 Northam St, suburb-profile buyer types), plus a listing-facts check for 5 Northam St. Feeds P8; run before the 14 Nov auction |
 
 ## People, not Claude
 | # | Task |
@@ -40,6 +42,7 @@ Rule: one session edits the workbook at a time. Commit and push before a cloud s
 | P5 | Q13d answers (reference-only; rows in RawResponses AN / CleanedAnswers 40) |
 | P6 | Point Cook travel decision (currently Conditional) |
 | P7 | Definition of score P (needs the user's approval; waits on B4) |
+| P8 | Review and approve the 5 Northam St decision summary (C9) before the parents see it. Open points: the family-and-school wording is the author's judgement (Needs verification; B8 collects the evidence, then keep, reword or remove); Glen Waverley's $1,763,500 median has no named source. Auction Sat 14 Nov 2026, 11:00 am |
 
 ## Phase 2 readiness (28 Oct 2026)
 

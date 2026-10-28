@@ -1,0 +1,106 @@
+meta:
+  prepared_on: 2026-10-28
+  workbook_commit: "387763a"        # last commit changing the workbook; sha256 d1b95d47…
+  buying_summary_commit: "d46e819"  # commit that added the PDF
+  status: draft_requires_family_review
+  position: caution_set_by_author   # stance stated, not derived
+  property_decision: requires_further_evidence_before_bidding
+  summary_md: research/properties/5-northam-street-glen-waverley.md
+  sources:
+    - id: realestate_listing_152636156
+      url: https://www.realestate.com.au/property-house-vic-glen+waverley-152636156
+      note: Agent claims as supplied by the user; not opened in this session (realestate.com.au blocked; no web research).
+    - id: melbourne_established_house_buying_summary_pdf
+      path: research/inputs/Melbourne_Established_House_Buying_Summary.pdf
+      used_for: [market_timing (section 1), trough_range (section 3 base case), suburb_advantage_wording (section 4)]
+    - id: scoring_workbook
+      path: "Our Next Home — Family Relocation Scoring Model.xlsx"
+      used_for: [Filters!B2, Filters!B6, Filters!B10, "SuburbScorecard C, G, H, J, L, Z, AM, AQ, AU", Listings!G2 and T2 logic]
+    - id: suburb_shortlist_foundation_report
+      path: Suburb shortlist foundation report.md
+      note: Not used for any figure. Glen Waverley median age comes from the workbook (SuburbScorecard!AM7); the report has no Glen Waverley demography.
+
+property:
+  address: 5 Northam Street, Glen Waverley VIC 3150
+  listing_id: "152636156"
+  listed_on: 2026-10-15
+  agents: [Natalie Visic, Alan Zhang]
+  agency: Jellis Craig Glen Waverley
+  property_type: house
+  price_guide_aud: {low: 1550000, high: 1650000}
+  sale_method: auction
+  auction: 2026-11-14T11:00:00+11:00   # AEDT
+  land_m2: 581
+  bedrooms: 4
+  bathrooms: 2
+  car_spaces: 2
+  levels: two                      # agent description
+  renovation: agent_claim_unverified
+  school_claim: close_to_mount_view_primary_agent_claim   # zone not claimed
+  label: Needs verification        # all property fields are agent claims
+
+assessment:
+  purchase_cap_aud: 1500000        # Filters!B2, hard cap; Checked
+  guide_low_over_cap_aud: 50000
+  guide_high_over_cap_aud: 150000
+  budget_test: fail_at_advertised_guide   # Listings!G logic gives "Over cap", so T gives "Fails: budget"
+  glen_waverley_house_median:
+    value_aud: 1763500
+    basis: sale median, rolling 12 months, 454 sales (SuburbScorecard!G7, H7; as at 26 Oct 2026)
+    label: Needs verification      # workbook names no source for this figure
+  drive_to_gw_min: 0
+  stairs_filter: pass              # Filters!B6: stairs allowed (corrected 27 Oct 2026)
+  market_timing:
+    value: further_weakness_plausible_into_h1_2027
+    label: Estimate
+    source: buying summary section 1; base case follows NAB October forecast
+  likely_trough: mid_2027          # Estimate
+  hypothetical_trough:
+    on_1500000_aud: {low: 1410000, high: 1440000}   # buying summary base case; Estimate
+    further_fall_pct: {low: 4, high: 6}
+    loss_on_1500000_aud: {low: 60000, high: 90000}  # Estimate (arithmetic)
+    loss_on_1600000_aud: {low: 64000, high: 96000}  # Estimate (arithmetic)
+  suburb_fit:
+    family_school_market:
+      value: true
+      label: Needs verification    # author's judgement; not in the buying summary or workbook
+    retiree_led_market: false      # author's judgement; ABS 2021 median age 40, 19.8% aged 65+ (SuburbScorecard!AM7, AN7)
+    median_age: {value: 40, label: Checked, source: "SuburbScorecard!AM7, ABS 2021"}
+    nature_access: good_but_not_superior     # judgement; Glen Waverley has no workbook nature score (N)
+    community_band: {value: High, label: Checked, basis: "AX formula on AU7 60.8%, AQ7 8.0% India-born; display-only"}
+    indian_community_fit: high_band_already  # only Clayton South (14.9%) has a higher India-born share among alternatives; secondary priority
+  recommendation: do_not_bid_at_or_above_guide_without_exceptional_justification
+  approval_required: true
+
+decision_tests: [comparable_sales_support_walk_away_price, filters_cap_raise_approved,
+  property_superior_to_realistic_alternatives, building_and_pest_clear,
+  school_zone_verified, title_planning_vendor_statement_clear, hold_7_to_10_years_ok]
+
+alternatives:
+  - {suburb: Glen Waverley, workbook_status: Active shortlist, price_aud: 1763500, price_basis: "sale median, rolling 12m, 454 sales", price_label: Needs verification, drive_to_gw_min: 0, drive_basis: n/a, advantage: "Family already here; multicultural convenience", advantage_source: "SuburbScorecard!F7"}
+  - {suburb: Wheelers Hill, workbook_status: Community comparator, price_aud: 1475000, price_basis: "SOI median, 22 Jun 2025–21 Jun 2026", price_label: Checked, drive_to_gw_min: 12, drive_basis: "10:00 weekday, 28 Oct 2026, top of range", advantage: "Family proximity and Jells Park", advantage_source: "buying summary section 4"}
+  - {suburb: Endeavour Hills, workbook_status: Community comparator, price_aud: 857000, price_basis: "SOI median, 1 Aug 2025–1 Aug 2026", price_label: Checked, drive_to_gw_min: 26, drive_basis: "10:00 weekday, 28 Oct 2026, top of range", advantage: "Bushland and community access", advantage_source: "buying summary section 4"}
+  - {suburb: Frankston, workbook_status: Active shortlist, price_aud: 834296, price_basis: "sale median, rolling 12m (Aussie/Cotality)", price_label: Checked, drive_to_gw_min: 25, drive_basis: "leave now, 26 Oct 2026", advantage: "Beach, reserves and train access", advantage_source: "buying summary section 4"}
+  - {suburb: Seaford, workbook_status: Watchlist, price_aud: 861235, price_basis: "AVM (30 Sep 2026), not a sale median", price_label: Checked, drive_to_gw_min: 24, drive_basis: "leave now, 26 Oct 2026", advantage: "Coastal and wetland lifestyle", advantage_source: "buying summary section 4 (coastal amenity); SuburbScorecard!Z59 (Edithvale-Seaford Wetland)"}
+  - {suburb: Springvale, workbook_status: Community comparator, price_aud: 942500, price_basis: "SOI median, 1 Jul 2025–30 Jun 2026", price_label: Checked, drive_to_gw_min: 26, drive_basis: "10:00 weekday, 28 Oct 2026, top of range", advantage: "Strong Indian-community infrastructure", advantage_source: "buying summary section 4"}
+  - {suburb: Keysborough, workbook_status: Community comparator, price_aud: 975000, price_basis: "SOI median, 1 Jul 2025–30 Jun 2026", price_label: Checked, drive_to_gw_min: 24, drive_basis: "10:00 weekday, 28 Oct 2026, top of range", advantage: "Family and community access", advantage_source: "buying summary section 4"}
+
+gaps:
+  undisclosed_listing_items: [floor_area, year_built, auction_location, price_history, solar, water_tanks, vendor_statement, renovation_permits, building_pest_report]
+  listing_not_independently_checked: All property facts are agent claims supplied by the user; realestate.com.au is not readable from cloud sessions.
+  glen_waverley_not_in_buying_summary: The PDF has no Glen Waverley or 5 Northam Street content (macro gap G02). The family-and-school wording is the author's judgement; Claude in Chrome Task 8 (register B8) collects the evidence.
+  glen_waverley_median_source: SuburbScorecard!Z7 names no source for the $1,763,500 sale median.
+  couples_with_children_figure: Removed (52.3% had no source in the repo; user decision 28 Oct 2026).
+  pdf_vs_workbook_prices:   # PDF medians have no stated source, index or period (macro gap G10); workbook governs
+    - {suburb: Frankston, pdf_aud: 860000, workbook_aud: 834296, workbook_basis: sale median}
+    - {suburb: Endeavour Hills, pdf_aud: 853000, workbook_aud: 857000, workbook_basis: SOI median}
+    - {suburb: Springvale, pdf_aud: 924000, workbook_aud: 942500, workbook_basis: SOI median}
+    - {suburb: Seaford, pdf_aud: 885000, workbook_aud: 861235, workbook_basis: AVM}
+    - {suburb: Keysborough, pdf_aud: 960000, workbook_aud: 975000, workbook_basis: SOI median}
+    - {suburb: Clayton South, pdf_aud: 982500, workbook_aud: 985000, workbook_basis: SOI median}
+    - {suburb: Mordialloc, pdf_aud: 1252500, workbook_aud: 1401241, workbook_basis: AVM}
+    - {suburb: Wheelers Hill, pdf_aud: 1455000, workbook_aud: 1475000, workbook_basis: SOI median}
+  pdf_budget_wording: PDF says "below approximately $1.5 million"; Filters!B2 is a hard cap of $1,500,000 (macro gap G15).
+  pdf_cites_this_repo: The PDF's source log includes this repo's foundation report, so its suburb wording is not independent evidence (macro gap G13).
+  drive_bases_differ: Glen Waverley, Frankston and Seaford use Filters!B10 ("leave now", 26 Oct 2026); the four comparators use the top of the 10:00 weekday range, 28 Oct 2026.
+  vermont_south: Not on SuburbScorecard.

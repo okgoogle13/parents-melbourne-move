@@ -16,4 +16,4 @@ Status counts, ranks and the change history are in `scoring-model-pointer.md`.
 
 ## Next task
 
-P4: family review of both reports.
+B8: Claude in Chrome Task 8 (Glen Waverley buyer-market and listing check), then P8: review the 5 Northam St decision summary (auction 14 Nov 2026). Then P4: family review of both reports.
