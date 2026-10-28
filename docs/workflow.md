@@ -46,7 +46,7 @@ Ten tabs. Data flows roughly in this order:
 
 ### Recalc test
 
-Recalculates a temporary copy; never the canonical file. Needs LibreOffice (`brew install --cask libreoffice`; not installed on the Mac as of 28 Oct 2026). Set `WB` to the file under test.
+Recalculates a temporary copy; never the canonical file. Needs LibreOffice (`brew install --cask libreoffice`). Set `WB` to the file under test.
 
 ```bash
 WB="Our Next Home — Family Relocation Scoring Model.xlsx"
