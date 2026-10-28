@@ -86,4 +86,4 @@ Survey import rule: a new RawResponses row per person = their previous latest ro
 
 ## Git and the local folder
 
-`main` mirrors `/Users/okgoogle13/Projects/Parents Melbourne MOVE/`. Cloud sessions work on a `claude/*` branch and the result is fast-forwarded into `main`. The user then runs `git pull --ff-only` locally. `.claude/handoffs/` files already tracked stay tracked; `.claude/handoff-nudge-state.json` is generated plugin state and is ignored.
+`main` mirrors `/Users/okgoogle13/Projects/Parents Melbourne MOVE/`. Cloud sessions work on a `claude/*` branch and the result is fast-forwarded into `main`. The user then runs `git pull --ff-only` locally. `.claude/handoffs/LATEST.md` is committable; timestamped `HANDOFF_*` files and `.claude/handoff-nudge-state.json` (generated plugin state) are ignored. Cloud sessions see a handoff only after it is committed and pushed.

@@ -13,7 +13,7 @@ Find the right suburbs/areas for my parents (and me, living with them) to move t
 ## Authority order (when sources disagree)
 1. `Our Next Home — Family Relocation Scoring Model.xlsx` — canonical for suburbs, scores, weights, filters, budget and family responses. The **Filters** tab is the current family decision record.
 2. `scoring-model-pointer.md` — tab map and current status summary. Update it whenever the workbook changes.
-3. Other root-level files (survey blueprint, evidence report, priority survey).
+3. Other root-level files; then `reference/` (survey blueprint, evidence report, priority survey — background only).
 4. `Archive/` — superseded. Never use as a source unless I ask.
 
 ## How to work

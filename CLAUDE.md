@@ -3,10 +3,12 @@
 Research record for choosing a suburb in or around Melbourne for the user's parents (the user lives with them). Not software. `main` is the baseline; `PROJECT_STATE.md` records when it was last verified against the local Mac folder.
 
 ## Read on demand
-- Always: `PROJECT_STATE.md` (canonical versions, next task).
+- Always: `PROJECT_STATE.md` (baseline, next task ID).
+- Open tasks, owners, blockers: `Open work — what runs where (27 Oct 2026).md` (the only task register).
 - Research, reports, scoring or interpreting results: `PROJECT_INSTRUCTIONS.md` (the family brief; overrides this file).
 - Editing the workbook, column map, recalc test, research blockers: `docs/workflow.md`.
 - Status counts, ranks, change log: `scoring-model-pointer.md`.
+- `reference/`: background only; read when asked.
 
 ## Sources (when they disagree)
 1. `Our Next Home — Family Relocation Scoring Model.xlsx`: canonical for suburbs, scores, weights, filters, budget, responses. **Filters** tab = family decision record.
@@ -36,5 +38,5 @@ Display-only, never feeding X, Y or any weight: AX (community band), Q13d, Commu
 - State the basis of each drive time ("10:00 weekday, top of range") and price (OnTheHouse AVM ≠ sale median).
 
 ## Closing and compaction
-- When a task is finished: update `PROJECT_STATE.md` (last completed, next task).
+- When a task is finished: mark it in the register, then set the next task ID in `PROJECT_STATE.md`.
 - On compaction keep: task, branch, canonical file commits, changed files, approvals given, blockers, next action. Drop superseded plans, logs and file dumps.

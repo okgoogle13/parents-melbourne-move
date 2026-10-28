@@ -72,14 +72,8 @@ Do not attempt to read or reference Google Drive or external sheets. This local 
 - **27 Oct 2026:** drive times added for Warburton (65 GW / 53 ED, Maroondah) and Frankston South (31 / 4, Peninsula University Hospital), Google Maps leave-now. Column L still "Needs data" for both (price missing).
 - **27 Oct 2026:** added West Footscray, Rosanna, Seaford, Chelsea, Curlewis, McCrae, Mount Martha, Mordialloc, Newport, Arthurs Seat (rows 57–66, Watchlist) and completed Dromana (row 45). (First write of rows 57–63 was overwritten by the parallel workbook repair at 01:53; re-applied on top of the repaired file.) Arthurs Seat price is a sale median from only 5 sales — weak. Mordialloc ED = Sandringham Hospital (24/7, Alfred Health). Drive times: Google Maps leave-now, by suburb name. Prices: OnTheHouse/Cotality AVM estimates, NOT sale medians. Train Yes/No from recall. P/Y fit and lens not assessed. L: Provisional pass for all except Curlewis (Fails: GW drive, 104 min). Rosebud Hospital ED confirmed 24/7 (Peninsula Health) but treats less serious cases; used for McCrae, Mount Martha, Dromana.
 
-## Open work and owners (consolidated 27 Oct 2026)
-Rule: one session edits the workbook at a time. Re-read the file immediately before writing and check its modified time hasn't changed.
-- **Done:** Google-only formulas removed (workbook repair, 01:53); Code.gs to Archive; Listings tab (32 listings); 10 Watchlist suburbs added and Dromana completed; new Chrome research prompt saved; pointer counts corrected.
-- **Research gaps:** drive times and prices DONE (02:30). Still open: (a) under-$1.5M searches for Blackburn, Glen Waverley, Williamstown, Mount Eliza and (b) train checks — realestate.com.au is blocked in the built-in browser, so run Tasks 4–5 of `Claude_in_Chrome_prompt — close research gaps.md` in Claude in Chrome. (c) Optional: re-run drive times at one consistent time for borderline rows (Wonthaggi 88, Torquay 88).
-- **Criteria scores M–V:** done for all 51 passing rows (27 Oct). Judgement scores are estimates; top 15 checked for train/bus, beach, shops & doctor (27 Oct); nature, Indian community, village and city trip still estimates.
-- **Family survey responses:** round 1 (rows 6–8) and round 2 (rows 9–11) recorded. Open: Q10–Q12 from early rows look unreliable (Q11 invalid); re-asked in round 3 and imported (rows 12–14). Survey complete; weights final unless the family revisits them.
-- **Mum's Essentials:** resolved in round 2 (Mum 2, Dad 1, Me 2; within the cap of 2).
-- **Suburb source runs (C1):** done for all 51 passing rows (27 Oct). **Demography (C2):** cols AK–AW done (27 Oct). Next: C3 (re-check N, P, R, V against this evidence; change only with a source and log it).
+## Open work
+Single task register: `Open work — what runs where (27 Oct 2026).md`. Next task ID: `PROJECT_STATE.md`.
 
 
 ## 28 Oct 2026 (foundation report: comparator alignment)
