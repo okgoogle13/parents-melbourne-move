@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "macro.schema.json",
+  "title": "Macro market conditions",
+  "type": "object",
+  "required": ["meta", "bottom_line", "indicators", "forecast", "scenarios", "hypothetical_house", "market_timing_tiers", "buying_rules", "monitoring", "gaps"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["report_id", "version", "prepared_on", "data_current_to", "scope", "freshness_rule", "snapshot", "target_price", "disclaimer", "exclusions", "workbook_relationship"],
+      "properties": {
+        "version": {"type": "string", "pattern": "^\\d{4}\\.\\d{2}\\.\\d{2}\\.\\d+$"},
+        "prepared_on": {"type": "string", "format": "date"},
+        "data_current_to": {"type": "string", "format": "date"}
+      }
+    },
+    "bottom_line": {
+      "type": "object",
+      "required": ["current_conditions", "main_risks", "main_supports", "forecast_range", "practical_timing"],
+      "additionalProperties": {"$ref": "#/$defs/valueObject"}
+    },
+    "indicators": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "allOf": [
+          {"$ref": "#/$defs/valueObject"},
+          {"required": ["id", "name", "value", "unit", "scope"]}
+        ]
+      }
+    },
+    "forecast": {"type": "object", "required": ["primary", "likely_trough", "further_decline_from_today", "caveat", "horizons"]},
+    "scenarios": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "conditions", "effect_on_1_5m_house", "likely_trough", "practical_implication"],
+        "properties": {
+          "id": {"enum": ["downside", "base_case", "upside"]},
+          "conditions": {"$ref": "#/$defs/valueObject"},
+          "effect_on_1_5m_house": {"allOf": [{"$ref": "#/$defs/valueObject"}, {"properties": {"value": {"$ref": "#/$defs/range"}}}]},
+          "likely_trough": {"$ref": "#/$defs/valueObject"},
+          "practical_implication": {"$ref": "#/$defs/valueObject"}
+        }
+      }
+    },
+    "hypothetical_house": {
+      "type": "object",
+      "required": ["current_price", "path"],
+      "properties": {"path": {"type": "array", "items": {"$ref": "#/$defs/valueObject"}}}
+    },
+    "market_timing_tiers": {
+      "type": "object",
+      "required": ["note", "suburbs"],
+      "properties": {
+        "suburbs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "tier", "rank", "house_median_aud", "buyer_approach", "modelled_forecast"],
+            "properties": {
+              "tier": {"allOf": [{"$ref": "#/$defs/valueObject"}, {"properties": {"value": {"enum": ["priority", "conditional", "opportunistic_only"]}}}]},
+              "modelled_forecast": {"allOf": [{"$ref": "#/$defs/valueObject"}, {"properties": {"kind": {"const": "modelled_estimate"}}}]}
+            }
+          }
+        }
+      }
+    },
+    "buying_rules": {"type": "array", "items": {"$ref": "#/$defs/valueObject"}},
+    "monitoring": {"allOf": [{"$ref": "#/$defs/valueObject"}, {"required": ["indicators"]}]},
+    "gaps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "topic", "status", "description", "resolution"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^G\\d{2}$"},
+          "status": {"enum": ["open", "resolved_by_decision"]}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "range": {
+      "type": "object",
+      "required": ["low", "high"],
+      "properties": {"low": {"type": "number"}, "high": {"type": "number"}}
+    },
+    "valueObject": {
+      "type": "object",
+      "required": ["kind", "label", "provenance", "source_id", "source_attribution"],
+      "properties": {
+        "kind": {"enum": ["fact", "forecast", "scenario", "modelled_estimate", "guidance", "statement"]},
+        "label": {"enum": ["Checked", "Estimate", "Needs verification", "Needs data", "N/A"]},
+        "provenance": {"enum": ["pdf", "handover", "user_decision", "project_policy", "workbook", "user_prompt"]},
+        "source_id": {"type": ["string", "null"]},
+        "source_attribution": {"enum": ["pdf_text", "pdf_source_log_match", "handover", null]},
+        "pdf_quote": {"type": "string", "minLength": 3}
+      },
+      "if": {"properties": {"provenance": {"const": "pdf"}}},
+      "then": {"required": ["pdf_quote"]}
+    }
+  }
+}

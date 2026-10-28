@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "freshness.schema.json",
+  "title": "Freshness rules",
+  "type": "object",
+  "required": ["schema_version", "statuses", "rules"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "statuses": {"const": ["current", "review_due", "stale", "historical"]},
+    "rules": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["file", "review_due_after", "stale_after", "manual_triggers"],
+        "properties": {
+          "file": {"type": "string"},
+          "review_due_after": {"type": ["string", "null"], "format": "date"},
+          "stale_after": {"type": ["string", "null"], "format": "date"},
+          "historical_after": {"type": ["string", "null"], "format": "date"},
+          "manual_triggers": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}

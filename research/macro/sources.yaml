@@ -1,0 +1,275 @@
+# Source log for the macro layer. Stable IDs; cite by `id`.
+# in_pdf: true  = listed in the input PDF's source log (section 7). PDF fields win.
+# in_pdf: false = appears only in the local handover package; shown, but marked "not in the PDF".
+# Fields with a *_provenance sibling say which input supplied that field.
+# No source here was opened or checked in this repo (no new research).
+
+schema_version: 1
+inputs:
+  - id: input_pdf
+    name: Melbourne Established-House Buying Summary (PDF)
+    path: research/inputs/Melbourne_Established_House_Buying_Summary.pdf
+    sha256: c386133a6e76ca626ec11264d670af0f219277a3f3593f0f9afd34be2fa85a11
+    prepared_on: 2026-10-28
+    pages: 4
+    committed: true
+    role: authoritative macro input; wins on any conflict
+  - id: input_handover
+    name: Handover package — parents-melbourne-move (Markdown)
+    path: research/inputs/parents-melbourne-move-handover.md
+    sha256: e1107b8082909d2196c12039dab92cfa779cd57cd653f802b1ab9532aab1bba5
+    prepared_on: 2026-10-28
+    committed: false
+    role: local-only supplementary input (gitignored); values tagged provenance handover
+
+sources:
+  # ---- Listed in the PDF source log ----
+  - id: proptrack_september_2026
+    name: PropTrack/REA Home Price Report
+    type: Agency research
+    pdf_date: 1 Oct 2026
+    publication_date: 2026-10-01
+    publication_date_provenance: pdf
+    data_current_to: 2026-09
+    data_current_to_provenance: handover
+    url: https://www.realestate.com.au/insights/realestate-com-au-home-price-report-september-2026/
+    in_pdf: true
+    in_handover: true
+    status: active
+
+  - id: domain_september_quarter_2026
+    name: Domain House Price Report
+    type: Agency research
+    pdf_date: 22 Oct 2026
+    publication_date: 2026-10-22
+    publication_date_provenance: pdf
+    data_current_to: 2026-Q3
+    data_current_to_provenance: handover
+    url: https://www.domain.com.au/research/house-price-report/september-2026/
+    in_pdf: true
+    in_handover: true
+    status: active
+
+  - id: cotality_hvi_september_2026
+    name: Cotality Home Value Index
+    type: Agency research
+    pdf_date: Sep 2026
+    publication_date: 2026-09
+    publication_date_provenance: pdf
+    data_current_to: 2026-08-31
+    data_current_to_provenance: handover
+    url: https://discover.cotality.com/hubfs/Article-Reports/COTALITY%20HVI%20SEP%202026%20FINAL%20(1).pdf
+    in_pdf: true
+    in_handover: true
+    status: active
+
+  - id: reiv_september_2026
+    name: REIV Research Bulletin
+    type: Industry data
+    pdf_date: Sep 2026
+    publication_date: 2026-09
+    publication_date_provenance: pdf
+    data_current_to: 2026-09
+    data_current_to_provenance: handover
+    url: https://reiv.com.au/market-insights/member-resources/research-bulletin
+    in_pdf: true
+    in_handover: true
+    status: active
+
+  - id: sqm_september_2026
+    name: SQM Research
+    type: Agency research
+    pdf_date: Sep 2026
+    publication_date: 2026-09
+    publication_date_provenance: pdf
+    data_current_to: 2026-09
+    data_current_to_provenance: handover
+    url: https://sqmresearch.com.au/property
+    in_pdf: true
+    in_handover: true
+    status: active
+
+  - id: rba_2026_10_28
+    name: RBA
+    type: Primary government data
+    pdf_date: 28 Oct 2026
+    publication_date: 2026-10-28
+    publication_date_provenance: pdf
+    data_current_to: null
+    data_current_to_provenance: null
+    url: https://www.rba.gov.au/
+    in_pdf: true
+    in_handover: true
+    handover_id: rba_cash_rate_2026_09_30
+    notes: >
+      Handover dates this source 2026-09-30, which is the cash rate's effective date.
+      Per user decision 2 (28 Oct 2026) the effective date is carried on the cash-rate
+      indicator; the source keeps the PDF publication date. Not a conflict.
+    status: active
+
+  - id: apra_property_exposures_2026_q2
+    name: APRA property exposures
+    type: Primary regulatory data
+    pdf_date: Jun 2026
+    publication_date: 2026-09-16
+    publication_date_provenance: handover
+    data_current_to: 2026-Q2
+    data_current_to_provenance: pdf
+    url: https://www.apra.gov.au/quarterly-authorised-deposit-taking-institution-property-exposure-statistics-june-2026-highlights
+    in_pdf: true
+    in_handover: true
+    status: active
+
+  - id: abs_population_dec_2025
+    name: ABS population
+    type: Primary government data
+    pdf_date: Dec 2025
+    publication_date: null
+    publication_date_provenance: null
+    data_current_to: 2025-12
+    data_current_to_provenance: pdf
+    url: https://www.abs.gov.au/statistics/people/population/national-state-and-territory-population/dec-2025
+    in_pdf: true
+    in_handover: false
+    status: active
+
+  - id: nab_housing_monitor_october_2026
+    name: NAB Housing Monitor
+    type: Bank forecast
+    pdf_date: 7 Oct 2026
+    publication_date: 2026-10-07
+    publication_date_provenance: pdf
+    data_current_to: 2026-10
+    data_current_to_provenance: handover
+    url: https://www.nab.com.au/news/housing/nab-housing-monitor-september-2026
+    in_pdf: true
+    in_handover: true
+    notes: PDF body calls it "NAB's October forecast"; the URL slug says september-2026 (see gap G18).
+    status: active
+
+  - id: cba_housing_outlook_august_2026
+    name: CBA housing outlook
+    type: Bank forecast
+    pdf_date: 31 Aug 2026
+    publication_date: 2026-08-31
+    publication_date_provenance: pdf
+    data_current_to: 2026-08
+    data_current_to_provenance: handover
+    url: https://www.commbank.com.au/articles/newsroom/2026/09/housing-correction-deepens-commbank-economists.html
+    in_pdf: true
+    in_handover: true
+    notes: Listed in the PDF source log but not cited in the PDF body (see gap G12).
+    status: active
+
+  - id: parents_melbourne_move_suburb_shortlist
+    name: Parents Melbourne Move shortlist
+    type: Project research
+    pdf_date: 28 Oct 2026
+    publication_date: 2026-10-28
+    publication_date_provenance: pdf
+    data_current_to: 2026-10-28
+    data_current_to_provenance: handover
+    url: https://github.com/okgoogle13/parents-melbourne-move/blob/main/Suburb%20shortlist%20foundation%20report.md
+    in_pdf: true
+    in_handover: true
+    notes: This repo's own report, cited by the PDF; circular, not independent evidence (see gap G13).
+    status: active
+
+  # ---- Handover only (not in the PDF source log) ----
+  - id: cotality_auctions_2026_10_25
+    name: Cotality auction reporting
+    type: Agency data via commentary
+    pdf_date: null
+    publication_date: 2026-10-25
+    publication_date_provenance: handover
+    data_current_to: 2026-10-25
+    data_current_to_provenance: handover
+    url: https://www.mpamag.com/au/news/general/auction-clearance-rates-slip-below-50-as-buyers-hold-back/594851
+    in_pdf: false
+    in_handover: true
+    notes: Secondary commentary site, not the Cotality primary release.
+    status: active
+
+  - id: abs_inflation_september_quarter_2026
+    name: ABS September-quarter inflation reporting
+    type: Government data via reporting
+    pdf_date: null
+    publication_date: 2026-10-28
+    publication_date_provenance: handover
+    data_current_to: 2026-Q3
+    data_current_to_provenance: handover
+    url: https://www.sbs.com.au/news/article/inflation-hotter-than-expected-ahead-of-rba-rates-meeting/f0h2na1lz
+    in_pdf: false
+    in_handover: true
+    notes: News report of ABS data, not the ABS release itself.
+    status: active
+
+  - id: market_pricing_after_inflation_2026_10_28
+    name: Market pricing after inflation release
+    type: Market commentary
+    pdf_date: null
+    publication_date: 2026-10-28
+    publication_date_provenance: handover
+    data_current_to: 2026-10-28
+    data_current_to_provenance: handover
+    url: https://www.afr.com/markets/debt-markets/markets-eye-two-more-rba-rate-rises-after-hot-inflation-20261028-p6199f
+    in_pdf: false
+    in_handover: true
+    notes: No value from this source appears in the handover data; listed only.
+    status: active
+
+  - id: westpac_housing_forecast_september_2026
+    name: Westpac housing forecast
+    type: Bank forecast
+    pdf_date: null
+    publication_date: 2026-09-08
+    publication_date_provenance: handover
+    data_current_to: 2026-09
+    data_current_to_provenance: handover
+    url: https://www.westpac.com.au/news/making-news/2026/09/westpac-tips-november-rate-hike-updates-housing-forecast/
+    in_pdf: false
+    in_handover: true
+    notes: No value from this source appears in the handover data; listed only.
+    status: active
+
+  - id: anz_property_focus_october_2026
+    name: ANZ property focus
+    type: Bank forecast via reporting
+    pdf_date: null
+    publication_date: 2026-10-26
+    publication_date_provenance: handover
+    data_current_to: 2026-10
+    data_current_to_provenance: handover
+    url: https://au.finance.yahoo.com/news/anz-now-expects-bigger-house-price-falls-with-smaller-recovery-in-2028-060227668.html
+    in_pdf: false
+    in_handover: true
+    notes: No value from this source appears in the handover data; listed only.
+    status: active
+
+  - id: kpmg_residential_outlook_august_2026
+    name: KPMG Residential Property Market Outlook
+    type: Economic consultancy forecast
+    pdf_date: null
+    publication_date: 2026-08
+    publication_date_provenance: handover
+    data_current_to: 2026-08
+    data_current_to_provenance: handover
+    url: https://assets.kpmg.com/content/dam/kpmgsites/au/pdf/2026/kpmg-residential-property-market-outlook-august-2026.pdf.coredownload.inline.pdf
+    in_pdf: false
+    in_handover: true
+    notes: No value from this source appears in the handover data; listed only.
+    status: active
+
+  - id: oxford_economics_2024
+    name: Oxford Economics Australia
+    type: Economic consultancy forecast
+    pdf_date: null
+    publication_date: 2024
+    publication_date_provenance: handover
+    data_current_to: 2024
+    data_current_to_provenance: handover
+    url: https://www.realestate.com.au/news/melbournes-median-house-value-forecast-to-reach-a-new-top-sum-oxford-economics-australia/
+    in_pdf: false
+    in_handover: true
+    notes: Marked superseded in the handover. Do not use.
+    status: superseded

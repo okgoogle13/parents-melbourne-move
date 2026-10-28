@@ -1,0 +1,29 @@
+# Freshness rules (governance config). Status is computed by tools/validate_macro.py from
+# today's date; it is never stored in the data files.
+#   current     today <= review_due_after
+#   review_due  today >  review_due_after, or a manual trigger below has occurred
+#   stale       today >  stale_after  (do not use for decisions until refreshed)
+#   historical  today >  historical_after (event has passed; keep as record, never edit)
+
+schema_version: 1
+statuses: [current, review_due, stale, historical]
+
+rules:
+  macro_market_conditions:
+    file: research/macro/macro-market-conditions.yaml
+    data_current_to: 2026-10-28
+    review_due_after: 2026-11-03
+    review_due_basis: "PDF: 'Reassess after the 3 November RBA decision'"
+    stale_after: 2026-12-27
+    stale_basis: "Project policy, approved by the user 28 Oct 2026: 60 days after data_current_to. Not PDF data."
+    manual_triggers:
+      - "Summer listing and clearance data released (PDF: 'and again after summer listing and clearance data')"
+      - "Any RBA cash-rate decision after 2026-11-03"
+
+  property_5_northam_street:
+    file: research/properties/5-northam-street-glen-waverley.yaml
+    review_due_after: null
+    stale_after: null
+    historical_after: 2026-11-14
+    historical_basis: "Auction date 14 Nov 2026 (handover / task prompt). After it, the page is a historical record."
+    manual_triggers: []

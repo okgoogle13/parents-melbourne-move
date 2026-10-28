@@ -1,0 +1,738 @@
+# Canonical macro market conditions — Melbourne established houses.
+# Read research/macro/README.md before using. Validate: .venv/bin/python tools/validate_macro.py
+#
+# Every value object carries:
+#   kind        fact | forecast | scenario | modelled_estimate | guidance | statement
+#   label       project evidence label (Checked | Estimate | Needs verification | Needs data | N/A)
+#               Reported readings = Needs verification (copied from an input, not checked against
+#               the named source in this repo). Forecasts, scenarios, modelled figures = Estimate.
+#   provenance  pdf | handover | user_decision | project_policy | workbook
+#   source_id   id in sources.yaml, or null
+#   source_attribution  how source_id was assigned: pdf_text | pdf_source_log_match | handover | null
+#   pdf_quote   exact PDF wording (required when provenance is pdf; checked by the validator)
+# The PDF wins on any conflict; conflicts are logged in `gaps`, never offered as alternatives.
+
+meta:
+  report_id: melbourne-established-house-buying-summary
+  title: Melbourne Established-House Buying Summary
+  version: 2026.10.28.1
+  prepared_on: 2026-10-28
+  data_current_to: 2026-10-28
+  scope: established_detached_houses
+  geography: Melbourne
+  primary_forecast_source_id: nab_housing_monitor_october_2026
+  freshness_rule: macro_market_conditions   # see freshness.yaml; status is computed, not stored
+  snapshot: research/macro/snapshots/2026-10-28.yaml
+  target_price:
+    pdf_wording:
+      value: below approximately $1.5 million
+      kind: statement
+      label: N/A
+      provenance: pdf
+      source_id: input_pdf
+      source_attribution: pdf_text
+      pdf_quote: "below approximately $1.5 million"
+    workbook_cap:
+      value: 1500000
+      unit: AUD
+      kind: fact
+      label: Checked
+      provenance: workbook
+      source_id: null
+      source_attribution: null
+      note: >
+        Filters!B2, confirmed family decision 27 Oct 2026: hard cap of $1,500,000 maximum
+        purchase price, excluding transaction and moving costs. The workbook governs budget (gap G15).
+  disclaimer:
+    value: >
+      General market research and decision framework only. Not financial, tax, legal or credit
+      advice. Ownership, title, duty and concession issues are being assessed separately and
+      should not affect the market-timing conclusion.
+    kind: statement
+    label: N/A
+    provenance: pdf
+    source_id: input_pdf
+    source_attribution: pdf_text
+    pdf_quote: "Not financial, tax, legal or credit advice."
+  exclusions:
+    note: Excluded from macro timing analysis (task brief, 28 Oct 2026).
+    topics: [ownership, title, stamp_duty, first_home_buyer_concessions, guarantors, centrelink, capital_gains_tax, estate_planning]
+  workbook_relationship: >
+    Macro layer provides market context; it never overrides the workbook on suburb ranks, budget
+    or filters. market_timing_tiers below are not workbook ranks and do not change SuburbScorecard C or L.
+
+bottom_line:
+  current_conditions:
+    value: >
+      Melbourne's established-house market is clearly soft. House prices have fallen for 11
+      consecutive months, auction clearance is weak, homes are taking longer to sell and buyers
+      have more negotiating power.
+    kind: statement
+    label: Needs verification
+    provenance: pdf
+    source_id: null
+    source_attribution: null
+    pdf_quote: "House prices have fallen for 11 consecutive months"
+  main_risks:
+    value: >
+      Further interest-rate rises, weaker employment, rising mortgage stress and more unsold
+      listings could extend the price decline.
+    kind: statement
+    label: Estimate
+    provenance: pdf
+    source_id: null
+    source_attribution: null
+    pdf_quote: "further interest-rate rises, weaker employment, rising mortgage stress and more unsold listings could extend the price decline"
+  main_supports:
+    value: >
+      Population growth, high rents, low rental vacancies and constrained new-home construction
+      continue to support underlying demand.
+    kind: statement
+    label: Estimate
+    provenance: pdf
+    source_id: null
+    source_attribution: null
+    pdf_quote: "population growth, high rents, low rental vacancies and constrained new-home construction continue to support underlying demand"
+  forecast_range:
+    value: >
+      The most likely path is further weakness into the first half of 2027, with a trough around
+      mid-2027 and a further decline from today's prices of roughly 4%–6%.
+    kind: forecast
+    label: Estimate
+    provenance: pdf
+    source_id: nab_housing_monitor_october_2026
+    source_attribution: pdf_text
+    pdf_quote: "a trough around mid-2027 and a further decline from today’s prices of roughly 4%–6%"
+  practical_timing:
+    value: >
+      Remain patient and negotiate firmly, but do not rule out buying a genuinely suitable,
+      well-priced house before the trough.
+    kind: guidance
+    label: N/A
+    provenance: pdf
+    source_id: null
+    source_attribution: null
+    pdf_quote: "remain patient and negotiate firmly, but do not rule out buying a genuinely suitable, well-priced house before the trough"
+
+indicators:
+  - id: melbourne_house_price_annual
+    name: Melbourne house prices, annual change
+    value: -6.2
+    unit: percent
+    as_at: 2026-09
+    scope: Melbourne houses
+    meaning: Established houses are still adjusting downward.
+    kind: fact
+    label: Needs verification
+    provenance: pdf
+    source_id: proptrack_september_2026
+    source_attribution: handover
+    pdf_quote: "Down 6.2% annually to September"
+    note: PDF does not name the index; handover attributes it to PropTrack (gap G08).
+
+  - id: melbourne_house_price_monthly
+    name: Melbourne house prices, monthly change
+    value: -0.2
+    unit: percent
+    as_at: 2026-09
+    scope: Melbourne houses
+    meaning: Established houses are still adjusting downward.
+    kind: fact
+    label: Needs verification
+    provenance: pdf
+    source_id: proptrack_september_2026
+    source_attribution: handover
+    pdf_quote: "down 0.2% in the month"
+
+  - id: melbourne_house_price_quarterly
+    name: Melbourne house prices, quarterly change
+    value: -3.3
+    unit: percent
+    as_at: 2026-Q3
+    scope: Melbourne houses
+    meaning: null
+    kind: fact
+    label: Needs verification
+    provenance: handover
+    source_id: domain_september_quarter_2026
+    source_attribution: handover
+    note: Not in the PDF. Domain index; not comparable with or averaged against the PropTrack figures (gap G08).
+
+  - id: auction_clearance
+    name: Auction clearance rate
+    value: 54.8
+    unit: percent
+    as_at: 2026-10-25
+    as_at_provenance: handover
+    scope: Melbourne
+    meaning: Weak-to-balanced market; buyers can negotiate rather than compete urgently.
+    kind: fact
+    label: Needs verification
+    provenance: pdf
+    source_id: cotality_auctions_2026_10_25
+    source_attribution: handover
+    pdf_quote: "54.8% in late October"
+    note: PDF says "late October"; exact date and source from handover only (source not in PDF log).
+
+  - id: private_sale_days_on_market
+    name: Days on market, private sales
+    value: 48
+    unit: days
+    as_at: 2026-09
+    as_at_provenance: handover
+    scope: Victoria (not Melbourne only)
+    meaning: Homes take longer to sell, giving buyers more time and leverage.
+    kind: fact
+    label: Needs verification
+    provenance: pdf
+    source_id: reiv_september_2026
+    source_attribution: handover
+    pdf_quote: "48 days for Victorian private sales"
+
+  - id: vendor_discounting
+    name: Median vendor discount
+    value: 3.9
+    unit: percent
+    as_at: null
+    scope: All capital cities (not Melbourne only)
+    meaning: Sellers are accepting larger discounts than a year earlier.
+    kind: fact
+    label: Needs verification
+    provenance: pdf
+    source_id: null
+    source_attribution: null
+    pdf_quote: "3.9% median across capitals"
+    note: Neither input names a source or date (gap G07).
+
+  - id: rental_vacancy
+    name: Rental vacancy rate
+    value: 1.9
+    unit: percent
+    as_at: 2026-09
+    as_at_provenance: handover
+    scope: Melbourne
+    meaning: Rental demand remains strong, supporting underlying housing demand.
+    kind: fact
+    label: Needs verification
+    provenance: pdf
+    source_id: sqm_september_2026
+    source_attribution: handover
+    pdf_quote: "1.9% in Melbourne"
+
+  - id: population_growth
+    name: Population growth
+    value: 117300
+    unit: persons
+    as_at: 2025-12
+    scope: Victoria, year to December 2025
+    meaning: Ongoing population growth supports longer-term demand.
+    kind: fact
+    label: Needs verification
+    provenance: pdf
+    source_id: abs_population_dec_2025
+    source_attribution: pdf_source_log_match
+    pdf_quote: "Victoria added about 117,300 people in the year to December 2025"
+    note: PDF says "about"; source matched to the PDF log entry by name and date, not stated per row.
+
+  - id: rba_cash_rate
+    name: RBA cash rate
+    value: 4.60
+    unit: percent
+    effective_date: 2026-09-30
+    effective_date_provenance: handover
+    source_publication_date: 2026-10-28
+    source_publication_date_provenance: pdf
+    scope: Australia
+    meaning: Higher rates reduce borrowing capacity and can extend price weakness.
+    kind: fact
+    label: Needs verification
+    provenance: pdf
+    source_id: rba_2026_10_28
+    source_attribution: pdf_source_log_match
+    pdf_quote: "4.60%; further rise highly likely on 3 November"
+
+  - id: rba_next_move
+    name: Next RBA decision outlook
+    value: Further rise highly likely on 3 November 2026
+    unit: null
+    as_at: 2026-10-28
+    scope: Australia
+    meaning: Higher rates reduce borrowing capacity and can extend price weakness.
+    kind: forecast
+    label: Estimate
+    provenance: pdf
+    source_id: null
+    source_attribution: null
+    pdf_quote: "further rise highly likely on 3 November"
+    note: PDF does not say who expects the rise or by how much.
+
+  - id: annual_headline_inflation
+    name: Annual headline inflation
+    value: 4.3
+    unit: percent
+    as_at: 2026-Q3
+    scope: Australia
+    meaning: null
+    kind: fact
+    label: Needs verification
+    provenance: handover
+    source_id: abs_inflation_september_quarter_2026
+    source_attribution: handover
+    note: Not in the PDF (gap G01). Source is a news report of ABS data.
+
+  - id: annual_trimmed_mean_inflation
+    name: Annual trimmed-mean inflation
+    value: 3.7
+    unit: percent
+    as_at: 2026-Q3
+    scope: Australia
+    meaning: null
+    kind: fact
+    label: Needs verification
+    provenance: handover
+    source_id: abs_inflation_september_quarter_2026
+    source_attribution: handover
+    note: Not in the PDF (gap G01).
+
+  - id: non_performing_housing_loans
+    name: Non-performing housing loans
+    value: 1.01
+    unit: percent
+    as_at: 2026-06
+    scope: System-wide (as worded in the PDF)
+    meaning: Stress is rising in places, but system-wide distress remains contained.
+    kind: fact
+    label: Needs verification
+    provenance: pdf
+    source_id: apra_property_exposures_2026_q2
+    source_attribution: pdf_source_log_match
+    pdf_quote: "Non-performing housing loans were 1.01% in June"
+
+forecast:
+  primary:
+    value: >
+      NAB's October forecast: Melbourne house prices continue to fall into the first half of 2027,
+      reach a trough around mid-2027, then stabilise before a gradual recovery.
+    kind: forecast
+    label: Estimate
+    provenance: pdf
+    source_id: nab_housing_monitor_october_2026
+    source_attribution: pdf_text
+    pdf_quote: "reach a trough around mid-2027, then stabilise before a gradual recovery"
+  likely_trough:
+    value: mid-2027
+    kind: forecast
+    label: Estimate
+    provenance: pdf
+    source_id: nab_housing_monitor_october_2026
+    source_attribution: pdf_text
+    pdf_quote: "reach a trough around mid-2027"
+  nab_peak_to_trough_decline:
+    value: 11
+    unit: percent
+    qualifier: about
+    kind: forecast
+    label: Estimate
+    provenance: pdf
+    source_id: nab_housing_monitor_october_2026
+    source_attribution: pdf_text
+    pdf_quote: "NAB expects a Melbourne peak-to-trough decline of about 11%"
+  already_below_peak:
+    value: {low: 6, high: 7}
+    unit: percent
+    as_at: September/October 2026
+    kind: fact
+    label: Needs verification
+    provenance: pdf
+    source_id: null
+    source_attribution: null
+    pdf_quote: "already about 6%–7% below peak in September/October 2026"
+  further_decline_from_today:
+    value: {low: 4, high: 6}
+    unit: percent
+    qualifier: about
+    kind: forecast
+    label: Estimate
+    provenance: pdf
+    source_id: nab_housing_monitor_october_2026
+    source_attribution: pdf_text
+    pdf_quote: "a further fall of about 4%–6% from today’s price"
+  caveat:
+    value: These are forecasts and scenarios, not predictions. A crash is possible but not the central case.
+    kind: statement
+    label: N/A
+    provenance: pdf
+    source_id: null
+    source_attribution: null
+    pdf_quote: "These are forecasts and scenarios, not predictions. A crash is possible but not the central case."
+  horizons:
+    note: >
+      Handover only; not in the PDF. Modelled path consistent with NAB per the handover. Baseline
+      PropTrack 2026-09 / Domain 2026-Q3. Where this path differs from the PDF trough range, the
+      PDF governs (gap G14).
+    items:
+      - {months_from_report: 3, target_date: 2027-01, value: {low: -4, high: -2}, unit: percent, confidence: moderate, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: nab_housing_monitor_october_2026, source_attribution: handover}
+      - {months_from_report: 6, target_date: 2027-04, value: {low: -6, high: -3}, unit: percent, confidence: moderate, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: nab_housing_monitor_october_2026, source_attribution: handover}
+      - {months_from_report: 9, target_date: 2027-07, value: {low: -7, high: -3}, unit: percent, confidence: moderate_low, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: nab_housing_monitor_october_2026, source_attribution: handover}
+      - {months_from_report: 12, target_date: 2027-10, value: {low: -7, high: -3}, unit: percent, confidence: low_moderate, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: nab_housing_monitor_october_2026, source_attribution: handover}
+      - {months_from_report: 24, target_date: 2028-10, value: {low: -4, high: 4}, unit: percent, confidence: low, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: nab_housing_monitor_october_2026, source_attribution: handover}
+
+scenarios:
+  - id: downside
+    name: Downside
+    conditions:
+      value: More rate rises, weaker jobs market, rising mortgage stress and more listings
+      kind: scenario
+      label: Estimate
+      provenance: pdf
+      source_id: null
+      source_attribution: null
+      pdf_quote: "More rate rises, weaker jobs market, rising mortgage stress and more listings"
+    effect_on_1_5m_house:
+      value: {low: 1350000, high: 1380000}
+      unit: AUD
+      pct_lower: {low: 8, high: 10}
+      kind: scenario
+      label: Estimate
+      provenance: pdf
+      source_id: null
+      source_attribution: null
+      pdf_quote: "About $1.35m–$1.38m, or 8%–10% lower"
+    likely_trough:
+      value: Later in 2027
+      kind: scenario
+      label: Estimate
+      provenance: pdf
+      source_id: null
+      source_attribution: null
+      pdf_quote: "Later in 2027"
+    practical_implication:
+      value: Wait or negotiate very hard; avoid stretching financially
+      kind: guidance
+      label: N/A
+      provenance: pdf
+      source_id: null
+      source_attribution: null
+      pdf_quote: "Wait or negotiate very hard; avoid stretching financially"
+    probability_language:
+      value: meaningful_but_not_central_case
+      kind: statement
+      label: Estimate
+      provenance: handover
+      source_id: null
+      source_attribution: null
+
+  - id: base_case
+    name: Base case
+    conditions:
+      value: Rates stay restrictive, inflation eases gradually, sales remain subdued but employment holds up
+      kind: scenario
+      label: Estimate
+      provenance: pdf
+      source_id: nab_housing_monitor_october_2026
+      source_attribution: pdf_text
+      pdf_quote: "Rates stay restrictive, inflation eases gradually, sales remain subdued but employment holds up"
+    effect_on_1_5m_house:
+      value: {low: 1410000, high: 1440000}
+      unit: AUD
+      pct_lower: {low: 4, high: 6}
+      kind: scenario
+      label: Estimate
+      provenance: pdf
+      source_id: nab_housing_monitor_october_2026
+      source_attribution: pdf_text
+      pdf_quote: "About $1.41m–$1.44m, or 4%–6% lower"
+    likely_trough:
+      value: Mid-2027
+      kind: scenario
+      label: Estimate
+      provenance: pdf
+      source_id: nab_housing_monitor_october_2026
+      source_attribution: pdf_text
+      pdf_quote: "Mid-2027"
+    practical_implication:
+      value: Remain patient; buy only a genuinely suitable, well-priced house
+      kind: guidance
+      label: N/A
+      provenance: pdf
+      source_id: null
+      source_attribution: null
+      pdf_quote: "Remain patient; buy only a genuinely suitable, well-priced house"
+    probability_language:
+      value: most_likely_current_path
+      kind: statement
+      label: Estimate
+      provenance: pdf
+      source_id: null
+      source_attribution: null
+      pdf_quote: "The most likely outcome follows NAB’s October forecast"
+
+  - id: upside
+    name: Upside
+    conditions:
+      value: Inflation improves quickly, rate rises are avoided or reversed, listings fall
+      kind: scenario
+      label: Estimate
+      provenance: pdf
+      source_id: null
+      source_attribution: null
+      pdf_quote: "Inflation improves quickly, rate rises are avoided or reversed, listings fall"
+    effect_on_1_5m_house:
+      value: {low: 1470000, high: 1500000}
+      unit: AUD
+      pct_lower: {low: 0, high: 2}
+      kind: scenario
+      label: Estimate
+      provenance: pdf
+      source_id: null
+      source_attribution: null
+      pdf_quote: "About $1.47m–$1.50m, or flat to 2% lower"
+    likely_trough:
+      value: Earlier in 2027
+      kind: scenario
+      label: Estimate
+      provenance: pdf
+      source_id: null
+      source_attribution: null
+      pdf_quote: "Earlier in 2027"
+    practical_implication:
+      value: Be ready to act for a scarce, suitable house
+      kind: guidance
+      label: N/A
+      provenance: pdf
+      source_id: null
+      source_attribution: null
+      pdf_quote: "Be ready to act for a scarce, suitable house"
+    probability_language:
+      value: possible_but_less_supported_near_term
+      kind: statement
+      label: Estimate
+      provenance: handover
+      source_id: null
+      source_attribution: null
+
+hypothetical_house:
+  note: >
+    Illustration only: what a house worth $1.5m today could be worth later. Not a valuation of any
+    property. The mid-2027 point is the PDF base case (user decision 1); other points are handover only.
+  current_price:
+    value: 1500000
+    unit: AUD
+    as_at: 2026-10-28
+    kind: statement
+    label: N/A
+    provenance: pdf
+    source_id: null
+    source_attribution: null
+    pdf_quote: "a $1.5 million house today"
+  path:
+    - {date: 2027-01, value: 1470000, unit: AUD, change_pct: -2.0, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
+    - {date: 2027-04, value: 1440000, unit: AUD, change_pct: -4.0, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
+    - {date: mid-2027, stage: likely_trough, value: {low: 1410000, high: 1440000}, unit: AUD, kind: forecast, label: Estimate, provenance: pdf, source_id: nab_housing_monitor_october_2026, source_attribution: pdf_text, pdf_quote: "could be worth roughly $1.41m–$1.44m at the trough", note: "PDF governs; handover's $1.425m–$1.44m logged as conflict G03"}
+    - {date: 2027-10, value: {low: 1425000, high: 1455000}, unit: AUD, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
+    - {date: 2028-10, value: {low: 1455000, high: 1500000}, unit: AUD, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
+
+market_timing_tiers:
+  note: >
+    Market-timing priority from the input PDF (eight current viewing suburbs). Does not replace
+    workbook ranks or SuburbScorecard C/L. Suburb medians and changes are as stated in the inputs;
+    their index, basis and period are not stated (gap G10) and must not be compared with workbook
+    column G. Suburb forecast ranges are modelled proxy estimates from the handover, not published
+    forecasts.
+  ranking_basis:
+    value: >
+      The ranking reflects current house-market resilience, price position, family suitability,
+      nature access, community infrastructure and likely negotiating conditions. No suburb is
+      confirmed: a suburb can rank well overall while having no suitable house available at the
+      right price, street or condition.
+    kind: statement
+    label: Estimate
+    provenance: pdf
+    source_id: null
+    source_attribution: null
+    pdf_quote: "The ranking reflects current house-market resilience, price position, family suitability, nature access, community infrastructure and likely negotiating conditions."
+  suburbs:
+    - name: Frankston
+      tier: {value: priority, kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Priority targets"}
+      rank: {value: 1, kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "1 Frankston"}
+      house_median_aud: {value: 860000, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "$860,000 house median"}
+      annual_change_pct: {value: 9.6, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "+9.6% annually"}
+      three_month_change_pct: {value: 0.0, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "flat over three months"}
+      annual_sales: {value: 532, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
+      active_listings: {value: 38, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
+      why: {value: "Strongest recent momentum. Beach, reserves, hospital and train access.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Beach, reserves, hospital and train access."}
+      watch_outs: {value: "Large suburb with variable streets; community infrastructure less concentrated.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Large suburb with variable streets; community infrastructure less concentrated."}
+      buyer_approach: {value: "Inspect broadly; act only for a well-located, sound house supported by recent settled sales.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Inspect broadly; act only for a well-located, sound house supported by recent settled sales."}
+      modelled_forecast: {three_month_pct: [-4, -2], six_month_pct: [-5, -3], nine_month_pct: [-6, -3], twelve_month_pct: [-5, -2], twenty_four_month_pct: [-3, 6], confidence: moderate, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
+
+    - name: Endeavour Hills
+      tier: {value: priority, kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Priority targets"}
+      rank: {value: 2, kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "2 Endeavour Hills"}
+      house_median_aud: {value: 853000, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "$853,000 median"}
+      annual_change_pct: {value: 5.3, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "+5.3% annually"}
+      annual_sales: {value: 278, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "278 annual sales"}
+      active_listings: {value: 28, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
+      why: {value: "Best \"both\" option: strong bush and park access.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "plus strong bush and park access"}
+      watch_outs: {value: "Less coastal or village character; property condition and street location matter.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Less coastal or village character; property condition and street location matter."}
+      buyer_approach: {value: "High-conviction suburb; move for a suitable low-maintenance house near recent comparables.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "High-conviction suburb; move for a suitable low-maintenance house near recent comparables."}
+      modelled_forecast: {three_month_pct: [-4, -2], six_month_pct: [-5, -2], nine_month_pct: [-5, -2], twelve_month_pct: [-4, -1], twenty_four_month_pct: [-2, 7], confidence: moderate, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
+
+    - name: Springvale
+      tier: {value: priority, kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Priority targets"}
+      rank: {value: 3, kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "3 Springvale"}
+      house_median_aud: {value: 924000, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "$924,000 median"}
+      annual_change_pct: {value: 6.2, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "+6.2% annually"}
+      annual_sales: {value: 164, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
+      active_listings: {value: 13, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "only 13 active listings"}
+      why: {value: "Resilient momentum; strong Indian-community infrastructure.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "strong Indian-community infrastructure"}
+      watch_outs: {value: "Limited nature and green space; less traditional leafy family-suburb feel.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Limited nature and green space; less traditional leafy family-suburb feel."}
+      buyer_approach: {value: "Target only if the house offers genuine long-term suitability and good access to priority amenities.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Target only if the house offers genuine long-term suitability and good access to priority amenities."}
+      modelled_forecast: {three_month_pct: [-4, -2], six_month_pct: [-5, -2], nine_month_pct: [-5, -2], twelve_month_pct: [-4, -1], twenty_four_month_pct: [-2, 6], confidence: moderate, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
+
+    - name: Seaford
+      tier: {value: priority, kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Priority targets"}
+      rank: {value: 4, kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "4 Seaford"}
+      house_median_aud: {value: 885000, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "$885,000 median"}
+      annual_change_pct: {value: 4.7, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "+4.7% annually"}
+      annual_sales: {value: 241, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "241 annual sales"}
+      active_listings: {value: 20, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
+      why: {value: "Good balance of affordability, coastal amenity and family appeal.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Good balance of affordability, coastal amenity and family appeal"}
+      watch_outs: {value: "Less concentrated Indian-community infrastructure; coastal, flood and drainage checks matter.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "coastal, flood and drainage checks matter"}
+      buyer_approach: {value: "Inspect actively; negotiate from recent settled sales rather than paying a coastal premium.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "negotiate from recent settled sales rather than paying a coastal premium"}
+      modelled_forecast: {three_month_pct: [-4, -2], six_month_pct: [-5, -3], nine_month_pct: [-6, -3], twelve_month_pct: [-5, -2], twenty_four_month_pct: [-3, 6], confidence: moderate, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
+
+    - name: Keysborough
+      tier: {value: conditional, kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Conditional targets"}
+      rank: {value: 5, kind: statement, label: Estimate, provenance: handover, source_id: null, source_attribution: null, note: "PDF does not rank conditional suburbs"}
+      house_median_aud: {value: 960000, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "$960,000 median"}
+      annual_change_pct: {value: 3.2, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "+3.2% annually"}
+      annual_sales: {value: 355, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
+      active_listings: {value: 25, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
+      why: {value: "Reasonable family and community access, but ample listings and rental stock.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "but ample listings and rental stock"}
+      when_to_prioritise: {value: "When a well-located, well-configured house appears.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "When a well-located, well-configured house appears."}
+      buyer_approach: {value: "Monitor and be selective; no need to compete for a generic house.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Monitor and be selective; no need to compete for a generic house."}
+      modelled_forecast: {three_month_pct: [-4, -2], six_month_pct: [-5, -2], nine_month_pct: [-6, -3], twelve_month_pct: [-5, -2], twenty_four_month_pct: [-3, 6], confidence: moderate, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
+
+    - name: Mordialloc
+      tier: {value: conditional, kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Conditional targets"}
+      rank: {value: 6, kind: statement, label: Estimate, provenance: handover, source_id: null, source_attribution: null, note: "PDF does not rank conditional suburbs"}
+      house_median_aud: {value: 1252500, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "$1,252,500 median"}
+      annual_change_pct: {value: -9.1, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "−9.1% annually"}
+      quarterly_change_pct: {value: -2.88, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "−2.88% quarterly house change"}
+      annual_sales: {value: 58, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
+      active_listings: {value: 8, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
+      why: {value: "Strong beach, pier, train and village appeal, but prices are falling.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Strong beach, pier, train and village appeal"}
+      when_to_prioritise: {value: "Only for an exceptional, correctly priced house.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Only for an exceptional, correctly priced house."}
+      buyer_approach: {value: "Wait for evidence or negotiate hard; do not chase a scarcity premium.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Wait for evidence or negotiate hard; do not chase a scarcity premium."}
+      modelled_forecast: {three_month_pct: [-5, -2], six_month_pct: [-7, -3], nine_month_pct: [-7, -3], twelve_month_pct: [-6, -2], twenty_four_month_pct: [-3, 5], confidence: low_moderate, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
+
+    - name: Wheelers Hill
+      tier: {value: conditional, kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Conditional targets"}
+      rank: {value: 7, kind: statement, label: Estimate, provenance: handover, source_id: null, source_attribution: null, note: "PDF does not rank conditional suburbs"}
+      house_median_aud: {value: 1455000, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "$1,455,000 median"}
+      annual_change_pct: {value: -0.7, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null, note: "PDF says only that prices have fallen recently"}
+      three_month_change_pct: {value: -2.3, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
+      six_month_change_pct: {value: -2.5, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
+      annual_sales: {value: 212, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
+      active_listings: {value: 23, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
+      why: {value: "Excellent family proximity and Jells Park, but the median is near the $1.5m ceiling and prices have fallen recently.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Excellent family proximity and Jells Park"}
+      when_to_prioritise: {value: "Only for an exceptional house with a clear discount.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "with a clear discount"}
+      buyer_approach: {value: "Wait or negotiate firmly; near-cap price limits the buyer pool.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Wait or negotiate firmly; near-cap price limits the buyer pool."}
+      modelled_forecast: {three_month_pct: [-5, -2], six_month_pct: [-6, -3], nine_month_pct: [-7, -3], twelve_month_pct: [-6, -2], twenty_four_month_pct: [-3, 5], confidence: moderate, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
+
+    - name: Clayton South
+      tier: {value: opportunistic_only, kind: statement, label: Estimate, provenance: user_decision, source_id: null, source_attribution: null, note: "User decision 3 (28 Oct 2026) adopts the handover tier; the PDF lists Clayton South under Conditional targets (gap G05)"}
+      rank: {value: 8, kind: statement, label: Estimate, provenance: user_decision, source_id: null, source_attribution: null, note: "Handover rank, adopted by user decision 3"}
+      house_median_aud: {value: 982500, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "$982,500 median"}
+      annual_change_pct: {value: 0.3, kind: fact, label: Needs verification, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "+0.3% annually"}
+      annual_sales: {value: 100, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
+      active_listings: {value: 14, kind: fact, label: Needs verification, provenance: handover, source_id: null, source_attribution: null}
+      why: {value: "Flat momentum and limited green space.", kind: statement, label: Estimate, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "and limited green space"}
+      when_to_prioritise: {value: "Only for a specific, well-priced property near family, transport, hospital or community facilities.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Only for a specific, well-priced property near family, transport, hospital or community facilities."}
+      buyer_approach: {value: "Opportunistic only; negotiate firmly.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Opportunistic only; negotiate firmly."}
+      modelled_forecast: {three_month_pct: [-4, -2], six_month_pct: [-5, -2], nine_month_pct: [-5, -2], twelve_month_pct: [-4, -1], twenty_four_month_pct: [-2, 6], confidence: moderate, kind: modelled_estimate, label: Estimate, provenance: handover, source_id: null, source_attribution: null}
+
+  groupings:
+    nature_first:
+      suburbs: [Frankston, Seaford, Mordialloc]
+      value: >
+        Beaches, reserves, water access and a more relaxed coastal feel, but Indian-community
+        infrastructure is generally less concentrated and some bayside suburbs are expensive or
+        already showing weakness.
+      kind: statement
+      label: Estimate
+      provenance: pdf
+      source_id: null
+      source_attribution: null
+      pdf_quote: "offer beaches, reserves, water access and a more relaxed coastal feel"
+    community_first:
+      suburbs: [Springvale, Clayton South, Keysborough]
+      value: >
+        Stronger access to Indian groceries, temples, cultural networks and familiar services, but
+        generally less access to large natural spaces, beaches and leafy surroundings.
+      kind: statement
+      label: Estimate
+      provenance: pdf
+      source_id: null
+      source_attribution: null
+      pdf_quote: "offer stronger access to Indian groceries, temples, cultural networks and familiar services"
+    potential_both:
+      suburbs: [Endeavour Hills, Wheelers Hill]
+      value: >
+        Endeavour Hills has strong bush and park access plus community infrastructure; Wheelers Hill
+        has excellent family proximity and Jells Park but sits close to the $1.5 million ceiling.
+      kind: statement
+      label: Estimate
+      provenance: pdf
+      source_id: null
+      source_attribution: null
+      pdf_quote: "Endeavour Hills has strong bush and park access plus community infrastructure"
+
+buying_rules:
+  - {value: "Start with Frankston, Endeavour Hills, Seaford and Springvale; keep Keysborough, Clayton South, Mordialloc and Wheelers Hill for exceptional properties.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Start with Frankston, Endeavour Hills, Seaford and Springvale"}
+  - {value: "Use recent settled sales from the last 60–90 days as the price anchor, not asking prices or older medians.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Use recent settled sales from the last 60–90 days as the price anchor, not asking prices or older medians."}
+  - {value: "Do not pay a premium for recent momentum in Frankston, Springvale or Endeavour Hills.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Do not pay a premium for recent momentum in Frankston, Springvale or Endeavour Hills."}
+  - {value: "Do not chase scarcity in Mordialloc or Wheelers Hill while their house markets are already softening.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Do not chase scarcity in Mordialloc or Wheelers Hill"}
+  - {value: "Set a conservative repayment ceiling and test affordability at least 2–3 percentage points above the expected mortgage rate.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "test affordability at least 2–3 percentage points above the expected mortgage rate"}
+  - {value: "Wait if the right house is not available; act only for a scarce, genuinely suitable house priced at or below recent comparable sales.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Wait if the right house is not available"}
+  - {value: "Reassess after the 3 November RBA decision and again after summer listing and clearance data.", kind: guidance, label: N/A, provenance: pdf, source_id: null, source_attribution: null, pdf_quote: "Reassess after the 3 November RBA decision and again after summer listing and clearance data."}
+
+monitoring:
+  note: Monitoring dashboard from the PDF (section 6). Thresholds are the PDF's, not project policy.
+  kind: guidance
+  provenance: pdf
+  label: N/A
+  source_id: null
+  source_attribution: null
+  pdf_quote: "6. Monitoring dashboard"
+  indicators:
+    - {indicator: RBA cash rate, where: RBA decisions, frequency: Each meeting, favours_waiting: Further increases or hawkish guidance, favours_acting: Clear peak and easing guidance}
+    - {indicator: Melbourne house index, where: Cotality / PropTrack, frequency: Monthly, favours_waiting: Three-month fall exceeds 3%, favours_acting: Monthly falls flatten for 2–3 months}
+    - {indicator: Target-suburb sales, where: REA / Domain sold results, frequency: Fortnightly, favours_waiting: Comparable houses sell below earlier results, favours_acting: Good houses sell at or above recent comparables}
+    - {indicator: Auction clearance, where: Cotality / REIV / Domain, frequency: Four-week average, favours_waiting: Below 50%, favours_acting: Sustained above 60%}
+    - {indicator: Days on market, where: REIV / agent reports, frequency: Monthly, favours_waiting: Above 50 days and rising, favours_acting: Below 35 days}
+    - {indicator: Active listings, where: REA / Domain, frequency: Fortnightly, favours_waiting: Rising stock in target price band, favours_acting: Stock falls while demand holds}
+    - {indicator: Rental vacancy, where: SQM Research, frequency: Monthly, favours_waiting: Above 2.5%, favours_acting: Below 2%}
+    - {indicator: Mortgage arrears, where: APRA, frequency: Quarterly, favours_waiting: Non-performing loans rise materially above 1.3%, favours_acting: Stable near current levels}
+
+gaps:
+  - {id: G01, topic: inflation, status: open, description: "The PDF gives no inflation readings; inflation appears only as scenario wording. Headline 4.3% and trimmed-mean 3.7% (2026-Q3) come from the handover, sourced to a news report of ABS data.", pdf_value: null, handover_value: "4.3% headline, 3.7% trimmed mean", resolution: "Shown, tagged handover; Needs verification."}
+  - {id: G02, topic: glen_waverley_exception, status: open, description: "The PDF has no 5 Northam Street or Glen Waverley content. All property facts come from the handover and the task prompt.", pdf_value: null, handover_value: "see handover section 5", resolution: "Handled in research/properties/ (Phase 2), tagged handover / user_prompt."}
+  - {id: G03, topic: hypothetical_house_trough, status: resolved_by_decision, description: "Mid-2027 value of a $1.5m house: PDF $1.41m–$1.44m vs handover $1.425m–$1.44m.", pdf_value: "1410000–1440000", handover_value: "1425000–1440000", resolution: "PDF used (user decision 1, 28 Oct 2026). Handover range is a logged conflict, not an alternative forecast."}
+  - {id: G04, topic: cash_rate_dates, status: resolved_by_decision, description: "Handover dates the RBA source 2026-09-30; the PDF dates it 28 Oct 2026.", pdf_value: "2026-10-28 (source date)", handover_value: "2026-09-30", resolution: "Not a conflict: effective_date 2026-09-30 and source_publication_date 2026-10-28 kept as separate fields (user decision 2)."}
+  - {id: G05, topic: clayton_south_tier, status: resolved_by_decision, description: "The PDF lists Clayton South under Conditional targets with an 'Opportunistic only' approach; the handover gives tier opportunistic_only, rank 8.", pdf_value: "conditional", handover_value: "opportunistic_only, rank 8", resolution: "Handover tier and rank adopted; PDF buyer approach kept (user decision 3)."}
+  - {id: G06, topic: indicator_attribution, status: open, description: "The PDF snapshot table does not attribute readings to sources. source_id comes from the handover or from a name/date match to the PDF source log (see source_attribution on each value).", pdf_value: null, handover_value: null, resolution: "Attribution basis recorded per value."}
+  - {id: G07, topic: vendor_discounting, status: open, description: "No source or date for the 3.9% median vendor discount in either input.", pdf_value: "3.9% median across capitals", handover_value: null, resolution: "source_id null; Needs verification."}
+  - {id: G08, topic: index_comparability, status: open, description: "The PDF does not name the index behind -6.2% annual / -0.2% monthly (handover: PropTrack). The -3.3% quarterly figure is Domain. PropTrack, Domain and Cotality are different indices.", pdf_value: null, handover_value: "PropTrack (annual, monthly); Domain (quarterly)", resolution: "Never average or chain figures from different indices."}
+  - {id: G09, topic: indicator_scope, status: open, description: "Indicators have different geographic scopes: days on market is Victoria, vendor discount is all capitals, arrears are system-wide, cash rate is national.", pdf_value: null, handover_value: null, resolution: "scope field on every indicator."}
+  - {id: G10, topic: suburb_median_basis, status: open, description: "Suburb medians and changes in the PDF have no stated source, index, period or basis. They differ from workbook column G (e.g. sale median vs AVM vs SOI).", pdf_value: null, handover_value: null, resolution: "Not compared like-for-like with the workbook; workbook governs suburb prices."}
+  - {id: G11, topic: suburb_order_vs_workbook, status: open, description: "PDF market-timing order (Frankston, Endeavour Hills, Springvale, Seaford...) differs from workbook ranks (Frankston #1, Mordialloc #2, Seaford #3; comparators unranked). The PDF's eight suburbs omit the Clyde North comparator.", pdf_value: null, handover_value: null, resolution: "Tiers kept as market-timing priority only; workbook unchanged. Raised in macro-impact-review.md."}
+  - {id: G12, topic: unused_sources, status: open, description: "CBA is in the PDF source log but not cited in the PDF body. Handover lists AFR, Westpac, ANZ, KPMG and Oxford Economics with no values used.", pdf_value: null, handover_value: null, resolution: "Listed in sources.yaml; validator reports them as unreferenced."}
+  - {id: G13, topic: circular_source, status: open, description: "The PDF cites this repo's own foundation report as a source.", pdf_value: null, handover_value: null, resolution: "Not treated as independent evidence."}
+  - {id: G14, topic: forecast_horizons, status: open, description: "Handover 9-month horizon (2027-07: -7% to -3%) is wider than the PDF's further fall of about 4%–6% to the trough.", pdf_value: "4%–6% further fall", handover_value: "-7% to -3% at 2027-07", resolution: "PDF governs the trough; horizons shown as handover modelled path only."}
+  - {id: G15, topic: budget_wording, status: open, description: "PDF target is 'below approximately $1.5 million'; workbook Filters!B2 is a confirmed hard cap of $1,500,000 purchase price excluding costs (27 Oct 2026).", pdf_value: "approximately $1.5 million", handover_value: "approximately $1.5m", resolution: "Workbook governs budget."}
+  - {id: G16, topic: indicator_dates, status: open, description: "Several indicator dates (auction 2026-10-25, days on market 2026-09, rental vacancy 2026-09) come only from the handover; the PDF gives 'late October' or no date.", pdf_value: null, handover_value: null, resolution: "as_at_provenance recorded per value."}
+  - {id: G17, topic: rate_expectations, status: open, description: "The PDF says a further rise is 'highly likely on 3 November' without saying who expects it or by how much. The handover lists an AFR source on two more rises but gives no value.", pdf_value: "further rise highly likely on 3 November", handover_value: null, resolution: "Kept as PDF wording; no size or count added."}
+  - {id: G18, topic: nab_naming, status: open, description: "The PDF calls it NAB's October forecast (source dated 7 Oct 2026) but the URL slug says september-2026.", pdf_value: "7 Oct 2026", handover_value: "nab_housing_monitor_october_2026", resolution: "Recorded; URL kept as given."}
+  - {id: G19, topic: hypothetical_path, status: open, description: "Hypothetical-house points other than the mid-2027 trough (2027-01, 2027-04, 2027-10, 2028-10) and all suburb forecast ranges come only from the handover.", pdf_value: null, handover_value: "see path and modelled_forecast", resolution: "Tagged handover, modelled_estimate."}
+  - {id: G20, topic: scenario_attribution, status: open, description: "The PDF ties only the base case to NAB; downside and upside scenarios have no named source.", pdf_value: null, handover_value: null, resolution: "source_id null on downside and upside."}

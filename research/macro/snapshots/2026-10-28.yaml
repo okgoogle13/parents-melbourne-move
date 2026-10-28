@@ -1,0 +1,647 @@
+# Frozen snapshot of macro-market-conditions.yaml version 2026.10.28.1.
+# Never edit. A refresh adds a new snapshot file and bumps meta.version.
+meta:
+  report_id: melbourne-established-house-buying-summary
+  title: Melbourne Established-House Buying Summary
+  version: 2026.10.28.1
+  prepared_on: '2026-10-28'
+  data_current_to: '2026-10-28'
+  scope: established_detached_houses
+  geography: Melbourne
+  primary_forecast_source_id: nab_housing_monitor_october_2026
+  freshness_rule: macro_market_conditions
+  snapshot: research/macro/snapshots/2026-10-28.yaml
+  target_price:
+    pdf_wording:
+      value: below approximately $1.5 million
+      kind: statement
+      label: N/A
+      provenance: pdf
+      source_id: input_pdf
+      source_attribution: pdf_text
+      pdf_quote: below approximately $1.5 million
+    workbook_cap:
+      value: 1500000
+      unit: AUD
+      kind: fact
+      label: Checked
+      provenance: workbook
+      source_id: null
+      source_attribution: null
+      note: 'Filters!B2, confirmed family decision 27 Oct 2026: hard cap of $1,500,000 maximum purchase
+        price, excluding transaction and moving costs. The workbook governs budget (gap G15).
+
+        '
+  disclaimer:
+    value: 'General market research and decision framework only. Not financial, tax, legal or credit advice.
+      Ownership, title, duty and concession issues are being assessed separately and should not affect
+      the market-timing conclusion.
+
+      '
+    kind: statement
+    label: N/A
+    provenance: pdf
+    source_id: input_pdf
+    source_attribution: pdf_text
+    pdf_quote: Not financial, tax, legal or credit advice.
+  exclusions:
+    note: Excluded from macro timing analysis (task brief, 28 Oct 2026).
+    topics:
+    - ownership
+    - title
+    - stamp_duty
+    - first_home_buyer_concessions
+    - guarantors
+    - centrelink
+    - capital_gains_tax
+    - estate_planning
+  workbook_relationship: 'Macro layer provides market context; it never overrides the workbook on suburb
+    ranks, budget or filters. market_timing_tiers below are not workbook ranks and do not change SuburbScorecard
+    C or L.
+
+    '
+bottom_line:
+  current_conditions:
+    value: 'Melbourne''s established-house market is clearly soft. House prices have fallen for 11 consecutive
+      months, auction clearance is weak, homes are taking longer to sell and buyers have more negotiating
+      power.
+
+      '
+    kind: statement
+    label: Needs verification
+    provenance: pdf
+    source_id: null
+    source_attribution: null
+    pdf_quote: House prices have fallen for 11 consecutive months
+  main_risks:
+    value: 'Further interest-rate rises, weaker employment, rising mortgage stress and more unsold listings
+      could extend the price decline.
+
+      '
+    kind: statement
+    label: Estimate
+    provenance: pdf
+    source_id: null
+    source_attribution: null
+    pdf_quote: further interest-rate rises, weaker employment, rising mortgage stress and more unsold
+      listings could extend the price decline
+  main_supports:
+    value: 'Population growth, high rents, low rental vacancies and constrained new-home construction
+      continue to support underlying demand.
+
+      '
+    kind: statement
+    label: Estimate
+    provenance: pdf
+    source_id: null
+    source_attribution: null
+    pdf_quote: population growth, high rents, low rental vacancies and constrained new-home construction
+      continue to support underlying demand
+  forecast_range:
+    value: 'The most likely path is further weakness into the first half of 2027, with a trough around
+      mid-2027 and a further decline from today''s prices of roughly 4%–6%.
+
+      '
+    kind: forecast
+    label: Estimate
+    provenance: pdf
+    source_id: nab_housing_monitor_october_2026
+    source_attribution: pdf_text
+    pdf_quote: a trough around mid-2027 and a further decline from today’s prices of roughly 4%–6%
+  practical_timing:
+    value: 'Remain patient and negotiate firmly, but do not rule out buying a genuinely suitable, well-priced
+      house before the trough.
+
+      '
+    kind: guidance
+    label: N/A
+    provenance: pdf
+    source_id: null
+    source_attribution: null
+    pdf_quote: remain patient and negotiate firmly, but do not rule out buying a genuinely suitable, well-priced
+      house before the trough
+indicators:
+- id: melbourne_house_price_annual
+  name: Melbourne house prices, annual change
+  value: -6.2
+  unit: percent
+  as_at: 2026-09
+  scope: Melbourne houses
+  meaning: Established houses are still adjusting downward.
+  kind: fact
+  label: Needs verification
+  provenance: pdf
+  source_id: proptrack_september_2026
+  source_attribution: handover
+  pdf_quote: Down 6.2% annually to September
+  note: PDF does not name the index; handover attributes it to PropTrack (gap G08).
+- id: melbourne_house_price_monthly
+  name: Melbourne house prices, monthly change
+  value: -0.2
+  unit: percent
+  as_at: 2026-09
+  scope: Melbourne houses
+  meaning: Established houses are still adjusting downward.
+  kind: fact
+  label: Needs verification
+  provenance: pdf
+  source_id: proptrack_september_2026
+  source_attribution: handover
+  pdf_quote: down 0.2% in the month
+- id: melbourne_house_price_quarterly
+  name: Melbourne house prices, quarterly change
+  value: -3.3
+  unit: percent
+  as_at: 2026-Q3
+  scope: Melbourne houses
+  meaning: null
+  kind: fact
+  label: Needs verification
+  provenance: handover
+  source_id: domain_september_quarter_2026
+  source_attribution: handover
+  note: Not in the PDF. Domain index; not comparable with or averaged against the PropTrack figures (gap
+    G08).
+- id: auction_clearance
+  name: Auction clearance rate
+  value: 54.8
+  unit: percent
+  as_at: '2026-10-25'
+  as_at_provenance: handover
+  scope: Melbourne
+  meaning: Weak-to-balanced market; buyers can negotiate rather than compete urgently.
+  kind: fact
+  label: Needs verification
+  provenance: pdf
+  source_id: cotality_auctions_2026_10_25
+  source_attribution: handover
+  pdf_quote: 54.8% in late October
+  note: PDF says "late October"; exact date and source from handover only (source not in PDF log).
+- id: private_sale_days_on_market
+  name: Days on market, private sales
+  value: 48
+  unit: days
+  as_at: 2026-09
+  as_at_provenance: handover
+  scope: Victoria (not Melbourne only)
+  meaning: Homes take longer to sell, giving buyers more time and leverage.
+  kind: fact
+  label: Needs verification
+  provenance: pdf
+  source_id: reiv_september_2026
+  source_attribution: handover
+  pdf_quote: 48 days for Victorian private sales
+- id: vendor_discounting
+  name: Median vendor discount
+  value: 3.9
+  unit: percent
+  as_at: null
+  scope: All capital cities (not Melbourne only)
+  meaning: Sellers are accepting larger discounts than a year earlier.
+  kind: fact
+  label: Needs verification
+  provenance: pdf
+  source_id: null
+  source_attribution: null
+  pdf_quote: 3.9% median across capitals
+  note: Neither input names a source or date (gap G07).
+- id: rental_vacancy
+  name: Rental vacancy rate
+  value: 1.9
+  unit: percent
+  as_at: 2026-09
+  as_at_provenance: handover
+  scope: Melbourne
+  meaning: Rental demand remains strong, supporting underlying housing demand.
+  kind: fact
+  label: Needs verification
+  provenance: pdf
+  source_id: sqm_september_2026
+  source_attribution: handover
+  pdf_quote: 1.9% in Melbourne
+- id: population_growth
+  name: Population growth
+  value: 117300
+  unit: persons
+  as_at: 2025-12
+  scope: Victoria, year to December 2025
+  meaning: Ongoing population growth supports longer-term demand.
+  kind: fact
+  label: Needs verification
+  provenance: pdf
+  source_id: abs_population_dec_2025
+  source_attribution: pdf_source_log_match
+  pdf_quote: Victoria added about 117,300 people in the year to December 2025
+  note: PDF says "about"; source matched to the PDF log entry by name and date, not stated per row.
+- id: rba_cash_rate
+  name: RBA cash rate
+  value: 4.6
+  unit: percent
+  effective_date: '2026-09-30'
+  effective_date_provenance: handover
+  source_publication_date: '2026-10-28'
+  source_publication_date_provenance: pdf
+  scope: Australia
+  meaning: Higher rates reduce borrowing capacity and can extend price weakness.
+  kind: fact
+  label: Needs verification
+  provenance: pdf
+  source_id: rba_2026_10_28
+  source_attribution: pdf_source_log_match
+  pdf_quote: 4.60%; further rise highly likely on 3 November
+- id: rba_next_move
+  name: Next RBA decision outlook
+  value: Further rise highly likely on 3 November 2026
+  unit: null
+  as_at: '2026-10-28'
+  scope: Australia
+  meaning: Higher rates reduce borrowing capacity and can extend price weakness.
+  kind: forecast
+  label: Estimate
+  provenance: pdf
+  source_id: null
+  source_attribution: null
+  pdf_quote: further rise highly likely on 3 November
+  note: PDF does not say who expects the rise or by how much.
+- id: annual_headline_inflation
+  name: Annual headline inflation
+  value: 4.3
+  unit: percent
+  as_at: 2026-Q3
+  scope: Australia
+  meaning: null
+  kind: fact
+  label: Needs verification
+  provenance: handover
+  source_id: abs_inflation_september_quarter_2026
+  source_attribution: handover
+  note: Not in the PDF (gap G01). Source is a news report of ABS data.
+- id: annual_trimmed_mean_inflation
+  name: Annual trimmed-mean inflation
+  value: 3.7
+  unit: percent
+  as_at: 2026-Q3
+  scope: Australia
+  meaning: null
+  kind: fact
+  label: Needs verification
+  provenance: handover
+  source_id: abs_inflation_september_quarter_2026
+  source_attribution: handover
+  note: Not in the PDF (gap G01).
+- id: non_performing_housing_loans
+  name: Non-performing housing loans
+  value: 1.01
+  unit: percent
+  as_at: 2026-06
+  scope: System-wide (as worded in the PDF)
+  meaning: Stress is rising in places, but system-wide distress remains contained.
+  kind: fact
+  label: Needs verification
+  provenance: pdf
+  source_id: apra_property_exposures_2026_q2
+  source_attribution: pdf_source_log_match
+  pdf_quote: Non-performing housing loans were 1.01% in June
+forecast:
+  primary:
+    value: 'NAB''s October forecast: Melbourne house prices continue to fall into the first half of 2027,
+      reach a trough around mid-2027, then stabilise before a gradual recovery.
+
+      '
+    kind: forecast
+    label: Estimate
+    provenance: pdf
+    source_id: nab_housing_monitor_october_2026
+    source_attribution: pdf_text
+    pdf_quote: reach a trough around mid-2027, then stabilise before a gradual recovery
+  likely_trough:
+    value: mid-2027
+    kind: forecast
+    label: Estimate
+    provenance: pdf
+    source_id: nab_housing_monitor_october_2026
+    source_attribution: pdf_text
+    pdf_quote: reach a trough around mid-2027
+  nab_peak_to_trough_decline:
+    value: 11
+    unit: percent
+    qualifier: about
+    kind: forecast
+    label: Estimate
+    provenance: pdf
+    source_id: nab_housing_monitor_october_2026
+    source_attribution: pdf_text
+    pdf_quote: NAB expects a Melbourne peak-to-trough decline of about 11%
+  already_below_peak:
+    value:
+      low: 6
+      high: 7
+    unit: percent
+    as_at: September/October 2026
+    kind: fact
+    label: Needs verification
+    provenance: pdf
+    source_id: null
+    source_attribution: null
+    pdf_quote: already about 6%–7% below peak in September/October 2026
+  further_decline_from_today:
+    value:
+      low: 4
+      high: 6
+    unit: percent
+    qualifier: about
+    kind: forecast
+    label: Estimate
+    provenance: pdf
+    source_id: nab_housing_monitor_october_2026
+    source_attribution: pdf_text
+    pdf_quote: a further fall of about 4%–6% from today’s price
+  caveat:
+    value: These are forecasts and scenarios, not predictions. A crash is possible but not the central
+      case.
+    kind: statement
+    label: N/A
+    provenance: pdf
+    source_id: null
+    source_attribution: null
+    pdf_quote: These are forecasts and scenarios, not predictions. A crash is possible but not the central
+      case.
+  horizons:
+    note: 'Handover only; not in the PDF. Modelled path consistent with NAB per the handover. Baseline
+      PropTrack 2026-09 / Domain 2026-Q3. Where this path differs from the PDF trough range, the PDF governs
+      (gap G14).
+
+      '
+    items:
+    - months_from_report: 3
+      target_date: 2027-01
+      value:
+        low: -4
+        high: -2
+      unit: percent
+      confidence: moderate
+      kind: modelled_estimate
+      label: Estimate
+      provenance: handover
+      source_id: nab_housing_monitor_october_2026
+      source_attribution: handover
+    - months_from_report: 6
+      target_date: 2027-04
+      value:
+        low: -6
+        high: -3
+      unit: percent
+      confidence: moderate
+      kind: modelled_estimate
+      label: Estimate
+      provenance: handover
+      source_id: nab_housing_monitor_october_2026
+      source_attribution: handover
+    - months_from_report: 9
+      target_date: 2027-07
+      value:
+        low: -7
+        high: -3
+      unit: percent
+      confidence: moderate_low
+      kind: modelled_estimate
+      label: Estimate
+      provenance: handover
+      source_id: nab_housing_monitor_october_2026
+      source_attribution: handover
+    - months_from_report: 12
+      target_date: 2027-10
+      value:
+        low: -7
+        high: -3
+      unit: percent
+      confidence: low_moderate
+      kind: modelled_estimate
+      label: Estimate
+      provenance: handover
+      source_id: nab_housing_monitor_october_2026
+      source_attribution: handover
+    - months_from_report: 24
+      target_date: 2028-10
+      value:
+        low: -4
+        high: 4
+      unit: percent
+      confidence: low
+      kind: modelled_estimate
+      label: Estimate
+      provenance: handover
+      source_id: nab_housing_monitor_october_2026
+      source_attribution: handover
+scenarios:
+- id: downside
+  name: Downside
+  conditions:
+    value: More rate rises, weaker jobs market, rising mortgage stress and more listings
+    kind: scenario
+    label: Estimate
+    provenance: pdf
+    source_id: null
+    source_attribution: null
+    pdf_quote: More rate rises, weaker jobs market, rising mortgage stress and more listings
+  effect_on_1_5m_house:
+    value:
+      low: 1350000
+      high: 1380000
+    unit: AUD
+    pct_lower:
+      low: 8
+      high: 10
+    kind: scenario
+    label: Estimate
+    provenance: pdf
+    source_id: null
+    source_attribution: null
+    pdf_quote: About $1.35m–$1.38m, or 8%–10% lower
+  likely_trough:
+    value: Later in 2027
+    kind: scenario
+    label: Estimate
+    provenance: pdf
+    source_id: null
+    source_attribution: null
+    pdf_quote: Later in 2027
+  practical_implication:
+    value: Wait or negotiate very hard; avoid stretching financially
+    kind: guidance
+    label: N/A
+    provenance: pdf
+    source_id: null
+    source_attribution: null
+    pdf_quote: Wait or negotiate very hard; avoid stretching financially
+  probability_language:
+    value: meaningful_but_not_central_case
+    kind: statement
+    label: Estimate
+    provenance: handover
+    source_id: null
+    source_attribution: null
+- id: base_case
+  name: Base case
+  conditions:
+    value: Rates stay restrictive, inflation eases gradually, sales remain subdued but employment holds
+      up
+    kind: scenario
+    label: Estimate
+    provenance: pdf
+    source_id: nab_housing_monitor_october_2026
+    source_attribution: pdf_text
+    pdf_quote: Rates stay restrictive, inflation eases gradually, sales remain subdued but employment
+      holds up
+  effect_on_1_5m_house:
+    value:
+      low: 1410000
+      high: 1440000
+    unit: AUD
+    pct_lower:
+      low: 4
+      high: 6
+    kind: scenario
+    label: Estimate
+    provenance: pdf
+    source_id: nab_housing_monitor_october_2026
+    source_attribution: pdf_text
+    pdf_quote: About $1.41m–$1.44m, or 4%–6% lower
+  likely_trough:
+    value: Mid-2027
+    kind: scenario
+    label: Estimate
+    provenance: pdf
+    source_id: nab_housing_monitor_october_2026
+    source_attribution: pdf_text
+    pdf_quote: Mid-2027
+  practical_implication:
+    value: Remain patient; buy only a genuinely suitable, well-priced house
+    kind: guidance
+    label: N/A
+    provenance: pdf
+    source_id: null
+    source_attribution: null
+    pdf_quote: Remain patient; buy only a genuinely suitable, well-priced house
+  probability_language:
+    value: most_likely_current_path
+    kind: statement
+    label: Estimate
+    provenance: pdf
+    source_id: null
+    source_attribution: null
+    pdf_quote: The most likely outcome follows NAB’s October forecast
+- id: upside
+  name: Upside
+  conditions:
+    value: Inflation improves quickly, rate rises are avoided or reversed, listings fall
+    kind: scenario
+    label: Estimate
+    provenance: pdf
+    source_id: null
+    source_attribution: null
+    pdf_quote: Inflation improves quickly, rate rises are avoided or reversed, listings fall
+  effect_on_1_5m_house:
+    value:
+      low: 1470000
+      high: 1500000
+    unit: AUD
+    pct_lower:
+      low: 0
+      high: 2
+    kind: scenario
+    label: Estimate
+    provenance: pdf
+    source_id: null
+    source_attribution: null
+    pdf_quote: About $1.47m–$1.50m, or flat to 2% lower
+  likely_trough:
+    value: Earlier in 2027
+    kind: scenario
+    label: Estimate
+    provenance: pdf
+    source_id: null
+    source_attribution: null
+    pdf_quote: Earlier in 2027
+  practical_implication:
+    value: Be ready to act for a scarce, suitable house
+    kind: guidance
+    label: N/A
+    provenance: pdf
+    source_id: null
+    source_attribution: null
+    pdf_quote: Be ready to act for a scarce, suitable house
+  probability_language:
+    value: possible_but_less_supported_near_term
+    kind: statement
+    label: Estimate
+    provenance: handover
+    source_id: null
+    source_attribution: null
+hypothetical_house:
+  note: 'Illustration only: what a house worth $1.5m today could be worth later. Not a valuation of any
+    property. The mid-2027 point is the PDF base case (user decision 1); other points are handover only.
+
+    '
+  current_price:
+    value: 1500000
+    unit: AUD
+    as_at: '2026-10-28'
+    kind: statement
+    label: N/A
+    provenance: pdf
+    source_id: null
+    source_attribution: null
+    pdf_quote: a $1.5 million house today
+  path:
+  - date: 2027-01
+    value: 1470000
+    unit: AUD
+    change_pct: -2.0
+    kind: modelled_estimate
+    label: Estimate
+    provenance: handover
+    source_id: null
+    source_attribution: null
+  - date: 2027-04
+    value: 1440000
+    unit: AUD
+    change_pct: -4.0
+    kind: modelled_estimate
+    label: Estimate
+    provenance: handover
+    source_id: null
+    source_attribution: null
+  - date: mid-2027
+    stage: likely_trough
+    value:
+      low: 1410000
+      high: 1440000
+    unit: AUD
+    kind: forecast
+    label: Estimate
+    provenance: pdf
+    source_id: nab_housing_monitor_october_2026
+    source_attribution: pdf_text
+    pdf_quote: could be worth roughly $1.41m–$1.44m at the trough
+    note: PDF governs; handover's $1.425m–$1.44m logged as conflict G03
+  - date: 2027-10
+    value:
+      low: 1425000
+      high: 1455000
+    unit: AUD
+    kind: modelled_estimate
+    label: Estimate
+    provenance: handover
+    source_id: null
+    source_attribution: null
+  - date: 2028-10
+    value:
+      low: 1455000
+      high: 1500000
+    unit: AUD
+    kind: modelled_estimate
+    label: Estimate
+    provenance: handover
+    source_id: null
+    source_attribution: null

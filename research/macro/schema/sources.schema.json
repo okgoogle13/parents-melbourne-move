@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "sources.schema.json",
+  "title": "Macro source log",
+  "type": "object",
+  "required": ["schema_version", "inputs", "sources"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": 1},
+    "inputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "path", "sha256", "committed", "role"],
+        "properties": {
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "committed": {"type": "boolean"}
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "type", "pdf_date", "publication_date", "url", "in_pdf", "in_handover", "status"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9_]+$"},
+          "name": {"type": "string"},
+          "type": {"type": "string"},
+          "pdf_date": {"type": ["string", "null"]},
+          "publication_date": {"type": ["string", "integer", "null"]},
+          "publication_date_provenance": {"enum": ["pdf", "handover", null]},
+          "data_current_to": {"type": ["string", "integer", "null"]},
+          "data_current_to_provenance": {"enum": ["pdf", "handover", null]},
+          "url": {"type": "string", "pattern": "^https://"},
+          "in_pdf": {"type": "boolean"},
+          "in_handover": {"type": "boolean"},
+          "handover_id": {"type": "string"},
+          "notes": {"type": "string"},
+          "status": {"enum": ["active", "superseded"]}
+        },
+        "if": {"properties": {"in_pdf": {"const": true}}},
+        "then": {"properties": {"pdf_date": {"type": "string"}}},
+        "else": {"properties": {"pdf_date": {"type": "null"}}}
+      }
+    }
+  }
+}
