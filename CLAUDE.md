@@ -10,6 +10,12 @@ Research record for choosing a suburb in or around Melbourne for the user's pare
 - Status counts, ranks, change log: `scoring-model-pointer.md`.
 - `reference/`: background only; read when asked.
 
+## Tools (run from repo root)
+- `.venv/bin/python tools/validate_macro.py`: validates `research/macro/` (schemas, sources, freshness); exit 1 on error.
+- `.venv/bin/python tools/report2.py <recalculated wb> <out.html>`: rebuilds the parent report. Needs cached values, so run it on the recalc temp copy.- `bash tools/build_pdf.sh <in.md> <out.pdf>` / `bash tools/build_property_pdf.sh research/properties/<name>.md <out.pdf>`: pandoc + weasyprint PDFs.
+- `tools/found.py` is broken on the current foundation-report format (29 Oct). Edit that report by script instead.
+- `research/macro/`: macro-market YAML, sources, snapshots. `research/properties/`: per-property summaries. `research/inputs/`: source PDFs and the handover brief.
+
 ## Sources (when they disagree)
 1. `Our Next Home — Family Relocation Scoring Model.xlsx`: canonical for suburbs, scores, weights, filters, budget, responses. **Filters** tab = family decision record.
 2. `scoring-model-pointer.md`.
