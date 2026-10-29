@@ -9,7 +9,7 @@
 
 ## Bottom line
 
-- **Budget:** The guide starts $50,000 above the parents' $1.5m cap and tops out $150,000 above it. Glen Waverley's house median is $1,763,500 (sale median, rolling 12 months, 454 sales; Needs verification: source not named in the workbook).
+- **Budget:** The guide starts $50,000 above the parents' $1.5m cap and tops out $150,000 above it. Glen Waverley's 4-bed house median is $1,603,000, down 5.7% in 12 months (realestate.com.au, Oct 2025–Sep 2026, 175 sales; Checked).
 - **Market timing:** Evidence suggests Melbourne house prices will keep weakening into the first half of 2027, with a likely trough around mid-2027 (buying summary base case, following NAB's October forecast; Estimate).
 - **Suburb fit:** 52.3% of Glen Waverley families are couples with children (Victoria 45.5%; ABS 2021, Checked), so expect family buyers at auction (Estimate), though the house is outside the Glen Waverley Secondary zone. The house suits a family; would a four-bedroom house with lawns and established gardens to maintain suit how the parents want to live for the next 10 years?
 - **Location:** Its clear strength: the family is already in Glen Waverley.

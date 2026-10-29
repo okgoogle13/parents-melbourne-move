@@ -67,7 +67,13 @@ assessment:
   guide_low_over_cap_aud: 50000
   guide_high_over_cap_aud: 150000
   budget_test: fail_at_advertised_guide   # Listings!G logic gives "Over cap", so T gives "Fails: budget"
-  glen_waverley_house_median:
+  glen_waverley_4bed_house_median:  # used in the Budget bullet (user decision 29 Oct 2026)
+    value_aud: 1603000
+    basis: "4-bedroom house median, Oct 2025-Sep 2026, 175 sales; past 12 month growth -5.7%"
+    source: realestate.com.au suburb profile (https://www.realestate.com.au/vic/glen-waverley-3150/), screenshot supplied by the user 29 Oct 2026
+    label: Checked
+    also_shown: {houses_available_past_month: 38, median_days_on_market: 30}
+  glen_waverley_house_median:      # all houses; still in the alternatives table
     value_aud: 1763500
     basis: sale median, rolling 12 months, 454 sales (SuburbScorecard!G7, H7; as at 26 Oct 2026)
     label: Needs verification      # workbook names no source for this figure
@@ -129,7 +135,7 @@ gaps:
   listing_school_wording: '"Within Mount View Primary zone (STSA)": STSA is not defined on the listing.'
   portal_suburb_profiles: realestate.com.au and Domain suburb profiles not read (B8 Task 8c; blocked from cloud sessions).
   glen_waverley_not_in_buying_summary: The PDF has no Glen Waverley or 5 Northam Street content (macro gap G02). The suburb-fit line now rests on B8 evidence (ABS 2021, Find My School), not the author's judgement.
-  glen_waverley_median_source: SuburbScorecard!Z7 names no source for the $1,763,500 sale median. Jellis Craig shows $1.68m (rolling 12 months, method not stated); which to show awaits user decision (P8).
+  glen_waverley_median_source: SuburbScorecard!Z7 names no source for the $1,763,500 sale median. Jellis Craig shows $1.68m (rolling 12 months, method not stated); Budget bullet now uses the realestate.com.au 4-bed median instead; the table keeps G7. G7 not changed because the 4-bed figure is not like-for-like with other rows' all-house medians.
   couples_with_children_figure: Removed 28 Oct 2026 (no source then); reinstated 29 Oct 2026 from ABS 2021 (52.3%, Victoria 45.5%; Checked).
   pdf_vs_workbook_prices:   # PDF medians have no stated source, index or period (macro gap G10); workbook governs
     - {suburb: Frankston, pdf_aud: 860000, workbook_aud: 834296, workbook_basis: sale median}

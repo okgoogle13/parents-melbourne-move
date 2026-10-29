@@ -42,7 +42,7 @@ Rule: one session edits the workbook at a time. Commit and push before a cloud s
 | P5 | Q13d answers (reference-only; rows in RawResponses AN / CleanedAnswers 40) |
 | P6 | Point Cook travel decision (currently Conditional) |
 | P7 | Definition of score P (needs the user's approval; waits on B4) |
-| P8 | Review and approve the 5 Northam St decision summary (C9) before the parents see it. Open points: (1)–(2) DONE 29 Oct: suburb-fit line reworded to the ABS 2021 and school-zone evidence; 52.3% reinstated. (3) median: workbook $1,763,500 (no named source) vs Jellis Craig $1.68m; (4) read the linked Statement of Information (comparable sales). Auction Sat 14 Nov 2026, 11:00 am |
+| P8 | Review and approve the 5 Northam St decision summary (C9) before the parents see it. Open points: (1)–(2) DONE 29 Oct: suburb-fit line reworded to the ABS 2021 and school-zone evidence; 52.3% reinstated. (3) DONE 29 Oct: Budget bullet uses the realestate.com.au 4-bed median $1,603,000; workbook G7 $1,763,500 still unsourced (needs the all-bedroom median); (4) read the linked Statement of Information (comparable sales). Auction Sat 14 Nov 2026, 11:00 am |
 
 ## Phase 2 readiness (28 Oct 2026)
 
