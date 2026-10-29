@@ -1,6 +1,6 @@
 # Open work: task register (the only list of open tasks; reviewed 28 Oct 2026)
 
-**Now:** Ready: B8, then P8 (auction 14 Nov 2026), then P4. Blocked: P7 (waits on B4). Awaiting your approval: P8.
+**Now:** Ready: P8 (auction 14 Nov 2026; inspections 29 and 31 Oct), then P4. Blocked: P7 (waits on B4). Awaiting your approval: P8.
 When a task finishes, mark it here and set the next task ID in `PROJECT_STATE.md`.
 
 Source: scoring-model-pointer.md, workbook headers, Claude_in_Chrome_prompt v2, foundation report, Talking with Mum.
@@ -30,7 +30,7 @@ Rule: one session edits the workbook at a time. Commit and push before a cloud s
 | B5 | Listings tab refresh from the "Parents." collection |
 | B6 | Suitable-property checks for the 6 Community comparators |
 | B7 | Comparator train access — recall-only check of train access for the six Community comparators. Distinct from C5, which covers train facts for passing suburbs |
-| B8 | Task 8 (added 28 Oct 2026): evidence on whether Glen Waverley is a family-and-school buyer market (ABS family composition, school zones for 5 Northam St, suburb-profile buyer types), plus a listing-facts check for 5 Northam St. Feeds P8; run before the 14 Nov auction |
+| B8 | **DONE 29 Oct: a, b, d; c partial** (Jellis Craig report read; realestate.com.au and Domain profiles blocked from cloud). Results in the 5 Northam St YAML. Task 8 (added 28 Oct 2026): evidence on whether Glen Waverley is a family-and-school buyer market (ABS family composition, school zones for 5 Northam St, suburb-profile buyer types), plus a listing-facts check for 5 Northam St. Feeds P8; run before the 14 Nov auction |
 
 ## People, not Claude
 | # | Task |
@@ -42,7 +42,7 @@ Rule: one session edits the workbook at a time. Commit and push before a cloud s
 | P5 | Q13d answers (reference-only; rows in RawResponses AN / CleanedAnswers 40) |
 | P6 | Point Cook travel decision (currently Conditional) |
 | P7 | Definition of score P (needs the user's approval; waits on B4) |
-| P8 | Review and approve the 5 Northam St decision summary (C9) before the parents see it. Open points: the family-and-school wording is the author's judgement (Needs verification; B8 collects the evidence, then keep, reword or remove); Glen Waverley's $1,763,500 median has no named source. Auction Sat 14 Nov 2026, 11:00 am |
+| P8 | Review and approve the 5 Northam St decision summary (C9) before the parents see it. Open points: (1) family-and-school line: B8 evidence is mixed (ABS 2021: 52.3% couples with children vs Victoria 45.5%, but fewer under-15s and more 65+ and outright owners; house zoned to Brentwood Secondary, not Glen Waverley Secondary): keep, reword or remove; (2) reinstate the 52.3% figure?; (3) median: workbook $1,763,500 (no named source) vs Jellis Craig $1.68m; (4) read the linked Statement of Information (comparable sales). Auction Sat 14 Nov 2026, 11:00 am |
 
 ## Phase 2 readiness (28 Oct 2026)
 

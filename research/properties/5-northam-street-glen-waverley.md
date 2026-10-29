@@ -5,7 +5,7 @@
 **Sale method:** Auction, Saturday 14 November 2026 at 11:00 am
 **Property:** 4 bed, 2 bath, 2 garage, 581 m², two-level family house (renovated, as the listing claims)
 **Parents' budget cap:** $1,500,000 purchase price (family decision, 27 Oct 2026; Checked)
-*Listing details are the agent's claims (listing 152636156): Needs verification.*
+*Listing details are the agent's claims (listing 152636156, read 29 Oct 2026): Needs verification.*
 
 ## Bottom line
 
@@ -41,7 +41,7 @@ Workbook figures, Checked (\*Needs verification: source not named). Suburb media
 2. The family deliberately approves raising the $1.5m cap.
 3. The house is genuinely better than realistic alternatives on the shortlist.
 4. A building and pest inspection shows the renovation is more than cosmetic.
-5. The house is independently confirmed to be in the Mount View Primary zone (the listing claims only that it is close).
+5. Met: Mount View Primary and Brentwood Secondary zones, not Glen Waverley Secondary's (Find My School 2027).
 6. Title, planning overlays, easements and the vendor statement show no material issues.
 7. The parents are comfortable holding the property for at least 7–10 years.
 
