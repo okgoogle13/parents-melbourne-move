@@ -21,6 +21,7 @@ Find the right suburbs/areas for my parents (and me, living with them) to move t
 - Save every output (new or updated file) into the folder. Edit existing files in place rather than creating near-duplicates; move superseded versions to `Archive/` with a clear suffix (e.g. "(superseded 2026-10-27)").
 - Never delete files; move to `Archive/` instead.
 - If the folder is not reachable (computer offline / not linked), say so and stop any work that needs the data. Do not fall back to Google or to old copies.
+- Handoffs between sessions (e.g. a chat writing instructions for a cloud branch) go in `Handoffs/` as "Handoff — topic (date).md", naming the target branch at the top. At the start of a session, read the newest one that names your branch. Move a handoff to `Archive/` once its work is done. `.claude/handoffs/` is local plugin output, not a record.
 - Cite researched claims (prices, drive times, train lines) with sources, and record the source in the workbook row.
 - Separate verified data from estimates in every answer and in the workbook.
 

@@ -1,6 +1,6 @@
 # Open work: task register (the only list of open tasks; reviewed 28 Oct 2026)
 
-**Now:** Ready: P4. Done 29 Oct: workbook Glen Waverley median update (5704d65), reports refreshed. Blocked: P7 (waits on B4). Awaiting your approval: none.
+**Now:** Ready: P4. Done 29 Oct: workbook Glen Waverley median update (5704d65), reports refreshed. Blocked: P7 (waits on B4). Awaiting your approval: M1–M3 and M5 (proposed 29 Oct).
 When a task finishes, mark it here and set the next task ID in `PROJECT_STATE.md`.
 
 Source: scoring-model-pointer.md, workbook headers, Claude_in_Chrome_prompt v2, foundation report, Talking with Mum.
@@ -19,6 +19,17 @@ Rule: one session edits the workbook at a time. Commit and push before a cloud s
 | C7 | Rewrite the foundation report: it predates round 2/3, final weights and entered scores ("workbook has no scores" is now wrong). Add demography, prices, stations, ED, top-15 under final weights; .md + .pdf; old version to Archive. **Done 28 Oct:** aligned to workbook commit 7de29d5 (ranks, scores, final weights, top 15); three four-suburb viewing options (each meets the viewing-shortlist rule); drive bases labelled per row; Point Cook Conditional, Tarneit and Mount Waverley Excluded; previous .md/.pdf in Archive. Refreshed 28 Oct to the 10:00 comparator basis (workbook 387763a) | Done |
 | C8 | Update scoring-model-pointer.md (stale lines: Mum's 3 Essentials resolved in round 2; status counts) | Every session |
 | C9 | **DONE 28 Oct (cloud): draft built.** One-page decision summary and YAML record for 5 Northam St, Glen Waverley (`research/properties/5-northam-street-glen-waverley.md` / `.yaml`), from workbook 387763a and the buying summary PDF (d46e819). One A4 page via `tools/build_property_pdf.sh`. Not added to Listings (user decision). | Gaps in the YAML; review is P8 |
+
+## Macro research integration (proposed 29 Oct 2026; awaiting approval)
+Task 1 of the handover (local-only `research/inputs/parents-melbourne-move-handover.md`) is partly done: macro YAML, sources, snapshot, freshness rules, schemas, validator (`tools/validate_macro.py`, 0 errors 29 Oct) and the 5 Northam St summary. Still missing below. Only the PDF `research/inputs/Melbourne_Established_House_Buying_Summary.pdf` is a source; no new research.
+
+| # | Task | Notes |
+|---|---|---|
+| M1 | `research/macro/macro-impact-review.md`: file-by-file consistency review of root reports, pointer, instructions and the 5 Northam St page against the macro YAML (statuses per handover §6). Proposes edits; changes nothing | Do first; M2–M3 use its findings |
+| M2 | Parent-facing `research/macro/macro-market-conditions.md` + printable PDF built from the macro YAML (reuse `tools/build_pdf.sh`) | Before 3 Nov: freshness flips to review_due after the RBA decision; cloud credit ends 4 Nov |
+| M3 | Agent ingestion note: a short "Macro data" section in `docs/workflow.md` (what is canonical, run the validator, freshness statuses), linked from CLAUDE.md "Read on demand" | Not a separate AGENTS.md |
+| M4 | Re-check after the 3 Nov RBA decision: update `macro-market-conditions.yaml` + new snapshot only from a named source, or mark review_due | Trigger in `research/macro/freshness.yaml` |
+| M5 | Decision: drop the handover's `research/suburbs/suburb-shortlist.yaml/.md` and Task 2 (full repo refactor). The suburb file would duplicate the workbook with conflicting PDF figures (e.g. Frankston $860k vs workbook $834,296); its modelled forecast ranges can be listed in M1 as display-only gaps | Recommended: drop both |
 
 ## Claude in Chrome (needs your signed-in browser or live Maps)
 | # | Task |

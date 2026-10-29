@@ -1,6 +1,6 @@
 .DS_Store
 .claude/handoff-nudge-state.json
-.claude/handoffs/HANDOFF_*
+.claude/handoffs/
 
 # Local-only provenance input (never commit; sha256 in research/macro/sources.yaml)
 research/inputs/parents-melbourne-move-handover.md
