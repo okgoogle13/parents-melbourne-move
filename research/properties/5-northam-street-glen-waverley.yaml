@@ -84,9 +84,9 @@ assessment:
     loss_on_1500000_aud: {low: 60000, high: 90000}  # Estimate (arithmetic)
     loss_on_1600000_aud: {low: 64000, high: 96000}  # Estimate (arithmetic)
   suburb_fit:
-    family_school_market:
-      value: true
-      label: Needs verification    # author's judgement; not in the buying summary or workbook; B8 evidence below is mixed; wording awaits user decision (P8)
+    family_buyer_market:           # reworded to the B8 evidence (user decision 29 Oct 2026); replaces the unsourced "family-and-school market" judgement
+      value: expect_family_buyers_at_auction
+      label: Estimate                # inference from abs_2021 below; house is outside the Glen Waverley Secondary College zone (school_zones_2027)
     abs_2021:                      # Glen Waverley vs Victoria; source abs_quickstats_2021_SAL21013
       couple_family_with_children_pct: {value: 52.3, victoria: 45.5, label: Checked}
       couple_family_without_children_pct: {value: 32.7, victoria: 37.6, label: Checked}
@@ -128,9 +128,9 @@ gaps:
   statement_of_information_not_read: Linked from the listing; its comparable sales and suburb median are not yet recorded.
   listing_school_wording: '"Within Mount View Primary zone (STSA)": STSA is not defined on the listing.'
   portal_suburb_profiles: realestate.com.au and Domain suburb profiles not read (B8 Task 8c; blocked from cloud sessions).
-  glen_waverley_not_in_buying_summary: The PDF has no Glen Waverley or 5 Northam Street content (macro gap G02). The family-and-school wording is the author's judgement; Claude in Chrome Task 8 (register B8) collects the evidence.
+  glen_waverley_not_in_buying_summary: The PDF has no Glen Waverley or 5 Northam Street content (macro gap G02). The suburb-fit line now rests on B8 evidence (ABS 2021, Find My School), not the author's judgement.
   glen_waverley_median_source: SuburbScorecard!Z7 names no source for the $1,763,500 sale median. Jellis Craig shows $1.68m (rolling 12 months, method not stated); which to show awaits user decision (P8).
-  couples_with_children_figure: Removed 28 Oct 2026 (no source then). ABS 2021 now confirms 52.3% (Victoria 45.5%); reinstating it awaits user decision (P8).
+  couples_with_children_figure: Removed 28 Oct 2026 (no source then); reinstated 29 Oct 2026 from ABS 2021 (52.3%, Victoria 45.5%; Checked).
   pdf_vs_workbook_prices:   # PDF medians have no stated source, index or period (macro gap G10); workbook governs
     - {suburb: Frankston, pdf_aud: 860000, workbook_aud: 834296, workbook_basis: sale median}
     - {suburb: Endeavour Hills, pdf_aud: 853000, workbook_aud: 857000, workbook_basis: SOI median}
