@@ -1,6 +1,6 @@
 # Open work: task register (the only list of open tasks; reviewed 28 Oct 2026)
 
-**Now:** Ready: P4. Pending: workbook G7/H7/Z7 Glen Waverley median update (from the P8 evidence). Blocked: P7 (waits on B4). Awaiting your approval: none.
+**Now:** Ready: P4. Done 29 Oct: workbook Glen Waverley median update (5704d65), reports refreshed. Blocked: P7 (waits on B4). Awaiting your approval: none.
 When a task finishes, mark it here and set the next task ID in `PROJECT_STATE.md`.
 
 Source: scoring-model-pointer.md, workbook headers, Claude_in_Chrome_prompt v2, foundation report, Talking with Mum.
@@ -42,7 +42,7 @@ Rule: one session edits the workbook at a time. Commit and push before a cloud s
 | P5 | Q13d answers (reference-only; rows in RawResponses AN / CleanedAnswers 40) |
 | P6 | Point Cook travel decision (currently Conditional) |
 | P7 | Definition of score P (needs the user's approval; waits on B4) |
-| P8 | **DONE 29 Oct: approved by the user.** Review and approve the 5 Northam St decision summary (C9) before the parents see it. Open points: (1)–(2) DONE 29 Oct: suburb-fit line reworded to the ABS 2021 and school-zone evidence; 52.3% reinstated. (3) DONE 29 Oct: Budget bullet uses the realestate.com.au 4-bed median $1,603,000; page table uses the realestate.com.au all-house median $1,675,000; workbook G7 still $1,763,500 (update pending: G7/H7/Z7, recalc, report regeneration); (4) DONE 29 Oct: Statement of Information read: no comparable sales listed; land 677 m² vs listing 581 m² (verify); REIV median $1,750,000. (5) Signed off. Auction Sat 14 Nov 2026, 11:00 am |
+| P8 | **DONE 29 Oct: approved by the user.** Review and approve the 5 Northam St decision summary (C9) before the parents see it. Open points: (1)–(2) DONE 29 Oct: suburb-fit line reworded to the ABS 2021 and school-zone evidence; 52.3% reinstated. (3) DONE 29 Oct: Budget bullet uses the realestate.com.au 4-bed median $1,603,000; page table uses the realestate.com.au all-house median $1,675,000; workbook G7 updated to $1,675,000 29 Oct (5704d65; recalc passed; reports refreshed); (4) DONE 29 Oct: Statement of Information read: no comparable sales listed; land 677 m² vs listing 581 m² (verify); REIV median $1,750,000. (5) Signed off. Auction Sat 14 Nov 2026, 11:00 am |
 
 ## Phase 2 readiness (28 Oct 2026)
 

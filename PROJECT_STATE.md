@@ -8,12 +8,12 @@ Read first. Baseline and next task ID only; open tasks live in the register, `Op
 
 | File | Version | Status |
 |---|---|---|
-| `Our Next Home — Family Relocation Scoring Model.xlsx` | Last changed in commit `387763a` (comparator fixes); sha256 `d1b95d47…bcd88c` | Approved research baseline (28 Oct). Recalc test verified locally (28 Oct): 0 errors, 51 ranked rows. Currently stores no cached formula values |
-| `Our Next Home — parent report (28 Oct 2026).html` | Commit `7acd52f`, built from workbook `387763a` | Draft: requires family review; not for publication or distribution |
-| `Suburb shortlist foundation report.md` / `.pdf` | Commit `5a23bd2`, built from workbook `387763a` | Awaiting human review |
+| `Our Next Home — Family Relocation Scoring Model.xlsx` | Last changed in commit `5704d65` (Glen Waverley median, 29 Oct); sha256 `5983b212…bd3242` | Approved research baseline (28 Oct). Recalc test verified locally (28 Oct): 0 errors, 51 ranked rows. Currently stores no cached formula values |
+| `Our Next Home — parent report (28 Oct 2026).html` | Rebuilt 29 Oct from workbook `5704d65` | Draft: requires family review; not for publication or distribution |
+| `Suburb shortlist foundation report.md` / `.pdf` | Updated 29 Oct to workbook `5704d65` (Glen Waverley price only) | Awaiting human review |
 
 Status counts, ranks and the change history are in `scoring-model-pointer.md`.
 
 ## Next task
 
-P4: family review of both reports. P8 done (5 Northam St summary approved 29 Oct 2026); pending: workbook G7/H7/Z7 Glen Waverley median update.
+P4: family review of both reports. P8 done (5 Northam St summary approved 29 Oct 2026); workbook Glen Waverley median updated (5704d65).

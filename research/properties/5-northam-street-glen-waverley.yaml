@@ -1,6 +1,6 @@
 meta:
   prepared_on: 2026-10-28
-  workbook_commit: "387763a"        # last commit changing the workbook; sha256 d1b95d47…
+  workbook_commit: "5704d65"        # Glen Waverley median update 29 Oct 2026; previously 387763a
   buying_summary_commit: "d46e819"  # commit that added the PDF
   status: approved_2026-10-29     # signed off by the user (P8)
   position: caution_set_by_author   # stance stated, not derived
@@ -86,11 +86,11 @@ assessment:
     sales_past_12_months: 442        # houses, all bedrooms (user correction 29 Oct 2026); workbook H7 had 454
     houses_available_past_month: 147   # houses for sale on realestate.com.au in the past month (user confirmed 29 Oct 2026); Checked
     label: Checked
-    workbook_g7_updated: false     # pending: G7/H7/Z7 update, recalc test and report regeneration
-  glen_waverley_house_median:      # workbook G7; superseded on the page by the all-house median above
+    workbook_g7_updated: true      # commit 5704d65, 29 Oct 2026; recalc test passed
+  glen_waverley_house_median_previous:  # former workbook G7, replaced 29 Oct 2026 (commit 5704d65)
     value_aud: 1763500
-    basis: sale median, rolling 12 months, 454 sales (SuburbScorecard!G7, H7; as at 26 Oct 2026)
-    label: Needs verification      # workbook names no source for this figure
+    basis: sale median, rolling 12 months, 454 sales; no source named
+    label: Needs verification
   drive_to_gw_min: 0
   stairs_filter: pass              # Filters!B6: stairs allowed (corrected 27 Oct 2026)
   market_timing:
@@ -134,7 +134,7 @@ decision_tests: [comparable_sales_support_walk_away_price, filters_cap_raise_app
   school_zone_verified_met, title_planning_vendor_statement_clear, hold_7_to_10_years_ok]
 
 alternatives:
-  - {suburb: Glen Waverley, workbook_status: Active shortlist, price_aud: 1763500, price_basis: "sale median, rolling 12m, 454 sales", price_label: Needs verification, drive_to_gw_min: 0, drive_basis: n/a, advantage: "Family already here; multicultural convenience", advantage_source: "SuburbScorecard!F7"}
+  - {suburb: Glen Waverley, workbook_status: Active shortlist, price_aud: 1675000, price_basis: "sale median, all bedrooms, 12 months, 442 sales (realestate.com.au)", price_label: Checked, drive_to_gw_min: 0, drive_basis: n/a, advantage: "Family already here; multicultural convenience", advantage_source: "SuburbScorecard!F7"}
   - {suburb: Wheelers Hill, workbook_status: Community comparator, price_aud: 1475000, price_basis: "SOI median, 22 Jun 2025–21 Jun 2026", price_label: Checked, drive_to_gw_min: 12, drive_basis: "10:00 weekday, 28 Oct 2026, top of range", advantage: "Family proximity and Jells Park", advantage_source: "buying summary section 4"}
   - {suburb: Endeavour Hills, workbook_status: Community comparator, price_aud: 857000, price_basis: "SOI median, 1 Aug 2025–1 Aug 2026", price_label: Checked, drive_to_gw_min: 26, drive_basis: "10:00 weekday, 28 Oct 2026, top of range", advantage: "Bushland and community access", advantage_source: "buying summary section 4"}
   - {suburb: Frankston, workbook_status: Active shortlist, price_aud: 834296, price_basis: "sale median, rolling 12m (Aussie/Cotality)", price_label: Checked, drive_to_gw_min: 25, drive_basis: "leave now, 26 Oct 2026", advantage: "Beach, reserves and train access", advantage_source: "buying summary section 4"}
@@ -150,7 +150,7 @@ gaps:
   listing_school_wording: '"Within Mount View Primary zone (STSA)": STSA is not defined on the listing.'
   portal_suburb_profiles: realestate.com.au and Domain suburb profiles not read (B8 Task 8c; blocked from cloud sessions).
   glen_waverley_not_in_buying_summary: The PDF has no Glen Waverley or 5 Northam Street content (macro gap G02). The suburb-fit line now rests on B8 evidence (ABS 2021, Find My School), not the author's judgement.
-  glen_waverley_median_source: SuburbScorecard!Z7 names no source for the $1,763,500 sale median. Jellis Craig shows $1.68m (rolling 12 months, method not stated); Budget bullet now uses the realestate.com.au 4-bed median instead; the table keeps G7. G7 not changed because the 4-bed figure is not like-for-like with other rows' all-house medians.
+  glen_waverley_median_source: Resolved 29 Oct 2026. Workbook G7 now $1,675,000 (realestate.com.au, 442 sales; commit 5704d65), replacing the unsourced $1,763,500. Cross-checks in Z7 (REIV $1.75m, Jellis Craig $1.68m).
   couples_with_children_figure: Removed 28 Oct 2026 (no source then); reinstated 29 Oct 2026 from ABS 2021 (52.3%, Victoria 45.5%; Checked).
   pdf_vs_workbook_prices:   # PDF medians have no stated source, index or period (macro gap G10); workbook governs
     - {suburb: Frankston, pdf_aud: 860000, workbook_aud: 834296, workbook_basis: sale median}

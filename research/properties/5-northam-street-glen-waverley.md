@@ -25,7 +25,7 @@ The guide is above the cap before any auction competition. The buying summary's 
 
 | Suburb | Workbook status | House price (basis) | Drive to GW | Main advantage |
 |---|---|---:|---:|---|
-| Glen Waverley | Active shortlist | $1,675,000 (sale median)* | 0 min | Family already here; multicultural convenience |
+| Glen Waverley | Active shortlist | $1,675,000 (sale median) | 0 min | Family already here; multicultural convenience |
 | Wheelers Hill | Community comparator | $1,475,000 (SOI median) | 12 min† | Family proximity and Jells Park |
 | Endeavour Hills | Community comparator | $857,000 (SOI median) | 26 min† | Bushland and community access |
 | Frankston | Active shortlist | $834,296 (sale median) | 25 min | Beach, reserves and train access |
@@ -33,7 +33,7 @@ The guide is above the cap before any auction competition. The buying summary's 
 | Springvale | Community comparator | $942,500 (SOI median) | 26 min† | Strong Indian-community infrastructure |
 | Keysborough | Community comparator | $975,000 (SOI median) | 24 min† | Family and community access |
 
-Workbook figures, Checked, except \*realestate.com.au all-house median, 12 months (Checked; not yet in the workbook). Suburb medians are not like-for-like with one renovated house; they show where the budget goes further. Drive times: Google Maps, typical traffic, not peak; "leave now", 26 Oct 2026, except †top of the 10:00 weekday range, 28 Oct 2026.
+Workbook figures, Checked (Glen Waverley: realestate.com.au, 12 months, 442 sales). Suburb medians are not like-for-like with one renovated house; they show where the budget goes further. Drive times: Google Maps, typical traffic, not peak; "leave now", 26 Oct 2026, except †top of the 10:00 weekday range, 28 Oct 2026.
 
 ## Decision test: proceed only if all are true
 
@@ -49,4 +49,4 @@ Workbook figures, Checked, except \*realestate.com.au all-house median, 12 month
 
 **Do not bid simply because the house is appealing.** Treat it as a high-discipline exception, not a default purchase. Set a hard walk-away price before auction day from recent settled comparable sales. If the house does not clearly beat realistic alternatives on price, nature access and long-term fit, keep searching: Wheelers Hill, Endeavour Hills, Frankston, Seaford and Springvale.
 
-*Decision framework, not a valuation or financial advice. Workbook 387763a; buying summary d46e819. Approved 29 Oct 2026.*
+*Decision framework, not a valuation or financial advice. Workbook 5704d65; buying summary d46e819. Approved 29 Oct 2026.*

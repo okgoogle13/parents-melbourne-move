@@ -2,11 +2,11 @@
 
 **Start viewing with one of three four-suburb options (A, B or C below).** Each option puts at least one nature-first anchor (Frankston, Mordialloc or Seaford) beside at least two Community comparators, one of which is a checked "Potential both" suburb (Endeavour Hills or Wheelers Hill). This lets the family see the nature-versus-community trade-off in person. Fifty-one suburbs pass the family's hard filters (price up to $1.5M, Glen Waverley drive up to 90 min, ED drive up to 90 min) and are ranked by the workbook. The top three are the nature-first anchors: **Frankston 7.00 (#1), Mordialloc 6.90 (#2) and Seaford 6.89 (#3)**, then Mentone and Altona. Seven of the top eight are bay or coast suburbs. Beach carries the largest final weight (16.4%), then Nature (14.4%), Train/bus (12.0%) and Village character (11.9%); Near family carries 5.8%. The anchors' own Nature scores are moderate (Frankston 6, Seaford 6, Mordialloc 5; ESTIMATE). The suburbs with Nature 10 (Sassafras, Olinda, Mount Dandenong, Warburton) rank 35th to 50th and are in no option. The six Community comparators are display-only and **not ranked**. No suburb is described here as a confirmed choice: no specific house has been checked anywhere. **The workbook is canonical; nothing here replaces it.** Every figure is labelled CHECKED, ESTIMATE or NEEDS VERIFICATION.
 
-*Read-date 27 Oct 2026; comparator update 28 Oct 2026; workbook alignment 28 Oct 2026. Workbook = "Our Next Home — Family Relocation Scoring Model.xlsx" at commit 387763a. Print in A4 landscape.*
+*Read-date 27 Oct 2026; comparator update 28 Oct 2026; workbook alignment 28 Oct 2026; Glen Waverley median update 29 Oct 2026. Workbook = "Our Next Home — Family Relocation Scoring Model.xlsx" at commit 5704d65. Print in A4 landscape.*
 
 | Update, 28 Oct 2026: what changed since the 27 Oct version |
 |---|
-| 1. **Rankings, scores and tables now reflect the current workbook** (commit 387763a; ranks and scores identical to 7de29d5): every rank, weighted score and 0–10 score below is the workbook's own. The 27 Oct provisional calculation, its weights, its sensitivity tables and its Round 2 scenario ranks have been removed. |
+| 1. **Rankings, scores and tables now reflect the current workbook** (commit 5704d65; ranks and scores identical to 387763a and 7de29d5): every rank, weighted score and 0–10 score below is the workbook's own. The 27 Oct provisional calculation, its weights, its sensitivity tables and its Round 2 scenario ranks have been removed. |
 | 2. **Six Community comparators added** (workbook SuburbScorecard rows 67–72, display-only, not ranked): Springvale, Clayton South, Keysborough, Clyde North ("Diverse / lower-green"); Endeavour Hills, Wheelers Hill ("Potential both"; Wheelers Hill community-lighter). All meet the price cap, the 90-min Glen Waverley limit and the public 24-hour ED rule on checked evidence. |
 | 3. **Point Cook is Conditional and is not a comparator** (fails the 90-min Glen Waverley cap at 08:00 peak). **Tarneit is Excluded** (family decision 28 Oct 2026) and **Mount Waverley is Excluded** (median over the cap). **Rowville is Reference only.** None of the four is in the scorecard or any option. |
 | 4. **Viewing options replaced** by three four-suburb options. Each meets the viewing-shortlist rule (checked in the table below). |
@@ -88,7 +88,7 @@ Nature-first anchor = Frankston, Mordialloc or Seaford. Community-first comparat
 | 1. **Prices for ranked suburbs are mostly AVMs.** 38 of 51 workbook prices are automated estimates, not sale medians (7 are sale medians, 5 are 3-bed medians, 1 is a 5-sale median). The six comparators use Statement of Information sale medians (CHECKED). |
 | 2. **Hazard overlays are unchecked for every suburb.** Only council-wide lists and news items were read; none at property level. |
 | 3. **Indian groceries, temples and churches are CHECKED for the six Community comparators** (current Google listings and drive times, 28 Oct), except two items that NEED VERIFICATION (Endeavour Spices; Shri Sanatan Dharam's opening hours). For the 51 ranked suburbs the notes name a few temples but no grocers, and the workbook's Indian-community scores (P) are ESTIMATE. |
-| 4. **Twelve suburbs are not ranked:** four "needs data" because the price is over the cap or unclear (Blackburn $1.60M sale median; Glen Waverley $1.7635M, baseline only; Williamstown $1.64M AVM, sale medians $1.49M to $1.58M; Mount Eliza $1.61M AVM, Jellis Craig median $1.72M) and eight fail the 90-minute Glen Waverley limit (Ocean Grove 92, Clifton Springs 95, Inverloch 96, Trentham 97, Curlewis 104, Ballarat 111, Castlemaine 114, Bendigo 140). |
+| 4. **Twelve suburbs are not ranked:** four "needs data" because the price is over the cap or unclear (Blackburn $1.60M sale median; Glen Waverley $1.675M sale median, baseline only; Williamstown $1.64M AVM, sale medians $1.49M to $1.58M; Mount Eliza $1.61M AVM, Jellis Craig median $1.72M) and eight fail the 90-minute Glen Waverley limit (Ocean Grove 92, Clifton Springs 95, Inverloch 96, Trentham 97, Curlewis 104, Ballarat 111, Castlemaine 114, Bendigo 140). |
 | 5. **No suitable property has been verified for any suburb.** A suburb median, or the Wheelers Hill sold results, shows that houses trade under the cap; it does not show that one meets the family's needs. |
 
 ## Community comparators: the other side of the trade-off (added 28 Oct 2026)
@@ -438,7 +438,7 @@ Option A shows the starkest contrast; Options B and C each include both Potentia
 
 ## Sources
 
-Sources are the researchers' notes (Dandenong foothills, ridge and Yarra Valley, north-east, Mornington Peninsula, bayside and south-east, Macedon and Geelong, west and Gippsland), the workbook at commit 387763a and the Community comparators research file. Main sources are linked in the cards. Others used:
+Sources are the researchers' notes (Dandenong foothills, ridge and Yarra Valley, north-east, Mornington Peninsula, bayside and south-east, Macedon and Geelong, west and Gippsland), the workbook at commit 5704d65 and the Community comparators research file. Main sources are linked in the cards. Others used:
 
 | Topic | Source |
 |---|---|
