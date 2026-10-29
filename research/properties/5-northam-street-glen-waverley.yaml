@@ -2,7 +2,7 @@ meta:
   prepared_on: 2026-10-28
   workbook_commit: "387763a"        # last commit changing the workbook; sha256 d1b95d47…
   buying_summary_commit: "d46e819"  # commit that added the PDF
-  status: draft_requires_family_review
+  status: approved_2026-10-29     # signed off by the user (P8)
   position: caution_set_by_author   # stance stated, not derived
   property_decision: requires_further_evidence_before_bidding
   summary_md: research/properties/5-northam-street-glen-waverley.md
@@ -43,7 +43,7 @@ property:
   price_guide_aud: {low: 1550000, high: 1650000}
   sale_method: auction
   auction: 2026-11-14T11:00:00+11:00   # AEDT
-  land_m2: 581
+  land_m2: 581                     # listing; the Statement of Information says 677 ("approx"); Needs verification
   bedrooms: 4
   bathrooms: 2
   car_spaces: 2
@@ -51,7 +51,14 @@ property:
   renovation: agent_claim_unverified
   school_claim: "Within Mount View Primary zone (STSA)"   # listing wording, 1.18 km; also lists Brentwood Secondary and Caulfield Grammar as nearby
   features: [north-facing alfresco and backyard, established gardens, irrigation, ducted heating, evaporative cooling, split-system air conditioning, video intercom, double garage with internal access]
-  statement_of_information_linked: true   # "Property price statement" PDF; not read
+  statement_of_information:        # "Property Price Statement", s47AF Estate Agents Act; prepared 2026-10-02; read 2026-10-29 (copy supplied by the user)
+    indicative_price_aud: {low: 1550000, high: 1650000}
+    land_m2: 677
+    internal_floor_area_m2: null   # "N/A"
+    suburb_median_aud: {value: 1750000, property_type: house, period: 2025-07-01/2026-06-30, source: REIV}
+    comparable_sales: []           # none listed
+    reason_no_comparables: "Fewer than 3 comparable sales were identified due to the property's particular type/ land type and characteristics"
+    label: Checked                 # what the statement says; agent document
   inspections: ["2026-10-29 16:00-16:30", "2026-10-31 12:00-12:30"]
   label: Needs verification        # all property fields are agent claims
 
@@ -73,7 +80,14 @@ assessment:
     source: realestate.com.au suburb profile (https://www.realestate.com.au/vic/glen-waverley-3150/), screenshot supplied by the user 29 Oct 2026
     label: Checked
     also_shown: {houses_available_past_month: 38, median_days_on_market: 30}
-  glen_waverley_house_median:      # all houses; still in the alternatives table
+  glen_waverley_all_house_median:  # alternatives table, Glen Waverley row (user decision 29 Oct 2026)
+    value_aud: 1675000
+    basis: all-bedroom house median, past 12 months (realestate.com.au suburb profile; figure supplied by the user 29 Oct 2026)
+    sales_past_12_months: 442        # houses, all bedrooms (user correction 29 Oct 2026); workbook H7 had 454
+    houses_available_past_month: 147   # houses for sale on realestate.com.au in the past month (user confirmed 29 Oct 2026); Checked
+    label: Checked
+    workbook_g7_updated: false     # pending: G7/H7/Z7 update, recalc test and report regeneration
+  glen_waverley_house_median:      # workbook G7; superseded on the page by the all-house median above
     value_aud: 1763500
     basis: sale median, rolling 12 months, 454 sales (SuburbScorecard!G7, H7; as at 26 Oct 2026)
     label: Needs verification      # workbook names no source for this figure
@@ -131,7 +145,8 @@ alternatives:
 gaps:
   undisclosed_listing_items: [floor_area, year_built, storey_count, auction_location, price_history, solar, water_tanks, vendor_statement, special_conditions, renovation_permits, building_pest_report]
   listing_not_independently_checked: Listing read 29 Oct 2026 (B8 Task 8d); all property facts remain agent claims.
-  statement_of_information_not_read: Linked from the listing; its comparable sales and suburb median are not yet recorded.
+  statement_of_information_comparables: The agent's statement lists no comparable sales (read 29 Oct 2026).
+  land_size_conflict: Listing 581 m2 vs Statement of Information 677 m2 approx; confirm from title or plan of subdivision.
   listing_school_wording: '"Within Mount View Primary zone (STSA)": STSA is not defined on the listing.'
   portal_suburb_profiles: realestate.com.au and Domain suburb profiles not read (B8 Task 8c; blocked from cloud sessions).
   glen_waverley_not_in_buying_summary: The PDF has no Glen Waverley or 5 Northam Street content (macro gap G02). The suburb-fit line now rests on B8 evidence (ABS 2021, Find My School), not the author's judgement.
