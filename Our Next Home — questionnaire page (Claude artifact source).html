@@ -140,7 +140,8 @@ const SECTIONS = [
   {tag:"Q7b", retired:true, q:"Household space needed:", opts:["A — 3 bedrooms","B — 3 bedrooms + a second living area","C — 4 bedrooms","D — A self-contained space (granny flat or separate unit)","E — Not decided / depends (see notes)"]},
   {tag:"Q3-Q7b Notes", notes:true}]},
  {title:"What nature and community mean to you", items:[
-  {tag:"Q8", q:"When you picture nature near your new home, it's mostly:", opts:withE(["A — A green outlook from the house","B — Bush walks within a short drive","C — Hills and forest all around","D — Your own garden"])},
+  // Q8 E (water) added 30 Oct 2026; "None of these" moved to F. Answers saved before then use E for "None of these".
+  {tag:"Q8", q:"When you picture nature near your new home, it's mostly:", opts:["A — A green outlook from the house","B — Bush walks within a short drive","C — Hills and forest all around","D — Your own garden","E — Water: a coast, bay or river outlook, or a beach nearby","F — None of these / depends (see notes)"]},
   {tag:"Q9", q:"Which one thing would make you feel most at home in the community?", opts:withE(["A — A church or place of worship nearby","B — Indian groceries and restaurants","C — Friends who share your language or culture","D — Friendly neighbours of any background"])},
   {tag:"Q8-Q9 Notes", notes:true}]},
  {title:"Pick one", help:"Real places force trade-offs. Pick the one you'd actually choose.", items:[
