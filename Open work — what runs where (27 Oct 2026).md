@@ -1,6 +1,6 @@
 # Open work: task register (the only list of open tasks; reviewed 28 Oct 2026)
 
-**Now:** Ready: P4 or rounds 5–6; order is your decision (plan recommends rounds 5–6 first, then N2 locally). Done 29 Oct: workbook Glen Waverley median update (5704d65), reports refreshed. Blocked: P7 (waits on B4). Awaiting your approval: M1–M3 and M5 (proposed 29 Oct).
+**Now:** Done 30 Oct: N2 workbook intake. Awaiting your approval: G3 (M/O decoupling) and G1 (republish the questionnaire for rounds 5–6). P4 order is still your decision (plan recommends rounds 5–6 first). Done 29 Oct: workbook Glen Waverley median update (5704d65), reports refreshed. Blocked: P7 (waits on B4). Awaiting your approval: M1–M3 and M5 (proposed 29 Oct).
 When a task finishes, mark it here and set the next task ID in `PROJECT_STATE.md`.
 
 Source: scoring-model-pointer.md, workbook headers, Claude_in_Chrome_prompt v2, foundation report, Talking with Mum.
@@ -19,7 +19,7 @@ Rule: one session edits the workbook at a time. Commit and push before a cloud s
 | C7 | Rewrite the foundation report: it predates round 2/3, final weights and entered scores ("workbook has no scores" is now wrong). Add demography, prices, stations, ED, top-15 under final weights; .md + .pdf; old version to Archive. **Done 28 Oct:** aligned to workbook commit 7de29d5 (ranks, scores, final weights, top 15); three four-suburb viewing options (each meets the viewing-shortlist rule); drive bases labelled per row; Point Cook Conditional, Tarneit and Mount Waverley Excluded; previous .md/.pdf in Archive. Refreshed 28 Oct to the 10:00 comparator basis (workbook 387763a) | Done |
 | C8 | Update scoring-model-pointer.md (stale lines: Mum's 3 Essentials resolved in round 2; status counts) | Every session |
 | C9 | **DONE 28 Oct (cloud): draft built.** One-page decision summary and YAML record for 5 Northam St, Glen Waverley (`research/properties/5-northam-street-glen-waverley.md` / `.yaml`), from workbook 387763a and the buying summary PDF (d46e819). One A4 page via `tools/build_property_pdf.sh`. Not added to Listings (user decision). | Gaps in the YAML; review is P8 |
-| C10 | **DONE 30 Oct (cloud, branch claude/n1-questionnaire-design): rounds 5–7 design doc; awaiting local review.** N1: rounds 5–7 questionnaire design doc, plus register and `PROJECT_STATE.md` updates. Documentation only | Plan: revision 3 + revision 4 routing (local `~/.claude/plans/`); prompt `cloud-kickoff-prompt-N1.md`. Review the branch locally before merging |
+| C10 | **DONE 30 Oct (cloud, branch claude/n1-questionnaire-design): rounds 5–7 design doc; merged to main 30 Oct (7f7d1c6).** N1: rounds 5–7 questionnaire design doc, plus register and `PROJECT_STATE.md` updates. Documentation only | Plan: revision 3 + revision 4 routing (local `~/.claude/plans/`); prompt `cloud-kickoff-prompt-N1.md`. Review the branch locally before merging |
 
 ## Macro research integration (proposed 29 Oct 2026; awaiting approval)
 Task 1 of the handover (local-only `research/inputs/parents-melbourne-move-handover.md`) is partly done: macro YAML, sources, snapshot, freshness rules, schemas, validator (`tools/validate_macro.py`, 0 errors 29 Oct) and the 5 Northam St summary. Still missing below. Only the PDF `research/inputs/Melbourne_Established_House_Buying_Summary.pdf` is a source; no new research.
@@ -63,7 +63,7 @@ From `Questionnaire redesign — rounds 5–7 (29 Oct 2026).md` sections 6–7. 
 
 | # | Change | When to ask | Depends on | Status |
 |---|---|---|---|---|
-| N2 | Workbook intake, one edit: RawResponses AO1:BE1 headers; CleanedAnswers rows 41–71; Settings A27:D39 (column B blank); Listings X1:AG1 headers plus AA/AG formulas filled down rows 2–33 (AG = "Pending rules"); SuburbScorecard AY1:BB1 and BF1 headers (empty); DiscussionSummary A40:F52 display block (no count). Recalc and diff | Not gated (intake) | None in the plan; G1 and G3 follow it | not started, runs locally, needs approval where gated |
+| N2 | Workbook intake, one edit: RawResponses AO1:BE1 headers; CleanedAnswers rows 41–71; Settings A27:D39 (column B blank); Listings X1:AG1 headers plus AA/AG formulas filled down rows 2–33 (AG = "Pending rules"); SuburbScorecard AY1:BB1 and BF1 headers (empty); DiscussionSummary A40:F52 display block (no count). Recalc and diff | Not gated (intake) | None in the plan; G1 and G3 follow it | **DONE 30 Oct** (recalc and diff passed; see pointer change log) |
 | N3 | Import round 5–6 answers per the design doc's Storage rule; recalc and diff | Not gated (intake); after all three answer | P9, N2 | not started, runs locally, needs approval where gated |
 | N4 | Write `CleanedAnswers!H59`/`H61` and the DiscussionSummary counts; re-run the dry run with real E59/E61 | After N3, with approval | N3 | not started, runs locally, needs approval where gated |
 | G1 | Republish the questionnaire (round-4 page archived first; R5/R6 items added; Q13d kept; Q4, Q4b, Q5, Q6, Q7, Q7b retired; R5.6, R5.7, R6.2 validation checks; mode label `round 5–6 (R5, R6, Q13d)`) | After N2 | N2 | not started, runs locally, needs approval where gated |
