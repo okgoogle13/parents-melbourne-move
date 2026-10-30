@@ -74,7 +74,7 @@ Hurstbridge is one of the 13 suburbs that profile answers must never describe or
 
 ## Caveats
 
-- The BMO marks land where bushfire hazard is high enough for planning controls. The BPA triggers the building standard (BAL assessment). Neither is a risk rating for a particular house. Both lag the latest planning amendments; zone and overlay data are as served on 31 Oct 2026.
+- The BMO marks land where bushfire hazard is high enough for planning controls. The BPA triggers the building standard (BAL assessment). Neither is a risk rating for a particular house. Both lag the latest planning amendments; zone and overlay data are as served on 31 Oct 2026. Every downloaded zone and BMO feature has `zone_status` = "g" (gazetted); no proposed controls are included.
 - The BMO share is an area share, not a count of streets or homes. "Most residential streets" is a proxy.
 - Card E suburbs other than McCrae, Mount Martha and Arthurs Seat (Mornington, Dromana, Rosebud, Rye) were not in scope. The same goes for cards A and D apart from Eltham.
 - The VicPlan address fallback was not needed and not run.
