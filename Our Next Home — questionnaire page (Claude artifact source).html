@@ -94,7 +94,7 @@ textarea{min-height:70px;resize:vertical}
 
   <section id="fallback" hidden>
     <h2>Answers to copy</h2>
-    <p class="sec-help">Saving isn't available in this view (you may be signed out). Copy these answers and send them on so they can be added to the workbook.</p>
+    <p class="sec-help">This page can't save your answers on this device. Press “Copy answers”, then paste them into a message or email to the family member who sent you this link. If Copy doesn't work, press and hold in the box, choose Select All, then Copy.</p>
     <textarea class="copybox" id="copyText" readonly></textarea>
     <div class="actions"><button class="secondary" type="button" id="copyBtn">Copy answers</button></div>
   </section>
@@ -123,8 +123,9 @@ const SECTIONS = [
   {tag:"Q2", q:"What was hardest about Coorabell day to day? (Everyone, whether you liked it or not.)", opts:withE(["A — Driving everywhere","B — Being far from family","C — Being far from doctors and the hospital","D — Looking after the house and land"])},
   {tag:"Q1-Q2 Notes", notes:true}]},
  {title:"Dealbreakers and living arrangement", items:[
-  {tag:"Q3", q:"What's the most you'd spend in total, including stamp duty and moving?", opts:withE(["A — $1.0m","B — $1.25m","C — $1.5m","D — More, for the right place"]), optional:true,
-   decided:"Family decision 27 Oct: $1.5m maximum purchase price. Only answer if your view is different."},
+  // Q3 reworded 30 Oct 2026: purchase price only (earlier wording said "in total, including stamp duty and moving").
+  {tag:"Q3", q:"What's the most you'd pay for the home itself?", help:"This is the purchase price only. Stamp duty and moving costs come on top, roughly 6% more.",
+   opts:withE(["A — $1.0m","B — $1.25m","C — $1.5m","D — More, for the right place"])},
   {tag:"Q4", retired:true, q:"What's the longest drive to the family in Glen Waverley you'd accept?", opts:withE(["A — 15 min","B — 25 min","C — 35 min","D — 45 min or more"]), optional:true,
    decided:"Family decision 26 Oct: 90 min maximum, 60 min preferred. Only answer if your view is different."},
   {tag:"Q4b", retired:true, q:"If D or E above: your maximum drive in minutes", number:true, optional:true, help:"E.g. 60, 75 or 90. Leave blank if there's no fixed limit."},
@@ -317,7 +318,7 @@ document.getElementById("save").addEventListener("click",async()=>{
   const bad=ruleError(a);
   if(bad){ setStatus("["+bad[0]+"] "+bad[1],false); const f=form.querySelector(`fieldset[data-tag="${CSS.escape(bad[0])}"]`); f&&f.scrollIntoView({behavior:"smooth",block:"center"}); return; }
   const rec={person:who, savedAt:new Date().toISOString(), mode:"full survey, own answers (30 Oct 2026)", answers:a, answeredCount:Object.keys(a).length};
-  if(!db){ document.getElementById("fallback").hidden=false; document.getElementById("copyText").value=textFor(rec); setStatus("Saving isn't available here. Copy the answers below.",false); return; }
+  if(!db){ document.getElementById("fallback").hidden=false; document.getElementById("copyText").value=textFor(rec); setStatus("Nearly done: copy your answers below and send them on.",false); document.getElementById("fallback").scrollIntoView({behavior:"smooth",block:"start"}); return; }
   const btn=document.getElementById("save"); btn.disabled=true; setStatus("Saving…",true);
   try{
     await db.collection("responses").add(rec);
@@ -347,7 +348,7 @@ function renderSaved(snap){
 applyMode();
 (async()=>{
   try{ db = window.claude && await window.claude.use("db"); }catch(e){ db=null; }
-  if(!db){ document.getElementById("savedEmpty").textContent="Saved answers show here when you're signed in to claude.ai. You can still fill this in and copy the answers."; return; }
+  if(!db){ document.getElementById("savedEmpty").textContent="When you finish, press Save at the bottom. You'll then get your answers to copy and send back."; return; }
   db.collection("responses").orderBy("savedAt","desc").onSnapshot(renderSaved,()=>{});
 })();
 </script>
