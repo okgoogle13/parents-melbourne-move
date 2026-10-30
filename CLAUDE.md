@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Research record for choosing a suburb in or around Melbourne for the user's parents (the user lives with them). Not software. `main` is the baseline; `PROJECT_STATE.md` records when it was last verified against the local Mac folder.
+Research record for choosing a suburb in or around Melbourne for the user's parents (the user lives separately now and will live with them after the move). Not software. `main` is the baseline; `PROJECT_STATE.md` records when it was last verified against the local Mac folder.
 
 ## Read on demand
 - Always: `PROJECT_STATE.md` (baseline, next task ID).

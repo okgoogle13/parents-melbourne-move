@@ -1,0 +1,504 @@
+<title>Our Next Home Questionnaire</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,650&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one calm column like a paper interview sheet; a sticky strip for who's answering and progress; large tap rows for phone and iPad */
+:root{
+  --bg:#f3f5f1; --paper:#ffffff; --ink:#1d2722; --muted:#5b6a62; --line:#d5ddd6;
+  --accent:#2f6b4f; --accent-soft:#e2eee6; --warn:#9a5a12; --warn-soft:#f8ecd9;
+  --display:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --body:"Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141a17; --paper:#1c2420; --ink:#e4ebe6; --muted:#9aaba1; --line:#33413a;
+  --accent:#7fc4a0; --accent-soft:#223a2e; --warn:#e3b06a; --warn-soft:#3a2d1a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141a17; --paper:#1c2420; --ink:#e4ebe6; --muted:#9aaba1; --line:#33413a;
+  --accent:#7fc4a0; --accent-soft:#223a2e; --warn:#e3b06a; --warn-soft:#3a2d1a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+header{padding-top:32px;display:flex;flex-direction:column;gap:10px}
+h1{font:650 clamp(30px,6vw,40px)/1.15 var(--display);margin:0;text-wrap:balance}
+h2{font:600 22px/1.25 var(--display);margin:0;text-wrap:balance}
+.lede{color:var(--muted);margin:0;max-width:62ch}
+.strip{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:10px 0;border-bottom:1px solid var(--line);
+  display:flex;gap:12px;align-items:center}
+.answering{font-weight:600;white-space:nowrap}
+.who{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.who-label{font-weight:600;margin-right:4px}
+.chip{min-height:44px;min-width:64px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:999px;padding:10px 18px;font:600 16px var(--body);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+.chip:focus-visible,button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.bar{flex:1;min-width:80px;height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--accent);transition:width .2s}
+.count{font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.notice{margin:0;padding:10px 14px;border-radius:8px;background:var(--accent-soft);font-size:15px}
+.notice.warn{background:var(--warn-soft);color:var(--warn)}
+.start{margin:0;color:var(--muted);font-size:17px}
+form{display:flex;flex-direction:column;gap:20px}
+section{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:22px;min-width:0}
+.sec-head{display:flex;flex-direction:column;gap:4px}
+.sec-no{font:500 14px var(--body);color:var(--accent)}
+.sec-help{color:var(--muted);margin:0;font-size:15px;white-space:pre-line}
+fieldset{border:0;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;min-width:0;border-radius:6px}
+fieldset.missing{outline:2px solid var(--warn);outline-offset:8px}
+legend{font-weight:600;font-size:17px;padding:0;margin-bottom:6px}
+.help{font-size:15px;color:var(--muted);margin:-2px 0 4px}
+.case{font-size:15px;margin:0 0 4px;padding:8px 12px;border-left:3px solid var(--line);background:var(--bg);border-radius:0 6px 6px 0}
+.opts{display:flex;flex-direction:column;gap:8px}
+label.opt{display:flex;gap:12px;align-items:center;min-height:48px;padding:10px 14px;border:1px solid var(--line);border-radius:8px;cursor:pointer}
+label.opt:has(input:checked){border-color:var(--accent);background:var(--accent-soft)}
+label.opt input{flex:none;width:20px;height:20px;margin:0;accent-color:var(--accent)}
+.opt-text{width:100%;min-height:44px;font:16px var(--body);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px}
+.scale{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.scale label.opt{flex-direction:column;justify-content:center;text-align:center;gap:2px;min-height:64px;padding:8px 4px;font-size:14px}
+.scale label.opt input{position:absolute;opacity:0;pointer-events:none}
+.scale label.opt{position:relative}
+.scale label.opt:has(input:focus-visible){outline:3px solid var(--accent);outline-offset:2px}
+.scale label.opt b{font-size:17px}
+.essential-warn{color:var(--warn);font-weight:600;font-size:15px;margin:0}
+textarea{width:100%;font:16px var(--body);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px;min-height:80px;resize:vertical}
+.actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.primary{min-height:48px;background:var(--accent);color:var(--paper);border:0;border-radius:8px;padding:12px 22px;font:600 17px var(--body);cursor:pointer}
+.primary:disabled{opacity:.5;cursor:not-allowed}
+.secondary{min-height:48px;display:inline-flex;align-items:center;background:transparent;color:var(--accent);border:1px solid var(--accent);border-radius:8px;padding:10px 18px;font:600 16px var(--body);cursor:pointer;text-decoration:none}
+.status{font-size:16px;margin:0}
+.status.ok{color:var(--accent)} .status.bad{color:var(--warn)}
+.steps{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:4px}
+.copybox{width:100%;min-height:180px;font:14px/1.45 var(--body)}
+.saved table,.preview table{border-collapse:collapse;width:100%;font-size:14px}
+.saved td,.saved th,.preview td,.preview th{text-align:left;vertical-align:top;padding:6px 8px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.scroll{overflow-x:auto}
+@media (max-width:480px){.scale{grid-template-columns:repeat(2,1fr)} section{padding:16px}}
+@media (prefers-reduced-motion:reduce){.bar i{transition:none}}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Our Next Home</h1>
+    <p class="lede">Tell us what matters to you in the next home. Mum, Dad and Nish each fill this in separately. It takes about 12–15 minutes, and there are no right or wrong answers.</p>
+    <p class="lede">Your answers are kept on this phone or iPad as you go, so nothing is lost if the page closes. At the end you'll copy them into WhatsApp and send them to Nish.</p>
+  </header>
+
+  <div class="who" role="group" aria-label="Who's answering?" id="who"><span class="who-label">Who's answering?</span></div>
+
+  <div class="strip" id="prog" hidden>
+    <span class="answering" id="answering"></span>
+    <div class="bar" aria-hidden="true"><i id="bar"></i></div><span class="count" id="count"></span>
+  </div>
+
+  <p class="start" id="startMsg">Tap your name above to start.</p>
+  <p class="notice" id="draftMsg" hidden></p>
+
+  <form id="form" novalidate hidden></form>
+
+  <div class="actions" id="finishRow" hidden>
+    <button class="primary" id="finish" type="button">I've finished</button>
+  </div>
+  <p class="essential-warn" id="essWarn2" hidden></p>
+  <p class="status" id="status" role="status"></p>
+
+  <section id="send" hidden aria-labelledby="sendTitle">
+    <h2 id="sendTitle">Last step: send your answers to Nish</h2>
+    <ol class="steps">
+      <li>Tap “Send in WhatsApp”, choose Nish, then tap Send.</li>
+      <li>If WhatsApp opens without your answers, come back, tap “Copy my answers”, then paste them into a message to Nish.</li>
+    </ol>
+    <div class="actions">
+      <a class="primary" id="waLink" href="https://wa.me/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;text-decoration:none">Send in WhatsApp</a>
+      <button class="secondary" type="button" id="copyBtn">Copy my answers</button>
+    </div>
+    <p class="status" id="copyStatus" role="status"></p>
+    <p class="sec-help">If Copy doesn't work, press and hold in the box below, choose Select All, then Copy.</p>
+    <textarea class="copybox" id="copyText" readonly aria-label="Your answers"></textarea>
+  </section>
+
+  <section id="importBox" hidden aria-labelledby="importTitle">
+    <h2 id="importTitle">Import answers from WhatsApp</h2>
+    <p class="sec-help">Only you can see this. Paste a whole message from Mum or Dad, check it, then save it to the responses.</p>
+    <textarea id="importText" aria-label="Pasted WhatsApp message"></textarea>
+    <div class="actions">
+      <button class="secondary" type="button" id="importCheck">Check answers</button>
+      <button class="primary" type="button" id="importSave" disabled>Save to responses</button>
+    </div>
+    <p class="status" id="importStatus" role="status"></p>
+    <div class="preview scroll" id="importPreview"></div>
+  </section>
+
+  <section class="saved" id="savedBox" hidden>
+    <h2>Saved so far</h2>
+    <p class="sec-help" id="savedEmpty">No answers saved yet.</p>
+    <div class="scroll"><table id="savedTable" hidden><thead><tr><th>Person</th><th>Saved</th><th>Answers</th><th>From</th></tr></thead><tbody></tbody></table></div>
+  </section>
+</div>
+
+<script>
+// Page version 10 (30 Oct 2026): simplified survey. Design: review approved 30 Oct 2026 (see scoring-model-pointer.md change log).
+// Kept questions keep their tags. New: Q3c (confirm the $1.5m budget). Cut (not shown; earlier answers stay in the data):
+// Q1, Q2, Q8, Q9, Q13b, Q13c, R5.1, R5.3, R6.7 and their notes boxes; Q4, Q4b, Q5, Q6, Q7, Q7b were already retired.
+// Q10–Q13: no "None of these" option. Q14: E is now "Not sure yet". Skip logic replaces "Not applicable" choices:
+// a hidden R5.6 / R5.7 stores its "Not applicable" option automatically so the workbook validation still lines up.
+const PAGE_VERSION = 10;
+const MODE = "v10 simplified survey (30 Oct 2026)";
+const NAME = {Mum:"Mum", Dad:"Dad", Me:"Nish", TEST:"TEST"};
+const PEOPLE = ["Mum","Dad","Me"].concat(location.hash === "#test" ? ["TEST"] : []);
+const LEVELS = ["A — Not needed","B — Nice to have","C — Important","D — Essential"];
+const SEP = ["A — Own bedroom; everything else shared","B — Own bedroom and bathroom; kitchen and living room shared","C — Own bedroom, bathroom and sitting room, away from the rest of the house (at the other end or on another floor)","D — Self-contained: own entrance, bathroom and small kitchen (like a granny flat or separate unit), still one household"];
+const R52_HELP = "This is your firm limit, not your ideal. Some midday drive times to Glen Waverley, as examples only: Belgrave 21 min, Mordialloc 28, Mornington 40, Healesville 43, Warragul 58, Macedon 62, Torquay 88.\nPeak hour takes longer. If a drive is only OK outside peak hour, choose the shorter limit.";
+const startsWith = (tag, letters) => r => { const v = r(tag); return v !== "" && letters.includes(v.charAt(0)); };
+
+const SECTIONS = [
+ {title:"Living together", items:[
+  {tag:"Q7a", short:"Living together", q:"Are we planning for all three of us to live together?",
+   opts:["A — Yes, living together","B — No, parents only","C — Not decided yet, depends on the place"]}]},
+ {title:"Budget", items:[
+  {tag:"Q3c", short:"Budget", q:"We're planning to spend up to $1.5m on the home itself. Is that right for you?",
+   help:"This is the price of the home. Stamp duty and moving costs come on top, roughly 6% more.",
+   opts:["A — Yes, up to $1.5m is right","B — Lower: I'd rather spend less","C — Higher, for the right place"]}]},
+ {title:"Drive limits", items:[
+  {tag:"R5.2", short:"Longest drive to Glen Waverley", q:"What's the longest drive to the family in Glen Waverley you'd accept, even for a place that's right in every other way?",
+   help:R52_HELP, opts:["A — No further than 25 min","B — No further than 35 min","C — No further than 45 min","D — No further than 60 min","E — Up to 90 min"]},
+  {tag:"R5.4", short:"Longest drive to a hospital emergency department", q:"What's the longest drive to a public hospital emergency department (open 24 hours, not an urgent-care clinic) you'd accept?",
+   opts:["A — 15 min","B — 20 min","C — 30 min","D — 45 min","E — No limit for me"]}]},
+ {title:"Pick one", help:"Each of these is a real trade-off. Pick the one you'd actually choose.", items:[
+  {tag:"Q10", short:"Forest street or leafy street", q:"Which would you choose?", opts:["A — A forest street, 35 min from Glen Waverley","B — A leafy suburban street, 15 min from Glen Waverley"]},
+  {tag:"Q11", short:"Near the beach or hills and bush", q:"Which would you choose?", opts:["A — A suburb near the coast, beach 10 min away","B — Hills and bush, beach an hour away"]},
+  {tag:"Q12", short:"Quiet street or walk to shops", q:"Which would you choose?", opts:["A — A quiet street, driving 15 min to the shops and doctor","B — A busier street, walking to the shops, doctor and station"]},
+  {tag:"Q13", short:"Community close or very green", q:"Which would you choose?", opts:["A — Indian shops and community in your own suburb, with ordinary suburban greenery","B — Bush and forest all around, with Indian shops and community a 30-min drive away"]},
+  {tag:"Q13d", short:"Green village or multicultural neighbourhood", q:"If both options were within 30 minutes of family, which would you prefer for everyday living?", cases:[
+    "A. A very green, peaceful village or bushland-edge suburb with trails and natural scenery nearby. Most neighbours would not share your background. Indian groceries, a Hindu temple, and churches would be about 30 minutes' drive away.",
+    "B. A more multicultural neighbourhood where many neighbours are from Indian and other migrant backgrounds. Indian groceries, Hindu temples, and churches would be close by, but with fewer trees, trails, and natural views nearby."],
+   opts:["A strongly","A slightly","No strong preference","B slightly","B strongly"]},
+  {tag:"Q10-Q13c Notes", short:"Notes on these choices", notes:true, label:"Anything to add about these choices? (optional)"}]},
+ {title:"Community", items:[
+  {tag:"R5.5", short:"Community place used most", q:"Which community place would you go to most often?",
+   help:"If it's something else, like restaurants or events, add it in the notes below.",
+   opts:["A — Indian grocery","B — Hindu temple","C — Church","D — None regularly"]},
+  {tag:"R5.6", short:"Longest regular drive to that place", q:"How long a drive would you make to get there regularly?",
+   opts:["A — 10 min","B — 20 min","C — 30 min","D — 45 min","E — Not applicable (I chose \"None regularly\")"], hideOpts:[4],
+   show:startsWith("R5.5","ABC"), auto:r=>startsWith("R5.5","D")(r)?4:null},
+  {tag:"R5.7", short:"Church", q:"Does it need to be a particular church or denomination?",
+   opts:["A — Any church is fine","B — Yes, this one:","C — Not applicable (I didn't choose Church)"], hideOpts:[2], textOpt:1,
+   show:startsWith("R5.5","C"), auto:r=>startsWith("R5.5","ABD")(r)?2:null},
+  {tag:"R5 Notes", short:"Notes on drives and community", notes:true, label:"Anything to add about drives or community places? (optional)"}]},
+ {title:"The home", help:"Thinking about the house itself, not the suburb.", items:[
+  {tag:"R6.1", short:"Separation: least that would work", q:who=>"If we live together, what's the least separation between "+(who==="Me"?"my":"Nish's")+" space and the rest of the home that would work for you?",
+   help:who=>"Each choice describes "+(who==="Me"?"your":"Nish's")+" part of the home.", opts:SEP, show:r=>!startsWith("Q7a","B")(r)},
+  {tag:"R6.2", short:"Separation: most that still feels like one household", q:"And what's the most separation that would still feel like one household to you?",
+   help:"Choices with less separation than your first answer are left out.",
+   opts:SEP, show:r=>!startsWith("Q7a","B")(r) && startsWith("R6.1","ABC")(r), auto:r=>!startsWith("Q7a","B")(r) && startsWith("R6.1","D")(r)?3:null, minLetter:r=>r("R6.1").charAt(0)},
+  {tag:"R6.3", short:"Separation: needed when we buy", q:"How important is it that the home already has the separation you chose first, when we buy it?",
+   opts:["A — Essential: I wouldn't buy without it","B — Important: I'd accept a little less for the right home","C — Nice to have"], show:r=>!startsWith("Q7a","B")(r)},
+  {tag:"R6.4", short:"Must-haves for 10–15 years ahead", q:"Thinking 10–15 years ahead, what must the home have?",
+   opts:["A — Nothing special","B — A bedroom and full bathroom on the same level as the front door","C — A bedroom, full bathroom, kitchen and living room on the same level as the front door, with no steps from the street","D — A single-level home with no steps inside or from the street"]},
+  {tag:"R6.5a", short:"Outdoor space", q:"What outdoor space would you most like?", opts:["A — Balcony or courtyard","B — Small garden","C — Medium garden","D — Large garden or bush block"]},
+  {tag:"R6.5b", short:"Garden time each week", q:"How much time could you spend looking after the garden each week?",
+   opts:["A — Very little (under 1 hour)","B — About 1–2 hours","C — Several hours","D — We'd pay for help with most of it"]},
+  {tag:"R6.6", short:"Getting to the supermarket and GP", q:"From the front door, what's OK for getting to the supermarket and GP?",
+   opts:["A — Must be able to walk (10 min or less)","B — A walk of up to 20 min would be nice; driving is fine","C — Driving is fine, up to 10 min","D — Driving is fine, up to 20 min"]},
+  {tag:"R6 Notes", short:"Notes on the home", notes:true, label:"Anything to add about the home? (optional)"}]},
+ {title:"Later on", items:[
+  {tag:"Q14", short:"If driving became hard", q:"If driving became hard in 10–15 years, what would you want to do?",
+   opts:["A — Stay put and rely on taxis or family","B — Walk to the shops and doctor","C — Take the train or bus to family and the hospital","D — Move again then","E — Not sure yet"]}]},
+ {title:"Priorities", scale:true, help:"How much does each of these matter to you?\nChoose Essential for no more than two. If something doesn't matter much, Not needed or Nice to have is the right answer.", items:[
+  ["Q15.1","Nature and scenery","Greenery, outlook, bush walks and hills."],
+  ["Q15.2","Near family in Glen Waverley","An easy routine drive to family."],
+  ["Q15.3","Indian/South Asian community","Indian groceries, restaurants, temple or church, people from our culture."],
+  ["Q15.4","Beach","A walkable or swimmable beach or bay close by."],
+  ["Q15.5","Hospital nearby","Quick access to a major public hospital."],
+  ["Q15.6","Train or bus","A walkable station or reliable bus."],
+  ["Q15.7","Shops and doctor nearby","Supermarket, pharmacy and GP within easy reach."],
+  ["Q15.8","Village character","Quiet, friendly village feel."],
+  ["Q15.9","Price","Staying comfortably under the budget."],
+  ["Q15.10","Easy trip to the city","Work and outings in Melbourne."]
+ ].map(([tag,q,help])=>({tag,short:q,q,help,opts:LEVELS,scale:true})).concat([{tag:"Q15 Notes", short:"Notes on priorities", notes:true, label:"If anything is Essential, why? (optional)"}])}
+];
+const ITEMS = SECTIONS.flatMap(s=>s.items);
+const BYTAG = Object.fromEntries(ITEMS.map(it=>[it.tag,it]));
+const lettered = o => /^[A-F] — /.test(o);
+
+const form = document.getElementById("form");
+let who = null, db = null, user = null, storageOK = true, saveTimer = null, pendingImport = null, justSaved = false;
+const el = (t,p={},...c)=>{const e=document.createElement(t);Object.assign(e,p);c.forEach(x=>e.append(x));return e};
+const safeId = tag => "q-"+tag.replace(/[^A-Za-z0-9]/g,"_");
+const qText = it => typeof it.q === "function" ? it.q(who) : it.q;
+
+// ---------- render ----------
+SECTIONS.forEach((s,si)=>{
+  const sec = el("section",{className:"sec"});
+  const head = el("div",{className:"sec-head"}, el("span",{className:"sec-no",textContent:"Part "+(si+1)+" of "+SECTIONS.length}), el("h2",{textContent:s.title}));
+  if(s.help) head.append(el("p",{className:"sec-help",textContent:s.help}));
+  sec.append(head);
+  if(s.scale) sec.append(el("p",{className:"essential-warn",id:"essWarn",hidden:true}));
+  s.items.forEach(it=>{
+    const fs = el("fieldset",{className:"item"}); fs.dataset.tag = it.tag; it.fs = fs;
+    const id = safeId(it.tag);
+    if(it.notes){
+      fs.append(el("label",{htmlFor:id,textContent:it.label}), el("textarea",{id,name:it.tag}));
+    } else {
+      it.qEl = el("span",{textContent:qText(it)});
+      const lg = el("legend"); lg.append(it.qEl); fs.append(lg);
+      if(it.help){ it.helpEl = el("p",{className:"help",textContent:typeof it.help==="function"?it.help(who):it.help}); fs.append(it.helpEl); }
+      if(it.cases) it.cases.forEach(t=>fs.append(el("p",{className:"case",textContent:t})));
+      const box = el("div",{className:it.scale?"scale":"opts"});
+      it.optEls = [];
+      it.opts.forEach((o,oi)=>{
+        const inp = el("input",{type:"radio",name:it.tag,value:o,id:id+"_"+oi});
+        const lab = el("label",{className:"opt",htmlFor:inp.id}); lab.append(inp);
+        if(it.scale){ lab.append(el("b",{textContent:o.slice(4)})); }
+        else lab.append(el("span",{textContent:lettered(o)?o.slice(4):o}));
+        if(it.hideOpts && it.hideOpts.includes(oi)) lab.hidden = true;
+        it.optEls.push(lab); box.append(lab);
+      });
+      fs.append(box);
+      if(it.textOpt!=null){
+        it.textEl = el("input",{type:"text",id:id+"_text",className:"opt-text",maxLength:80,placeholder:"Church or denomination",hidden:true});
+        it.textEl.setAttribute("aria-label","Church or denomination");
+        fs.append(it.textEl);
+      }
+    }
+    sec.append(fs);
+  });
+  form.append(sec);
+});
+
+// ---------- reading the form ----------
+function raw(tag){
+  const r = form.querySelector(`input[name="${CSS.escape(tag)}"]:checked`);
+  return r ? r.value : "";
+}
+const isShown = it => !it.show || it.show(raw);
+function valueOf(it){
+  if(it.notes){ const t=it.fs.querySelector("textarea"); return t.value.trim(); }
+  const r = raw(it.tag); if(!r) return "";
+  if(it.textOpt!=null && r===it.opts[it.textOpt]) return (r+" "+it.textEl.value.trim()).trim();
+  return r;
+}
+function collect(){
+  const a = {};
+  ITEMS.forEach(it=>{
+    if(isShown(it)){ const v=valueOf(it); if(v!=="") a[it.tag]=v; }
+    else if(it.auto){ const i=it.auto(raw); if(i!=null) a[it.tag]=it.opts[i]; }
+  });
+  return a;
+}
+const requiredShown = () => ITEMS.filter(it=>!it.notes && isShown(it));
+function missing(a){ return requiredShown().filter(it=>!(it.tag in a)); }
+function ruleError(a){
+  const v = a["R5.7"];
+  if(v && v.startsWith("B") && !v.replace(/^B — Yes, this one:/,"").trim()) return [BYTAG["R5.7"],"Please type the church or denomination."];
+  return null;
+}
+
+// ---------- visibility, progress ----------
+function applyVisibility(){
+  ITEMS.forEach(it=>{
+    it.fs.hidden = !isShown(it);
+    if(it.minLetter){
+      const m = it.minLetter(raw);
+      it.optEls.forEach((lab,oi)=>{
+        const hide = !!m && it.opts[oi].charAt(0) < m;
+        lab.hidden = hide;
+        if(hide){ const inp=lab.querySelector("input"); if(inp.checked) inp.checked=false; }
+      });
+    }
+    if(it.textEl){ it.textEl.hidden = raw(it.tag)!==it.opts[it.textOpt]; }
+  });
+}
+function update(){
+  applyVisibility();
+  const a = collect(), req = requiredShown();
+  const done = req.filter(it=>it.tag in a).length;
+  document.getElementById("count").textContent = done+" of "+req.length+" answered";
+  document.getElementById("bar").style.width = (req.length?100*done/req.length:0)+"%";
+  const ess = Object.keys(a).filter(k=>/^Q15\.\d+$/.test(k) && a[k].startsWith("D")).length;
+  ["essWarn","essWarn2"].forEach(id=>{ const w=document.getElementById(id); w.hidden = ess<=2; w.textContent = "You've chosen Essential for "+ess+" things in Priorities. Please keep it to two."; });
+  const fb = document.getElementById("finish"); fb.disabled = ess>2 || justSaved; fb.textContent = justSaved ? "Saved" : "I've finished";
+  form.querySelectorAll("fieldset.missing").forEach(f=>{ if(f.dataset.tag in a) f.classList.remove("missing"); });
+  return {a, ess};
+}
+
+// ---------- draft on this device ----------
+const DKEY = p => "onh-v10-draft-"+p;
+function rawState(){
+  const s = {radios:{}, texts:{}, extra:{}};
+  ITEMS.forEach(it=>{
+    if(it.notes){ const t=it.fs.querySelector("textarea").value; if(t) s.texts[it.tag]=t; }
+    else { const r=raw(it.tag); if(r) s.radios[it.tag]=r; if(it.textEl && it.textEl.value) s.extra[it.tag]=it.textEl.value; }
+  });
+  return s;
+}
+function clearForm(){ form.reset(); ITEMS.forEach(it=>{ if(it.textEl) it.textEl.value=""; it.fs.classList.remove("missing"); }); }
+function restore(s){
+  Object.entries(s.radios||{}).forEach(([tag,v])=>{ const it=BYTAG[tag]; if(!it||!it.opts) return; const i=it.opts.indexOf(v); if(i>=0) document.getElementById(safeId(tag)+"_"+i).checked=true; });
+  Object.entries(s.texts||{}).forEach(([tag,v])=>{ const it=BYTAG[tag]; if(it&&it.notes) it.fs.querySelector("textarea").value=v; });
+  Object.entries(s.extra||{}).forEach(([tag,v])=>{ const it=BYTAG[tag]; if(it&&it.textEl) it.textEl.value=v; });
+}
+function saveDraft(){
+  if(!who) return;
+  try{ localStorage.setItem(DKEY(who), JSON.stringify({savedAt:new Date().toISOString(), state:rawState()})); storageOK=true; }
+  catch(e){ if(storageOK){ storageOK=false; showDraftMsg("This browser can't keep your answers if the page closes. Please finish in one go and copy your answers at the end.", true); } }
+}
+function loadDraft(p){
+  try{ const t=localStorage.getItem(DKEY(p)); return t?JSON.parse(t):null; }catch(e){ return null; }
+}
+function showDraftMsg(t,warn){ const m=document.getElementById("draftMsg"); m.textContent=t; m.className="notice"+(warn?" warn":""); m.hidden=!t; }
+function onEdit(){ justSaved = false; update(); clearTimeout(saveTimer); saveTimer=setTimeout(saveDraft,400); }
+form.addEventListener("change", onEdit);
+form.addEventListener("input", e=>{ if(e.target.matches("textarea,input[type=text]")) onEdit(); });
+ITEMS.forEach(it=>{ if(it.textEl) it.textEl.addEventListener("input",()=>{ document.getElementById(safeId(it.tag)+"_"+it.textOpt).checked=true; onEdit(); }); });
+
+// ---------- who's answering ----------
+const whoBox = document.getElementById("who");
+PEOPLE.forEach(p=>{
+  const b = el("button",{type:"button",className:"chip",id:"who-"+p,textContent:NAME[p]});
+  b.setAttribute("aria-pressed","false");
+  b.addEventListener("click",()=>choose(p));
+  whoBox.append(b);
+});
+function choose(p){
+  if(who===p) return;
+  if(who){ clearTimeout(saveTimer); saveDraft(); }
+  who = p; justSaved = false;
+  PEOPLE.forEach(q=>document.getElementById("who-"+q).setAttribute("aria-pressed",String(q===p)));
+  clearForm();
+  const d = loadDraft(p);
+  if(d && d.state){ restore(d.state); const t=new Date(d.savedAt);
+    showDraftMsg("Welcome back, "+NAME[p]+". Your answers from "+(isNaN(t)?"earlier":t.toLocaleString([], {weekday:"short",hour:"numeric",minute:"2-digit"}))+" are filled in.", false); }
+  else showDraftMsg(storageOK?"":document.getElementById("draftMsg").textContent, !storageOK);
+  ITEMS.forEach(it=>{ if(it.qEl) it.qEl.textContent = qText(it); if(it.helpEl && typeof it.help==="function") it.helpEl.textContent = it.help(who); });
+  document.getElementById("answering").textContent = NAME[p]+"'s answers";
+  document.getElementById("startMsg").hidden = true;
+  form.hidden = false; document.getElementById("finishRow").hidden = false; document.getElementById("prog").hidden = false;
+  document.getElementById("send").hidden = true; setStatus("",true);
+  update();
+}
+
+// ---------- message for WhatsApp ----------
+const plain = v => lettered(v) ? v.slice(4) : v;
+function encodeVal(it,v){
+  if(it.notes) return v.replace(/\s*\n\s*/g," / ");
+  if(it.textOpt!=null && v.startsWith(it.opts[it.textOpt])) return it.opts[it.textOpt].charAt(0)+":"+v.slice(it.opts[it.textOpt].length).trim();
+  const i = it.opts.indexOf(v);
+  return lettered(v) ? v.charAt(0) : String(i+1);
+}
+function exportText(rec){
+  const L = ["Our Next Home: "+NAME[rec.person]+"'s answers",""];
+  ITEMS.forEach(it=>{
+    const v = rec.answers[it.tag]; if(v==null) return;
+    if(it.hideOpts && it.hideOpts.includes(it.opts.indexOf(v))) return;
+    L.push(it.short+": "+(it.notes?v:plain(v)));
+  });
+  L.push("","Code for Nish (no need to read; please leave it as it is):","ONH v"+PAGE_VERSION+" | "+rec.person+" | "+rec.savedAt);
+  ITEMS.forEach(it=>{ const v=rec.answers[it.tag]; if(v!=null) L.push(it.tag+"="+encodeVal(it,v)); });
+  return L.join("\n");
+}
+function parseImport(text){
+  const lines = String(text).split(/\r?\n/).map(s=>s.trim());
+  const h = lines.findIndex(s=>/^ONH v\d+ \|/.test(s));
+  if(h<0) return {error:"Couldn't find the line that starts with “ONH v”. Paste the whole message."};
+  const parts = lines[h].split("|").map(s=>s.trim());
+  if(parts[0]!=="ONH v"+PAGE_VERSION) return {error:"This message came from page version "+parts[0].replace("ONH v","")+"; this page is version "+PAGE_VERSION+"."};
+  const person = parts[1], savedAt = parts[2]||"";
+  if(!["Mum","Dad","Me","TEST"].includes(person)) return {error:"Unknown person “"+person+"”."};
+  const answers = {}, errors = [];
+  lines.slice(h+1).forEach(s=>{
+    if(!s) return; const k=s.indexOf("="); if(k<0) return;
+    const tag=s.slice(0,k).trim(), val=s.slice(k+1).trim(), it=BYTAG[tag];
+    if(!it){ errors.push("Unknown question “"+tag+"”"); return; }
+    if(it.notes){ if(val) answers[tag]=val; return; }
+    let code=val, extra="";
+    if(it.textOpt!=null && /^[A-F]:/.test(val)){ code=val.charAt(0); extra=val.slice(2).trim(); }
+    const idx = /^\d+$/.test(code) ? Number(code)-1 : it.opts.findIndex(o=>o.startsWith(code+" — "));
+    if(idx<0 || idx>=it.opts.length){ errors.push(tag+": “"+val+"” isn't one of the choices"); return; }
+    answers[tag] = idx===it.textOpt ? (it.opts[idx]+" "+extra).trim() : it.opts[idx];
+  });
+  return {person, savedAt, answers, errors};
+}
+
+// ---------- finishing ----------
+function setStatus(t,ok,id="status"){ const s=document.getElementById(id); s.textContent=t; s.className="status "+(ok?"ok":"bad"); }
+function showSend(rec){
+  const txt = exportText(rec);
+  document.getElementById("copyText").value = txt;
+  document.getElementById("waLink").href = "https://wa.me/?text="+encodeURIComponent(txt);
+  const box = document.getElementById("send"); box.hidden = false; setStatus("",true,"copyStatus");
+  box.scrollIntoView({behavior:"smooth",block:"start"});
+}
+document.getElementById("finish").addEventListener("click", async ()=>{
+  const {a} = update();
+  const miss = missing(a);
+  form.querySelectorAll("fieldset.missing").forEach(f=>f.classList.remove("missing"));
+  if(miss.length){
+    miss.forEach(it=>it.fs.classList.add("missing"));
+    setStatus(miss.length===1?"One question still needs an answer. It's outlined above.":miss.length+" questions still need an answer. They're outlined above.", false);
+    miss[0].fs.scrollIntoView({behavior:"smooth",block:"center"}); return;
+  }
+  const bad = ruleError(a);
+  if(bad){ bad[0].fs.classList.add("missing"); setStatus(bad[1],false); bad[0].fs.scrollIntoView({behavior:"smooth",block:"center"}); return; }
+  clearTimeout(saveTimer); saveDraft();
+  const rec = {person:who, savedAt:new Date().toISOString(), mode:MODE, pageVersion:PAGE_VERSION, source:"page", answers:a, answeredCount:Object.keys(a).length};
+  if(!db){ setStatus("All answered. One last step below.",true); showSend(rec); return; }
+  const btn = document.getElementById("finish"); btn.disabled = true; setStatus("Saving…",true);
+  try{ await db.collection("responses").add(rec); justSaved = true; setStatus("Saved "+NAME[who]+"'s answers. Thank you.",true); }
+  catch(e){ console.warn("save failed", e&&e.code); setStatus("Couldn't save here. Please send your answers below instead.",false); showSend(rec); }
+  finally{ update(); }
+});
+document.getElementById("copyBtn").addEventListener("click",()=>{
+  const t = document.getElementById("copyText");
+  const fallback = ()=>{ t.focus(); t.select(); setStatus("Press and hold in the box, choose Select All, then Copy.",false,"copyStatus"); };
+  try{ navigator.clipboard.writeText(t.value).then(()=>setStatus("Copied. Now open WhatsApp, choose Nish, paste and send.",true,"copyStatus"), fallback); }
+  catch(e){ fallback(); }
+});
+
+// ---------- owner: import from WhatsApp, saved list ----------
+function renderPreview(res){
+  const box = document.getElementById("importPreview"); box.textContent = "";
+  const tb = el("tbody");
+  ITEMS.forEach(it=>{ const v=res.answers[it.tag]; if(v!=null) tb.append(el("tr",{},el("td",{textContent:it.tag}),el("td",{textContent:v}))); });
+  box.append(el("table",{},el("thead",{},el("tr",{},el("th",{textContent:"Question"}),el("th",{textContent:"Answer (as saved)"}))),tb));
+}
+document.getElementById("importCheck").addEventListener("click",()=>{
+  pendingImport = null; document.getElementById("importSave").disabled = true; document.getElementById("importPreview").textContent = "";
+  const res = parseImport(document.getElementById("importText").value);
+  if(res.error){ setStatus(res.error,false,"importStatus"); return; }
+  renderPreview(res);
+  const n = Object.keys(res.answers).length;
+  if(res.errors.length){ setStatus("Fix these before saving: "+res.errors.join("; ")+".",false,"importStatus"); return; }
+  pendingImport = res; document.getElementById("importSave").disabled = false;
+  setStatus(n+" answers for "+NAME[res.person]+" look right. Check the table, then save.",true,"importStatus");
+});
+document.getElementById("importSave").addEventListener("click", async ()=>{
+  if(!pendingImport || !db) return;
+  const r = pendingImport, btn = document.getElementById("importSave"); btn.disabled = true;
+  const rec = {person:r.person, savedAt:r.savedAt||new Date().toISOString(), importedAt:new Date().toISOString(), mode:MODE, pageVersion:PAGE_VERSION, source:"whatsapp", answers:r.answers, answeredCount:Object.keys(r.answers).length};
+  try{ await db.collection("responses").add(rec); pendingImport=null; setStatus("Saved "+NAME[r.person]+"'s answers to the responses.",true,"importStatus"); document.getElementById("importText").value=""; }
+  catch(e){ btn.disabled=false; setStatus("Couldn't save ("+(e&&e.code||"error")+"). Try again.",false,"importStatus"); }
+});
+function renderSaved(snap){
+  const tb = document.querySelector("#savedTable tbody"); tb.textContent = "";
+  document.getElementById("savedEmpty").hidden = !snap.empty;
+  document.getElementById("savedTable").hidden = snap.empty;
+  snap.docs.forEach(d=>{ const r=d.data(); if(!r) return; const dt=new Date(r.savedAt);
+    tb.append(el("tr",{},el("td",{textContent:NAME[r.person]||r.person||"?"}),
+      el("td",{textContent:isNaN(dt)?"":dt.toLocaleString([], {day:"numeric",month:"short",hour:"numeric",minute:"2-digit"})}),
+      el("td",{textContent:String(r.answeredCount||Object.keys(r.answers||{}).length)}),
+      el("td",{textContent:r.source==="whatsapp"?"WhatsApp":"Page"})));
+  });
+}
+
+update();
+(async()=>{
+  try{ db = window.claude && await window.claude.use("db"); }catch(e){ db = null; }
+  try{ user = window.claude && await window.claude.use("user"); }catch(e){ user = null; }
+  if(!db) return;
+  document.getElementById("savedBox").hidden = false;
+  db.collection("responses").orderBy("savedAt","desc").onSnapshot(renderSaved,()=>{});
+  let owner = false; try{ owner = !!(user && await user.canEdit()); }catch(e){}
+  document.getElementById("importBox").hidden = !owner;
+})();
+</script>

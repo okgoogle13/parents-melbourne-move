@@ -1,6 +1,6 @@
 # Open work: task register (the only list of open tasks; reviewed 28 Oct 2026)
 
-**Now:** Done 30 Oct: N2 workbook intake; G1 questionnaire republished for rounds 5–6 (version 5). Waiting on: P9 family answers (now the whole survey in their own words, page version 8; importing them can move the weights, so N3 needs approval). Awaiting your approval: G3 (M/O decoupling). Found 30 Oct: all three Q13d answers have been in the page store since 27 Oct but were never imported (P5). P4 order is still your decision (plan recommends rounds 5–6 first). Done 29 Oct: workbook Glen Waverley median update (5704d65), reports refreshed. Blocked: P7 (waits on B4). Awaiting your approval: M1–M3 and M5 (proposed 29 Oct).
+**Now:** Done 30 Oct: questionnaire simplified and republished (page v11: 29 questions, WhatsApp capture, owner import panel; see pointer change log). Next: send the link to Mum and Dad (P9); N3 import must add a RawResponses column for new tag Q3c. Done 30 Oct: N2 workbook intake; G1 questionnaire republished for rounds 5–6 (version 5). Waiting on: P9 family answers (now the whole survey in their own words, page version 8; importing them can move the weights, so N3 needs approval). Awaiting your approval: G3 (M/O decoupling). Found 30 Oct: all three Q13d answers have been in the page store since 27 Oct but were never imported (P5). P4 order is still your decision (plan recommends rounds 5–6 first). Done 29 Oct: workbook Glen Waverley median update (5704d65), reports refreshed. Blocked: P7 (waits on B4). Awaiting your approval: M1–M3 and M5 (proposed 29 Oct).
 When a task finishes, mark it here and set the next task ID in `PROJECT_STATE.md`.
 
 Source: scoring-model-pointer.md, workbook headers, Claude_in_Chrome_prompt v2, foundation report, Talking with Mum.
@@ -56,7 +56,7 @@ Task 1 of the handover (local-only `research/inputs/parents-melbourne-move-hando
 | P6 | Point Cook travel decision (currently Conditional) |
 | P7 | Definition of score P (needs the user's approval; waits on B4) → covered by rounds 5–7 (see P9 / G1 / G2 / G6) |
 | P8 | **DONE 29 Oct: approved by the user.** Review and approve the 5 Northam St decision summary (C9) before the parents see it. Open points: (1)–(2) DONE 29 Oct: suburb-fit line reworded to the ABS 2021 and school-zone evidence; 52.3% reinstated. (3) DONE 29 Oct: Budget bullet uses the realestate.com.au 4-bed median $1,603,000; page table uses the realestate.com.au all-house median $1,675,000; workbook G7 updated to $1,675,000 29 Oct (5704d65; recalc passed; reports refreshed); (4) DONE 29 Oct: Statement of Information read: no comparable sales listed; land 677 m² vs listing 581 m² (verify); REIV median $1,750,000. (5) Signed off. Auction Sat 14 Nov 2026, 11:00 am |
-| P9 | Family answers to rounds 5–6 (includes P5 Q13d) |
+| P9 | Family answers to rounds 5–6 (includes P5 Q13d). From 30 Oct: page v11 (simplified survey); parents send answers by WhatsApp, imported via the page's owner-only panel |
 
 ## Rounds 5–7 local steps (29 Oct 2026)
 From `Questionnaire redesign — rounds 5–7 (29 Oct 2026).md` sections 6–7. Each gate is asked once, when its inputs exist.

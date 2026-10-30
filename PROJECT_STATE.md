@@ -1,6 +1,6 @@
 # Project state
 
-Read first. Baseline and next task ID only; open tasks live in the register, `Open work — what runs where (27 Oct 2026).md`. Updated 30 Oct 2026.
+Read first. Baseline and next task ID only; open tasks live in the register, `Open work — what runs where (27 Oct 2026).md`. Updated 31 Oct 2026.
 
 ## Baseline
 
@@ -16,4 +16,4 @@ Status counts, ranks and the change history are in `scoring-model-pointer.md`.
 
 ## Next task
 
-P9: family answers rounds 5–6 on the republished questionnaire (G1 done 30 Oct). G3 (M/O decoupling, Settings B38/B39 = 90) needs the user's approval. P4 order still the user's decision.
+P9: family answers on survey code version 14 (round 8 trade-offs survey, built 31 Oct; see `Questionnaire redesign — round 8 (31 Oct 2026).md`). **Published 31 Oct to the existing artifact URL; link not yet sent.** Awaiting the user's review of v14. Bushfire screening, the model spec and any weight, filter, status or voting change each need separate approval. Answers arrive by WhatsApp and are imported through the page's owner panel. N3 import must add RawResponses columns for Q3c and the R8 items (listed in the round 8 record). Before any bush-edge area is promoted: bushfire screening B3-S (25 suburbs, not started). After the survey: a separate model spec (assumptions, sensitivity tests, impact on the top 10 and excluded suburbs) before any weight, filter, status or voting change. G3 (M/O decoupling, Settings B38/B39 = 90) needs the user's approval. P4 order still the user's decision.
