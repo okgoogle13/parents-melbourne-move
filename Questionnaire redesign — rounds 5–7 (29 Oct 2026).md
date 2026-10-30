@@ -84,10 +84,10 @@ C — No further than 45 min (e.g. Mornington 40, Healesville 43)
 D — No further than 60 min (e.g. Mount Martha 47, Rosebud 49, Warragul 58)
 E — Up to 90 min: keep the current family limit (e.g. Macedon 62, Kyneton 77, Torquay 88)
 
-Help text: *"This is your firm limit, not your ideal. Examples are illustrative only, not recommendations: Google Maps 'leave now' drive times around midday, 26–27 Oct 2026, from each suburb's centre to Glen Waverley. Peak hour is longer, and the drive from a particular house can be several minutes more or less."*
+Help text: *"This is your firm limit, not your ideal. Examples are illustrative only, not recommendations: Google Maps 'leave now' drive times around midday, 26–27 Oct 2026, from each suburb's centre to Glen Waverley. Peak hour is longer, and the drive from a particular house can be several minutes more or less. If you'd accept a longer drive only outside peak hour, choose the shorter limit and say so in the notes."*
 *Hard-filter candidate.*
 
-**R5.3 And what drive would you be happiest with?** Same A–E text, with "Up to …" in place of "No further than …". Same help text, except the first sentence reads "This is your ideal, not a limit." *Preference tier only; never excludes.*
+**R5.3 And what drive would you be happiest with?** Same A–E text, with "Up to …" in place of "No further than …". Same help text, except the first sentence reads "This is your ideal, not a limit." and the last sentence (peak hour) is left out. *Preference tier only; never excludes.*
 
 **R5.4 What's the furthest from a 24-hour public hospital emergency department you would not accept going beyond?** (Not an urgent-care clinic.)
 A — 15 min · B — 20 min · C — 30 min · D — 45 min · E — No limit for me
