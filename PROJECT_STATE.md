@@ -16,4 +16,4 @@ Status counts, ranks and the change history are in `scoring-model-pointer.md`.
 
 ## Next task
 
-P4: family review of both reports. P8 done (5 Northam St summary approved 29 Oct 2026); workbook Glen Waverley median updated (5704d65).
+P4 vs rounds 5–6 order: user decision pending (plan recommends rounds 5–6 first; then N2, local).
