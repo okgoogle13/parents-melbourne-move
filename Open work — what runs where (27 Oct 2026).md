@@ -1,6 +1,6 @@
 # Open work: task register (the only list of open tasks; reviewed 28 Oct 2026)
 
-**Now:** Done 30 Oct: N2 workbook intake. Awaiting your approval: G3 (M/O decoupling) and G1 (republish the questionnaire for rounds 5–6). P4 order is still your decision (plan recommends rounds 5–6 first). Done 29 Oct: workbook Glen Waverley median update (5704d65), reports refreshed. Blocked: P7 (waits on B4). Awaiting your approval: M1–M3 and M5 (proposed 29 Oct).
+**Now:** Done 30 Oct: N2 workbook intake; G1 questionnaire republished for rounds 5–6 (version 5). Waiting on: P9 family answers. Awaiting your approval: G3 (M/O decoupling). Found 30 Oct: all three Q13d answers have been in the page store since 27 Oct but were never imported (P5). P4 order is still your decision (plan recommends rounds 5–6 first). Done 29 Oct: workbook Glen Waverley median update (5704d65), reports refreshed. Blocked: P7 (waits on B4). Awaiting your approval: M1–M3 and M5 (proposed 29 Oct).
 When a task finishes, mark it here and set the next task ID in `PROJECT_STATE.md`.
 
 Source: scoring-model-pointer.md, workbook headers, Claude_in_Chrome_prompt v2, foundation report, Talking with Mum.
@@ -66,7 +66,7 @@ From `Questionnaire redesign — rounds 5–7 (29 Oct 2026).md` sections 6–7. 
 | N2 | Workbook intake, one edit: RawResponses AO1:BE1 headers; CleanedAnswers rows 41–71; Settings A27:D39 (column B blank); Listings X1:AG1 headers plus AA/AG formulas filled down rows 2–33 (AG = "Pending rules"); SuburbScorecard AY1:BB1 and BF1 headers (empty); DiscussionSummary A40:F52 display block (no count). Recalc and diff | Not gated (intake) | None in the plan; G1 and G3 follow it | **DONE 30 Oct** (recalc and diff passed; see pointer change log) |
 | N3 | Import round 5–6 answers per the design doc's Storage rule; recalc and diff | Not gated (intake); after all three answer | P9, N2 | not started, runs locally, needs approval where gated |
 | N4 | Write `CleanedAnswers!H59`/`H61` and the DiscussionSummary counts; re-run the dry run with real E59/E61 | After N3, with approval | N3 | not started, runs locally, needs approval where gated |
-| G1 | Republish the questionnaire (round-4 page archived first; R5/R6 items added; Q13d kept; Q4, Q4b, Q5, Q6, Q7, Q7b retired; R5.6, R5.7, R6.2 validation checks; mode label `round 5–6 (R5, R6, Q13d)`) | After N2 | N2 | not started, runs locally, needs approval where gated |
+| G1 | Republish the questionnaire (round-4 page archived first; R5/R6 items added; Q13d kept; Q4, Q4b, Q5, Q6, Q7, Q7b retired; R5.6, R5.7, R6.2 validation checks; mode label `round 5–6 (R5, R6, Q13d)`) | After N2 | N2 | **DONE 30 Oct** (approved; round-4 page in Archive; republished as version 5; validation rules tested; 15 stored responses intact) |
 | G2a/G2b | `Filters!B4` / `Filters!B5`, incl. no-cap or backstop choice | After N4 | N4; G3 before G2 | not started, runs locally, needs approval where gated |
 | G3 | M/O decoupling, Settings B38/B39 = 90 | After N2 (before G2) | N2 | not started, runs locally, needs approval where gated |
 | G4 | L re-evaluation, plus any C status change (incl. R7.4 vetoes) | After G2 | G2a/G2b | not started, runs locally, needs approval where gated |

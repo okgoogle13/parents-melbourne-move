@@ -1,0 +1,301 @@
+<title>Our Next Home Questionnaire</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,650&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one calm column, a sticky progress strip, sections as numbered pages of a paper interview sheet */
+:root{
+  --bg:#f3f5f1; --paper:#ffffff; --ink:#1d2722; --muted:#5b6a62; --line:#d5ddd6;
+  --accent:#2f6b4f; --accent-soft:#e2eee6; --warn:#9a5a12; --warn-soft:#f8ecd9;
+  --display:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --body:"Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141a17; --paper:#1c2420; --ink:#e4ebe6; --muted:#9aaba1; --line:#33413a;
+  --accent:#7fc4a0; --accent-soft:#223a2e; --warn:#e3b06a; --warn-soft:#3a2d1a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141a17; --paper:#1c2420; --ink:#e4ebe6; --muted:#9aaba1; --line:#33413a;
+  --accent:#7fc4a0; --accent-soft:#223a2e; --warn:#e3b06a; --warn-soft:#3a2d1a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+header{padding-top:32px;display:flex;flex-direction:column;gap:8px}
+h1{font:650 clamp(28px,5vw,38px)/1.15 var(--display);margin:0;text-wrap:balance}
+h2{font:600 22px/1.25 var(--display);margin:0;text-wrap:balance}
+.lede{color:var(--muted);margin:0;max-width:62ch}
+.strip{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:10px 0;border-bottom:1px solid var(--line);
+  display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.who{display:flex;gap:6px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:999px;padding:6px 14px;font:500 15px var(--body);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+.chip:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.bar{flex:1;min-width:120px;height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--accent);transition:width .2s}
+.count{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.mode{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--muted)}
+section{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:18px}
+.sec-head{display:flex;flex-direction:column;gap:4px}
+.sec-no{font:600 12px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.sec-help{color:var(--muted);margin:0;font-size:15px;white-space:pre-line}
+fieldset{border:0;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;min-width:0}
+legend{font-weight:600;padding:0;margin-bottom:6px}
+.tag{font:500 12px var(--body);color:var(--muted);margin-right:6px;font-variant-numeric:tabular-nums}
+.help{font-size:14px;color:var(--muted);margin:-4px 0 4px}
+.case{font-size:15px;margin:0 0 4px;padding:8px 12px;border-left:3px solid var(--line);background:var(--bg);border-radius:0 6px 6px 0}
+.decided{font-size:14px;background:var(--warn-soft);color:var(--warn);border-radius:6px;padding:6px 10px;margin:0 0 4px}
+label.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:8px;cursor:pointer}
+label.opt:has(input:checked){border-color:var(--accent);background:var(--accent-soft)}
+label.opt input{margin-top:4px;accent-color:var(--accent)}
+.scale{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.scale label.opt{flex-direction:column;align-items:center;text-align:center;gap:2px;padding:8px 4px;font-size:13px}
+.scale label.opt b{font-size:16px}
+.essential-warn{color:var(--warn);font-weight:600;font-size:14px}
+textarea,input[type=number]{width:100%;font:15px var(--body);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px}
+textarea{min-height:70px;resize:vertical}
+.req{color:var(--warn);font-size:13px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.primary{background:var(--accent);color:var(--paper);border:0;border-radius:8px;padding:12px 22px;font:600 16px var(--body);cursor:pointer}
+.primary:disabled{opacity:.5;cursor:not-allowed}
+.secondary{background:transparent;color:var(--accent);border:1px solid var(--accent);border-radius:8px;padding:10px 16px;font:500 15px var(--body);cursor:pointer}
+.status{font-size:15px}
+.status.ok{color:var(--accent)} .status.bad{color:var(--warn)}
+.saved{display:flex;flex-direction:column;gap:6px;font-size:14px}
+.saved table{border-collapse:collapse;width:100%}
+.saved td,.saved th{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.copybox{width:100%;min-height:140px;font:13px ui-monospace,Menlo,monospace}
+@media (max-width:480px){.scale{grid-template-columns:repeat(2,1fr)}}
+@media (prefers-reduced-motion:reduce){.bar i{transition:none}}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Our Next Home: family priorities</h1>
+    <p class="lede">One person per submission: Mum, Dad or Me. There are no right or wrong answers. “E — None of these / depends” is a real answer; if you pick it, write what was said in that section's notes.</p>
+    <p class="lede">Round 4: one more “which would you prefer?” question (Q13d), about 2 minutes. Your earlier answers are already saved.</p>
+  </header>
+
+  <div class="strip">
+    <div class="who" role="group" aria-label="Whose answers are these?">
+      <button type="button" class="chip" id="who-Mum" aria-pressed="false">Mum</button>
+      <button type="button" class="chip" id="who-Dad" aria-pressed="false">Dad</button>
+      <button type="button" class="chip" id="who-Me" aria-pressed="false">Me</button>
+    </div>
+    <div class="bar" aria-hidden="true"><i id="bar"></i></div>
+    <span class="count" id="count">0 answered</span>
+    <label class="mode"><input type="checkbox" id="gapsOnly" checked> Only the questions still needed</label>
+  </div>
+
+  <form id="form" novalidate></form>
+
+  <div class="actions">
+    <button class="primary" id="save" type="button" disabled>Choose who is answering</button>
+    <span class="status" id="status" role="status"></span>
+  </div>
+
+  <section id="fallback" hidden>
+    <h2>Answers to copy</h2>
+    <p class="sec-help">Saving isn't available in this view (you may be signed out). Copy these answers and send them on so they can be added to the workbook.</p>
+    <textarea class="copybox" id="copyText" readonly></textarea>
+    <div class="actions"><button class="secondary" type="button" id="copyBtn">Copy answers</button></div>
+  </section>
+
+  <section class="saved" id="savedBox">
+    <h2>Saved so far</h2>
+    <p class="sec-help" id="savedEmpty">No answers saved yet. Pick a person above, answer, and press Save.</p>
+    <div style="overflow-x:auto"><table id="savedTable" hidden><thead><tr><th>Person</th><th>Saved</th><th>Questions answered</th></tr></thead><tbody></tbody></table></div>
+  </section>
+</div>
+
+<script>
+const E = "E — None of these / depends (see notes)";
+const withE = a => a.concat([E]);
+const LEVELS = ["A — Not needed","B — Nice to have","C — Important","D — Essential"];
+// gap:true = round 4 (28 Oct 2026): Q13d only, shown in "still needed" mode. Q13d is reference-only; it feeds no weight. Round 3 (Q10-Q12) is complete.
+const SECTIONS = [
+ {title:"Coorabell", help:"Thinking back to daily life in Coorabell.", items:[
+  {tag:"Q1", q:"What did you love most about daily life in Coorabell?", opts:withE(["A — Green views and quiet","B — Being near the beach","C — The village and its people","D — The space and the garden"])},
+  {tag:"Q2", q:"What was hardest about Coorabell day to day?", opts:withE(["A — Driving everywhere","B — Being far from family","C — Being far from doctors and the hospital","D — Looking after the house and land"])},
+  {tag:"Q1-Q2 Notes", notes:true}]},
+ {title:"Dealbreakers and living arrangement", items:[
+  {tag:"Q3", q:"What's the most you'd spend in total, including stamp duty and moving?", opts:withE(["A — $1.0m","B — $1.25m","C — $1.5m","D — More, for the right place"]), optional:true,
+   decided:"Family decision 27 Oct: $1.5m maximum purchase price. Only answer if your view is different."},
+  {tag:"Q4", q:"What's the longest drive to the family in Glen Waverley you'd accept?", opts:withE(["A — 15 min","B — 25 min","C — 35 min","D — 45 min or more"]), optional:true,
+   decided:"Family decision 26 Oct: 90 min maximum, 60 min preferred. Only answer if your view is different."},
+  {tag:"Q4b", q:"If D or E above: your maximum drive in minutes", number:true, optional:true, help:"E.g. 60, 75 or 90. Leave blank if there's no fixed limit."},
+  {tag:"Q5", q:"What's the longest drive to a public hospital emergency department (24-hour) you'd accept?", opts:withE(["A — 10 min","B — 20 min","C — 30 min","D — It doesn't matter much"]), optional:true,
+   help:"A public hospital with a 24-hour emergency department, not an urgent-care clinic.",
+   decided:"Family decision 26 Oct: 90 min maximum, and closer scores better. Only answer if your view is different."},
+  {tag:"Q6", q:"Stairs inside the home?", opts:withE(["A — None at all","B — Fine if the bedroom and bathroom are downstairs","C — Fine anywhere"]), optional:true,
+   decided:"Corrected 27 Oct: stairs are allowed. Only answer if your view is different."},
+  {tag:"Q7", q:"Garden?", opts:withE(["A — Small, low upkeep","B — Medium, room to grow things","C — Large, lots of trees","D — No garden is fine"])},
+  {tag:"Q7a", q:"Are we planning for all three of us to live together?", opts:["A — Yes, living together","B — No, parents only","C — Not decided yet, depends on the place"]},
+  {tag:"Q7b", q:"Household space needed:", opts:["A — 3 bedrooms","B — 3 bedrooms + a second living area","C — 4 bedrooms","D — A self-contained space (granny flat or separate unit)","E — Not decided / depends (see notes)"]},
+  {tag:"Q3-Q7b Notes", notes:true}]},
+ {title:"What nature and community mean to you", items:[
+  {tag:"Q8", q:"When you picture nature near your new home, it's mostly:", opts:withE(["A — A green outlook from the house","B — Bush walks within a short drive","C — Hills and forest all around","D — Your own garden"])},
+  {tag:"Q9", q:"Which one thing would make you feel most at home in the community?", opts:withE(["A — A church or place of worship nearby","B — Indian groceries and restaurants","C — Friends who share your language or culture","D — Friendly neighbours of any background"])},
+  {tag:"Q8-Q9 Notes", notes:true}]},
+ {title:"Pick one", help:"Real places force trade-offs. Pick the one you'd actually choose.", items:[
+  {tag:"Q10", q:"Which would you choose?", opts:withE(["A — A forest street, 35 min from Glen Waverley","B — A leafy suburban street, 15 min from Glen Waverley"])},
+  {tag:"Q11", q:"Which would you choose?", opts:withE(["A — Flat suburban streets, beach 10 min away","B — Hills and bush, beach an hour away"])},
+  {tag:"Q12", q:"Which would you choose?", opts:withE(["A — A quiet street, driving 15 min to the shops and doctor","B — A busier street, walking to the shops, doctor and station"])},
+  {tag:"Q13", q:"Which would you choose?", opts:withE(["A — Indian shops and community in your own suburb, less green","B — Very green, community a 30-min drive away"])},
+  {tag:"Q13d", q:"If both options were within 30 minutes of family, which would you prefer for everyday living?", cases:[
+    "A. A very green, peaceful village or bushland-edge suburb with trails and natural scenery nearby. Most neighbours would not share your background. Indian groceries, a Hindu temple, and churches would be about 30 minutes' drive away.",
+    "B. A more multicultural neighbourhood where many neighbours are from Indian and other migrant backgrounds. Indian groceries, Hindu temples, and churches would be close by, but with fewer trees, trails, and natural views nearby."],
+   opts:["A strongly","A slightly","No strong preference","B slightly","B strongly"], gap:true},
+  {tag:"Q13b", q:"Which would you choose?", opts:withE(["A — Scenic country or coastal town, 60–90 min from family","B — Leafy metropolitan suburb within 35 min of family"])},
+  {tag:"Q13c", q:"Which would you choose?", opts:withE(["A — Inland forest, hills and gardens","B — Coastal or bay town with greenery and water walks"])},
+  {tag:"Q10-Q13c Notes", notes:true, gap:true}]},
+ {title:"Later on", help:"Thinking 10–15 years ahead.", items:[
+  {tag:"Q14", q:"If driving became hard in 10–15 years, you'd want to:", opts:withE(["A — Stay put and rely on taxis or family","B — Walk to the shops and doctor","C — Take the train or bus to family and the hospital","D — Move again then"])},
+  {tag:"Q14 Notes", notes:true}]},
+ {title:"Priorities", help:"How much does each of these matter to you?\nChoose D (Essential) for no more than TWO items. Use the whole range: if something doesn't matter much to you, A or B is the right answer.", scale:true, items:[
+  ["Q15.1","Nature and scenery","Greenery, outlook, bush walks, hills or coastal nature."],
+  ["Q15.2","Near family in Glen Waverley","An easy routine drive to family."],
+  ["Q15.3","Indian/South Asian community","Groceries, restaurants, worship or cultural peers."],
+  ["Q15.4","Beach","A walkable or swimmable beach or bay close by."],
+  ["Q15.5","Hospital nearby","Quick access to a major public hospital."],
+  ["Q15.6","Train or bus","A walkable station or reliable bus."],
+  ["Q15.7","Shops and doctor nearby","Supermarket, pharmacy and GP within easy reach."],
+  ["Q15.8","Village character","Quiet, friendly village feel."],
+  ["Q15.9","Price","Staying comfortably under the budget."],
+  ["Q15.10","Easy trip to the city","Work and outings in Melbourne."]
+ ].map(([tag,q,help])=>({tag,q,help,opts:LEVELS,scale:true})).concat([{tag:"Q15 Notes", notes:true, help:"If anything is Essential, note why."}])}
+];
+
+const form = document.getElementById("form");
+let who = null, db = null;
+const el = (t,p={},...c)=>{const e=document.createElement(t);Object.assign(e,p);c.forEach(x=>e.append(x));return e};
+const safeId = tag => "q-"+tag.replace(/[^A-Za-z0-9]/g,"_");
+
+SECTIONS.forEach((s,si)=>{
+  const sec = el("section",{className:"sec"});
+  sec.dataset.idx=si;
+  const head = el("div",{className:"sec-head"}, el("span",{className:"sec-no",textContent:"Section "+(si+1)+" of "+SECTIONS.length}), el("h2",{textContent:s.title}));
+  if(s.help) head.append(el("p",{className:"sec-help",textContent:s.help}));
+  sec.append(head);
+  if(s.scale) sec.append(el("p",{className:"essential-warn",id:"essWarn",hidden:true}));
+  s.items.forEach(it=>{
+    const fs = el("fieldset",{className:"item"}); fs.dataset.tag=it.tag; if(it.gap) fs.dataset.gap="1";
+    const id = safeId(it.tag);
+    if(it.notes){
+      const lab = el("label",{htmlFor:id}); lab.append(el("span",{className:"tag",textContent:"["+it.tag+"]"}),"Notes (optional)");
+      fs.append(lab); if(it.help) fs.append(el("p",{className:"help",textContent:it.help}));
+      fs.append(el("textarea",{id,name:it.tag}));
+    } else if(it.number){
+      const lab = el("label",{htmlFor:id}); lab.append(el("span",{className:"tag",textContent:"["+it.tag+"]"}),it.q);
+      fs.append(lab); if(it.help) fs.append(el("p",{className:"help",textContent:it.help}));
+      fs.append(el("input",{type:"number",id,name:it.tag,min:1,max:300,inputMode:"numeric"}));
+    } else {
+      const lg = el("legend"); lg.append(el("span",{className:"tag",textContent:"["+it.tag+"]"}),it.q);
+      if(!it.optional) lg.append(" ",el("span",{className:"req",textContent:"required"}));
+      fs.append(lg);
+      if(it.decided) fs.append(el("p",{className:"decided",textContent:it.decided}));
+      if(it.help) fs.append(el("p",{className:"help",textContent:it.help}));
+      if(it.cases) it.cases.forEach(t=>fs.append(el("p",{className:"case",textContent:t})));
+      const box = el("div",{className:it.scale?"scale":""}); if(!it.scale) box.style.cssText="display:flex;flex-direction:column;gap:6px";
+      it.opts.forEach((o,oi)=>{
+        const inp = el("input",{type:"radio",name:it.tag,value:o,id:id+"_"+oi});
+        const lab = el("label",{className:"opt",htmlFor:inp.id}); lab.append(inp);
+        if(it.scale){ lab.append(el("b",{textContent:o[0]}), el("span",{textContent:o.slice(4)})); }
+        else lab.append(el("span",{textContent:o}));
+        box.append(lab);
+      });
+      fs.append(box);
+    }
+    sec.append(fs);
+  });
+  form.append(sec);
+});
+
+function applyMode(){
+  const gaps = document.getElementById("gapsOnly").checked;
+  form.querySelectorAll("fieldset.item").forEach(f=>{ f.hidden = gaps && !f.dataset.gap; });
+  form.querySelectorAll("section.sec").forEach(s=>{ s.hidden = ![...s.querySelectorAll("fieldset.item")].some(f=>!f.hidden); });
+  update();
+}
+function collect(){
+  const a = {};
+  form.querySelectorAll("fieldset.item").forEach(f=>{
+    if(f.hidden) return;
+    const tag=f.dataset.tag;
+    const r=f.querySelector("input[type=radio]:checked"); if(r){a[tag]=r.value;return;}
+    const n=f.querySelector("input[type=number]"); if(n && n.value!==""){a[tag]=Number(n.value);return;}
+    const t=f.querySelector("textarea"); if(t && t.value.trim()) a[tag]=t.value.trim();
+  });
+  return a;
+}
+function missingRequired(){
+  const gapsOnly=document.getElementById("gapsOnly").checked;
+  const miss=[];
+  SECTIONS.forEach(s=>s.items.forEach(it=>{
+    if(it.notes||it.number||it.optional) return;
+    if(gapsOnly && !it.gap) return;
+    if(!form.querySelector(`input[name="${CSS.escape(it.tag)}"]:checked`)) miss.push(it.tag);
+  }));
+  return miss;
+}
+function update(){
+  const a=collect(); const n=Object.keys(a).length;
+  const total=[...form.querySelectorAll("fieldset.item")].filter(f=>!f.hidden).length;
+  document.getElementById("count").textContent=n+" of "+total+" answered";
+  document.getElementById("bar").style.width=(total?100*n/total:0)+"%";
+  const ess=Object.keys(a).filter(k=>/^Q15\.\d+$/.test(k)&&a[k].startsWith("D")).length;
+  const w=document.getElementById("essWarn"); if(w){w.hidden=ess<=2; w.textContent="You've chosen Essential for "+ess+" items. Please keep it to two.";}
+  const btn=document.getElementById("save");
+  const miss=missingRequired();
+  btn.disabled=!who||ess>2;
+  btn.textContent=!who?"Choose who is answering":("Save "+who+"'s answers");
+  return {a,miss,ess};
+}
+form.addEventListener("change",update);
+form.addEventListener("input",update);
+document.getElementById("gapsOnly").addEventListener("change",applyMode);
+["Mum","Dad","Me"].forEach(p=>document.getElementById("who-"+p).addEventListener("click",()=>{
+  who=p; ["Mum","Dad","Me"].forEach(q=>document.getElementById("who-"+q).setAttribute("aria-pressed",String(q===p))); update();
+}));
+
+function setStatus(t,ok){const s=document.getElementById("status");s.textContent=t;s.className="status "+(ok?"ok":"bad");}
+function textFor(rec){return ["Person: "+rec.person,"Saved: "+rec.savedAt,"Mode: "+rec.mode].concat(Object.entries(rec.answers).map(([k,v])=>"["+k+"] "+v)).join("\n");}
+
+document.getElementById("save").addEventListener("click",async()=>{
+  const {a,miss}=update();
+  if(miss.length){ setStatus("Still to answer: "+miss.join(", ")+".",false); const f=form.querySelector(`fieldset[data-tag="${CSS.escape(miss[0])}"]`); f&&f.scrollIntoView({behavior:"smooth",block:"center"}); return; }
+  const rec={person:who, savedAt:new Date().toISOString(), mode:document.getElementById("gapsOnly").checked?"round 4 (Q13d)":"full", answers:a, answeredCount:Object.keys(a).length};
+  if(!db){ document.getElementById("fallback").hidden=false; document.getElementById("copyText").value=textFor(rec); setStatus("Saving isn't available here. Copy the answers below.",false); return; }
+  const btn=document.getElementById("save"); btn.disabled=true; setStatus("Saving…",true);
+  try{
+    await db.collection("responses").add(rec);
+    setStatus("Saved "+who+"'s answers. Pick the next person to continue.",true);
+    form.reset(); who=null; ["Mum","Dad","Me"].forEach(q=>document.getElementById("who-"+q).setAttribute("aria-pressed","false"));
+    update(); window.scrollTo({top:0,behavior:"smooth"});
+  }catch(e){
+    document.getElementById("fallback").hidden=false; document.getElementById("copyText").value=textFor(rec);
+    setStatus("Couldn't save ("+(e&&e.code||"error")+"). Copy the answers below instead.",false); update();
+  }
+});
+document.getElementById("copyBtn").addEventListener("click",()=>{
+  const t=document.getElementById("copyText");
+  try{navigator.clipboard.writeText(t.value).then(()=>setStatus("Copied.",true),()=>{t.select();});}catch(e){t.select();}
+});
+
+function renderSaved(snap){
+  const tb=document.querySelector("#savedTable tbody"); tb.textContent="";
+  document.getElementById("savedEmpty").hidden=!snap.empty;
+  document.getElementById("savedTable").hidden=snap.empty;
+  snap.docs.forEach(d=>{const r=d.data(); if(!r) return;
+    const dt=new Date(r.savedAt);
+    tb.append(el("tr",{},el("td",{textContent:r.person||"?"}),el("td",{textContent:isNaN(dt)?"":dt.toLocaleString([], {day:"numeric",month:"short",hour:"numeric",minute:"2-digit"})}),el("td",{textContent:String(r.answeredCount||Object.keys(r.answers||{}).length)})));
+  });
+}
+
+applyMode();
+(async()=>{
+  try{ db = window.claude && await window.claude.use("db"); }catch(e){ db=null; }
+  if(!db){ document.getElementById("savedEmpty").textContent="Saved answers show here when you're signed in to claude.ai. You can still fill this in and copy the answers."; return; }
+  db.collection("responses").orderBy("savedAt","desc").onSnapshot(renderSaved,()=>{});
+})();
+</script>

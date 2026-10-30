@@ -16,4 +16,4 @@ Status counts, ranks and the change history are in `scoring-model-pointer.md`.
 
 ## Next task
 
-G3 (M/O decoupling, Settings B38/B39 = 90) and G1 (republish the questionnaire for rounds 5–6): both need the user's approval. P4 order still the user's decision.
+P9: family answers rounds 5–6 on the republished questionnaire (G1 done 30 Oct). G3 (M/O decoupling, Settings B38/B39 = 90) needs the user's approval. P4 order still the user's decision.

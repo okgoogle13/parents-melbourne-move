@@ -72,8 +72,8 @@ textarea{min-height:70px;resize:vertical}
 <div class="wrap">
   <header>
     <h1>Our Next Home: family priorities</h1>
-    <p class="lede">One person per submission: Mum, Dad or Me. There are no right or wrong answers. “E — None of these / depends” is a real answer; if you pick it, write what was said in that section's notes.</p>
-    <p class="lede">Round 4: one more “which would you prefer?” question (Q13d), about 2 minutes. Your earlier answers are already saved.</p>
+    <p class="lede">One person per submission: Mum, Dad or Me. There are no right or wrong answers. Where a question offers “E — None of these / depends”, it is a real answer; if you pick it, write what was said in that section's notes.</p>
+    <p class="lede">Rounds 5–6: drive limits, community places and the home itself, about 10 minutes. Q13d is here too if you haven't answered it yet. Your earlier answers are already saved.</p>
   </header>
 
   <div class="strip">
@@ -112,7 +112,13 @@ textarea{min-height:70px;resize:vertical}
 const E = "E — None of these / depends (see notes)";
 const withE = a => a.concat([E]);
 const LEVELS = ["A — Not needed","B — Nice to have","C — Important","D — Essential"];
-// gap:true = round 4 (28 Oct 2026): Q13d only, shown in "still needed" mode. Q13d is reference-only; it feeds no weight. Round 3 (Q10-Q12) is complete.
+// gap:true = rounds 5–6 (30 Oct 2026): R5.1–R5.7, R6.1–R6.7, notes, plus Q13d (reference-only; feeds no weight), shown in "still needed" mode.
+// retired:true = not rendered; earlier saved answers stay in the data. Design doc: Questionnaire redesign — rounds 5–7 (29 Oct 2026).md
+const R52_HELP = "This is your firm limit, not your ideal. Examples are illustrative only, not recommendations: Google Maps ‘leave now’ drive times around midday, 26–27 Oct 2026, from each suburb's centre to Glen Waverley. Peak hour is longer, and the drive from a particular house can be several minutes more or less.";
+const GW_EX = ["25 min (e.g. Belgrave 21, Seaford 24, Frankston 25)","35 min (e.g. Mordialloc 28, Sassafras 29, Altona 35)","45 min (e.g. Mornington 40, Healesville 43)","60 min (e.g. Mount Martha 47, Rosebud 49, Warragul 58)"];
+const GW_E = "E — Up to 90 min: keep the current family limit (e.g. Macedon 62, Kyneton 77, Torquay 88)";
+const SEP = ["A — Own bedroom; everything else shared","B — Own bedroom and own bathroom; kitchen and living shared","C — Own zone: bedroom, bathroom and a separate living room, at the other end of the house or on another level","D — Self-contained: own entrance, bathroom and kitchenette (studio, granny flat or dual-living layout), still part of the same household"];
+const MATCH_MSG = "Please match this to your answer above.";
 const SECTIONS = [
  {title:"Coorabell", help:"Thinking back to daily life in Coorabell.", items:[
   {tag:"Q1", q:"What did you love most about daily life in Coorabell?", opts:withE(["A — Green views and quiet","B — Being near the beach","C — The village and its people","D — The space and the garden"])},
@@ -121,17 +127,17 @@ const SECTIONS = [
  {title:"Dealbreakers and living arrangement", items:[
   {tag:"Q3", q:"What's the most you'd spend in total, including stamp duty and moving?", opts:withE(["A — $1.0m","B — $1.25m","C — $1.5m","D — More, for the right place"]), optional:true,
    decided:"Family decision 27 Oct: $1.5m maximum purchase price. Only answer if your view is different."},
-  {tag:"Q4", q:"What's the longest drive to the family in Glen Waverley you'd accept?", opts:withE(["A — 15 min","B — 25 min","C — 35 min","D — 45 min or more"]), optional:true,
+  {tag:"Q4", retired:true, q:"What's the longest drive to the family in Glen Waverley you'd accept?", opts:withE(["A — 15 min","B — 25 min","C — 35 min","D — 45 min or more"]), optional:true,
    decided:"Family decision 26 Oct: 90 min maximum, 60 min preferred. Only answer if your view is different."},
-  {tag:"Q4b", q:"If D or E above: your maximum drive in minutes", number:true, optional:true, help:"E.g. 60, 75 or 90. Leave blank if there's no fixed limit."},
-  {tag:"Q5", q:"What's the longest drive to a public hospital emergency department (24-hour) you'd accept?", opts:withE(["A — 10 min","B — 20 min","C — 30 min","D — It doesn't matter much"]), optional:true,
+  {tag:"Q4b", retired:true, q:"If D or E above: your maximum drive in minutes", number:true, optional:true, help:"E.g. 60, 75 or 90. Leave blank if there's no fixed limit."},
+  {tag:"Q5", retired:true, q:"What's the longest drive to a public hospital emergency department (24-hour) you'd accept?", opts:withE(["A — 10 min","B — 20 min","C — 30 min","D — It doesn't matter much"]), optional:true,
    help:"A public hospital with a 24-hour emergency department, not an urgent-care clinic.",
    decided:"Family decision 26 Oct: 90 min maximum, and closer scores better. Only answer if your view is different."},
-  {tag:"Q6", q:"Stairs inside the home?", opts:withE(["A — None at all","B — Fine if the bedroom and bathroom are downstairs","C — Fine anywhere"]), optional:true,
+  {tag:"Q6", retired:true, q:"Stairs inside the home?", opts:withE(["A — None at all","B — Fine if the bedroom and bathroom are downstairs","C — Fine anywhere"]), optional:true,
    decided:"Corrected 27 Oct: stairs are allowed. Only answer if your view is different."},
-  {tag:"Q7", q:"Garden?", opts:withE(["A — Small, low upkeep","B — Medium, room to grow things","C — Large, lots of trees","D — No garden is fine"])},
+  {tag:"Q7", retired:true, q:"Garden?", opts:withE(["A — Small, low upkeep","B — Medium, room to grow things","C — Large, lots of trees","D — No garden is fine"])},
   {tag:"Q7a", q:"Are we planning for all three of us to live together?", opts:["A — Yes, living together","B — No, parents only","C — Not decided yet, depends on the place"]},
-  {tag:"Q7b", q:"Household space needed:", opts:["A — 3 bedrooms","B — 3 bedrooms + a second living area","C — 4 bedrooms","D — A self-contained space (granny flat or separate unit)","E — Not decided / depends (see notes)"]},
+  {tag:"Q7b", retired:true, q:"Household space needed:", opts:["A — 3 bedrooms","B — 3 bedrooms + a second living area","C — 4 bedrooms","D — A self-contained space (granny flat or separate unit)","E — Not decided / depends (see notes)"]},
   {tag:"Q3-Q7b Notes", notes:true}]},
  {title:"What nature and community mean to you", items:[
   {tag:"Q8", q:"When you picture nature near your new home, it's mostly:", opts:withE(["A — A green outlook from the house","B — Bush walks within a short drive","C — Hills and forest all around","D — Your own garden"])},
@@ -152,6 +158,37 @@ const SECTIONS = [
  {title:"Later on", help:"Thinking 10–15 years ahead.", items:[
   {tag:"Q14", q:"If driving became hard in 10–15 years, you'd want to:", opts:withE(["A — Stay put and rely on taxis or family","B — Walk to the shops and doctor","C — Take the train or bus to family and the hospital","D — Move again then"])},
   {tag:"Q14 Notes", notes:true}]},
+ {title:"Drives and community", help:"Round 5. Each person answers for themselves.", items:[
+  {tag:"R5.1", q:"How often do you want to be with the family in Glen Waverley in person?", opts:["A — Several times a week","B — About once a week","C — Every two weeks","D — Monthly or less"], gap:true},
+  {tag:"R5.2", q:"What's the furthest drive from Glen Waverley you would not accept going beyond, even for a place that was right in every other way?",
+   help:R52_HELP+" If you'd accept a longer drive only outside peak hour, choose the shorter limit and say so in the notes.",
+   opts:GW_EX.map((t,i)=>"ABCD"[i]+" — No further than "+t).concat([GW_E]), gap:true},
+  {tag:"R5.3", q:"And what drive would you be happiest with?", help:R52_HELP.replace("This is your firm limit, not your ideal.","This is your ideal, not a limit."),
+   opts:GW_EX.map((t,i)=>"ABCD"[i]+" — Up to "+t).concat([GW_E]), gap:true},
+  {tag:"R5.4", q:"What's the furthest from a 24-hour public hospital emergency department you would not accept going beyond? (Not an urgent-care clinic.)",
+   opts:["A — 15 min","B — 20 min","C — 30 min","D — 45 min","E — No limit for me"], gap:true},
+  {tag:"R5.5", q:"Which community place would you go to most regularly?", help:"If it's something else (restaurants, events), say so in the notes.",
+   opts:["A — Indian grocery","B — Hindu temple","C — Church","D — None regularly"], gap:true},
+  {tag:"R5.6", q:"For that place, what's the longest drive you'd make regularly?",
+   opts:["A — 10 min","B — 20 min","C — 30 min","D — 45 min","E — Not applicable (I chose \"None regularly\")"], gap:true},
+  {tag:"R5.7", q:"If you chose Church: does it need to be a particular denomination?",
+   opts:["A — Any church is fine","B — Yes, this one:","C — Not applicable (I didn't choose Church)"], textOpt:1, gap:true},
+  {tag:"R5 Notes", notes:true, gap:true}]},
+ {title:"The home itself", help:"Round 6. Thinking about the house, not the suburb.", items:[
+  {tag:"R6.1", q:"If we live together, what's the least separation between Nish's space and the rest of the home that would still work?", opts:SEP, gap:true},
+  {tag:"R6.2", q:"What's the most separation that would still feel like one household to you?", opts:SEP, gap:true},
+  {tag:"R6.3", q:"How important is it that the home already has the separation you chose above?",
+   opts:["A — Essential: I wouldn't buy without it","B — Important: I'd accept a little less for the right home","C — Nice to have"], gap:true},
+  {tag:"R6.4", q:"Thinking 10–15 years ahead, what must the home have? (Each option includes the ones before it.)",
+   opts:["A — No special requirement","B — A bedroom and full bathroom on the entry level","C — B, plus step-free access from the street to the entry-level bedroom, bathroom, kitchen and main living area","D — C, plus a fully single-level home with no steps inside"], gap:true},
+  {tag:"R6.5a", q:"What outdoor space would you most like?", opts:["A — Balcony or courtyard","B — Small garden","C — Medium garden","D — Large garden or bush block"], gap:true},
+  {tag:"R6.5b", q:"Who would look after it, and how much?",
+   opts:["A — We can do very little ourselves (under 1 hour a week)","B — About 1–2 hours a week ourselves","C — Several hours a week ourselves","D — We'd pay for regular help with most of it"], gap:true},
+  {tag:"R6.6", q:"From the front door, what's OK for getting to the supermarket and GP?",
+   opts:["A — Must be able to walk (10 min or less)","B — A walk of up to 20 min would be nice; driving is fine","C — Driving is fine, up to 10 min","D — Driving is fine, up to 20 min"], gap:true},
+  {tag:"R6.7", q:"Which one thing matters most for privacy between us?",
+   opts:["A — Separate entrance","B — Own bathroom","C — Own living space","D — Sound separation","E — Space to have friends over privately"], gap:true},
+  {tag:"R6 Notes", notes:true, gap:true}]},
  {title:"Priorities", help:"How much does each of these matter to you?\nChoose D (Essential) for no more than TWO items. Use the whole range: if something doesn't matter much to you, A or B is the right answer.", scale:true, items:[
   ["Q15.1","Nature and scenery","Greenery, outlook, bush walks, hills or coastal nature."],
   ["Q15.2","Near family in Glen Waverley","An easy routine drive to family."],
@@ -179,6 +216,7 @@ SECTIONS.forEach((s,si)=>{
   sec.append(head);
   if(s.scale) sec.append(el("p",{className:"essential-warn",id:"essWarn",hidden:true}));
   s.items.forEach(it=>{
+    if(it.retired) return;
     const fs = el("fieldset",{className:"item"}); fs.dataset.tag=it.tag; if(it.gap) fs.dataset.gap="1";
     const id = safeId(it.tag);
     if(it.notes){
@@ -202,6 +240,13 @@ SECTIONS.forEach((s,si)=>{
         const lab = el("label",{className:"opt",htmlFor:inp.id}); lab.append(inp);
         if(it.scale){ lab.append(el("b",{textContent:o[0]}), el("span",{textContent:o.slice(4)})); }
         else lab.append(el("span",{textContent:o}));
+        if(it.textOpt===oi){
+          const txt = el("input",{type:"text",id:id+"_text",maxLength:80,placeholder:"Church or denomination"});
+          txt.setAttribute("aria-label","Church or denomination");
+          txt.style.cssText="width:auto;flex:1;min-width:0;font:15px var(--body);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:4px 8px";
+          txt.addEventListener("input",()=>{ if(txt.value.trim()) inp.checked=true; });
+          lab.append(txt);
+        }
         box.append(lab);
       });
       fs.append(box);
@@ -222,7 +267,8 @@ function collect(){
   form.querySelectorAll("fieldset.item").forEach(f=>{
     if(f.hidden) return;
     const tag=f.dataset.tag;
-    const r=f.querySelector("input[type=radio]:checked"); if(r){a[tag]=r.value;return;}
+    const r=f.querySelector("input[type=radio]:checked");
+    if(r){ const x=f.querySelector("input[type=text]"); a[tag]=(x && r.id===x.id.replace(/_text$/,"_1"))?(r.value+" "+x.value.trim()).trim():r.value; return; }
     const n=f.querySelector("input[type=number]"); if(n && n.value!==""){a[tag]=Number(n.value);return;}
     const t=f.querySelector("textarea"); if(t && t.value.trim()) a[tag]=t.value.trim();
   });
@@ -232,11 +278,20 @@ function missingRequired(){
   const gapsOnly=document.getElementById("gapsOnly").checked;
   const miss=[];
   SECTIONS.forEach(s=>s.items.forEach(it=>{
-    if(it.notes||it.number||it.optional) return;
+    if(it.retired||it.notes||it.number||it.optional) return;
     if(gapsOnly && !it.gap) return;
     if(!form.querySelector(`input[name="${CSS.escape(it.tag)}"]:checked`)) miss.push(it.tag);
   }));
   return miss;
+}
+// Page validation (design doc section 3): returns [tag, message] for the first broken rule, or null.
+function ruleError(a){
+  const L=k=>(a[k]||"").charAt(0);
+  if(L("R5.5")&&L("R5.6")&&(L("R5.5")==="D"?L("R5.6")!=="E":L("R5.6")==="E")) return ["R5.6",MATCH_MSG];
+  if(L("R5.5")&&L("R5.7")&&(L("R5.5")==="C"?L("R5.7")==="C":L("R5.7")!=="C")) return ["R5.7",MATCH_MSG];
+  if(L("R5.7")==="B"&&!a["R5.7"].replace(/^B — Yes, this one:/,"").trim()) return ["R5.7","Please type the church or denomination."];
+  if(L("R6.1")&&L("R6.2")&&L("R6.2")<L("R6.1")) return ["R6.2","Your ‘most’ can't be less separation than your ‘least’."];
+  return null;
 }
 function update(){
   const a=collect(); const n=Object.keys(a).length;
@@ -264,7 +319,9 @@ function textFor(rec){return ["Person: "+rec.person,"Saved: "+rec.savedAt,"Mode:
 document.getElementById("save").addEventListener("click",async()=>{
   const {a,miss}=update();
   if(miss.length){ setStatus("Still to answer: "+miss.join(", ")+".",false); const f=form.querySelector(`fieldset[data-tag="${CSS.escape(miss[0])}"]`); f&&f.scrollIntoView({behavior:"smooth",block:"center"}); return; }
-  const rec={person:who, savedAt:new Date().toISOString(), mode:document.getElementById("gapsOnly").checked?"round 4 (Q13d)":"full", answers:a, answeredCount:Object.keys(a).length};
+  const bad=ruleError(a);
+  if(bad){ setStatus("["+bad[0]+"] "+bad[1],false); const f=form.querySelector(`fieldset[data-tag="${CSS.escape(bad[0])}"]`); f&&f.scrollIntoView({behavior:"smooth",block:"center"}); return; }
+  const rec={person:who, savedAt:new Date().toISOString(), mode:document.getElementById("gapsOnly").checked?"round 5–6 (R5, R6, Q13d)":"full", answers:a, answeredCount:Object.keys(a).length};
   if(!db){ document.getElementById("fallback").hidden=false; document.getElementById("copyText").value=textFor(rec); setStatus("Saving isn't available here. Copy the answers below.",false); return; }
   const btn=document.getElementById("save"); btn.disabled=true; setStatus("Saving…",true);
   try{
