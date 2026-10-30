@@ -72,8 +72,8 @@ textarea{min-height:70px;resize:vertical}
 <div class="wrap">
   <header>
     <h1>Our Next Home: family priorities</h1>
-    <p class="lede">One person per submission: Mum, Dad or Me. There are no right or wrong answers. Where a question offers “E — None of these / depends”, it is a real answer; if you pick it, write what was said in that section's notes.</p>
-    <p class="lede">Rounds 5–6: drive limits, community places and the home itself, about 10 minutes. Q13d is here too if you haven't answered it yet. Your earlier answers are already saved.</p>
+    <p class="lede">One person per submission: Mum, Dad or Me. There are no right or wrong answers. Where a question offers “None of these / depends”, it is a real answer; if you pick it, write what you mean in that section's notes.</p>
+    <p class="lede">This is the whole survey, about 25 minutes. Please answer every question yourself, in your own words, even if someone filled in an earlier version for you.</p>
   </header>
 
   <div class="strip">
@@ -83,9 +83,7 @@ textarea{min-height:70px;resize:vertical}
       <button type="button" class="chip" id="who-Me" aria-pressed="false">Me</button>
     </div>
     <div class="bar" aria-hidden="true"><i id="bar"></i></div>
-    <span class="count" id="count">0 answered</span>
-    <label class="mode"><input type="checkbox" id="gapsOnly" checked> Only the questions still needed</label>
-  </div>
+    <span class="count" id="count">0 answered</span>  </div>
 
   <form id="form" novalidate></form>
 
@@ -112,7 +110,7 @@ textarea{min-height:70px;resize:vertical}
 const E = "E — None of these / depends (see notes)";
 const withE = a => a.concat([E]);
 const LEVELS = ["A — Not needed","B — Nice to have","C — Important","D — Essential"];
-// gap:true = rounds 5–6 (30 Oct 2026): R5.1–R5.7, R6.1–R6.7, notes, plus Q13d (reference-only; feeds no weight), shown in "still needed" mode.
+// 30 Oct 2026: whole survey shown to everyone (own answers, not filled in on their behalf). gap:true marks rounds 5–6 items and Q13d; it no longer changes what is shown.
 // retired:true = not rendered; earlier saved answers stay in the data. Design doc: Questionnaire redesign — rounds 5–7 (29 Oct 2026).md
 const R52_HELP = "This is your firm limit, not your ideal. Examples are illustrative only, not recommendations: Google Maps ‘leave now’ drive times around midday, 26–27 Oct 2026, from each suburb's centre to Glen Waverley. Peak hour is longer, and the drive from a particular house can be several minutes more or less.";
 const GW_EX = ["25 min (e.g. Belgrave 21, Seaford 24, Frankston 25)","35 min (e.g. Mordialloc 28, Sassafras 29, Altona 35)","45 min (e.g. Mornington 40, Healesville 43)","60 min (e.g. Mount Martha 47, Rosebud 49, Warragul 58)"];
@@ -258,8 +256,7 @@ SECTIONS.forEach((s,si)=>{
 });
 
 function applyMode(){
-  const gaps = document.getElementById("gapsOnly").checked;
-  form.querySelectorAll("fieldset.item").forEach(f=>{ f.hidden = gaps && !f.dataset.gap; });
+  form.querySelectorAll("fieldset.item").forEach(f=>{ f.hidden = false; });
   form.querySelectorAll("section.sec").forEach(s=>{ s.hidden = ![...s.querySelectorAll("fieldset.item")].some(f=>!f.hidden); });
   update();
 }
@@ -276,11 +273,9 @@ function collect(){
   return a;
 }
 function missingRequired(){
-  const gapsOnly=document.getElementById("gapsOnly").checked;
   const miss=[];
   SECTIONS.forEach(s=>s.items.forEach(it=>{
     if(it.retired||it.notes||it.number||it.optional) return;
-    if(gapsOnly && !it.gap) return;
     if(!form.querySelector(`input[name="${CSS.escape(it.tag)}"]:checked`)) miss.push(it.tag);
   }));
   return miss;
@@ -309,7 +304,6 @@ function update(){
 }
 form.addEventListener("change",update);
 form.addEventListener("input",update);
-document.getElementById("gapsOnly").addEventListener("change",applyMode);
 ["Mum","Dad","Me"].forEach(p=>document.getElementById("who-"+p).addEventListener("click",()=>{
   who=p; ["Mum","Dad","Me"].forEach(q=>document.getElementById("who-"+q).setAttribute("aria-pressed",String(q===p))); update();
 }));
@@ -322,7 +316,7 @@ document.getElementById("save").addEventListener("click",async()=>{
   if(miss.length){ setStatus("Still to answer: "+miss.join(", ")+".",false); const f=form.querySelector(`fieldset[data-tag="${CSS.escape(miss[0])}"]`); f&&f.scrollIntoView({behavior:"smooth",block:"center"}); return; }
   const bad=ruleError(a);
   if(bad){ setStatus("["+bad[0]+"] "+bad[1],false); const f=form.querySelector(`fieldset[data-tag="${CSS.escape(bad[0])}"]`); f&&f.scrollIntoView({behavior:"smooth",block:"center"}); return; }
-  const rec={person:who, savedAt:new Date().toISOString(), mode:document.getElementById("gapsOnly").checked?"round 5–6 (R5, R6, Q13d)":"full", answers:a, answeredCount:Object.keys(a).length};
+  const rec={person:who, savedAt:new Date().toISOString(), mode:"full survey, own answers (30 Oct 2026)", answers:a, answeredCount:Object.keys(a).length};
   if(!db){ document.getElementById("fallback").hidden=false; document.getElementById("copyText").value=textFor(rec); setStatus("Saving isn't available here. Copy the answers below.",false); return; }
   const btn=document.getElementById("save"); btn.disabled=true; setStatus("Saving…",true);
   try{

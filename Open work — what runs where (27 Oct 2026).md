@@ -1,6 +1,6 @@
 # Open work: task register (the only list of open tasks; reviewed 28 Oct 2026)
 
-**Now:** Done 30 Oct: N2 workbook intake; G1 questionnaire republished for rounds 5–6 (version 5). Waiting on: P9 family answers. Awaiting your approval: G3 (M/O decoupling). Found 30 Oct: all three Q13d answers have been in the page store since 27 Oct but were never imported (P5). P4 order is still your decision (plan recommends rounds 5–6 first). Done 29 Oct: workbook Glen Waverley median update (5704d65), reports refreshed. Blocked: P7 (waits on B4). Awaiting your approval: M1–M3 and M5 (proposed 29 Oct).
+**Now:** Done 30 Oct: N2 workbook intake; G1 questionnaire republished for rounds 5–6 (version 5). Waiting on: P9 family answers (now the whole survey in their own words, page version 8; importing them can move the weights, so N3 needs approval). Awaiting your approval: G3 (M/O decoupling). Found 30 Oct: all three Q13d answers have been in the page store since 27 Oct but were never imported (P5). P4 order is still your decision (plan recommends rounds 5–6 first). Done 29 Oct: workbook Glen Waverley median update (5704d65), reports refreshed. Blocked: P7 (waits on B4). Awaiting your approval: M1–M3 and M5 (proposed 29 Oct).
 When a task finishes, mark it here and set the next task ID in `PROJECT_STATE.md`.
 
 Source: scoring-model-pointer.md, workbook headers, Claude_in_Chrome_prompt v2, foundation report, Talking with Mum.
