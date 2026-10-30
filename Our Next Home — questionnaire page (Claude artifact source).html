@@ -1,3 +1,4 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Our Next Home Questionnaire</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -143,6 +144,8 @@ textarea{width:100%;font:16px var(--body);color:var(--ink);background:var(--bg);
 // Page version 14 (31 Oct 2026): trade-offs survey. Design: round 8, approved 31 Oct 2026 (see "Questionnaire redesign — round 8 (31 Oct 2026).md").
 // v14 new: R8.1–R8.2 kind of nature; R8.4–R8.5 kinds of area (cards); R8.3 family drive ladder (steps R8.3-30/20/45/60/75; worked-out R8.3, R8.3c).
 // v14 cut: Q10 (replaced by the R8.3 ladder) and Q13d; earlier answers stay in the data. Parts 4–6 show one question at a time.
+// 31 Oct 2026 (approved): R8.6 bushfire question, asked only if R8.4 is B or C (otherwise stored X; feeds nothing); Q12 B no longer mentions the station;
+// card B drops the Angliss caveat (24-hour ED confirmed on the Eastern Health site); card E notes the smaller hospital treats less serious cases.
 // Earlier notes:
 // Page version 10 (30 Oct 2026): simplified survey. Design: review approved 30 Oct 2026 (see scoring-model-pointer.md change log).
 // Kept questions keep their tags. New: Q3c (confirm the $1.5m budget). Cut (not shown; earlier answers stay in the data):
@@ -168,10 +171,10 @@ const AREAS = ["A — Bayside suburb","B — Bush-edge hills","C — Country tow
 // Emergency-department times and prices are estimates. Which suburbs each card stands for is in the round 8 design record, never shown here.
 const CARDS = [
  "A. Bayside suburb\nFlat streets near the bay. Beach a short walk or drive away. Big shopping strips and doctors close by. Fewer big trees.\nDrive to family in Glen Waverley: about 25–35 min\nNearest 24-hour emergency department: roughly under 20 min (estimate)\nTrain: all have a station\nTypical house: roughly $850k–$1.5m (estimates, rounded)",
- "B. Bush-edge hills\nHilly streets under tall forest, next to a national park. Walking trails close by. Small village shops; bigger shops are a drive away. Parts are bushfire-prone (early check, still being confirmed).\nDrive to family in Glen Waverley: about 15–35 min\nNearest 24-hour emergency department: roughly under 25 min (estimate; one hospital's 24-hour status is still being checked)\nTrain: a few have a station\nTypical house: mostly roughly $850k–$1m, some higher (estimates, rounded)",
+ "B. Bush-edge hills\nHilly streets under tall forest, next to a national park. Walking trails close by. Small village shops; bigger shops are a drive away. Parts are bushfire-prone (early check, still being confirmed).\nDrive to family in Glen Waverley: about 15–35 min\nNearest 24-hour emergency department: roughly under 25 min (estimate)\nTrain: a few have a station\nTypical house: mostly roughly $850k–$1m, some higher (estimates, rounded)",
  "C. Country town\nA small town with a main street, surrounded by forest, farms or hills. Quieter, with fewer shops and specialists. Parts are bushfire-prone (early check, still being confirmed).\nDrive to family in Glen Waverley: about 45 min to 1¼ hours\nNearest 24-hour emergency department: roughly 30 min to 1 hour (estimate; may be closer for some towns)\nTrain: most have a station\nTypical house: roughly $700k–$1.15m (estimates, rounded)",
  "D. Leafy established suburb\nBig trees and gardens, with a creek or bush reserve nearby. Good shops, doctors and a train station.\nDrive to family in Glen Waverley: about 15–35 min\nNearest 24-hour emergency department: roughly under 20 min (estimate)\nTrain: all have a station\nTypical house: roughly $850k–$1.45m (estimates, rounded)",
- "E. Peninsula seaside\nSeaside towns and hills above the bay. Beach close by. Holiday-town feel; busier in summer. No train.\nDrive to family in Glen Waverley: about 40 min to 1 hour\nNearest 24-hour emergency department: roughly under 20 min, mostly a smaller hospital (estimate)\nTrain: none\nTypical house: roughly $750k–$1.45m (estimates, rounded)"];
+ "E. Peninsula seaside\nSeaside towns and hills above the bay. Beach close by. Holiday-town feel; busier in summer. No train.\nDrive to family in Glen Waverley: about 40 min to 1 hour\nNearest 24-hour emergency department: roughly under 20 min, mostly a smaller hospital that treats less serious cases (estimate)\nTrain: none\nTypical house: roughly $750k–$1.45m (estimates, rounded)"];
 // Family drive ladder. A step is skipped (stored L) when its green-street drive is over the person's R5.2 firm limit.
 const LIMIT = {A:25,B:35,C:45,D:60,E:90};
 const over = (r,m) => { const l = LIMIT[r("R5.2").charAt(0)]; return !!l && m > l; };
@@ -232,7 +235,10 @@ const SECTIONS = [
    help:"These are rough guides, not exact figures. Drive times are midday; peak hour takes longer.", cases:CARDS, opts:AREAS},
   {tag:"R8.5", short:"Kind of area least wanted", q:"And which would you least like?",
    help:"Same five areas, with your first choice left out. Tap Back to see them again.",
-   opts:AREAS.concat(["F — I'd be happy in any of them"]), excludeFrom:"R8.4"}]},
+   opts:AREAS.concat(["F — I'd be happy in any of them"]), excludeFrom:"R8.4"},
+  {tag:"R8.6", short:"Bushfire risk", q:"Parts of the kind of area you chose are bushfire-prone. Which is closest to how you feel?",
+   opts:["A — I'd only live where the risk is low","B — Some risk is OK if the home meets bushfire building rules and we leave early on bad fire days","C — Bushfire risk wouldn't stop me","X — Not asked (most-wanted area wasn't B or C)"], hideOpts:[3],
+   show:startsWith("R8.4","BC"), auto:r=>startsWith("R8.4","ADE")(r)?3:null}]},
  {title:"Family drive", step:true, help:"A few quick choices. Each one depends on your last answer.", items:[
   rung(30), rung(20), rung(45), rung(60), rung(75),
   {tag:"R8.3", short:"Family drive result (worked out)", q:"Family drive result (worked out, not asked)",
@@ -243,7 +249,7 @@ const SECTIONS = [
    show:()=>false, auto:r=>{ const x=ladder(r); return x ? (x[1]?0:1) : null; }}]},
  {title:"Pick one", help:"Each of these is a real trade-off. Pick the one you'd actually choose.", items:[
   {tag:"Q11", short:"Near the beach or hills and bush", q:"Which would you choose?", opts:["A — A suburb near the coast, beach 10 min away","B — Hills and bush, beach an hour away"]},
-  {tag:"Q12", short:"Quiet street or walk to shops", q:"Which would you choose?", opts:["A — A quiet street, driving 15 min to the shops and doctor","B — A busier street, walking to the shops, doctor and station"]},
+  {tag:"Q12", short:"Quiet street or walk to shops", q:"Which would you choose?", opts:["A — A quiet street, driving 15 min to the shops and doctor","B — A busier street, walking to the shops and doctor"]},
   {tag:"Q13", short:"Community close or very green", q:"Which would you choose?", opts:["A — Indian shops and community in your own suburb, with ordinary suburban greenery","B — Bush and forest all around, with Indian shops and community a 30-min drive away"]},
   {tag:"Q10-Q13c Notes", short:"Notes on these choices", notes:true, label:"Anything to add about these choices? (optional)"}]},
  {title:"Community", items:[
@@ -621,3 +627,5 @@ update();
   document.getElementById("importBox").hidden = !owner;
 })();
 </script>
+
+</body></html>

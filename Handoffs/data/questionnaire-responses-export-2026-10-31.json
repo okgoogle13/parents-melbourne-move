@@ -1,0 +1,319 @@
+{
+ "exported": "2026-10-31",
+ "from": "Our Next Home questionnaire artifact, collection 'responses' (claude.ai)",
+ "count": 17,
+ "records": [
+  {
+   "id": "rcaooxhxaqjwhdfe7nxv",
+   "answeredCount": 10,
+   "answers": {
+    "Q1": "A — Green views and quiet",
+    "Q13b": "A — Scenic country or coastal town, 60–90 min from family",
+    "Q13c": "A — Inland forest, hills and gardens",
+    "Q14": "A — Stay put and rely on taxis or family",
+    "Q2": "D — Looking after the house and land",
+    "Q3-Q7b Notes": "ideally D, or min 3 bedrooms,",
+    "Q7a": "A — Yes, living together",
+    "Q7b": "E — Not decided / depends (see notes)",
+    "Q8": "C — Hills and forest all around",
+    "Q9": "B — Indian groceries and restaurants"
+   },
+   "mode": "gaps only",
+   "person": "Dad",
+   "savedAt": "2026-10-27T02:00:03.813Z"
+  },
+  {
+   "id": "wcs926r77472kad6z372",
+   "answeredCount": 11,
+   "answers": {
+    "Q1": "A — Green views and quiet",
+    "Q1-Q2 Notes": "B, D, i actually never wanted to live here, it was too remote and cut off.",
+    "Q13b": "B — Leafy metropolitan suburb within 35 min of family",
+    "Q13c": "B — Coastal or bay town with greenery and water walks",
+    "Q14": "A — Stay put and rely on taxis or family",
+    "Q2": "E — None of these / depends (see notes)",
+    "Q3-Q7b Notes": "3+ bedrooms, but ideally D",
+    "Q7a": "A — Yes, living together",
+    "Q7b": "E — Not decided / depends (see notes)",
+    "Q8": "A — A green outlook from the house",
+    "Q9": "A — A church or place of worship nearby"
+   },
+   "mode": "gaps only",
+   "person": "Mum",
+   "savedAt": "2026-10-27T02:02:10.673Z"
+  },
+  {
+   "id": "gw6iuku3bxnpjba4jx6v",
+   "answeredCount": 11,
+   "answers": {
+    "Q1": "B — Being near the beach",
+    "Q13b": "A — Scenic country or coastal town, 60–90 min from family",
+    "Q13c": "B — Coastal or bay town with greenery and water walks",
+    "Q14": "C — Take the train or bus to family and the hospital",
+    "Q14 Notes": "When I picture nature near new home, its a scenic viewpoint like from arthurs seat, of greenery and coast",
+    "Q2": "B — Being far from family",
+    "Q7a": "A — Yes, living together",
+    "Q7b": "D — A self-contained space (granny flat or separate unit)",
+    "Q8": "E — None of these / depends (see notes)",
+    "Q8-Q9 Notes": "When you picture nature near your new home",
+    "Q9": "D — Friendly neighbours of any background"
+   },
+   "mode": "gaps only",
+   "person": "Me",
+   "savedAt": "2026-10-27T02:05:04.190Z"
+  },
+  {
+   "id": "jxqz3b7yho6kv96r61lh",
+   "answeredCount": 11,
+   "answers": {
+    "Q13": "A — Indian shops and community in your own suburb, less green",
+    "Q15.1": "B — Nice to have",
+    "Q15.10": "A — Not needed",
+    "Q15.2": "C — Important",
+    "Q15.3": "C — Important",
+    "Q15.4": "B — Nice to have",
+    "Q15.5": "D — Essential",
+    "Q15.6": "C — Important",
+    "Q15.7": "D — Essential",
+    "Q15.8": "B — Nice to have",
+    "Q15.9": "B — Nice to have"
+   },
+   "mode": "round 2 (Q13, Q15)",
+   "person": "Mum",
+   "savedAt": "2026-10-27T06:07:44.150Z"
+  },
+  {
+   "id": "zz37nbe5iirxb0yl0h6v",
+   "answeredCount": 11,
+   "answers": {
+    "Q13": "B — Very green, community a 30-min drive away",
+    "Q15.1": "D — Essential",
+    "Q15.10": "A — Not needed",
+    "Q15.2": "B — Nice to have",
+    "Q15.3": "B — Nice to have",
+    "Q15.4": "B — Nice to have",
+    "Q15.5": "B — Nice to have",
+    "Q15.6": "C — Important",
+    "Q15.7": "C — Important",
+    "Q15.8": "C — Important",
+    "Q15.9": "C — Important"
+   },
+   "mode": "round 2 (Q13, Q15)",
+   "person": "Dad",
+   "savedAt": "2026-10-27T06:08:36.019Z"
+  },
+  {
+   "id": "dcpo3v54qzboj2ovr4dl",
+   "answeredCount": 11,
+   "answers": {
+    "Q13": "B — Very green, community a 30-min drive away",
+    "Q15.1": "D — Essential",
+    "Q15.10": "C — Important",
+    "Q15.2": "A — Not needed",
+    "Q15.3": "B — Nice to have",
+    "Q15.4": "D — Essential",
+    "Q15.5": "B — Nice to have",
+    "Q15.6": "C — Important",
+    "Q15.7": "C — Important",
+    "Q15.8": "A — Not needed",
+    "Q15.9": "A — Not needed"
+   },
+   "mode": "round 2 (Q13, Q15)",
+   "person": "Me",
+   "savedAt": "2026-10-27T06:10:46.934Z"
+  },
+  {
+   "id": "7naruhty24iczusoq088",
+   "answeredCount": 3,
+   "answers": {
+    "Q10": "A — A forest street, 35 min from Glen Waverley",
+    "Q11": "A — Flat suburban streets, beach 10 min away",
+    "Q12": "A — A quiet street, driving 15 min to the shops and doctor"
+   },
+   "mode": "round 3 (Q10-Q12)",
+   "person": "Mum",
+   "savedAt": "2026-10-27T06:33:30.577Z"
+  },
+  {
+   "id": "0vrprd1vd2kd5gvalztb",
+   "answeredCount": 3,
+   "answers": {
+    "Q10": "A — A forest street, 35 min from Glen Waverley",
+    "Q11": "B — Hills and bush, beach an hour away",
+    "Q12": "A — A quiet street, driving 15 min to the shops and doctor"
+   },
+   "mode": "round 3 (Q10-Q12)",
+   "person": "Dad",
+   "savedAt": "2026-10-27T06:33:57.848Z"
+  },
+  {
+   "id": "uc1dwl3q2gqsdxr5qyp4",
+   "answeredCount": 3,
+   "answers": {
+    "Q10": "A — A forest street, 35 min from Glen Waverley",
+    "Q11": "A — Flat suburban streets, beach 10 min away",
+    "Q12": "B — A busier street, walking to the shops, doctor and station"
+   },
+   "mode": "round 3 (Q10-Q12)",
+   "person": "Me",
+   "savedAt": "2026-10-27T06:34:22.703Z"
+  },
+  {
+   "id": "2gnewqh18nxv4u5chmpx",
+   "answeredCount": 3,
+   "answers": {
+    "Q10": "B — A leafy suburban street, 15 min from Glen Waverley",
+    "Q11": "A — Flat suburban streets, beach 10 min away",
+    "Q12": "A — A quiet street, driving 15 min to the shops and doctor"
+   },
+   "mode": "round 3 (Q10-Q12)",
+   "person": "Mum",
+   "savedAt": "2026-10-27T06:40:04.835Z"
+  },
+  {
+   "id": "ayut14pm22aezx0ybwjy",
+   "answeredCount": 3,
+   "answers": {
+    "Q10": "A — A forest street, 35 min from Glen Waverley",
+    "Q11": "B — Hills and bush, beach an hour away",
+    "Q12": "A — A quiet street, driving 15 min to the shops and doctor"
+   },
+   "mode": "round 3 (Q10-Q12)",
+   "person": "Dad",
+   "savedAt": "2026-10-27T06:40:20.738Z"
+  },
+  {
+   "id": "c0he3q1704wui4ayyurw",
+   "answeredCount": 3,
+   "answers": {
+    "Q10": "A — A forest street, 35 min from Glen Waverley",
+    "Q11": "A — Flat suburban streets, beach 10 min away",
+    "Q12": "B — A busier street, walking to the shops, doctor and station"
+   },
+   "mode": "round 3 (Q10-Q12)",
+   "person": "Me",
+   "savedAt": "2026-10-27T06:40:43.416Z"
+  },
+  {
+   "id": "aqgj9yaryqgyzgd9i33f",
+   "answeredCount": 1,
+   "answers": {
+    "Q13d": "A strongly"
+   },
+   "mode": "round 4 (Q13d)",
+   "person": "Me",
+   "savedAt": "2026-10-27T14:37:34.953Z"
+  },
+  {
+   "id": "eeqzbao8136pxrcgf5py",
+   "answeredCount": 1,
+   "answers": {
+    "Q13d": "A slightly"
+   },
+   "mode": "round 4 (Q13d)",
+   "person": "Dad",
+   "savedAt": "2026-10-27T14:38:06.687Z"
+  },
+  {
+   "id": "jfucqxbjrvrtd1y0kxub",
+   "answeredCount": 1,
+   "answers": {
+    "Q13d": "B slightly"
+   },
+   "mode": "round 4 (Q13d)",
+   "person": "Mum",
+   "savedAt": "2026-10-27T14:38:24.158Z"
+  },
+  {
+   "id": "nwug61z2s5z001smvcwy",
+   "answeredCount": 30,
+   "answers": {
+    "Q10": "B — A leafy suburban street, 15 min from Glen Waverley",
+    "Q11": "B — Hills and bush, beach an hour away",
+    "Q12": "B — A busier street, walking to the shops, doctor and station",
+    "Q13": "B — Bush and forest all around, with Indian shops and community a 30-min drive away",
+    "Q13d": "B strongly",
+    "Q14": "E — Not sure yet",
+    "Q15.1": "D — Essential",
+    "Q15.10": "C — Important",
+    "Q15.2": "C — Important",
+    "Q15.3": "C — Important",
+    "Q15.4": "C — Important",
+    "Q15.5": "C — Important",
+    "Q15.6": "C — Important",
+    "Q15.7": "C — Important",
+    "Q15.8": "C — Important",
+    "Q15.9": "C — Important",
+    "Q3c": "C — Higher, for the right place",
+    "Q7a": "C — Not decided yet, depends on the place",
+    "R5.2": "E — Up to 90 min",
+    "R5.4": "E — No limit for me",
+    "R5.5": "D — None regularly",
+    "R5.6": "E — Not applicable (I chose \"None regularly\")",
+    "R5.7": "C — Not applicable (I didn't choose Church)",
+    "R6.1": "D — Self-contained: own entrance, bathroom and small kitchen (like a granny flat or separate unit), still one household",
+    "R6.2": "D — Self-contained: own entrance, bathroom and small kitchen (like a granny flat or separate unit), still one household",
+    "R6.3": "C — Nice to have",
+    "R6.4": "D — A single-level home with no steps inside or from the street",
+    "R6.5a": "D — Large garden or bush block",
+    "R6.5b": "D — We'd pay for help with most of it",
+    "R6.6": "D — Driving is fine, up to 20 min"
+   },
+   "mode": "v10 simplified survey (30 Oct 2026)",
+   "pageVersion": 10,
+   "person": "Mum",
+   "savedAt": "2026-10-30T10:50:41.247Z",
+   "source": "page"
+  },
+  {
+   "id": "mj7crn0qy5hf52p9pqsb",
+   "answeredCount": 39,
+   "answers": {
+    "Q11": "A — A suburb near the coast, beach 10 min away",
+    "Q12": "A — A quiet street, driving 15 min to the shops and doctor",
+    "Q13": "B — Bush and forest all around, with Indian shops and community a 30-min drive away",
+    "Q14": "C — Take the train or bus to family and the hospital",
+    "Q15.1": "D — Essential",
+    "Q15.10": "C — Important",
+    "Q15.2": "A — Not needed",
+    "Q15.3": "B — Nice to have",
+    "Q15.4": "D — Essential",
+    "Q15.5": "B — Nice to have",
+    "Q15.6": "C — Important",
+    "Q15.7": "C — Important",
+    "Q15.8": "B — Nice to have",
+    "Q15.9": "A — Not needed",
+    "Q3c": "C — Higher, for the right place",
+    "Q7a": "A — Yes, living together",
+    "R5.2": "D — No further than 60 min",
+    "R5.4": "C — 30 min",
+    "R5.5": "D — None regularly",
+    "R5.6": "E — Not applicable (I chose \"None regularly\")",
+    "R5.7": "C — Not applicable (I didn't choose Church)",
+    "R6.1": "A — Own bedroom; everything else shared",
+    "R6.2": "D — Self-contained: own entrance, bathroom, small kitchen and living area (like a granny flat or separate unit), still one household",
+    "R6.3": "B — Important: I'd accept a little less for the right home",
+    "R6.4": "A — Nothing special",
+    "R6.5a": "C — Medium garden",
+    "R6.5b": "B — About 1–2 hours",
+    "R6.6": "B — A walk of up to 20 min would be nice; driving is fine",
+    "R8.1": "F — The coast and beach",
+    "R8.2": "B — Hills and long views from home",
+    "R8.3": "E — 45–60 extra min",
+    "R8.3-20": "X — Not shown (not on this path)",
+    "R8.3-30": "A — A very green street: tall bush, forest trails from your door. 30 min drive to family in Glen Waverley",
+    "R8.3-45": "A — A very green street: tall bush, forest trails from your door. 45 min drive to family in Glen Waverley",
+    "R8.3-60": "A — A very green street: tall bush, forest trails from your door. 60 min drive to family in Glen Waverley",
+    "R8.3-75": "L — Not shown (over my firm drive limit)",
+    "R8.3c": "Y — Capped by my firm drive limit",
+    "R8.4": "E — Peninsula seaside",
+    "R8.5": "C — Country town"
+   },
+   "mode": "v14 trade-offs survey (31 Oct 2026)",
+   "pageVersion": 14,
+   "person": "Me",
+   "savedAt": "2026-10-30T15:59:11.742Z",
+   "source": "page"
+  }
+ ]
+}
