@@ -1,0 +1,606 @@
+{
+ "read_date": "2026-10-31",
+ "note": "Downloaded GIS files kept out of git; re-run research/bushfire/screen.py to refetch and compare sha256.",
+ "files": [
+  {
+   "file": "sal_Upper_Ferntree_Gully.geojson",
+   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SAL/MapServer/0/query?where=sal_code_2021%3D%2722614%27&outFields=sal_code_2021%2Csal_name_2021&outSR=4326&f=geojson",
+   "sha256": "cacd2166f7b1e003f67b04811e920c3185f3d105bc44a232a15aa85f24fd36da",
+   "bytes": 9365
+  },
+  {
+   "file": "zone_Upper_Ferntree_Gully.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_zone&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.29487166210896%2C-37.909976026571435%2C145.32849758218208%2C-37.88733616656301%2C%27EPSG%3A4326%27%29",
+   "sha256": "1d4ac1619dbdcbe41543dd2d839e4d891210af001203368fee0ca1daab16a280",
+   "bytes": 599732
+  },
+  {
+   "file": "bmo_Upper_Ferntree_Gully.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_overlay&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.29487166210896%2C-37.909976026571435%2C145.32849758218208%2C-37.88733616656301%2C%27EPSG%3A4326%27%29+AND+zone_code+LIKE+%27BMO%25%27",
+   "sha256": "e1281209fdf85e216816daf09232e6bff7e447ac2aa3a16722ac5b72cc48776e",
+   "bytes": 996152
+  },
+  {
+   "file": "bpa_Upper_Ferntree_Gully.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Abushfire_prone_area&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.29487166210896%2C-37.909976026571435%2C145.32849758218208%2C-37.88733616656301%2C%27EPSG%3A4326%27%29",
+   "sha256": "21b1418d0b7e1befb11f407f31ecdf1474c9ca987f401364168e63f2118efdc9",
+   "bytes": 674576
+  },
+  {
+   "file": "sal_Upwey.geojson",
+   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SAL/MapServer/0/query?where=sal_code_2021%3D%2722620%27&outFields=sal_code_2021%2Csal_name_2021&outSR=4326&f=geojson",
+   "sha256": "841809342379d62b6ed41fdec32dd5f0e16679fd54f5e22261750e6aba7ea22c",
+   "bytes": 11959
+  },
+  {
+   "file": "zone_Upwey.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_zone&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.31074555164443%2C-37.920497126661836%2C145.34387601221084%2C-37.88900100652378%2C%27EPSG%3A4326%27%29",
+   "sha256": "932b6a556aa8e748b29d2058c707f146e61793b2fbf80d49a67eae5a3be8f647",
+   "bytes": 690356
+  },
+  {
+   "file": "bmo_Upwey.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_overlay&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.31074555164443%2C-37.920497126661836%2C145.34387601221084%2C-37.88900100652378%2C%27EPSG%3A4326%27%29+AND+zone_code+LIKE+%27BMO%25%27",
+   "sha256": "ba108ea4b676ae0533ba90e93e8ef6fa1c5a4ce3ffb2f0b27605ee21a44785b0",
+   "bytes": 1009204
+  },
+  {
+   "file": "bpa_Upwey.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Abushfire_prone_area&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.31074555164443%2C-37.920497126661836%2C145.34387601221084%2C-37.88900100652378%2C%27EPSG%3A4326%27%29",
+   "sha256": "6eaddff63e24bad9f49765abe8f6bb1d27665ff4eed646904978f1d1ef101f03",
+   "bytes": 674576
+  },
+  {
+   "file": "sal_The_Basin.geojson",
+   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SAL/MapServer/0/query?where=sal_code_2021%3D%2722496%27&outFields=sal_code_2021%2Csal_name_2021&outSR=4326&f=geojson",
+   "sha256": "db8984107e69b2a4302bc1a16731746ba14ce12cb282bea7ea54c7ae4552e494",
+   "bytes": 10535
+  },
+  {
+   "file": "zone_The_Basin.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_zone&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.29887001223454%2C-37.86706575695057%2C145.34761934230542%2C-37.844862036596254%2C%27EPSG%3A4326%27%29",
+   "sha256": "ad121118c444cd90cdac3929b06588cbf61b0ce871b1eeacfd1c017bf0b3bc06",
+   "bytes": 580609
+  },
+  {
+   "file": "bmo_The_Basin.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_overlay&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.29887001223454%2C-37.86706575695057%2C145.34761934230542%2C-37.844862036596254%2C%27EPSG%3A4326%27%29+AND+zone_code+LIKE+%27BMO%25%27",
+   "sha256": "e0e61464d8733841752940005cb7a8ce038560d3ed73489f17891a7bbd62d355",
+   "bytes": 987221
+  },
+  {
+   "file": "bpa_The_Basin.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Abushfire_prone_area&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.29887001223454%2C-37.86706575695057%2C145.34761934230542%2C-37.844862036596254%2C%27EPSG%3A4326%27%29",
+   "sha256": "f3ecf0b1a0f7e2483729b3897b38df98b0491b89737dc58b42a2104fac2c7cfc",
+   "bytes": 674576
+  },
+  {
+   "file": "sal_Tecoma.geojson",
+   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SAL/MapServer/0/query?where=sal_code_2021%3D%2722476%27&outFields=sal_code_2021%2Csal_name_2021&outSR=4326&f=geojson",
+   "sha256": "1d3e5de6c26c5e640798263aca7d3be309ba97e4f110d44f0bf7df5c31b79fcd",
+   "bytes": 17992
+  },
+  {
+   "file": "zone_Tecoma.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_zone&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.33181597231638%2C-37.923900917155976%2C145.351809542033%2C-37.88976999659318%2C%27EPSG%3A4326%27%29",
+   "sha256": "fef75000d535ae02244b2ccc4be2e109ef8d6d9fc3c16244d4660643857beead",
+   "bytes": 608045
+  },
+  {
+   "file": "bmo_Tecoma.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_overlay&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.33181597231638%2C-37.923900917155976%2C145.351809542033%2C-37.88976999659318%2C%27EPSG%3A4326%27%29+AND+zone_code+LIKE+%27BMO%25%27",
+   "sha256": "387ffe64f4a4af8465d68e03922e437901694099d8efe4e73baa119ddaf3e6a9",
+   "bytes": 999755
+  },
+  {
+   "file": "bpa_Tecoma.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Abushfire_prone_area&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.33181597231638%2C-37.923900917155976%2C145.351809542033%2C-37.88976999659318%2C%27EPSG%3A4326%27%29",
+   "sha256": "48d643c4bf101676e07e575dda3fb6100655aff29d2b3f59d030fe7b8560d70f",
+   "bytes": 674576
+  },
+  {
+   "file": "sal_Belgrave.geojson",
+   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SAL/MapServer/0/query?where=sal_code_2021%3D%2720188%27&outFields=sal_code_2021%2Csal_name_2021&outSR=4326&f=geojson",
+   "sha256": "3d27602f5c7265022013b1aa019af19f774b1c9294d27ad52f736e988bdc5736",
+   "bytes": 8042
+  },
+  {
+   "file": "zone_Belgrave.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_zone&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.3400306622461%2C-37.92338680662713%2C145.37186782189121%2C-37.89863766658369%2C%27EPSG%3A4326%27%29",
+   "sha256": "50d2abd40a783c2b9f35e8f60d8b8a4f4a8f53341c58b8c778fba9399e39ee1e",
+   "bytes": 844066
+  },
+  {
+   "file": "bmo_Belgrave.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_overlay&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.3400306622461%2C-37.92338680662713%2C145.37186782189121%2C-37.89863766658369%2C%27EPSG%3A4326%27%29+AND+zone_code+LIKE+%27BMO%25%27",
+   "sha256": "ffc7df0808e76f45c52f12ab381ef65c77f5aa5225302e0d3eb29b35d00f4fc1",
+   "bytes": 952293
+  },
+  {
+   "file": "bpa_Belgrave.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Abushfire_prone_area&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.3400306622461%2C-37.92338680662713%2C145.37186782189121%2C-37.89863766658369%2C%27EPSG%3A4326%27%29",
+   "sha256": "0e4907b22ef47f51e3ac0437abee835b551b541ef61e0081f01b47ca857f1e7f",
+   "bytes": 1059430
+  },
+  {
+   "file": "sal_Montrose.geojson",
+   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SAL/MapServer/0/query?where=sal_code_2021%3D%2721736%27&outFields=sal_code_2021%2Csal_name_2021&outSR=4326&f=geojson",
+   "sha256": "091509088a05b505229b4b7a7acddcde150a7a58fefbe54aa0469023853306b1",
+   "bytes": 9061
+  },
+  {
+   "file": "zone_Montrose.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_zone&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.3229117616257%2C-37.84743485671224%2C145.37469099236887%2C-37.78697115702714%2C%27EPSG%3A4326%27%29",
+   "sha256": "e7b2af8d5ea3f9abc2cfe81164a2afcf2304e856f4a72f5cf0010cc7cc4ca44a",
+   "bytes": 938483
+  },
+  {
+   "file": "bmo_Montrose.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_overlay&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.3229117616257%2C-37.84743485671224%2C145.37469099236887%2C-37.78697115702714%2C%27EPSG%3A4326%27%29+AND+zone_code+LIKE+%27BMO%25%27",
+   "sha256": "fa219ca36de597335b7f1f3e2d0e2765086d0f52e8767d8d5277d9b6c2527fa0",
+   "bytes": 1048286
+  },
+  {
+   "file": "bpa_Montrose.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Abushfire_prone_area&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.3229117616257%2C-37.84743485671224%2C145.37469099236887%2C-37.78697115702714%2C%27EPSG%3A4326%27%29",
+   "sha256": "472c987d65da0d854cdfa557880b7f11c0c7609291c52ad6bdc96f5ddae7e016",
+   "bytes": 674576
+  },
+  {
+   "file": "sal_Warrandyte.geojson",
+   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SAL/MapServer/0/query?where=sal_code_2021%3D%2722702%27&outFields=sal_code_2021%2Csal_name_2021&outSR=4326&f=geojson",
+   "sha256": "a7e3f88ceb0bf796f5d160b5e4f948db754ce9fa8a797e5fd5fcdf95e3726340",
+   "bytes": 51548
+  },
+  {
+   "file": "zone_Warrandyte.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_zone&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.17553283199632%2C-37.77250803659242%2C145.24468799202393%2C-37.729611197136514%2C%27EPSG%3A4326%27%29",
+   "sha256": "93583a197a1c39866ade3bcedcfbf27509c6c7fb7550c50dcb2bc837075cc2d5",
+   "bytes": 992950
+  },
+  {
+   "file": "bmo_Warrandyte.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_overlay&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.17553283199632%2C-37.77250803659242%2C145.24468799202393%2C-37.729611197136514%2C%27EPSG%3A4326%27%29+AND+zone_code+LIKE+%27BMO%25%27",
+   "sha256": "65e9fe711e02770739d68f07ed6d16cc302895125e2e0b4f8dd40f5077f71372",
+   "bytes": 470197
+  },
+  {
+   "file": "bpa_Warrandyte.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Abushfire_prone_area&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.17553283199632%2C-37.77250803659242%2C145.24468799202393%2C-37.729611197136514%2C%27EPSG%3A4326%27%29",
+   "sha256": "bbf374b799436f25c6e0d37fe16f968064da2b52c35ad99006db78805cd00d84",
+   "bytes": 429928
+  },
+  {
+   "file": "sal_Mount_Evelyn.geojson",
+   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SAL/MapServer/0/query?where=sal_code_2021%3D%2721795%27&outFields=sal_code_2021%2Csal_name_2021&outSR=4326&f=geojson",
+   "sha256": "f20712d970603ead08dfc3ec7f55e0483617a78814ba556464110216af4343d9",
+   "bytes": 10615
+  },
+  {
+   "file": "zone_Mount_Evelyn.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_zone&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.3594104822994%2C-37.81091980676597%2C145.41864480194107%2C-37.76410259701895%2C%27EPSG%3A4326%27%29",
+   "sha256": "cc77c617d8ead98e9121bac5cdbdd642bdd347916740aebf4c4a5dccef3216ea",
+   "bytes": 757141
+  },
+  {
+   "file": "bmo_Mount_Evelyn.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_overlay&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.3594104822994%2C-37.81091980676597%2C145.41864480194107%2C-37.76410259701895%2C%27EPSG%3A4326%27%29+AND+zone_code+LIKE+%27BMO%25%27",
+   "sha256": "237103e79ff2679f681516cf306fb1b0e8d857acb0c933f65a1ea80489294837",
+   "bytes": 1036600
+  },
+  {
+   "file": "bpa_Mount_Evelyn.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Abushfire_prone_area&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.3594104822994%2C-37.81091980676597%2C145.41864480194107%2C-37.76410259701895%2C%27EPSG%3A4326%27%29",
+   "sha256": "cabe2ffbeec4f004a7720da2a2fd984498fd264719d8f054e6816bd613699a12",
+   "bytes": 361959
+  },
+  {
+   "file": "sal_Sassafras.geojson",
+   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SAL/MapServer/0/query?where=sal_code_2021%3D%2722239%27&outFields=sal_code_2021%2Csal_name_2021&outSR=4326&f=geojson",
+   "sha256": "8ac45265067a950b94d7b0cd24581e12450cbd6ce484005cb31b50fa4989f92f",
+   "bytes": 10423
+  },
+  {
+   "file": "zone_Sassafras.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_zone&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.32659001237118%2C-37.87734400704431%2C145.36367803236286%2C-37.85115096661319%2C%27EPSG%3A4326%27%29",
+   "sha256": "37b7b842fd2a52e2021ac4bc401f987bf84bfdef949edc8c06561410a2af7f6c",
+   "bytes": 627593
+  },
+  {
+   "file": "bmo_Sassafras.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_overlay&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.32659001237118%2C-37.87734400704431%2C145.36367803236286%2C-37.85115096661319%2C%27EPSG%3A4326%27%29+AND+zone_code+LIKE+%27BMO%25%27",
+   "sha256": "aeec19d414919361ea16ef591fb620fd4ec85339e30e55f3493663265c2445c8",
+   "bytes": 961417
+  },
+  {
+   "file": "bpa_Sassafras.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Abushfire_prone_area&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.32659001237118%2C-37.87734400704431%2C145.36367803236286%2C-37.85115096661319%2C%27EPSG%3A4326%27%29",
+   "sha256": "effba72444ad39beb8806a63ae335a6ddccf55287f36552230531350425637f6",
+   "bytes": 674576
+  },
+  {
+   "file": "sal_Mount_Dandenong.geojson",
+   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SAL/MapServer/0/query?where=sal_code_2021%3D%2721787%27&outFields=sal_code_2021%2Csal_name_2021&outSR=4326&f=geojson",
+   "sha256": "6bcc5aab08fbcfcf2aeb91545029a6b0cd40605944dd9ad13d490970fa950e7b",
+   "bytes": 6507
+  },
+  {
+   "file": "zone_Mount_Dandenong.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_zone&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.33212338209478%2C-37.85353694673012%2C145.37000063225062%2C-37.81897885709971%2C%27EPSG%3A4326%27%29",
+   "sha256": "f7b4ff9f8d986d88b11e7de4aac85f9f0001ca2aed5f3fb84480deb903b7e165",
+   "bytes": 691980
+  },
+  {
+   "file": "bmo_Mount_Dandenong.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_overlay&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.33212338209478%2C-37.85353694673012%2C145.37000063225062%2C-37.81897885709971%2C%27EPSG%3A4326%27%29+AND+zone_code+LIKE+%27BMO%25%27",
+   "sha256": "dad44074ec4cb814bf9ca6ed0f74c8482f6861325e75ad83dceece5ab3f55607",
+   "bytes": 971899
+  },
+  {
+   "file": "bpa_Mount_Dandenong.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Abushfire_prone_area&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.33212338209478%2C-37.85353694673012%2C145.37000063225062%2C-37.81897885709971%2C%27EPSG%3A4326%27%29",
+   "sha256": "5b581f2ee272b9d101be748c2e6e1bd6e1465ad5dc4c597fb72423beacf52679",
+   "bytes": 674576
+  },
+  {
+   "file": "sal_Olinda.geojson",
+   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SAL/MapServer/0/query?where=sal_code_2021%3D%2722009%27&outFields=sal_code_2021%2Csal_name_2021&outSR=4326&f=geojson",
+   "sha256": "2250b4f73e57e73db90086a0eb8ec6ef9ad1aa746bd8b1d01a4ff27f1ead1193",
+   "bytes": 33373
+  },
+  {
+   "file": "zone_Olinda.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_zone&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.34831485213437%2C-37.880492626901116%2C145.40526700179674%2C-37.82524752693061%2C%27EPSG%3A4326%27%29",
+   "sha256": "e7b05176578091e6e9ad74177ed53aa2da29babab24f8fde2f29662a348724fc",
+   "bytes": 874797
+  },
+  {
+   "file": "bmo_Olinda.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_overlay&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.34831485213437%2C-37.880492626901116%2C145.40526700179674%2C-37.82524752693061%2C%27EPSG%3A4326%27%29+AND+zone_code+LIKE+%27BMO%25%27",
+   "sha256": "823744feb5439dd39dd5b2d7e5f133a926ca9b4b829600190bab2190c7a5cbc4",
+   "bytes": 1319318
+  },
+  {
+   "file": "bpa_Olinda.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Abushfire_prone_area&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.34831485213437%2C-37.880492626901116%2C145.40526700179674%2C-37.82524752693061%2C%27EPSG%3A4326%27%29",
+   "sha256": "124987b6ed5ca9a6562d94b6cca20e6ba9b0e0575cd4a808bcb0a56d54346c98",
+   "bytes": 746813
+  },
+  {
+   "file": "sal_Emerald.geojson",
+   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SAL/MapServer/0/query?where=sal_code_2021%3D%2720868%27&outFields=sal_code_2021%2Csal_name_2021&outSR=4326&f=geojson",
+   "sha256": "2eff07afe73c7fc3329513df215942a0548a5d1a58e623adc0379dca10559d43",
+   "bytes": 44272
+  },
+  {
+   "file": "zone_Emerald.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_zone&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.38216780163268%2C-37.98298399675252%2C145.48669598189187%2C-37.881924996632286%2C%27EPSG%3A4326%27%29",
+   "sha256": "69933ef3e6293aaf54b66c49be2bf108a19d9710fb39180806c21fe39e05aa49",
+   "bytes": 1759487
+  },
+  {
+   "file": "bmo_Emerald.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_overlay&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.38216780163268%2C-37.98298399675252%2C145.48669598189187%2C-37.881924996632286%2C%27EPSG%3A4326%27%29+AND+zone_code+LIKE+%27BMO%25%27",
+   "sha256": "7da026138cdf75a445352437d081cb6d5baafdb15ecfd5a120132e8475b70115",
+   "bytes": 1477239
+  },
+  {
+   "file": "bpa_Emerald.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Abushfire_prone_area&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.38216780163268%2C-37.98298399675252%2C145.48669598189187%2C-37.881924996632286%2C%27EPSG%3A4326%27%29",
+   "sha256": "c4ff9e144508edb8f6c3ab4fa3e6d51ed20121dbb55491a2b9fd407c0df9ca59",
+   "bytes": 1268199
+  },
+  {
+   "file": "sal_Healesville.geojson",
+   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SAL/MapServer/0/query?where=sal_code_2021%3D%2721158%27&outFields=sal_code_2021%2Csal_name_2021&outSR=4326&f=geojson",
+   "sha256": "1047a068f4ccf5e9a2049c1993211f6614d7c35bb391f93a39c32801063f9142",
+   "bytes": 51269
+  },
+  {
+   "file": "zone_Healesville.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_zone&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.4525978318469%2C-37.740002186658614%2C145.63581601183182%2C-37.59324436684714%2C%27EPSG%3A4326%27%29",
+   "sha256": "ad7826f877dccd1a081e9cea10e0713e2964c4276bd81ac435780d15cad56d53",
+   "bytes": 2032846
+  },
+  {
+   "file": "bmo_Healesville.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_overlay&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.4525978318469%2C-37.740002186658614%2C145.63581601183182%2C-37.59324436684714%2C%27EPSG%3A4326%27%29+AND+zone_code+LIKE+%27BMO%25%27",
+   "sha256": "3493591191f8ef0d568428569a6c39cfc2ff2e187c2be709456a67add21f7c16",
+   "bytes": 1864962
+  },
+  {
+   "file": "bpa_Healesville.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Abushfire_prone_area&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.4525978318469%2C-37.740002186658614%2C145.63581601183182%2C-37.59324436684714%2C%27EPSG%3A4326%27%29",
+   "sha256": "b0e908b68de59ccc48706e2c07d2485a93c5e4270a56db15e30bb27d1e328fa2",
+   "bytes": 598856
+  },
+  {
+   "file": "sal_Yarra_Glen.geojson",
+   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SAL/MapServer/0/query?where=sal_code_2021%3D%2722910%27&outFields=sal_code_2021%2Csal_name_2021&outSR=4326&f=geojson",
+   "sha256": "6b13cd8d821a5cccdcfe8e18499624660d3b3ffcf8599ce01a5bace859d3a4f8",
+   "bytes": 23068
+  },
+  {
+   "file": "zone_Yarra_Glen.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_zone&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.33036583183465%2C-37.68287764706026%2C145.42645102162285%2C-37.616993007021385%2C%27EPSG%3A4326%27%29",
+   "sha256": "4d0ee4cf6b659c09e76e2709e4d93229834e357fdf342fc8979a46ac5e8a086d",
+   "bytes": 934996
+  },
+  {
+   "file": "bmo_Yarra_Glen.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_overlay&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.33036583183465%2C-37.68287764706026%2C145.42645102162285%2C-37.616993007021385%2C%27EPSG%3A4326%27%29+AND+zone_code+LIKE+%27BMO%25%27",
+   "sha256": "3256bcbb980e18d6ddefaf220780e2a0b1d8cf373d423ac82755e45f1e16553a",
+   "bytes": 1602037
+  },
+  {
+   "file": "bpa_Yarra_Glen.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Abushfire_prone_area&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.33036583183465%2C-37.68287764706026%2C145.42645102162285%2C-37.616993007021385%2C%27EPSG%3A4326%27%29",
+   "sha256": "7e7058d63b9bf8a6308211eab33a83129fb05bbc7a4cf908abab62a596bd3601",
+   "bytes": 811989
+  },
+  {
+   "file": "sal_Warburton.geojson",
+   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SAL/MapServer/0/query?where=sal_code_2021%3D%2722689%27&outFields=sal_code_2021%2Csal_name_2021&outSR=4326&f=geojson",
+   "sha256": "fbe02611df3cbce01c842705b67d3efd2c5dd5c96bf9036c81bfdb80dc8b2de3",
+   "bytes": 22792
+  },
+  {
+   "file": "zone_Warburton.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_zone&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.62893700174527%2C-37.81938437667841%2C145.78872801204582%2C-37.649656786734056%2C%27EPSG%3A4326%27%29",
+   "sha256": "00ca952755c16537ce8f56bdb9e37a48fb69b7fd20ff20f32f88bd4ff1303e01",
+   "bytes": 1593367
+  },
+  {
+   "file": "bmo_Warburton.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_overlay&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.62893700174527%2C-37.81938437667841%2C145.78872801204582%2C-37.649656786734056%2C%27EPSG%3A4326%27%29+AND+zone_code+LIKE+%27BMO%25%27",
+   "sha256": "f4cf8ed78de7601285dff536579c4f6938abc8db1ae9be8ebc094df4369a8dbc",
+   "bytes": 1073234
+  },
+  {
+   "file": "bpa_Warburton.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Abushfire_prone_area&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.62893700174527%2C-37.81938437667841%2C145.78872801204582%2C-37.649656786734056%2C%27EPSG%3A4326%27%29",
+   "sha256": "b87bc8315f616d135f22b735547df0c0e7365fd1de58a06d6fb295bb69dae829",
+   "bytes": 614797
+  },
+  {
+   "file": "sal_Macedon.geojson",
+   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SAL/MapServer/0/query?where=sal_code_2021%3D%2721562%27&outFields=sal_code_2021%2Csal_name_2021&outSR=4326&f=geojson",
+   "sha256": "756e7481cd033582d47a25f902681abb243cf55c1ef82aef1bfd85cec30ee690",
+   "bytes": 9764
+  },
+  {
+   "file": "zone_Macedon.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_zone&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C144.51408235216311%2C-37.46516818702294%2C144.60826895170007%2C-37.38214721724207%2C%27EPSG%3A4326%27%29",
+   "sha256": "0caed532d5a1d8bd0d1a35184c48880e9a6a1677189d32800a366337a8b5a0c2",
+   "bytes": 557579
+  },
+  {
+   "file": "bmo_Macedon.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_overlay&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C144.51408235216311%2C-37.46516818702294%2C144.60826895170007%2C-37.38214721724207%2C%27EPSG%3A4326%27%29+AND+zone_code+LIKE+%27BMO%25%27",
+   "sha256": "a264dc778518ebde94be3a94302d9684956acd4db565fabdf50db058076dbc12",
+   "bytes": 519641
+  },
+  {
+   "file": "bpa_Macedon.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Abushfire_prone_area&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C144.51408235216311%2C-37.46516818702294%2C144.60826895170007%2C-37.38214721724207%2C%27EPSG%3A4326%27%29",
+   "sha256": "d52563582e59bb5e0bbc3c5f3795e17dd6f3f07737d151bf20106835fc843b92",
+   "bytes": 807194
+  },
+  {
+   "file": "sal_Woodend.geojson",
+   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SAL/MapServer/0/query?where=sal_code_2021%3D%2722833%27&outFields=sal_code_2021%2Csal_name_2021&outSR=4326&f=geojson",
+   "sha256": "4bf7122bcaf96eb3a0fc8d8db5a6f445c423af351e14eded32b2efbe627cd800",
+   "bytes": 14141
+  },
+  {
+   "file": "zone_Woodend.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_zone&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C144.45582696172082%2C-37.41762788676195%2C144.61434898220662%2C-37.32035998677502%2C%27EPSG%3A4326%27%29",
+   "sha256": "449d5ebe4c0c0f8b10b0dbb5e3e677edfce2b51887635111b8d377dceba13a5b",
+   "bytes": 598532
+  },
+  {
+   "file": "bmo_Woodend.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_overlay&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C144.45582696172082%2C-37.41762788676195%2C144.61434898220662%2C-37.32035998677502%2C%27EPSG%3A4326%27%29+AND+zone_code+LIKE+%27BMO%25%27",
+   "sha256": "97098ab2404d82bb40e7dd02a3bcb89b2787b7c8547afaa625faf9db96d9e9de",
+   "bytes": 583742
+  },
+  {
+   "file": "bpa_Woodend.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Abushfire_prone_area&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C144.45582696172082%2C-37.41762788676195%2C144.61434898220662%2C-37.32035998677502%2C%27EPSG%3A4326%27%29",
+   "sha256": "eb36cf50be23baab290e922c59565558f71c5e461b1c7bfb153aaa0cf6279d08",
+   "bytes": 807194
+  },
+  {
+   "file": "sal_Gisborne.geojson",
+   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SAL/MapServer/0/query?where=sal_code_2021%3D%2721001%27&outFields=sal_code_2021%2Csal_name_2021&outSR=4326&f=geojson",
+   "sha256": "f898ea9a797af8c05aad9600cd9f110b11cb80ed74cd572afbc3fc9ad2cecefd",
+   "bytes": 13509
+  },
+  {
+   "file": "zone_Gisborne.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_zone&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C144.48538499218384%2C-37.558900346701%2C144.65768287158778%2C-37.454557736843874%2C%27EPSG%3A4326%27%29",
+   "sha256": "f3c263a7a7c27185ac65be332fea64178994ff18625c5286c09e2f4fa90c43ae",
+   "bytes": 852248
+  },
+  {
+   "file": "bmo_Gisborne.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_overlay&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C144.48538499218384%2C-37.558900346701%2C144.65768287158778%2C-37.454557736843874%2C%27EPSG%3A4326%27%29+AND+zone_code+LIKE+%27BMO%25%27",
+   "sha256": "dc8e27269c96c9cd613e3bd6b6c9e202db44dfbd9e5bd85ab50b82c96f82681a",
+   "bytes": 706218
+  },
+  {
+   "file": "bpa_Gisborne.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Abushfire_prone_area&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C144.48538499218384%2C-37.558900346701%2C144.65768287158778%2C-37.454557736843874%2C%27EPSG%3A4326%27%29",
+   "sha256": "3711dcf9e6610a4f3c1614f4862556dbc34727947c2ea4b5d6569e7d630ae6dc",
+   "bytes": 1264032
+  },
+  {
+   "file": "sal_Riddells_Creek.geojson",
+   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SAL/MapServer/0/query?where=sal_code_2021%3D%2722172%27&outFields=sal_code_2021%2Csal_name_2021&outSR=4326&f=geojson",
+   "sha256": "1b68e9a11d3dc598bfb9e5f73d292e88e93e9a7dbfb03650b800cccbe5e04d50",
+   "bytes": 31892
+  },
+  {
+   "file": "zone_Riddells_Creek.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_zone&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C144.63066097202133%2C-37.5011407371461%2C144.7352390222535%2C-37.39230399684371%2C%27EPSG%3A4326%27%29",
+   "sha256": "2e7b81d7e02140729302e9b64b7ef763f15abdf92b02de0270f83e1c2ac676ae",
+   "bytes": 508595
+  },
+  {
+   "file": "bmo_Riddells_Creek.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_overlay&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C144.63066097202133%2C-37.5011407371461%2C144.7352390222535%2C-37.39230399684371%2C%27EPSG%3A4326%27%29+AND+zone_code+LIKE+%27BMO%25%27",
+   "sha256": "2007cb7d88a5568d9e3da954e08958f7031b122bfb4f314c5a9a5d91b91fbc7c",
+   "bytes": 247633
+  },
+  {
+   "file": "bpa_Riddells_Creek.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Abushfire_prone_area&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C144.63066097202133%2C-37.5011407371461%2C144.7352390222535%2C-37.39230399684371%2C%27EPSG%3A4326%27%29",
+   "sha256": "681e09fa53515aaa90deaffb3081e130e6b2a5435cf65ef9bc19d1aadadffbb2",
+   "bytes": 860460
+  },
+  {
+   "file": "sal_Kyneton.geojson",
+   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SAL/MapServer/0/query?where=sal_code_2021%3D%2721414%27&outFields=sal_code_2021%2Csal_name_2021&outSR=4326&f=geojson",
+   "sha256": "e88cab683f753e656c2d5f03e754e849ee9ed38534ea96c914d55e5887f9c658",
+   "bytes": 15125
+  },
+  {
+   "file": "zone_Kyneton.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_zone&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C144.3660570020418%2C-37.27517283661981%2C144.53370800158382%2C-37.17143693669995%2C%27EPSG%3A4326%27%29",
+   "sha256": "7dc8ec505074d65df3c18c5195ef95fa0beec6a23a31bbe4d5f8f52b5a256870",
+   "bytes": 1203446
+  },
+  {
+   "file": "bmo_Kyneton.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_overlay&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C144.3660570020418%2C-37.27517283661981%2C144.53370800158382%2C-37.17143693669995%2C%27EPSG%3A4326%27%29+AND+zone_code+LIKE+%27BMO%25%27",
+   "sha256": "9f6987ccf6b505b35c0c13b48df44426ecb1209e83f55bfcac885f19942d83b2",
+   "bytes": 706580
+  },
+  {
+   "file": "bpa_Kyneton.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Abushfire_prone_area&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C144.3660570020418%2C-37.27517283661981%2C144.53370800158382%2C-37.17143693669995%2C%27EPSG%3A4326%27%29",
+   "sha256": "543b2acfbeee5a7d963779b2b0caa580e06cef28ec76ad61ac379e56156262c5",
+   "bytes": 936221
+  },
+  {
+   "file": "sal_Eltham.geojson",
+   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SAL/MapServer/0/query?where=sal_code_2021%3D%2720865%27&outFields=sal_code_2021%2Csal_name_2021&outSR=4326&f=geojson",
+   "sha256": "7d0660da3c6e0f9992d2643a1baabaecba1ea194df3d32290f983c0b344360ba",
+   "bytes": 48123
+  },
+  {
+   "file": "zone_Eltham.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_zone&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.13160515172083%2C-37.74091355674568%2C145.19500094206904%2C-37.68840217677199%2C%27EPSG%3A4326%27%29",
+   "sha256": "f70e0e12f8f0137957240f575d1b396658e335c1a03589ef9fddf2a5f916ee3e",
+   "bytes": 1609789
+  },
+  {
+   "file": "bmo_Eltham.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_overlay&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.13160515172083%2C-37.74091355674568%2C145.19500094206904%2C-37.68840217677199%2C%27EPSG%3A4326%27%29+AND+zone_code+LIKE+%27BMO%25%27",
+   "sha256": "dd1ce9f4a9c1123ccad9cab33f9679291d2fde60983659d73df4a664883af496",
+   "bytes": 464929
+  },
+  {
+   "file": "bpa_Eltham.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Abushfire_prone_area&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.13160515172083%2C-37.74091355674568%2C145.19500094206904%2C-37.68840217677199%2C%27EPSG%3A4326%27%29",
+   "sha256": "af62f2617d6651dc3f1964a89d354b17aa571c3b7200d1a507cd1e0c0b7ea43f",
+   "bytes": 653525
+  },
+  {
+   "file": "sal_Hurstbridge.geojson",
+   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SAL/MapServer/0/query?where=sal_code_2021%3D%2721223%27&outFields=sal_code_2021%2Csal_name_2021&outSR=4326&f=geojson",
+   "sha256": "6a4534d1d2c95f89e3e36a6d72b84fa3c70d611ca43d3abdea1cb9978c0536f6",
+   "bytes": 26154
+  },
+  {
+   "file": "zone_Hurstbridge.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_zone&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.16607601187886%2C-37.65825397666309%2C145.22732399236648%2C-37.61570200721884%2C%27EPSG%3A4326%27%29",
+   "sha256": "41ff242a859f6de047b1a4d17386f6e824999f7d6867560aa8c275e327dd3700",
+   "bytes": 771372
+  },
+  {
+   "file": "bmo_Hurstbridge.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_overlay&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.16607601187886%2C-37.65825397666309%2C145.22732399236648%2C-37.61570200721884%2C%27EPSG%3A4326%27%29+AND+zone_code+LIKE+%27BMO%25%27",
+   "sha256": "45e7c2cd395bce3a36c6a98c92527967e8ef2062581dea0757554d1e66745400",
+   "bytes": 1074243
+  },
+  {
+   "file": "bpa_Hurstbridge.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Abushfire_prone_area&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C145.16607601187886%2C-37.65825397666309%2C145.22732399236648%2C-37.61570200721884%2C%27EPSG%3A4326%27%29",
+   "sha256": "1f0a7bb9653d15a892c9904deea035313a85083ad3a76532f1a0912f50bb1c52",
+   "bytes": 728115
+  },
+  {
+   "file": "sal_McCrae.geojson",
+   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SAL/MapServer/0/query?where=sal_code_2021%3D%2721625%27&outFields=sal_code_2021%2Csal_name_2021&outSR=4326&f=geojson",
+   "sha256": "c429977166ed999c170c98cfe5ed5e1922205f8afd7d89920f0a46cb55837240",
+   "bytes": 5714
+  },
+  {
+   "file": "zone_McCrae.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_zone&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C144.91597615244183%2C-38.36581498630898%2C144.9488512623972%2C-38.3429749965913%2C%27EPSG%3A4326%27%29",
+   "sha256": "af35d5896cc94e47ce8e44e1c13923672ddbccf33f9f15591a4d405ffa94fcdf",
+   "bytes": 655613
+  },
+  {
+   "file": "bmo_McCrae.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_overlay&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C144.91597615244183%2C-38.36581498630898%2C144.9488512623972%2C-38.3429749965913%2C%27EPSG%3A4326%27%29+AND+zone_code+LIKE+%27BMO%25%27",
+   "sha256": "f0950861a9eb53130fa76e940133298c01aca8187361b0f0f57a328d647f54ff",
+   "bytes": 133401
+  },
+  {
+   "file": "bpa_McCrae.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Abushfire_prone_area&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C144.91597615244183%2C-38.36581498630898%2C144.9488512623972%2C-38.3429749965913%2C%27EPSG%3A4326%27%29",
+   "sha256": "b171246a1e9262c05186e5758bd4f1c7dcd9083ff93167e582fa9a4a38012e1e",
+   "bytes": 583599
+  },
+  {
+   "file": "sal_Mount_Martha.geojson",
+   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SAL/MapServer/0/query?where=sal_code_2021%3D%2721803%27&outFields=sal_code_2021%2Csal_name_2021&outSR=4326&f=geojson",
+   "sha256": "8fe909dbb648cc12e5c1fe837e9e51eef678f4cb85f511272298bfcb70a86f22",
+   "bytes": 25554
+  },
+  {
+   "file": "zone_Mount_Martha.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_zone&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C144.9827870221916%2C-38.30475200662415%2C145.07891802246604%2C-38.24281026678333%2C%27EPSG%3A4326%27%29",
+   "sha256": "38dd66a6b546bd6452520b96605671a5e30d15b575f72b60d253c1f21083a902",
+   "bytes": 803027
+  },
+  {
+   "file": "bmo_Mount_Martha.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_overlay&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C144.9827870221916%2C-38.30475200662415%2C145.07891802246604%2C-38.24281026678333%2C%27EPSG%3A4326%27%29+AND+zone_code+LIKE+%27BMO%25%27",
+   "sha256": "2f19848b004d71f7ed2eca02a0c2990669f796795cf3618f3d673c208352f888",
+   "bytes": 106527
+  },
+  {
+   "file": "bpa_Mount_Martha.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Abushfire_prone_area&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C144.9827870221916%2C-38.30475200662415%2C145.07891802246604%2C-38.24281026678333%2C%27EPSG%3A4326%27%29",
+   "sha256": "fac262caf4b3803a0e35ada9d3a21650ededc2ca68e42fc51e6c041d651adb60",
+   "bytes": 583599
+  },
+  {
+   "file": "sal_Arthurs_Seat.geojson",
+   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/SAL/MapServer/0/query?where=sal_code_2021%3D%2720072%27&outFields=sal_code_2021%2Csal_name_2021&outSR=4326&f=geojson",
+   "sha256": "40aa564e18434077f961934be276d004c8db617efc93168385965084fa6473e7",
+   "bytes": 3845
+  },
+  {
+   "file": "zone_Arthurs_Seat.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_zone&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C144.94248000256704%2C-38.379828996548476%2C144.9784999921612%2C-38.34296140635511%2C%27EPSG%3A4326%27%29",
+   "sha256": "49c10a7dba13e822ff3c3caac7fd7e60124abf6a6cc5e1c80028e6fb64d7e273",
+   "bytes": 675137
+  },
+  {
+   "file": "bmo_Arthurs_Seat.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Aplan_overlay&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C144.94248000256704%2C-38.379828996548476%2C144.9784999921612%2C-38.34296140635511%2C%27EPSG%3A4326%27%29+AND+zone_code+LIKE+%27BMO%25%27",
+   "sha256": "b8f32fc212185509ae7470060c58e5a8e3a8eb16c69d22110117e5bbe3c0d655",
+   "bytes": 173526
+  },
+  {
+   "file": "bpa_Arthurs_Seat.json",
+   "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Abushfire_prone_area&outputFormat=application%2Fjson&srsName=EPSG%3A4326&cql_filter=BBOX%28geom%2C144.94248000256704%2C-38.379828996548476%2C144.9784999921612%2C-38.34296140635511%2C%27EPSG%3A4326%27%29",
+   "sha256": "eefddb2673ea6818d867a817591d7d91ffd3cc2766803e8b2eae7ffc4f012b1e",
+   "bytes": 583599
+  }
+ ]
+}
