@@ -25,9 +25,9 @@ const { chromium } = require('playwright');
     out.invisible = same(parseImport(inv));
     out.backticks = same(parseImport(L.map((l,i)=> i===hi ? "```"+l : i===L.length-1 ? l+"```" : l).join("\n")));
     // 3 old version still rejected, also with prefix/invisible
-    out.v13 = parseImport(txt.replace("ONH v14","ONH v13")).error;
-    out.v13prefixed = parseImport(ios.replace("ONH v14","ONH v13")).error;
-    out.v10invisible = parseImport(inv.replace("ONH v14","ONH v10")).error;
+    out.v13 = parseImport(txt.replace("ONH v15","ONH v13")).error;
+    out.v13prefixed = parseImport(ios.replace("ONH v15","ONH v13")).error;
+    out.v10invisible = parseImport(inv.replace("ONH v15","ONH v10")).error;
     out.noHeader = parseImport(L.slice(0,hi).join("\n")).error;
     out.churchText = parseImport(ios).answers["R5.7"]; out.note = parseImport(ios).answers["Q15 Notes"];
     // owner panel UI path

@@ -1,6 +1,6 @@
 # Questionnaire redesign — round 8 (31 Oct 2026)
 
-Design record for survey **code version 14** ("v14 trade-offs survey"). Approved by the user 31 Oct 2026 (Option C). Page source: `Our Next Home — questionnaire page (Claude artifact source).html`. Previous source in Archive as `(superseded 2026-10-31, before trade-offs v14)`.
+Design record for survey **code version 14** ("v14 trade-offs survey"). Approved by the user 31 Oct 2026 (Option C). Page source: `Archive/Our Next Home — questionnaire page v14 (superseded 2026-10-31, before timing v15).html` (now superseded by v15). Previous source in Archive as `(superseded 2026-10-31, before trade-offs v14)`.
 
 **Status:** published 31 Oct 2026 to the existing artifact URL (live copy verified identical to this source; PAGE_VERSION 14). Link NOT sent. Awaiting the user's review. **The model is unchanged:** no change to weights, filters, shortlist status, P scores, the 51-suburb list or the Mum/Dad/Nish voting.
 
@@ -117,3 +117,10 @@ New RawResponses columns needed: R8.1, R8.2, R8.3-20, R8.3-30, R8.3-45, R8.3-60,
 ## Checks run (31 Oct 2026, local copy, headless browser at phone width)
 
 All 35 combinations of firm limit and ladder answer gave the expected R8.3, R8.3c and step codes; X/L codes correct; changing an earlier ladder answer re-routes; R8.2 and R8.5 hide and clear the earlier pick; R8.2 stores X when R8.1 = G; one question on screen in parts 4–6 with Back/Next; "I've finished" jumps to the first missing step; skipped questions hidden on screen; WhatsApp export → import round trip identical (39 answers); a v13 message is rejected; no console errors.
+
+## Review round 2 (31 Oct 2026, v15, user-approved Option B)
+
+- Gemini and Perplexity reviewed v15. Applied: intro "about 15–20 minutes"; R8.5 shows the cards again; R6.6 "both the supermarket and the GP". Stored values, branching, PAGE_VERSION 15 unchanged. Live version 1793424601-d805.
+- Rebutted (verified against workbook/page): Nish excluded from corrections (false: col M); Q15.2/Q15.10 zero weight (false: Settings B16:B25 unused); R5.2 vs ladder conflict (ladder skips rungs over limit); "D — Essential" breaks COUNTIF (import stores the letter); R8.6 for cards D/E; reorder Priorities first; WhatsApp number; cutting Timing; splitting Q11–Q13; extra gap questions.
+- Deferred to the model spec: Q10 row in ForcedChoiceCorrections, wiring R8/Q3c/R5.2/R5.4, 2–1 vote swing size, household weighting.
+- To do before import: update `tools/import_v14.py` for v15 (R9 tags); CleanedAnswers B71/E64:E66 when Q7a = B.

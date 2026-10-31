@@ -72,11 +72,11 @@ const { chromium } = require('playwright');
     setA("R5.2","D"); setA("R8.1","A"); setA("R8.2","C"); setA("R8.4","B"); setA("R8.5","E"); setA("R8.6","B"); setA("R8.3-30","A"); setA("R8.3-45","A"); setA("R8.3-60","A");
     const a=collect(); const rec={person:"TEST",savedAt:"2026-10-31T00:00:00Z",answers:a}; const txt=exportText(rec); const p=parseImport(txt);
     const same = Object.keys(a).length===Object.keys(p.answers).length && Object.keys(a).every(k=>a[k]===p.answers[k]);
-    const old = parseImport(txt.replace("ONH v14","ONH v13"));
+    const old = parseImport(txt.replace("ONH v15","ONH v13")); window.__v14 = parseImport(txt.replace("ONH v15","ONH v14")).error;
     return {n:Object.keys(a).length, missing:missing(a).map(i=>i.tag), same, errors:p.errors, old:old.error, code:txt.split("\n").filter(l=>/^R8|^ONH/.test(l)), r83:a["R8.3"], cap:a["R8.3c"]}; });
   console.log(JSON.stringify(rt));
   ok(rt.same && rt.errors.length===0 && rt.missing.length===0, "round trip");
-  ok(/version 13/.test(rt.old||""), "v13 message rejected");
+  ok(/version 13/.test(rt.old||""), "v13 message rejected"); ok(/version 14/.test(await pg.evaluate(()=>window.__v14)||""), "v14 rejected");
   const vv = await pg.evaluate(()=>{ reset(); setA("R8.1","B"); BYTAG["R8.2"].sec.pos=1; update(); const r82=BYTAG["R8.2"].optEls.filter(l=>l.getBoundingClientRect().height>0).length; setA("Q7a","B"); const r6=["R6.1","R6.2","R6.3"].map(t=>BYTAG[t].fs.getBoundingClientRect().height); const r56=BYTAG["R5.6"].fs.getBoundingClientRect().height; const rung=ITEMS.filter(i=>i.tag.startsWith("R8.3")).filter(i=>i.fs.getBoundingClientRect().height>0).map(i=>i.tag); return {r82,r6,r56,rung}; }); console.log(JSON.stringify(vv)); ok(vv.r82===6 && vv.r6.every(h=>h===0) && vv.r56===0 && JSON.stringify(vv.rung)==="[\"R8.3-30\"]","on-screen visibility "+JSON.stringify(vv));
   // screenshots
   for(const [t,f] of [["Kinds of nature","p4.png"],["Kinds of area","p5.png"],["Family drive","p6.png"]]){

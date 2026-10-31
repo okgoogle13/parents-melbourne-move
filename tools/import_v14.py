@@ -1,11 +1,13 @@
-"""Import questionnaire v14 answers (task N3) from a page `responses` export into a COPY of the workbook.
+"""Import questionnaire v14 and v15 answers (task N3) from a page `responses` export into a COPY of the workbook.
+
+v15 (31 Oct 2026) = v14 + Timing part (R9.1-R9.4, R9 Notes). The file keeps its v14 name because docs refer to it.
 
 Usage (from repo root):
   .venv/bin/python tools/import_v14.py <export.json> <in.xlsx> <out.xlsx>
   .venv/bin/python tools/import_v14.py <export.json> <in.xlsx> <out.xlsx> --blank-context
 
-Never writes to <in.xlsx>. Takes, per person (Mum, Dad, Me), the latest record with pageVersion 14;
-ignores TEST, other people and every other version. New RawResponses row per person = their latest
+Never writes to <in.xlsx>. Takes, per person (Mum, Dad, Me), the latest record with pageVersion 14 or 15;
+ignores TEST, other people and every other version. A v14 record leaves the R9 columns blank and prints a FLAG. New RawResponses row per person = their latest
 row carried forward, overwritten by the v14 answers (rounds 5-7 design doc, section 3, Storage).
 Q10 and Q13d are blanked (not asked in v14). Columns v14 never asks keep the carried-forward value
 unless --blank-context is given. Exit 1 on any unmapped answer key or failed check.
@@ -35,6 +37,12 @@ NEW_COLUMNS = [
     ("R8.4", "[R8.4] Kind of area most wanted"),
     ("R8.5", "[R8.5] Kind of area least wanted"),
     ("R8.6", "[R8.6] Bushfire risk tolerance (feeds nothing)"),
+    # v15 Timing part: feeds no weight, filter or score (market-timing note only).
+    ("R9.1", "[R9.1] Timing: when to have moved by"),
+    ("R9.2", "[R9.2] Timing: if prices fell 5% after buying"),
+    ("R9.3", "[R9.3] Timing: sell Beachmere first or buy first"),
+    ("R9.4", "[R9.4] Timing: where to live until we buy"),
+    ("R9 Notes", "[R9 Notes] Timing: notes"),
 ]
 
 # Every tag the v14 page can store, except notes that have no column of their own.
@@ -43,6 +51,8 @@ V14_TAGS = ["Q7a", "Q3c", "R5.2", "R5.4", "R8.1", "R8.2", "R8.4", "R8.5", "R8.6"
             "Q11", "Q12", "Q13", "R5.5", "R5.6", "R5.7", "R5 Notes",
             "R6.1", "R6.2", "R6.3", "R6.4", "R6.5a", "R6.5b", "R6.6", "R6 Notes",
             "Q14"] + [f"Q15.{i}" for i in range(1, 11)] + ["Q15 Notes"]
+R9_TAGS = ["R9.1", "R9.2", "R9.3", "R9.4", "R9 Notes"]
+VERSIONS = (14, 15)
 Q15_TAGS = {f"Q15.{i}" for i in range(1, 11)}
 NOTES_TO_AM = "Q10-Q13c Notes"  # no RawResponses column; kept as a labelled note in the AM merge log
 BLANKED = ["Q10", "Q13d"]       # round 8 note: not asked in v14, columns stay empty for v14
@@ -59,7 +69,7 @@ def tag_of(header):
 
 
 def select(records):
-    v14 = [r for r in records if r.get("pageVersion") == 14 and r.get("person") in PERSONS]
+    v14 = [r for r in records if r.get("pageVersion") in VERSIONS and r.get("person") in PERSONS]
     chosen, others = {}, []
     for r in sorted(v14, key=lambda r: r["savedAt"]):
         if r["person"] in chosen:
@@ -81,13 +91,13 @@ def main():
 
     records = json.loads(Path(a.export).read_text(encoding="utf-8"))["records"]
     chosen, others, skipped = select(records)
-    print(f"records: {len(records)}; v14 Mum/Dad/Me: {len(chosen) + len(others)}; ignored (other version/person/TEST): {len(skipped)}")
+    print(f"records: {len(records)}; v14/v15 Mum/Dad/Me: {len(chosen) + len(others)}; ignored (other version/person/TEST): {len(skipped)}")
     for r in others:
-        print(f"  superseded v14 record (not imported): {r['id']} {r['person']} {r['savedAt']}")
+        print(f"  superseded v{r['pageVersion']} record (not imported): {r['id']} {r['person']} {r['savedAt']}")
     if not chosen:
-        sys.exit("no v14 records to import")
+        sys.exit("no v14/v15 records to import")
 
-    known = set(V14_TAGS) | {NOTES_TO_AM}
+    known = set(V14_TAGS) | set(R9_TAGS) | {NOTES_TO_AM}
     for r in chosen.values():
         bad = sorted(set(r["answers"]) - known)
         if bad:
@@ -124,7 +134,8 @@ def main():
         ans, ts = r["answers"], r["savedAt"][:19]
         prev = max(row for row in range(2, ws.max_row + 1) if ws.cell(row, 2).value == person)
         am_prev = ws.cell(prev, cols["Gap-form notes"]).value or ""
-        if f"v14 {ts}Z" in am_prev:
+        ver = r["pageVersion"]
+        if f"v{ver} {ts}Z" in am_prev:
             sys.exit(f"{person}: record {ts}Z already imported (row {prev})")
         new = ws.max_row + 1
         for c in range(1, ws.max_column + 1):
@@ -133,7 +144,7 @@ def main():
             d._style = copy(s._style)
 
         ws.cell(new, 1).value = dt.datetime.fromisoformat(ts)
-        for tag in V14_TAGS:
+        for tag in V14_TAGS + R9_TAGS:
             v = ans.get(tag)
             if v is not None and tag in Q15_TAGS:
                 v = v[0]
@@ -144,7 +155,7 @@ def main():
             for tag in CONTEXT_TAGS:
                 ws.cell(new, cols[tag]).value = None
 
-        log = f"v14 {ts}Z merged onto row {prev} (record {r['id']}; Q10, Q13d blanked; context columns {'blanked' if a.blank_context else 'carried forward'})."
+        log = f"v{ver} {ts}Z merged onto row {prev} (record {r['id']}; Q10, Q13d blanked; context columns {'blanked' if a.blank_context else 'carried forward'})."
         if "R8.6" not in ans:
             area = ans.get("R8.4", "")[:1]
             if area in ("A", "D", "E"):
@@ -153,10 +164,13 @@ def main():
             else:
                 flags.append(f"{person} row {new}: R8.6 Needs data: answered before R8.6 existed (R8.4 = {area or 'blank'})")
                 log += " R8.6 Needs data: answered before R8.6 existed."
+        if ver == 14:
+            flags.append(f"{person} row {new}: R9.1-R9.4 Needs data: answered v14 (no Timing part); add chat answers by hand, source 'chat'")
+            log += " R9 Needs data: v14 record (no Timing part)."
         if ans.get(NOTES_TO_AM):
             log += f" Q10-Q13c notes: {ans[NOTES_TO_AM]}"
         ws.cell(new, cols["Gap-form notes"]).value = f"{log} | {am_prev}" if am_prev else log
-        print(f"  {person}: row {new} = row {prev} + v14 record {r['id']} ({len(ans)} answers)")
+        print(f"  {person}: row {new} = row {prev} + v{ver} record {r['id']} ({len(ans)} answers)")
 
     ca = wb["CleanedAnswers"]
     have = {ca.cell(row, 1).value for row in range(1, ca.max_row + 1)}
@@ -167,7 +181,7 @@ def main():
     if todo:
         if ca.max_row >= CA_LABEL_ROW:
             sys.exit(f"CleanedAnswers has content at or below row {CA_LABEL_ROW}; place new rows by hand")
-        ca.cell(CA_LABEL_ROW, 1, "v14 answers (round 8; context, not weighted)")._style = copy(ca["A30"]._style)
+        ca.cell(CA_LABEL_ROW, 1, "v14/v15 answers (round 8 + timing; context, not weighted)")._style = copy(ca["A30"]._style)
         for i, h in enumerate(["Question ID", "Mum Answer", "Dad Answer", "Me Answer", "Mum Code", "Dad Code", "Me Code"]):
             ca.cell(CA_LABEL_ROW + 1, i + 1, h)._style = copy(ca.cell(31, i + 1)._style)
         for i, h in enumerate(todo):
