@@ -96,7 +96,7 @@ Rules: no formula may reference these columns (X, Y, L, weights, filters). Add t
 - **Card B: understates.** Most of its suburbs are bushfire-prone and under the BMO across most residential land. Proposed wording: "Most homes here are in bushfire-prone areas with bushfire building and planning rules (early check)."
 - **Card C: fits roughly.** Results vary by town. Proposed wording: "Bushfire risk varies: some towns have bushfire planning rules across most streets, others only at the edges (early check)."
 
-Both wordings wait for gated step F1. Changing the card text is wording only, but it is shown to people who have already answered (Nish answered R8.4 = E). So it needs weighing per the version rule.
+**Applied 31 Oct 2026 (user-approved)**, with R8.6 reworded to "Some or most of the kind of area you chose is bushfire-prone". Nish answered R8.4 = E, so his answers are unaffected. Page log: `scoring-model-pointer.md`.
 
 ## Use with R8.6
 

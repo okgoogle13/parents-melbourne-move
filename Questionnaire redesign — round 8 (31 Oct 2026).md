@@ -109,6 +109,11 @@ New RawResponses columns needed: R8.1, R8.2, R8.3-20, R8.3-30, R8.3-45, R8.3-60,
 - Checks: regression suite 0 fails (round trip now 40 answers with R8.6 asked); R8.6 asked only for B/C, stored X for A/D/E, not stored while R8.4 is blank, X when R8.4 changes away from B/C; one question on screen with Back/Next; draft restore on iPhone 13 and iPad (portrait, landscape), no sideways scroll; WhatsApp prefix/invisible-character imports still pass (41 answers when R8.6 is X); v13/v10 still rejected.
 - Rebutted review items and reasons: see the chat of 31 Oct 2026 (Card F, About-equal options, length/notes cuts, WhatsApp line hiding, slope question, Q3c wording, townhouse, multiple venues, 60/45-min rescaling, Q15 ranges).
 
+## Bushfire wording (31 Oct 2026, user-approved)
+
+- From bushfire screening B3-S (`research/bushfire/bushfire-screening (31 Oct 2026).md`, Estimate): card B "Most homes here are in bushfire-prone areas with bushfire building and planning rules (early check)"; card C "Bushfire risk varies: some towns have bushfire planning rules across most streets, others only at the edges (early check)"; R8.6 now opens "Some or most of the kind of area you chose is bushfire-prone" (was "Parts of …", which contradicted the new card B).
+- Code version 14, stored letters and branching unchanged. Live artifact version 1793421274-e848 (folder source sha256 c7547bc46138). Checks: regression 0 fails, import no errors, R8.6 0 fails; the R8.6 legend still contains "bushfire-prone".
+
 ## Checks run (31 Oct 2026, local copy, headless browser at phone width)
 
 All 35 combinations of firm limit and ladder answer gave the expected R8.3, R8.3c and step codes; X/L codes correct; changing an earlier ladder answer re-routes; R8.2 and R8.5 hide and clear the earlier pick; R8.2 stores X when R8.1 = G; one question on screen in parts 4–6 with Back/Next; "I've finished" jumps to the first missing step; skipped questions hidden on screen; WhatsApp export → import round trip identical (39 answers); a v13 message is rejected; no console errors.
