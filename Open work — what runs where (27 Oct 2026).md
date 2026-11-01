@@ -38,7 +38,8 @@ Task 1 of the handover (local-only `research/inputs/parents-melbourne-move-hando
 | B1 | Task 1: realestate.com.au under-$1.5M searches (Williamstown, Blackburn, Glen Waverley, Mount Eliza; all four are "Active — needs data" rows) |
 | B2 | Task 2: Google Maps "Depart at" drive times (10:00 and 08:00) |
 | B3 | Task 6: VicPlan bushfire/flood overlays for 23 listing addresses |
-| B4 | Task 7: nearest Indian grocery, Hindu temple **and** church with drive minutes (suburbs passing the approved filters, community comparators done 28 Oct for the 6 added rows; Wheelers Hill budget now Checked 28 Oct via Jellis Craig sold-results report; still open: Endeavour Spices and Shri Sanatan Dharam opening hours, both Needs verification and not counted). Feeds the P decision |
+| B4 | **2 Nov 2026: grocery part DONE for the 51 ranked rows (AY + col Z, Checked, 10:00 top of range); temple and church still open; filter threshold awaits approval.** Task 7: nearest Indian grocery, Hindu temple **and** church with drive minutes (suburbs passing the approved filters, community comparators done 28 Oct for the 6 added rows; Wheelers Hill budget now Checked 28 Oct via Jellis Craig sold-results report; still open: Endeavour Spices and Shri Sanatan Dharam opening hours, both Needs verification and not counted). Feeds the P decision |
+| B9 | **DONE 2 Nov 2026:** beach drive times (BJ/BK), U from beach drive, P option B, grocery filter 25 min, family-set weights. See pointer change log |
 | B5 | Listings tab refresh from the "Parents." collection |
 | B6 | Suitable-property checks for the 6 Community comparators |
 | B7 | Comparator train access — recall-only check of train access for the six Community comparators. Distinct from C5, which covers train facts for passing suburbs |
@@ -56,7 +57,7 @@ Task 1 of the handover (local-only `research/inputs/parents-melbourne-move-hando
 | P6 | Point Cook travel decision (currently Conditional) |
 | P7 | Definition of score P (needs the user's approval; waits on B4) → covered by rounds 5–7 (see P9 / G1 / G2 / G6) |
 | P8 | **DONE 29 Oct: approved by the user.** Review and approve the 5 Northam St decision summary (C9) before the parents see it. Open points: (1)–(2) DONE 29 Oct: suburb-fit line reworded to the ABS 2021 and school-zone evidence; 52.3% reinstated. (3) DONE 29 Oct: Budget bullet uses the realestate.com.au 4-bed median $1,603,000; page table uses the realestate.com.au all-house median $1,675,000; workbook G7 updated to $1,675,000 29 Oct (5704d65; recalc passed; reports refreshed); (4) DONE 29 Oct: Statement of Information read: no comparable sales listed; land 677 m² vs listing 581 m² (verify); REIV median $1,750,000. (5) Signed off. Auction Sat 14 Nov 2026, 11:00 am |
-| P9 | Family answers to rounds 5–6 (includes P5 Q13d). From 30 Oct: page v11 (simplified survey); parents send answers by WhatsApp, imported via the page's owner-only panel |
+| P9 | **1 Nov 2026: survey replaced by short v16 (about 5–8 min; round 9 design note); link not yet sent.** Family answers to rounds 5–6 (includes P5 Q13d). From 30 Oct: page v11 (simplified survey); parents send answers by WhatsApp, imported via the page's owner-only panel |
 
 ## Rounds 5–7 local steps (29 Oct 2026)
 From `Questionnaire redesign — rounds 5–7 (29 Oct 2026).md` sections 6–7. Each gate is asked once, when its inputs exist.

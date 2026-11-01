@@ -1,6 +1,8 @@
-"""Import questionnaire v14 and v15 answers (task N3) from a page `responses` export into a COPY of the workbook.
+"""Import questionnaire v14, v15 and v16 answers (task N3) from a page `responses` export into a COPY of the workbook.
 
 v15 (31 Oct 2026) = v14 + Timing part (R9.1-R9.4, R9 Notes). The file keeps its v14 name because docs refer to it.
+v16 (1 Nov 2026) = short survey: asks only V16_TAGS (kept tags) + R10.1-R10.3 and R10 Notes (new, feed nothing).
+Tags v16 does not ask are carried forward like the context columns (blanked with --blank-context); no R8.6 or R9 flags for v16.
 
 Usage (from repo root):
   .venv/bin/python tools/import_v14.py <export.json> <in.xlsx> <out.xlsx>
@@ -43,6 +45,11 @@ NEW_COLUMNS = [
     ("R9.3", "[R9.3] Timing: sell Beachmere first or buy first"),
     ("R9.4", "[R9.4] Timing: where to live until we buy"),
     ("R9 Notes", "[R9 Notes] Timing: notes"),
+    # v16 short survey (1 Nov 2026): feed no weight, filter or score until a model change is approved.
+    ("R10.1", "[R10.1] How close Indian grocery and restaurants need to be"),
+    ("R10.2", "[R10.2] Kinds of area happy to look at (letters, tick all)"),
+    ("R10.3", "[R10.3] Look at other areas before buying"),
+    ("R10 Notes", "[R10 Notes] Anything else (v16)"),
 ]
 
 # Every tag the v14 page can store, except notes that have no column of their own.
@@ -52,7 +59,9 @@ V14_TAGS = ["Q7a", "Q3c", "R5.2", "R5.4", "R8.1", "R8.2", "R8.4", "R8.5", "R8.6"
             "R6.1", "R6.2", "R6.3", "R6.4", "R6.5a", "R6.5b", "R6.6", "R6 Notes",
             "Q14"] + [f"Q15.{i}" for i in range(1, 11)] + ["Q15 Notes"]
 R9_TAGS = ["R9.1", "R9.2", "R9.3", "R9.4", "R9 Notes"]
-VERSIONS = (14, 15)
+R10_TAGS = ["R10.1", "R10.2", "R10.3", "R10 Notes"]
+V16_TAGS = ["Q3c", "R5.2", "R5.4", "R5.5", "R5.6", "R5.7", "R8.1", "R6.1", "Q14"] + [f"Q15.{i}" for i in range(1, 11)]
+VERSIONS = (14, 15, 16)
 Q15_TAGS = {f"Q15.{i}" for i in range(1, 11)}
 NOTES_TO_AM = "Q10-Q13c Notes"  # no RawResponses column; kept as a labelled note in the AM merge log
 BLANKED = ["Q10", "Q13d"]       # round 8 note: not asked in v14, columns stay empty for v14
@@ -91,13 +100,13 @@ def main():
 
     records = json.loads(Path(a.export).read_text(encoding="utf-8"))["records"]
     chosen, others, skipped = select(records)
-    print(f"records: {len(records)}; v14/v15 Mum/Dad/Me: {len(chosen) + len(others)}; ignored (other version/person/TEST): {len(skipped)}")
+    print(f"records: {len(records)}; v14-v16 Mum/Dad/Me: {len(chosen) + len(others)}; ignored (other version/person/TEST): {len(skipped)}")
     for r in others:
         print(f"  superseded v{r['pageVersion']} record (not imported): {r['id']} {r['person']} {r['savedAt']}")
     if not chosen:
-        sys.exit("no v14/v15 records to import")
+        sys.exit("no v14-v16 records to import")
 
-    known = set(V14_TAGS) | set(R9_TAGS) | {NOTES_TO_AM}
+    known = set(V14_TAGS) | set(R9_TAGS) | set(R10_TAGS) | {NOTES_TO_AM}
     for r in chosen.values():
         bad = sorted(set(r["answers"]) - known)
         if bad:
@@ -144,7 +153,16 @@ def main():
             d._style = copy(s._style)
 
         ws.cell(new, 1).value = dt.datetime.fromisoformat(ts)
-        for tag in V14_TAGS + R9_TAGS:
+        if ver == 16:
+            written = V16_TAGS + R10_TAGS
+            if a.blank_context:
+                for tag in V14_TAGS + R9_TAGS:
+                    ws.cell(new, cols[tag]).value = None
+        else:
+            written = V14_TAGS + R9_TAGS
+            for tag in R10_TAGS:
+                ws.cell(new, cols[tag]).value = None
+        for tag in written:
             v = ans.get(tag)
             if v is not None and tag in Q15_TAGS:
                 v = v[0]
@@ -156,7 +174,9 @@ def main():
                 ws.cell(new, cols[tag]).value = None
 
         log = f"v{ver} {ts}Z merged onto row {prev} (record {r['id']}; Q10, Q13d blanked; context columns {'blanked' if a.blank_context else 'carried forward'})."
-        if "R8.6" not in ans:
+        if ver == 16:
+            log += f" v16 short survey: unasked round 8/timing columns {'blanked' if a.blank_context else 'carried forward'}."
+        elif "R8.6" not in ans:
             area = ans.get("R8.4", "")[:1]
             if area in ("A", "D", "E"):
                 ws.cell(new, cols["R8.6"]).value = R86_X
@@ -181,7 +201,7 @@ def main():
     if todo:
         if ca.max_row >= CA_LABEL_ROW:
             sys.exit(f"CleanedAnswers has content at or below row {CA_LABEL_ROW}; place new rows by hand")
-        ca.cell(CA_LABEL_ROW, 1, "v14/v15 answers (round 8 + timing; context, not weighted)")._style = copy(ca["A30"]._style)
+        ca.cell(CA_LABEL_ROW, 1, "v14-v16 answers (round 8, timing, short survey; context, not weighted)")._style = copy(ca["A30"]._style)
         for i, h in enumerate(["Question ID", "Mum Answer", "Dad Answer", "Me Answer", "Mum Code", "Dad Code", "Me Code"]):
             ca.cell(CA_LABEL_ROW + 1, i + 1, h)._style = copy(ca.cell(31, i + 1)._style)
         for i, h in enumerate(todo):
