@@ -1,3 +1,42 @@
+<details>
+<summary>Prompt that produced this file</summary>
+
+````text
+Prompt A: Phase 1 audit (Sonnet 5.5, effort medium)
+
+## Goal
+Audit how the parents' suburb research currently measures "community fit". After talking with my parents, the priority has shifted: living in a multicultural or diverse suburb, with nearby access to Indian groceries and restaurants, matters more than living somewhere with a high Indian population. This session only finds where the survey and workbook still reflect the old priority. A later session will propose fixes.
+
+Files:
+- Survey: @</Users/okgoogle13/Projects/Parents Melbourne MOVE/Our Next Home — questionnaire page v16 (Claude artifact source).html>
+- Workbook: @</Users/okgoogle13/Projects/Parents Melbourne MOVE/Our Next Home — Family Relocation Scoring Model.xlsx>
+
+## Task — Audit (read only)
+Input: both files.
+Task: List every question, column, metric, weighting and scoring formula that touches community, culture, ethnicity, Indian population, food or shopping. In the workbook, read the formulas themselves, not just the displayed values, and trace which ones feed the final suburb score.
+Output: write to `<audit file, e.g. ./community-audit.md>` with this structure:
+
+```
+# Community-fit audit
+## Items
+| File | Location (question no. / sheet!cell or column) | What it measures now | Feeds final score? (Y/N + how) | Problem under the new priority |
+## Scoring chain
+<How the community-related values flow into the final score: weights, formulas, cell references>
+## Not checked / uncertain
+<Anything you could not read or were unsure about>
+```
+
+Done when: every relevant item in both files is in the table, the scoring chain is traced end to end, and the uncertain section is filled in (write "none" if empty).
+
+## Constraints
+- Read only: do not edit the survey or workbook. Changes come later, after my review.
+- Do not propose fixes, new metrics or data sources. That is the next session's job, and early proposals will anchor it.
+- Create only the audit file; no helper scripts, notes or workbook copies.
+- When the audit file is complete and checked against the Done criterion, stop and report the file path plus the number of items found.
+````
+
+</details>
+
 # Community-fit audit
 
 Read-only audit, 2 Nov 2026. New priority: a multicultural/diverse suburb with nearby Indian groceries and restaurants matters more than a high Indian population.

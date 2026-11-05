@@ -16,6 +16,8 @@ Status counts, ranks and the change history are in `scoring-model-pointer.md`.
 
 ## Next task
 
+**5 Nov (latest):** Nish's v16 answers imported (RawResponses row 16); workbook sha `841c84acf860`, 37 ranked, scores unchanged. As of 5 Nov Mum and Dad have not submitted v16 (survey link not yet sent by user).
+
 **2 Nov (latest, softer beach + nature 10%):** beach full marks within 15 min; Nature 10%, Price 1%, City 4%. Workbook sha `da376cfadef0`; recalc 0 errors, 37 ranked.
 
 **2 Nov (beach bands):** U uses stepped bands in Filters A15:C21 (10/20/30/45/60 min → 10/8/6/4/2, over 60 → 0). Workbook sha `25c6e9659d24`; recalc 0 errors, 37 ranked.
