@@ -107,7 +107,7 @@ W=sorted([(fc.cell(r,2).value,fc.cell(r,1).value) for r in range(6,16)],reverse=
 PLAIN={'Near family in GW':'Near family in Glen Waverley','Village character':'Village feel','Train/bus':'Train or bus','Shops & doctor':'Shops & doctor','City trip':'Trip to the city'}
 ds=wb['DiscussionSummary']
 filt=wb['Filters']
-cap=filt['B2'].value; gwmax=filt['B4'].value; edmax=filt['B5'].value; outlay=filt['B3'].value
+cap=filt['B2'].value; gwmax=filt['B4'].value; edmax=filt['B5'].value; outlay=filt['B3'].value; grmax=filt['B11'].value
 active=[d for d in rows if d['C']=='Active Shortlist']
 NA_=len(active)
 NRK=sum(1 for d in rows if isinstance(d['Y'],(int,float)))
@@ -159,17 +159,16 @@ def ev_cell(val,k,basis=''):
 H=[]
 H.append(f'<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Draft: Our Next Home report</title><style>{CSS}</style></head><body>')
 # ===== PAGE 1
-H.append('<section class="sheet page"><div class="draft">Draft — requires family review; not for publication or distribution.</div><h1>Our Next Home: where we have got to (28 Oct 2026)</h1>')
-H.append(nr('Title date (28 Oct 2026) predates the workbook used for the numbers; tables are rebuilt from the workbook named in A12.'))
+H.append('<section class="sheet page"><div class="draft">Draft — requires family review; not for publication or distribution.</div><h1>Our Next Home: where we have got to (5 Nov 2026)</h1>')
 H.append('''<div class="box"><p><b>What this is.</b> A summary of the suburbs we have looked at, scored against what the three of us said matters most. It is a research summary, not a decision.</p>
-<p><b>How to read it.</b> Every place must meet our hard limits on price, drive time to Glen Waverley and drive time to a hospital emergency department. &ldquo;Provisional pass&rdquo; means a place meets them on current evidence; no place is a &ldquo;Confirmed pass&rdquo; yet, because we have not checked any specific home. Each fact is labelled <i>Checked</i> (we confirmed it from a named source), <i>Estimate</i> (best available figure, not confirmed) or <i>Needs verification</i> (not yet confirmed). Scores run from 0 to 10, where 10 is the best fit for that priority.</p>
+<p><b>How to read it.</b> Every place must meet our hard limits on price, drive time to Glen Waverley, drive time to a hospital emergency department, and drive time to the nearest Indian grocery. &ldquo;Provisional pass&rdquo; means a place meets them on current evidence; no place is a &ldquo;Confirmed pass&rdquo; yet, because we have not checked any specific home. Each fact is labelled <i>Checked</i> (we confirmed it from a named source), <i>Estimate</i> (best available figure, not confirmed) or <i>Needs verification</i> (not yet confirmed). Scores run from 0 to 10, where 10 is the best fit for that priority.</p>
 <p><b>No place in this report is described as suitable</b> until both its hard limits and a specific home have been checked.</p></div>''')
-H.append(nr('Hard-limits table omits the 25-min drive limit to the nearest Indian grocery applied 2 Nov 2026 (Filters B11); rows failing it are shown "not ranked".'))
 H.append('<div class="key"><b>Labels:</b> <span class="ev ev-c">Checked</span> <span class="ev ev-e">Est.</span>&nbsp;Estimate <span class="ev ev-v">Verify</span>&nbsp;Needs verification <span class="st st-pp">Provisional pass</span> <span class="st st-cp">Confirmed pass</span>&nbsp;(no place yet) <span class="st st-f">Fail</span> <span class="st st-nd">Needs data</span> <span class="ev ev-na">N/A</span>&nbsp;Not applicable</div>')
 H.append(f'''<h2>Our hard limits</h2><table><thead><tr><th>Limit</th><th>Value</th><th>Note</th></tr></thead><tbody>
 <tr><td>Purchase price</td><td>{money(cap)} maximum</td><td>Total with 6% costs: {money(outlay)}</td></tr>
 <tr><td>Drive to Glen Waverley</td><td>{gwmax} min maximum</td><td>60 min preferred: a preference, not a limit</td></tr>
 <tr><td>Drive to a public 24-hour emergency department (ED)</td><td>{edmax} min maximum</td><td>ED drive time is also scored</td></tr>
+<tr><td>Drive to nearest Indian grocery</td><td>{grmax} min maximum</td><td>Weekday 10:00 top of range (Filters B11); 14 suburbs fail this limit and are unranked</td></tr>
 <tr><td>Stairs</td><td><span class="na">Not applicable</span></td><td>Stairs are allowed; not a hard limit</td></tr>
 <tr><td>Train</td><td><span class="na">Not applicable</span></td><td>Preferred, not required; scored instead</td></tr></tbody></table>''')
 H.append('<div class="cols"><div class="block"><h2>What matters most to us</h2><ol style="margin:0 0 1mm;padding-left:5mm">')
@@ -215,16 +214,14 @@ H.append(nvc_row('Rowville','Reference only',f"~15 min {tag('E')}",f"~$1,129,555
 H.append('</tbody></table><p class="small">Drive basis (as in the workbook, Glen Waverley and ED): anchors &ldquo;leave now&rdquo; 26–27 Oct; comparators 10:00 weekday, 28 Oct (top of range). Comparator peak (08:00) ranges: A4, reference only. Prices: Frankston and comparators sale medians; Mordialloc, Seaford, Rowville automated valuations. Rowville figures not looked up; its ED is not confirmed.</p>')
 H.append('<div class="note">This table puts two kinds of place side by side. <b>Nature-first anchors</b> (Frankston, Mordialloc, Seaford) are green and coastal, with smaller Indian communities. Mordialloc and Seaford are Watchlist locations, not on the active shortlist. <b>Community comparators</b> (Springvale, Clayton South, Keysborough, Clyde North, Endeavour Hills, Wheelers Hill) have larger Indian and multilingual communities but less nature. Endeavour Hills and Wheelers Hill have some of both. Comparators are <b>not ranked and carry no weight</b> in the main score; they are here only to make the trade-off between nature and community visible. The <b>Community comparison band</b> (High / Medium / Low) is based on census language and birthplace figures. <b>It is not a liveability score.</b> Rowville is shown for reference only. <b>Point Cook is Conditional, not a comparator:</b> it fails the verified 90-minute Glen Waverley journey at 08:00 peak, and including it would need a family decision to accept a longer travel trade-off.</div>')
 OQ='''<div class="block"><p><b>Still to decide</b></p><ul>
-<li>What the &ldquo;Indian community&rdquo; score should measure. This is pending a family decision.</li>
 <li>How we will use the answers to the community-versus-nature question (Q13d). Reference-only; feeds no score or weight.</li>
 <li>Whether a longer trip to Glen Waverley is acceptable for Point Cook. A family decision.</li>
-<li>Whether our 60-minute preference for the Glen Waverley drive should become a hard limit. Not yet decided; today the limit is 90 minutes.</li></ul>
+<li>Whether our 60-minute preference for the Glen Waverley drive should become a hard limit. Not yet decided; today the limit is 90 minutes.</li>
+<li><b>Settled (2 Nov 2026):</b> Indian community score (P) uses Option B: 50% drive to nearest Indian grocery (AY) and 50% India-born population share (AQ).</li></ul>
 <p><b>Still to check</b></p><ul>
 <li>Whether a suitable home is actually available in each comparator suburb. Not yet checked for any of them.</li>
 <li>Train access for the comparator suburbs. Currently an estimate only.</li></ul>
 <p><b>Next step:</b> agree these questions, then choose places to view. The proposed rule is at least 2 community comparators, at least 1 nature-first anchor, and at least 1 checked &ldquo;Potential both&rdquo; suburb.</p></div>'''
-H.append(nr('Open question "What the Indian community score should measure" may be settled: 2 Nov 2026 scoring change set P = option B (PROJECT_STATE.md).'))
-H.append(nr('A2 intro says only Near family, Hospital and Price are calculated; since 2 Nov Beach (U) is calculated from beach drive time (Filters A15:C21) and P is set by option B.'))
 H.append('<h2>Open questions and next steps</h2><div class="oq">'+OQ+'</div></section>')
 # ===== APPENDIX
 def sec(title,body,last=False): H.append(f'<section class="sheet land{"" if last else " page"}"><p class="draftsm">Draft — requires family review; not for publication or distribution.</p><h2>{title}</h2>{body}</section>')
@@ -238,7 +235,7 @@ for d in order:
 t.append('</tbody></table>')
 sec('A1. Full comparison table — filters and evidence',''.join(t))
 SC=[('M','Near family'),('N','Nature'),('O','Hospital'),('P','Indian community'),('Q','Shops & doctor'),('R','Village'),('S','Train/bus'),('T','Price'),('U','Beach'),('V','City trip')]
-t=['<p class="small">Scores run 0–10; 10 is the best fit for that priority. Near family, Hospital and Price are calculated from drive times and price. The other seven are judgements, each with a source in the workbook. Blank = not scored. Comparators have no weighted score or rank (Not applicable). The comparison band is display-only and not a liveability score.</p><table><thead><tr><th>Location</th>'+''.join(f'<th>{n}</th>' for _,n in SC)+'<th>Weighted score (0–10)</th><th>Rank</th><th>India-born</th><th>Other language at home</th><th>Comparison band</th></tr></thead><tbody>']
+t=['<p class="small">Scores run 0–10; 10 is the best fit for that priority. Near family (M), Hospital (O), Indian community (P), Price (T), and Beach (U) are calculated from drive times, demography, and price formulas. The other five (Nature, Shops & doctor, Village, Train/bus, City trip) are judgements, each with a source in the workbook. Blank = not scored. Comparators have no weighted score or rank (Not applicable). The comparison band is display-only and not a liveability score.</p><table><thead><tr><th>Location</th>'+''.join(f'<th>{n}</th>' for _,n in SC)+'<th>Weighted score (0–10)</th><th>Rank</th><th>India-born</th><th>Other language at home</th><th>Comparison band</th></tr></thead><tbody>']
 for d in order:
     ws_=f"{d['X']:.2f}" if isinstance(d['X'],(int,float)) else '<span class=na>N/A</span>'
     t.append(f"<tr><td>{E(d['A'])}</td>"+''.join(f"<td class=n>{num(d[k])}</td>" for k,_ in SC)+f"<td class=n>{ws_}</td><td class=n>{rank(d)}</td><td class=n>{pct(d['AQ'])}</td><td class=n>{pct(d['AU'])}</td><td>{E(str(d['AX'])) if d['AX'] else '<span class=na>N/A</span>'}</td></tr>")

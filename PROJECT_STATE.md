@@ -9,8 +9,8 @@ Read first. Baseline and next task ID only; open tasks live in the register, `Op
 | File | Version | Status |
 |---|---|---|
 | `Our Next Home — Family Relocation Scoring Model.xlsx` | Last changed 5 Nov (Nish's v16 answers imported; scores unchanged); sha `841c84acf860`. Scoring change 2 Nov (grocery filter 25 min, beach drive times, P = option B, U = beach drive, family-set weights, beach bands in Filters A15:C21) | Approved research baseline (28 Oct). Recalc test verified 5 Nov: 0 errors, 37 ranked rows. Currently stores no cached formula values |
-| `Our Next Home — parent report v3 (29 Oct 2026).html` | Rebuilt 5 Nov from workbook sha `841c84acf860` by `tools/report2.py` (G7); previous copy in Archive | Draft: requires family review; not for publication or distribution |
-| `Suburb shortlist foundation report.md` / `.pdf` | Numbers only refreshed 5 Nov from workbook sha `841c84acf860` (G7; narrative not edited, NEEDS REVIEW comments in the .md); previous copies in Archive | Awaiting human review |
+| `Our Next Home — parent report v3 (29 Oct 2026).html` | Rebuilt 6 Nov from workbook sha `841c84acf860` by `tools/report2.py`; all review feedback addressed; previous copy in Archive | Draft: requires family review; not for publication or distribution |
+| `Suburb shortlist foundation report.md` / `.pdf` | Narrative and numbers refreshed 6 Nov from workbook sha `841c84acf860`; all review feedback addressed and PDF recompiled; previous copies in Archive | Awaiting human review |
 
 Status counts, ranks and the change history are in `scoring-model-pointer.md`.
 

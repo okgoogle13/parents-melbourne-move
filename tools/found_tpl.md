@@ -1,12 +1,12 @@
 # Three four-suburb viewing options: nature-first anchors beside Community comparators
 
-**Start viewing with one of three four-suburb options (A, B or C below).** Each option puts at least one nature-first anchor (Frankston, Mordialloc or Seaford) beside at least two Community comparators, one of which is a checked "Potential both" suburb (Endeavour Hills or Wheelers Hill). This lets the family see the nature-versus-community trade-off in person. Fifty-one suburbs pass the family's hard filters (price up to $1.5M, Glen Waverley drive up to 90 min, ED drive up to 90 min) and are ranked by the workbook. The top three are the nature-first anchors: **Frankston {{Frankston}}, Mordialloc {{Mordialloc}} and Seaford {{Seaford}}**, then Mentone and Altona. Seven of the top eight are bay or coast suburbs. Beach carries the largest final weight (16.4%), then Nature (14.4%), Train/bus (12.0%) and Village character (11.9%); Near family carries 5.8%. The anchors' own Nature scores are moderate (Frankston 6, Seaford 6, Mordialloc 5; ESTIMATE). The suburbs with Nature 10 (Sassafras, Olinda, Mount Dandenong, Warburton) rank 35th to 50th and are in no option. The six Community comparators are display-only and **not ranked**. No suburb is described here as a confirmed choice: no specific house has been checked anywhere. **The workbook is canonical; nothing here replaces it.** Every figure is labelled CHECKED, ESTIMATE or NEEDS VERIFICATION.
+**Start viewing with one of three four-suburb options (A, B or C below).** Each option puts at least one nature-first anchor (Frankston, Mordialloc or Seaford) beside at least two Community comparators, one of which is a checked "Potential both" suburb (Endeavour Hills or Wheelers Hill). This lets the family see the nature-versus-community trade-off in person. Thirty-seven suburbs pass the family's hard filters (price up to $1.5M, Glen Waverley drive up to 90 min, ED drive up to 90 min, and nearest Indian grocery drive up to 25 min) and are ranked by the workbook (14 suburbs fail the grocery drive limit and are unranked). The top three are: **Frankston {{Frankston}}, Berwick 7.56 (#2) and West Footscray 7.47 (#3)**, then Newport 7.39 (#4) and Seaford {{Seaford}}. Mordialloc is 12th (7.02). Five of the top eight are bay or coast suburbs (Frankston, Newport, Seaford, Altona, Mentone). Five priorities carry equal top weight at 15% each (Beach, Train/bus, Shops & doctor, Hospital, and Indian community); Nature carries 10%, Village character and Near family carry 5% each, City trip carries 4%, and Price carries 1%. The anchors' own Nature scores are moderate (Frankston 6, Seaford 6, Mordialloc 5; ESTIMATE). The suburbs with Nature 10 (Sassafras, Olinda, Mount Dandenong) rank 33rd to 35th (Warburton fails the grocery drive limit and is unranked); none is in a viewing option. The six Community comparators are display-only and **not ranked**. No suburb is described here as a confirmed choice: no specific house has been checked anywhere. **The workbook is canonical; nothing here replaces it.** Every figure is labelled CHECKED, ESTIMATE or NEEDS VERIFICATION.
 
-*Read-date 27 Oct 2026; comparator update 28 Oct 2026; workbook alignment 28 Oct 2026. Workbook = "Our Next Home — Family Relocation Scoring Model.xlsx" at commit 387763a. Print in A4 landscape.*
+*Read-date 27 Oct 2026; comparator update 28 Oct 2026; workbook alignment 28 Oct 2026; Glen Waverley median update 29 Oct 2026; scoring update & narrative refresh 6 Nov 2026. Workbook = "Our Next Home — Family Relocation Scoring Model.xlsx" at sha 841c84acf860 (after 2 Nov 2026 scoring change). Print in A4 landscape.*
 
 | Update, 28 Oct 2026: what changed since the 27 Oct version |
 |---|
-| 1. **Rankings, scores and tables now reflect the current workbook** (commit 387763a; ranks and scores identical to 7de29d5): every rank, weighted score and 0–10 score below is the workbook's own. The 27 Oct provisional calculation, its weights, its sensitivity tables and its Round 2 scenario ranks have been removed. |
+| 1. **Rankings, scores and tables now reflect the current workbook** (commit 5704d65; ranks and scores identical to 387763a and 7de29d5): every rank, weighted score and 0–10 score below is the workbook's own. The 27 Oct provisional calculation, its weights, its sensitivity tables and its Round 2 scenario ranks have been removed. |
 | 2. **Six Community comparators added** (workbook SuburbScorecard rows 67–72, display-only, not ranked): Springvale, Clayton South, Keysborough, Clyde North ("Diverse / lower-green"); Endeavour Hills, Wheelers Hill ("Potential both"; Wheelers Hill community-lighter). All meet the price cap, the 90-min Glen Waverley limit and the public 24-hour ED rule on checked evidence. |
 | 3. **Point Cook is Conditional and is not a comparator** (fails the 90-min Glen Waverley cap at 08:00 peak). **Tarneit is Excluded** (family decision 28 Oct 2026) and **Mount Waverley is Excluded** (median over the cap). **Rowville is Reference only.** None of the four is in the scorecard or any option. |
 | 4. **Viewing options replaced** by three four-suburb options. Each meets the viewing-shortlist rule (checked in the table below). |
@@ -77,7 +77,7 @@ Nature-first anchor = Frankston, Mordialloc or Seaford. Community-first comparat
 | Wheelers Hill | Potential both; price caveat (B, C) | Comparator, not ranked; suitable-property verification outstanding | 12 (10:00 weekday, 28 Oct) | Dandenong Hospital, 18 (10:00 weekday) | $1,475,000 SOI median, 1.7% under the cap; budget CHECKED from Jellis Craig sold results | Medium (4.1% / 46%) | Jells Park (~127 ha) 6 min (CHECKED) |
 
 **What each option shows.**
-- **A — Coastal / bayside** sets the two ends side by side: the workbook's 1st and 3rd suburbs (both Low on community, Beach 8–9) against Springvale, the most multicultural comparator (76% other language at home), with Endeavour Hills as the one middle case. It has the starkest contrast and only one compromise suburb.
+- **A — Coastal / bayside** sets the two ends side by side: two top bayside anchors (Frankston, #1, and Seaford, #5; both Beach 10, Low on community) against Springvale, the most multicultural comparator (76% other language at home), with Endeavour Hills as the one middle case. It has the starkest contrast and only one compromise suburb.
 - **B — Hills / forest** has the strongest Indian-community comparator in any option (Clayton South, India-born 14.9%, grocer 4–6 min, temple 7–12 min) and both Potential-both suburbs. Its only anchor is Seaford. Note that none of its four suburbs is a hills or forest suburb in the workbook's sense: Endeavour Hills (bush reserve, Churchill NP 8–10 min) and Wheelers Hill (Jells Park) are the greenest.
 - **C — Green / family access** has the shortest drives to family (Wheelers Hill 12 min, 10:00 weekday; Mordialloc 28 min, leave now) and both Potential-both suburbs. Its anchor, Mordialloc, has the lowest Nature score of the three anchors (5) and an AVM price near the cap; Keysborough is the lighter community-first comparator (India-born 6.6%, temple 14–20 min).
 
@@ -85,15 +85,15 @@ Nature-first anchor = Frankston, Mordialloc or Seaford. Community-first comparat
 
 | Five things to know before reading on |
 |---|
-| 1. **Prices for ranked suburbs are mostly AVMs.** 38 of 51 workbook prices are automated estimates, not sale medians (7 are sale medians, 5 are 3-bed medians, 1 is a 5-sale median). The six comparators use Statement of Information sale medians (CHECKED). |
+| 1. **Prices for ranked suburbs are mostly AVMs.** 29 of 37 ranked workbook prices are automated estimates, not sale medians (8 are sale medians). The six comparators use Statement of Information sale medians (CHECKED). |
 | 2. **Hazard overlays are unchecked for every suburb.** Only council-wide lists and news items were read; none at property level. |
-| 3. **Indian groceries, temples and churches are CHECKED for the six Community comparators** (current Google listings and drive times, 28 Oct), except two items that NEED VERIFICATION (Endeavour Spices; Shri Sanatan Dharam's opening hours). For the 51 ranked suburbs the notes name a few temples but no grocers, and the workbook's Indian-community scores (P) are ESTIMATE. |
-| 4. **Twelve suburbs are not ranked:** four "needs data" because the price is over the cap or unclear (Blackburn $1.60M sale median; Glen Waverley $1.7635M, baseline only; Williamstown $1.64M AVM, sale medians $1.49M to $1.58M; Mount Eliza $1.61M AVM, Jellis Craig median $1.72M) and eight fail the 90-minute Glen Waverley limit (Ocean Grove 92, Clifton Springs 95, Inverloch 96, Trentham 97, Curlewis 104, Ballarat 111, Castlemaine 114, Bendigo 140). |
+| 3. **Nearest Indian grocery is CHECKED for all suburbs** (weekday 10:00 typical top of range; 37 ranked suburbs meet the 25-min limit, 14 fail). Temples and churches are CHECKED for the six Community comparators (current Google listings and drive times, 28 Oct), except two items that NEED VERIFICATION (Endeavour Spices; Shri Sanatan Dharam's opening hours). For the ranked suburbs, notes name a few temples; temple and church scores were closed 5 Nov. |
+| 4. **Twenty-six candidate suburbs are not ranked:** four "needs data" because the price is over the cap or unclear (Blackburn $1.60M sale median; Glen Waverley $1.675M sale median, baseline only; Williamstown $1.64M AVM, sale medians $1.49M to $1.58M; Mount Eliza $1.61M AVM, Jellis Craig median $1.72M), eight fail the 90-minute Glen Waverley limit (Ocean Grove 92, Clifton Springs 95, Inverloch 96, Trentham 97, Curlewis 104, Ballarat 111, Castlemaine 114, Bendigo 140), and fourteen fail the 25-minute Indian grocery limit (AY > 25 min: Arthurs Seat, Dromana, Emerald, Healesville, Hurstbridge, Kyneton, McCrae, Mount Martha, Rosebud, Rye, Warburton, Woodend, Wonthaggi, Yarra Glen). |
 | 5. **No suitable property has been verified for any suburb.** A suburb median, or the Wheelers Hill sold results, shows that houses trade under the cap; it does not show that one meets the family's needs. |
 
 ## Community comparators: the other side of the trade-off (added 28 Oct 2026)
 
-**Why they are here.** On the band thresholds below, 48 of the 51 ranked suburbs would be Low on community; only Berwick, Ringwood and West Footscray would reach Medium (ABS 2021, workbook columns AQ, AU and AX). The three anchors are all Low. The comparators let the family see what "Indian shops and community in your own suburb, less green" (Q13 option A) looks like. They are **not ranked and not meant to win**: they carry only the three formula scores (Near family, Hospital, Price), so the workbook gives them no weighted score. No overall winner is declared.
+**Why they are here.** On the band thresholds below, 34 of the 37 ranked suburbs would be Low on community; only Berwick, Ringwood and West Footscray reach Medium (ABS 2021, workbook columns AQ, AU and AX). The three anchors are all Low. The comparators let the family see what "Indian shops and community in your own suburb, less green" (Q13 option A) looks like. They are **not ranked and not meant to win**: they carry only the three formula scores (Near family, Hospital, Price), so the workbook gives them no weighted score. No overall winner is declared.
 
 **Community band (display-only; workbook column AX).** High: other language at home 50% or more, or India-born 8% or more. Medium: 30–49%, or India-born 4–7.9%. Low: everything else. These ABS 2021 shares describe who lives in a suburb; they do not measure belonging or community quality. The band is not used by any score or weight.
 
@@ -132,11 +132,11 @@ Drive figures are minutes. **Anchors for comparison** (workbook, all Low): Frank
 
 ## Workbook ranking: the top 15
 
-All scores are the workbook's own (SuburbScorecard column X, rank column Y, passing rows only). Nat, Vil, Bch, Shp, Ind and Train score are ESTIMATE. Scores within about 0.05 are ties in practice (Mordialloc 6.90 and Seaford 6.89).
+All scores are the workbook's own (SuburbScorecard column X, rank column Y, passing rows only). Nat, Vil, Bch, Shp, Ind and Train score are ESTIMATE. Scores within about 0.05 are ties in practice (Heidelberg 7.26 and Mentone 7.26).
 
 {{TOP}}
 
-## Master comparison: 51 ranked suburbs, grouped by region
+## Master comparison: 51 suburbs (37 ranked after the 2 Nov 2026 scoring change), grouped by region
 
 **Key.** Rg = region (DAN Dandenong foothills and ridge, YV Yarra Valley, NE north-east and inner-east, BAY bayside and south-east, PEN Mornington Peninsula, WST west coast, MAC Macedon Ranges, GEE Geelong and Surf Coast, GIP Gippsland). Opt = in viewing option A, B or C. Price = workbook house price plus basis: **S** sale median, **A** AVM (automated estimate, not a sale; ESTIMATE), **3B** 3-bed house median (Domain), **S5** median of only 5 sales. † = an independent source disagrees by 8% or more, or on a different basis (see disagreements). ‡ = identical AVM for Ferntree Gully and Upper Ferntree Gully (duplicate). GW = workbook drive minutes to Glen Waverley, with the basis label; ED = workbook drive minutes to the 24-hour ED it used; **!** = that ED is the nearest, not a major ED (Rosebud); **?** = researchers flagged the figure. Train = station in or beside suburb (workbook, from recall; Y includes slow V/Line services). Nat, Vil, Bch, Shp, Ind = the workbook's Nature, Village, Beach, Shops and doctor and Indian-community scores, 0 to 10, all **ESTIMATE**. Workbook score (rank) = SuburbScorecard X and Y. Hazard: F fire, W flood, C coast, I industry or noise; H, M, L = researcher's rough level; * = a checked source names the hazard. All hazard levels are unverified at property level.
 
@@ -146,26 +146,26 @@ The six Community comparators are not in this table: they are display-only and n
 
 ## How the workbook score works
 
-**Formula (workbook column X).** Weighted score = sum of (criterion score × final weight) over ten criteria, on a 0 to 10 scale. A row gets a score only when all ten criterion scores are entered, and a rank (column Y) only when its hard-filter status contains "pass". Near family = 10 × (1 − Glen Waverley minutes ÷ 90); Hospital = 10 × (1 − ED minutes ÷ 90); Price = 10 at $500k or less, falling to 0 at the $1.5M cap. The other seven scores are researcher estimates (ESTIMATE).
+**Formula (workbook column X).** Weighted score = sum of (criterion score × final weight) over ten criteria, on a 0 to 10 scale. A row gets a score only when all ten criterion scores are entered, and a rank (column Y) only when its hard-filter status contains "pass" and grocery drive passes (BG ≠ "Fails: grocery drive"). Five criteria are calculated from underlying data: Near family (M) = 10 × (1 − Glen Waverley minutes ÷ 90); Hospital (O) = 10 × (1 − ED minutes ÷ 90); Price (T) = 10 at $500k or less, falling to 0 at the $1.5M cap; Beach (U) uses stepped bands from drive minutes (Filters A15:C21: 10 at ≤15 min, 8 at ≤20 min, 6 at ≤30 min, 4 at ≤45 min, 2 at ≤60 min, 0 over 60 min); and Indian community (P) is Option B (half grocery drive score, half India-born share score). The other five scores (Nature, Shops & doctor, Village, Train/bus, City trip) are researcher estimates (ESTIMATE).
 
-**Final weights (workbook ForcedChoiceCorrections).** Survey weight from the Q15 ratings, plus the trade-off correction (winner moved 2 points ahead of loser), renormalised.
+**Final weights (workbook ForcedChoiceCorrections).** Family-set weights applied 2 Nov 2026: five priorities set at 15% each, Nature 10%, Village and Near family 5% each, City trip 4%, and Price 1%.
 
-| Criterion | Survey weight % | Trade-off correction (points) | Final weight % |
-|---|---|---|---|
-| Beach | 12.3 | +4.1 (Q11: Beach over Nature, 2–1) | 16.4 |
-| Nature | 18.5 | −4.1 (Q11) | 14.4 |
-| Train/bus | 12.0 | 0 | 12.0 |
-| Village character | 6.0 | +5.9 (Q12: Village over Shops, 2–1) | 11.9 |
-| Hospital | 11.6 | 0 | 11.6 |
-| Shops & doctor | 15.7 | −5.9 (Q12) | 9.9 |
-| Indian community | 7.9 | 0 (Q13: Nature over Indian community, 2–1; Nature already ahead) | 7.9 |
-| Price | 6.0 | 0 | 6.0 |
-| Near family in Glen Waverley | 5.8 | 0 (Q10: Nature over Near family, 2–1; Nature already ahead) | 5.8 |
-| City trip | 4.2 | 0 | 4.2 |
+| Criterion | Final weight % | Notes |
+|---|---|---|
+| Beach | 15.0 | Stepped bands from beach drive minutes (Filters A15:C21) |
+| Train/bus | 15.0 | Equal top priority |
+| Shops & doctor | 15.0 | Equal top priority |
+| Hospital | 15.0 | Calculated from ED drive minutes (K) |
+| Indian community | 15.0 | Calculated from grocery drive (AY) and % India-born (AQ) |
+| Nature | 10.0 | High priority |
+| Village character | 5.0 | Modest priority |
+| Near family in Glen Waverley | 5.0 | Calculated from GW drive minutes (J) |
+| City trip | 4.0 | Lower priority |
+| Price | 1.0 | Calculated from house price (G) |
 
-**Worked example (Frankston).** Near family 7.2 × 5.8% + Nature 6 × 14.4% + Hospital 9.6 × 11.6% + Indian 4 × 7.9% + Shops 9 × 9.9% + Village 3 × 11.9% + Train 9 × 12.0% + Price 6.7 × 6.0% + Beach 8 × 16.4% + City trip 6 × 4.2% = **7.00**.
+**Worked example (Frankston).** Near family 7.2 × 5.0% + Nature 6 × 10.0% + Hospital 9.6 × 15.0% + Indian 5.7 × 15.0% + Shops 9 × 15.0% + Village 3 × 5.0% + Train 9 × 15.0% + Price 6.7 × 1.0% + Beach 10 × 15.0% + City trip 6 × 4.0% = **7.91**.
 
-**Why the top is bayside.** Beach (16.4%) is now the largest weight, and seven of the top eight have Beach 8 or 9 (Newport, 8th, has 4). Near family carries only 5.8%, so a short drive to Glen Waverley adds little. Nature carries 14.4%, but the greenest suburbs score low on Beach (0), Shops and Train, so they rank 35th or lower. The 27 Oct sensitivity tables (original survey weights, rule-recomputed weights, Nature at 30%) were calculated on the earlier provisional scores and weights; they have been removed and **not re-run** on the workbook.
+**Why the top is bayside.** Five priorities share top weight at 15% each (Beach, Train/bus, Shops & doctor, Hospital, Indian community). Suburbs that perform strongly across these five score highest. Frankston (#1, 7.91) combines Beach 10, Train 9, Shops 9, Hospital 9.6, and a 3-minute grocery drive (Indian 5.7). Berwick (#2, 7.56) combines strong services (Shops 9, Hospital 9.3, Train 8, Indian 8.4) with moderate beach drive (26 min, score 6). West Footscray (#3, 7.47) and Newport (#4, 7.39) combine excellent public transport, close services, and quick access to beach and Indian groceries. Five of the top eight are coastal or bay suburbs (Frankston, Newport, Seaford, Altona, Mentone). Deep nature suburbs (Nature 10: Sassafras, Olinda, Mount Dandenong) score low on Beach (0 to 4), Shops, and Train, ranking 33rd to 35th. The 27 Oct sensitivity tables were calculated on earlier provisional scores and weights and have been removed.
 
 **Researcher limits.** Seven researchers scored with one rubric but no cross-calibration. Each estimate is one person's judgement from thin sources. Treat gaps under about 0.5 points as noise.
 
@@ -176,10 +176,10 @@ Each card separates **Checked** facts (with links) from **Estimate**. Card heade
 ### The three nature-first anchors
 
 **Frankston** · BAY · $834,296 (S) · GW 25 (Leave now, 26 Oct) · ED 4 · train Y · workbook {{Frankston}}
-**Checked:** rail terminus of the Frankston and Stony Point lines and a bus hub (workbook, Wikipedia); Peninsula University Hospital runs a 24-hour ED ([Peninsula Health](https://www.peninsulahealth.org.au/services/emergency-medicine/frankston-emergency-department/)); India-born 1.1%, other language at home 12.1% (ABS 2021, workbook) ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL20947)). **Estimate (workbook scores and notes):** Nature 6, Village 3, Beach 8, Shops 9, Indian 4; central Frankston has mixed amenity; Frankston South is its greener counterpart. **Trade-off:** the workbook's top score and the cheapest bayside sale median; a busy regional centre rather than a village.
+**Checked:** rail terminus of the Frankston and Stony Point lines and a bus hub (workbook, Wikipedia); Peninsula University Hospital runs a 24-hour ED ([Peninsula Health](https://www.peninsulahealth.org.au/services/emergency-medicine/frankston-emergency-department/)); India-born 1.1%, other language at home 12.1% (ABS 2021, workbook) ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL20947)). **Estimate (workbook scores and notes):** Nature 6, Village 3, Beach 10, Shops 9, Indian 5.7; central Frankston has mixed amenity; Frankston South is its greener counterpart. **Trade-off:** the workbook's top score and the cheapest bayside sale median; a busy regional centre rather than a village.
 
 **Mordialloc** · BAY · $1,401,241 (A) · GW 28 (Leave now, 27 Oct) · ED 14 · train Y · workbook {{Mordialloc}}
-**Checked:** station on the Frankston line; beach and pier (workbook, Wikipedia); Sandringham Hospital ED open 24 hours, 7 days (Alfred Health, workbook note); India-born 1.4%, other language at home 18.7% (ABS 2021, workbook) ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL21760)). **Estimate (workbook scores and notes):** Nature 5, Village 7, Beach 9, Shops 8, Indian 5; the price is an AVM 6.6% under the cap. **Trade-off:** the strongest village feel of the bayside suburbs, on rail; the least green anchor, and the price is close to the cap.
+**Checked:** station on the Frankston line; beach and pier (workbook, Wikipedia); Sandringham Hospital ED open 24 hours, 7 days (Alfred Health, workbook note); India-born 1.4%, other language at home 18.7% (ABS 2021, workbook) ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL21760)). **Estimate (workbook scores and notes):** Nature 5, Village 7, Beach 10, Shops 8, Indian 2.5; the price is an AVM 6.6% under the cap. **Trade-off:** the strongest village feel of the bayside suburbs, on rail; the least green anchor, and the price is close to the cap.
 
 {{SEAFORD}}
 
@@ -187,7 +187,7 @@ Each card separates **Checked** facts (with links) from **Estimate**. Card heade
 
 {{OTHER_CARDS}}
 
-### The other 28 ranked suburbs in one line each
+### The other 28 suburbs in one line each
 
 Sorted by workbook rank.
 
@@ -213,20 +213,20 @@ Items 1 to 6 can move a ranking or a hard filter; the rest are smaller. "Effect"
 
 | Question | Why it matters |
 |---|---|
-| Are Mum's 25-minute Glen Waverley and 20-minute ED answers limits or preferences? | On the "leave now" basis, 15 of the 51 meet both. Of the anchors, Frankston (25) and Seaford (24) do; Mordialloc (28) does not. Comparators are on the 10:00 weekday basis and are not compared. |
-| Should the 60-minute preference become a working limit? | 11 ranked suburbs are over 60 min (Warburton, Rye, Kyneton, Woodend, Macedon, Gisborne, Riddells Creek, Newtown, Highton, Torquay, Wonthaggi); Clyde North is 50 min at 10:00 weekday (peak (08:00) top 70, context only). None is in an option. |
-| What should the Indian-community score (P) measure? | P is unchanged and pending a family decision; the comparators' drive minutes to a grocery, temple and church are the evidence to judge it. |
+| Are Mum's 25-minute Glen Waverley and 20-minute ED answers limits or preferences? | On the "leave now" basis, 15 of the 37 ranked suburbs meet both. Of the anchors, Frankston (25) and Seaford (24) do; Mordialloc (28) does not. Comparators are on the 10:00 weekday basis and are not compared. |
+| Should the 60-minute preference become a working limit? | 6 ranked suburbs are over 60 min (Macedon 62, Gisborne 67, Riddells Creek 71, Newtown 72, Highton 74, Torquay 88); Clyde North is 50 min at 10:00 weekday (peak (08:00) top 70, context only). None is in an option. (Warburton, Rye, Kyneton, Woodend and Wonthaggi also exceed 60 min but are unranked due to grocery drive.) |
+| What should the Indian-community score (P) measure? | Settled 2 Nov 2026 (Option B applied live): 50% nearest Indian grocery drive (AY) + 50% India-born share (AQ). |
 | Q13d (reference-only) | Round 4 asks a 5-point green-village versus multicultural-neighbourhood question. It feeds no weight and is not in the workbook. |
 | Point Cook | Conditional: it needs a family decision to accept a longer travel trade-off. |
 
 ## Conclusion
 
-The research does not name a winner. Under the family's current weights the workbook ranks three bay suburbs first (Frankston, Mordialloc, Seaford), all Low on community and moderate on Nature. The Community comparators show the other side: Springvale, Clayton South and Keysborough are High on community with little nature, and Endeavour Hills is the one suburb found so far that offers both, with a bush reserve, a confirmed temple, a grocer and a church within about 15 minutes. Wheelers Hill is the closest to family but sits 1.7% under the cap. Its budget evidence is CHECKED, but no suitable house has been verified.
+The research does not name a winner. Under the family's current weights the workbook ranks Frankston (#1, 7.91), Berwick (#2, 7.56) and West Footscray (#3, 7.47) at the top, followed by Newport (#4, 7.39) and Seaford (#5, 7.30). Mordialloc is 12th (7.02). The Community comparators show the other side: Springvale, Clayton South and Keysborough are High on community with little nature, and Endeavour Hills is the one suburb found so far that offers both, with a bush reserve, a confirmed temple, a grocer and a church within about 15 minutes. Wheelers Hill is the closest to family but sits 1.7% under the cap. Its budget evidence is CHECKED, but no suitable house has been verified.
 
-Option A shows the starkest contrast; Options B and C each include both Potential-both suburbs. If the family comes back from Springvale or Clayton South preferring them, the Indian-community weight (7.9%) is understated. If they come back preferring the bay anchors, the current weights stand. Before any offer, every suburb still needs property-level checks: sold prices for suitable houses, overlay maps and an insurance quote.
+Option A shows the starkest contrast; Options B and C each include both Potential-both suburbs. If the family comes back from Springvale or Clayton South preferring them, the Indian-community weighting (now 15%) or local amenity trade-offs can be refined. If they come back preferring the bay anchors, the current weights stand. Before any offer, every suburb still needs property-level checks: sold prices for suitable houses, overlay maps and an insurance quote.
 
 ## Sources
 
-Sources are the researchers' notes (Dandenong foothills, ridge and Yarra Valley, north-east, Mornington Peninsula, bayside and south-east, Macedon and Geelong, west and Gippsland), the workbook at commit 387763a and the Community comparators research file. Main sources are linked in the cards. Others used:
+Sources are the researchers' notes (Dandenong foothills, ridge and Yarra Valley, north-east, Mornington Peninsula, bayside and south-east, Macedon and Geelong, west and Gippsland), the workbook at commit 5704d65 and the Community comparators research file. Main sources are linked in the cards. Others used:
 
 {{SOURCES}}
