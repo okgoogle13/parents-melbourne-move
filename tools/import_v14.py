@@ -2,13 +2,19 @@
 
 v15 (31 Oct 2026) = v14 + Timing part (R9.1-R9.4, R9 Notes). The file keeps its v14 name because docs refer to it.
 v16 (1 Nov 2026) = short survey: asks only V16_TAGS (kept tags) + R10.1-R10.3 and R10 Notes (new, feed nothing).
+v17 (5 Nov 2026) = community split: Q15.3 -> C1-C4, R10.1 -> R11.1/R11.2, new R11.3 (beach closeness); R5.5-R5.7 removed. New columns feed nothing until a
+model change is approved. For a v17 record, the tags v17 removed (V17_REMOVED: Q15.3, R10.1, R5.5-R5.7) are carried forward like
+other unasked tags (blanked with --blank-context). Blanking Q15.3 by default would put #N/A into PriorityWeights row 4 and
+ForcedChoiceCorrections column D (reference only; X is unaffected) and fail the recalc test. Replacing PriorityWeights row 4 with
+C1-C4 is part of the approved-later model change. For v14-v16 records, the v17 columns are blanked.
+v18 (5 Nov 2026) = v17 with wording and layout fixes only: same tags, letters and stored values, so it is imported exactly like v17.
 Tags v16 does not ask are carried forward like the context columns (blanked with --blank-context); no R8.6 or R9 flags for v16.
 
 Usage (from repo root):
   .venv/bin/python tools/import_v14.py <export.json> <in.xlsx> <out.xlsx>
   .venv/bin/python tools/import_v14.py <export.json> <in.xlsx> <out.xlsx> --blank-context
 
-Never writes to <in.xlsx>. Takes, per person (Mum, Dad, Me), the latest record with pageVersion 14 or 15;
+Never writes to <in.xlsx>. Takes, per person (Mum, Dad, Me), the latest record with pageVersion 14-18;
 ignores TEST, other people and every other version. A v14 record leaves the R9 columns blank and prints a FLAG. New RawResponses row per person = their latest
 row carried forward, overwritten by the v14 answers (rounds 5-7 design doc, section 3, Storage).
 Q10 and Q13d are blanked (not asked in v14). Columns v14 never asks keep the carried-forward value
@@ -50,6 +56,14 @@ NEW_COLUMNS = [
     ("R10.2", "[R10.2] Kinds of area happy to look at (letters, tick all)"),
     ("R10.3", "[R10.3] Look at other areas before buying"),
     ("R10 Notes", "[R10 Notes] Anything else (v16)"),
+    # v17 community split (5 Nov 2026): feed no weight, filter or score until a model change is approved.
+    ("C1", "[C1] Rating: a mix of cultures"),
+    ("C2", "[C2] Rating: Indian groceries nearby"),
+    ("C3", "[C3] Rating: Indian restaurants nearby"),
+    ("C4", "[C4] Rating: many Indian families nearby"),
+    ("R11.1", "[R11.1] Longest drive to an Indian grocery (firm limit)"),
+    ("R11.2", "[R11.2] Longest drive to an Indian restaurant (firm limit)"),
+    ("R11.3", "[R11.3] Beach: longest drive still counted as close by (sets full-marks band, not a limit)"),
 ]
 
 # Every tag the v14 page can store, except notes that have no column of their own.
@@ -61,8 +75,11 @@ V14_TAGS = ["Q7a", "Q3c", "R5.2", "R5.4", "R8.1", "R8.2", "R8.4", "R8.5", "R8.6"
 R9_TAGS = ["R9.1", "R9.2", "R9.3", "R9.4", "R9 Notes"]
 R10_TAGS = ["R10.1", "R10.2", "R10.3", "R10 Notes"]
 V16_TAGS = ["Q3c", "R5.2", "R5.4", "R5.5", "R5.6", "R5.7", "R8.1", "R6.1", "Q14"] + [f"Q15.{i}" for i in range(1, 11)]
-VERSIONS = (14, 15, 16)
-Q15_TAGS = {f"Q15.{i}" for i in range(1, 11)}
+R11_TAGS = ["C1", "C2", "C3", "C4", "R11.1", "R11.2", "R11.3"]
+V17_REMOVED = ["Q15.3", "R10.1", "R5.5", "R5.6", "R5.7"]
+V17_TAGS = [t for t in V16_TAGS + R10_TAGS if t not in V17_REMOVED] + R11_TAGS
+VERSIONS = (14, 15, 16, 17, 18)
+Q15_TAGS = {f"Q15.{i}" for i in range(1, 11)} | {"C1", "C2", "C3", "C4"}  # stored as the level letter
 NOTES_TO_AM = "Q10-Q13c Notes"  # no RawResponses column; kept as a labelled note in the AM merge log
 BLANKED = ["Q10", "Q13d"]       # round 8 note: not asked in v14, columns stay empty for v14
 # Columns v14 never asks: carried forward by default, blanked with --blank-context.
@@ -106,7 +123,7 @@ def main():
     if not chosen:
         sys.exit("no v14-v16 records to import")
 
-    known = set(V14_TAGS) | set(R9_TAGS) | set(R10_TAGS) | {NOTES_TO_AM}
+    known = set(V14_TAGS) | set(R9_TAGS) | set(R10_TAGS) | set(R11_TAGS) | {NOTES_TO_AM}
     for r in chosen.values():
         bad = sorted(set(r["answers"]) - known)
         if bad:
@@ -153,7 +170,14 @@ def main():
             d._style = copy(s._style)
 
         ws.cell(new, 1).value = dt.datetime.fromisoformat(ts)
-        if ver == 16:
+        if ver in (17, 18):
+            written = V17_TAGS
+            if a.blank_context:
+                for tag in V14_TAGS + R9_TAGS:
+                    ws.cell(new, cols[tag]).value = None
+                for tag in V17_REMOVED:
+                    ws.cell(new, cols[tag]).value = None
+        elif ver == 16:
             written = V16_TAGS + R10_TAGS
             if a.blank_context:
                 for tag in V14_TAGS + R9_TAGS:
@@ -161,6 +185,9 @@ def main():
         else:
             written = V14_TAGS + R9_TAGS
             for tag in R10_TAGS:
+                ws.cell(new, cols[tag]).value = None
+        if ver not in (17, 18):
+            for tag in R11_TAGS:
                 ws.cell(new, cols[tag]).value = None
         for tag in written:
             v = ans.get(tag)
@@ -174,7 +201,9 @@ def main():
                 ws.cell(new, cols[tag]).value = None
 
         log = f"v{ver} {ts}Z merged onto row {prev} (record {r['id']}; Q10, Q13d blanked; context columns {'blanked' if a.blank_context else 'carried forward'})."
-        if ver == 16:
+        if ver in (17, 18):
+            log += f" v17 community split: not asked, {'blanked' if a.blank_context else 'carried forward (stale, not current answers)'}: Q15.3, R10.1, R5.5-R5.7 and round 8/timing columns."
+        elif ver == 16:
             log += f" v16 short survey: unasked round 8/timing columns {'blanked' if a.blank_context else 'carried forward'}."
         elif "R8.6" not in ans:
             area = ans.get("R8.4", "")[:1]
@@ -200,12 +229,17 @@ def main():
     todo = [h for _, h in NEW_COLUMNS if h not in have]
     if todo:
         if ca.max_row >= CA_LABEL_ROW:
-            sys.exit(f"CleanedAnswers has content at or below row {CA_LABEL_ROW}; place new rows by hand")
-        ca.cell(CA_LABEL_ROW, 1, "v14-v16 answers (round 8, timing, short survey; context, not weighted)")._style = copy(ca["A30"]._style)
-        for i, h in enumerate(["Question ID", "Mum Answer", "Dad Answer", "Me Answer", "Mum Code", "Dad Code", "Me Code"]):
-            ca.cell(CA_LABEL_ROW + 1, i + 1, h)._style = copy(ca.cell(31, i + 1)._style)
+            # v17: the v14-v16 block already exists; append below its last used row (never insert).
+            if ca.cell(CA_LABEL_ROW, 1).value is None or not str(ca.cell(CA_LABEL_ROW, 1).value).startswith("v14-v16 answers"):
+                sys.exit(f"CleanedAnswers row {CA_LABEL_ROW} is not the v14-v16 block label; place new rows by hand")
+            first = max(r for r in range(1, ca.max_row + 1) if any(ca.cell(r, c).value is not None for c in range(1, 8))) + 1
+        else:
+            ca.cell(CA_LABEL_ROW, 1, "v14-v16 answers (round 8, timing, short survey; context, not weighted)")._style = copy(ca["A30"]._style)
+            for i, h in enumerate(["Question ID", "Mum Answer", "Dad Answer", "Me Answer", "Mum Code", "Dad Code", "Me Code"]):
+                ca.cell(CA_LABEL_ROW + 1, i + 1, h)._style = copy(ca.cell(31, i + 1)._style)
+            first = CA_LABEL_ROW + 2
         for i, h in enumerate(todo):
-            row = CA_LABEL_ROW + 2 + i
+            row = first + i
             ca.cell(row, 1, h)._style = copy(ca["A41"]._style)
             for j, col in enumerate("BCD"):
                 f = ca[f"{col}41"].value.replace("$A:$BE", f"$A:${last_col}").replace("$A$1:$BE$1", f"$A$1:${last_col}$1").replace("$A41", f"$A{row}")
@@ -213,7 +247,7 @@ def main():
                 ca[f"{col}{row}"]._style = copy(ca[f"{col}41"]._style)
                 ca[f"{'EFG'[j]}{row}"] = f"=LEFT({col}{row},1)"
                 ca[f"{'EFG'[j]}{row}"]._style = copy(ca[f"{'EFG'[j]}41"]._style)
-        print(f"  added CleanedAnswers rows {CA_LABEL_ROW}-{CA_LABEL_ROW + 1 + len(todo)} (lookups over RawResponses $A:${last_col})")
+        print(f"  added CleanedAnswers rows {first}-{first + len(todo) - 1} (lookups over RawResponses $A:${last_col})")
 
     for f in flags:
         print("FLAG", f)
