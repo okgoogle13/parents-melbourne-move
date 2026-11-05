@@ -16,6 +16,10 @@ Status counts, ranks and the change history are in `scoring-model-pointer.md`.
 
 ## Next task
 
+**2 Nov (latest, softer beach + nature 10%):** beach full marks within 15 min; Nature 10%, Price 1%, City 4%. Workbook sha `da376cfadef0`; recalc 0 errors, 37 ranked.
+
+**2 Nov (beach bands):** U uses stepped bands in Filters A15:C21 (10/20/30/45/60 min → 10/8/6/4/2, over 60 → 0). Workbook sha `25c6e9659d24`; recalc 0 errors, 37 ranked.
+
 **2 Nov (latest, scoring change):** grocery filter 25 min applied (15/30 backups shown), beach drive times added, P = option B, U = beach drive, family-set weights (5 priorities at 15%, rest 5%). 37 ranked; workbook sha `73d9c412903d`. Next: parent report and foundation report are now out of date (rebuild with tools/report2.py on a recalculated copy, needs approval to distribute); survey (v16) answers no longer feed weights; decide whether the survey priority questions are still needed.
 
 **2 Nov (latest):** AY (drive to nearest Indian grocery, 10:00 top of range) filled for 51 ranked rows; workbook sha `1794f0841640`; recalc 0 errors, 51 ranked. Next: user picks a grocery-drive limit for the Filters tab (approval needed), then apply and recalc. Then P9 survey answers and the model spec (option 1).
