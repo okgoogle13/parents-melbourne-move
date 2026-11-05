@@ -38,13 +38,15 @@ Task 1 of the handover (local-only `research/inputs/parents-melbourne-move-hando
 | B1 | Task 1: realestate.com.au under-$1.5M searches (Williamstown, Blackburn, Glen Waverley, Mount Eliza; all four are "Active — needs data" rows) |
 | B2 | Task 2: Google Maps "Depart at" drive times (10:00 and 08:00) |
 | B3 | Task 6: VicPlan bushfire/flood overlays for 23 listing addresses |
-| B4 | **2 Nov 2026: grocery part DONE for the 51 ranked rows (AY + col Z, Checked, 10:00 top of range); temple and church still open; filter threshold awaits approval.** Task 7: nearest Indian grocery, Hindu temple **and** church with drive minutes (suburbs passing the approved filters, community comparators done 28 Oct for the 6 added rows; Wheelers Hill budget now Checked 28 Oct via Jellis Craig sold-results report; still open: Endeavour Spices and Shri Sanatan Dharam opening hours, both Needs verification and not counted). Feeds the P decision |
+| B4 | **5 Nov 2026: temple and church part CLOSED (user decision D4: temple/church questions removed from survey v17; SuburbScorecard AZ/BA stay empty, to be repurposed per `community-proposals.md` item 17). 2 Nov 2026: grocery part DONE for the 51 ranked rows (AY + col Z, Checked, 10:00 top of range); grocery filter 25 min applied 2 Nov (Filters B11).** Still open: AY for the 6 comparators (drives in Z67–Z72, not yet in AY) and the 4 needs-data shortlist rows; Endeavour Spices opening hours (Needs verification, not counted). Was: Task 7, nearest Indian grocery, Hindu temple and church with drive minutes. Restaurants now tracked in B10 |
 | B9 | **DONE 2 Nov 2026:** beach drive times (BJ/BK), U from beach drive, P option B, grocery filter 25 min, family-set weights. See pointer change log |
 | B5 | Listings tab refresh from the "Parents." collection |
 | B6 | Suitable-property checks for the 6 Community comparators |
 | B7 | Comparator train access — recall-only check of train access for the six Community comparators. Distinct from C5, which covers train facts for passing suburbs |
 | B8 | **DONE 29 Oct: a, b, d; c partial** (Jellis Craig report read; realestate.com.au and Domain profiles blocked from cloud). Results in the 5 Northam St YAML. Task 8 (added 28 Oct 2026): evidence on whether Glen Waverley is a family-and-school buyer market (ABS family composition, school zones for 5 Northam St, suburb-profile buyer types), plus a listing-facts check for 5 Northam St. Feeds P8; run before the 14 Nov auction |
 | B9 | Floorplan/listing-fit fields for the 32 listings (Listings X–AG; design doc `Questionnaire redesign — rounds 5–7 (29 Oct 2026).md` section 5) |
+| B10 | **Added 5 Nov 2026.** Indian restaurant drive times (planned column AZ, 10:00 weekday, top of range): pilot 10 suburbs first, then all passing rows + comparators + 4 needs-data rows. Prompt: `Claude_in_Chrome_prompt — Indian restaurant pilot (5 Nov 2026).md`. Results stay in `research/` until the workbook change is approved |
+| B11 | **Added 5 Nov 2026 (user decision, later).** New workbook measures so survey distances can be checked: walk to nearest train station (min / m; survey says about 10-min walk, roughly 800 m) and drive to nearest supermarket + GP (min, 10:00 weekday; survey says about 10-min drive). New columns need approval; Q (Shops & doctor) and S (Train/bus) stay judgement scores until then |
 
 ## People, not Claude
 | # | Task |
@@ -57,7 +59,7 @@ Task 1 of the handover (local-only `research/inputs/parents-melbourne-move-hando
 | P6 | Point Cook travel decision (currently Conditional) |
 | P7 | Definition of score P (needs the user's approval; waits on B4) → covered by rounds 5–7 (see P9 / G1 / G2 / G6) |
 | P8 | **DONE 29 Oct: approved by the user.** Review and approve the 5 Northam St decision summary (C9) before the parents see it. Open points: (1)–(2) DONE 29 Oct: suburb-fit line reworded to the ABS 2021 and school-zone evidence; 52.3% reinstated. (3) DONE 29 Oct: Budget bullet uses the realestate.com.au 4-bed median $1,603,000; page table uses the realestate.com.au all-house median $1,675,000; workbook G7 updated to $1,675,000 29 Oct (5704d65; recalc passed; reports refreshed); (4) DONE 29 Oct: Statement of Information read: no comparable sales listed; land 677 m² vs listing 581 m² (verify); REIV median $1,750,000. (5) Signed off. Auction Sat 14 Nov 2026, 11:00 am |
-| P9 | **1 Nov 2026: survey replaced by short v16 (about 5–8 min; round 9 design note); link not yet sent.** Family answers to rounds 5–6 (includes P5 Q13d). From 30 Oct: page v11 (simplified survey); parents send answers by WhatsApp, imported via the page's owner-only panel |
+| P9 | **5 Nov 2026: survey v18 live (review fixes to v17; same URL); link not yet sent. N3 note: fix CleanedAnswers B71:C71 to check R6.1 only.** 1 Nov 2026: survey replaced by short v16 (about 5–8 min; round 9 design note); link not yet sent.** Family answers to rounds 5–6 (includes P5 Q13d). From 30 Oct: page v11 (simplified survey); parents send answers by WhatsApp, imported via the page's owner-only panel |
 
 ## Rounds 5–7 local steps (29 Oct 2026)
 From `Questionnaire redesign — rounds 5–7 (29 Oct 2026).md` sections 6–7. Each gate is asked once, when its inputs exist.
@@ -100,3 +102,8 @@ From `Questionnaire redesign — rounds 5–7 (29 Oct 2026).md` sections 6–7. 
 | Q13d | Rows added; answers pending |
 | Reports | Parent report draft refreshed 28 Oct (comparator drives = workbook J/K, 10:00 basis; marked "Draft — requires family review; not for publication or distribution"). Foundation report (branch claude/inspiring-lovelace-cflq1z) refreshed 28 Oct to the same 10:00 workbook basis (commit 387763a) |
 
+
+## Parked (not open work; revive only on the trigger)
+| # | Item | Revival trigger | Notes |
+|---|---|---|---|
+| K1 | **Parked 5 Nov 2026 (Gemini diversity plan review).** (B) Multicultural mix / single-group dominance: penalise suburbs where one non-English language dominates. (C) Broader South Asian community footprint (Sri Lankan, Tamil, Punjabi etc.), beyond India-born share AQ | B: the parents' C1 answer says avoiding single-group dominance matters separately from overall diversity, **or** a candidate with top language (AV) over 20% enters the active shortlist. C: the family decides AQ under-represents South Asian communities and wants C4 to cover all South Asian origins | P keeps AU (% other language at home). If revived: Excel formula on SAL AU/AV, or SAL G09 evenness (DataPack not in repo; re-download); no Python pipeline, no SA2 data. Gemini's rank test (AU minus top language, ρ 0.96, 0 top-12 moves of 3+ places) is partly mechanical, so the breadth conclusion is **Estimate**. Dropped: overall-volume blend, settlement maturity, shrinkage model, SA2 pipeline. Reviving either into P needs the user's approval (definition of P) |
