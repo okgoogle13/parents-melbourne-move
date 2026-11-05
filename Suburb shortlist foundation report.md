@@ -2,7 +2,21 @@
 
 **Start viewing with one of three four-suburb options (A, B or C below).** Each option puts at least one nature-first anchor (Frankston, Mordialloc or Seaford) beside at least two Community comparators, one of which is a checked "Potential both" suburb (Endeavour Hills or Wheelers Hill). This lets the family see the nature-versus-community trade-off in person. Fifty-one suburbs pass the family's hard filters (price up to $1.5M, Glen Waverley drive up to 90 min, ED drive up to 90 min) and are ranked by the workbook. The top three are the nature-first anchors: **Frankston 7.00 (#1), Mordialloc 6.90 (#2) and Seaford 6.89 (#3)**, then Mentone and Altona. Seven of the top eight are bay or coast suburbs. Beach carries the largest final weight (16.4%), then Nature (14.4%), Train/bus (12.0%) and Village character (11.9%); Near family carries 5.8%. The anchors' own Nature scores are moderate (Frankston 6, Seaford 6, Mordialloc 5; ESTIMATE). The suburbs with Nature 10 (Sassafras, Olinda, Mount Dandenong, Warburton) rank 35th to 50th and are in no option. The six Community comparators are display-only and **not ranked**. No suburb is described here as a confirmed choice: no specific house has been checked anywhere. **The workbook is canonical; nothing here replaces it.** Every figure is labelled CHECKED, ESTIMATE or NEEDS VERIFICATION.
 
-*Read-date 27 Oct 2026; comparator update 28 Oct 2026; workbook alignment 28 Oct 2026; Glen Waverley median update 29 Oct 2026. Workbook = "Our Next Home — Family Relocation Scoring Model.xlsx" at commit 5704d65. Print in A4 landscape.*
+*Read-date 27 Oct 2026; comparator update 28 Oct 2026; workbook alignment 28 Oct 2026; Glen Waverley median update 29 Oct 2026. Workbook = "Our Next Home — Family Relocation Scoring Model.xlsx" at commit 5704d65. Print in A4 landscape. Numbers refreshed 5 Nov 2026 (ranks, scores, 0–10 criterion scores only) from workbook sha 841c84acf860 (main 1fd9676), after the 2 Nov 2026 scoring change; narrative not edited.*
+
+<!-- NEEDS REVIEW: "Fifty-one suburbs pass" — executive summary: top three, "seven of the top eight are bay or coast", Beach largest weight, "rank 35th to 50th" predate the 2 Nov scoring change (new top 3: Frankston, Berwick, West Footscray; Mordialloc 12th) -->
+<!-- NEEDS REVIEW: "the workbook's 1st and 3rd suburbs" — option A text cites the old 1st and 3rd suburbs; Seaford is now 5th -->
+<!-- NEEDS REVIEW: "38 of 51 workbook prices" — counts of 51 ranked suburbs; only 37 are ranked now (14 fail the 25-min grocery drive limit, Filters B11) -->
+<!-- NEEDS REVIEW: "For the 51 rank" — "51 ranked suburbs" count in the community-facilities finding (also in Unverified table) -->
+<!-- NEEDS REVIEW: "48 of the 51 ranked suburbs would be Low on community" — band counts were for the 51 old ranked suburbs; recount for the 37 -->
+<!-- NEEDS REVIEW: "**Final weights (workbook ForcedChoiceCorrections).**" — weights table, worked example (Frankston 7.00) and "Why the top is bayside" are the old survey-based weights; since 2 Nov five priorities are 15%, Nature 10%, Price 1%, City 4%, rest 5% (Filters/ForcedChoiceCorrections B6:B15), and Frankston scores 7.91 -->
+<!-- NEEDS REVIEW: "the highest India-born share of the ranked top 10" — Berwick card: ranked top 10 membership changed -->
+<!-- NEEDS REVIEW: "Rosebud (11th), Rye (13th) and Dromana (14th) rank just below the top 10" — Rosebud, Rye and Dromana are no longer ranked (fail grocery drive limit) -->
+<!-- NEEDS REVIEW: "**15 of 51** meet 25 and 20" — count of 51 ranked; only 37 are ranked now -->
+<!-- NEEDS REVIEW: "38 of 51 ranked prices are AVMs" — count of 51 ranked; only 37 are ranked now -->
+<!-- NEEDS REVIEW: "15 of the 51 meet both" — count of 51 ranked; only 37 are ranked now -->
+<!-- NEEDS REVIEW: "11 ranked suburbs are over 60 min" — count of ranked suburbs over 60 min; recount for the 37 -->
+<!-- NEEDS REVIEW: "and are ranked by the workbook" — hard-limits list omits the 25-min Indian grocery drive limit applied 2 Nov 2026 (Filters B11) -->
 
 | Update, 28 Oct 2026: what changed since the 27 Oct version |
 |---|
@@ -132,92 +146,92 @@ Drive figures are minutes. **Anchors for comparison** (workbook, all Low): Frank
 
 ## Workbook ranking: the top 15
 
-All scores are the workbook's own (SuburbScorecard column X, rank column Y, passing rows only). Nat, Vil, Bch, Shp, Ind and Train score are ESTIMATE. Scores within about 0.05 are ties in practice (Mordialloc 6.90 and Seaford 6.89).
+All scores are the workbook's own (SuburbScorecard column X, rank column Y, passing rows only). Nat, Vil, Bch, Shp, Ind and Train score are ESTIMATE. Scores within about 0.05 are ties in practice (Heidelberg 7.26 and Mentone 7.26).
 
 | Rank | Suburb | Score | GW min (basis) | ED min | Nat | Vil | Bch | Shp | Ind | Train score |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 1 | Frankston | 7.00 | 25 (Leave now, 26 Oct) | 4 | 6 | 3 | 8 | 9 | 4 | 9 |
-| 2 | Mordialloc | 6.90 | 28 (Leave now, 27 Oct) | 14 | 5 | 7 | 9 | 8 | 5 | 8 |
-| 3 | Seaford | 6.89 | 24 (Leave now, 27 Oct) | 8 | 6 | 4 | 9 | 7 | 4 | 8 |
-| 4 | Mentone | 6.71 | 25 (Leave now, 26 Oct) | 16 | 4 | 6 | 9 | 9 | 5 | 8 |
-| 5 | Altona | 6.68 | 35 (Leave now, 26 Oct) | 15 | 4 | 6 | 8 | 8 | 6 | 8 |
-| 6 | Chelsea | 6.51 | 30 (Leave now, 27 Oct) | 19 | 4 | 5 | 9 | 8 | 4 | 8 |
-| 7 | Mornington | 6.31 | 40 (Leave now, 26 Oct) | 15 | 6 | 7 | 9 | 9 | 3 | 3 |
-| 8 | Newport | 6.25 | 35 (Leave now, 27 Oct) | 14 | 5 | 6 | 4 | 7 | 6 | 9 |
-| 9 | Berwick | 6.08 | 25 (Leave now, 27 Oct) | 6 | 5 | 6 | 1 | 9 | 7 | 8 |
-| 10 | Upwey | 6.07 | 17 (Leave now, 26 Oct) | 4 | 9 | 8 | 0 | 5 | 3 | 8 |
-| 11 | Rosebud | 6.03 | 49 (Leave now, 27 Oct) | 3 | 6 | 4 | 9 | 9 | 2 | 2 |
-| 12 | Belgrave | 6.02 | 21 (Leave now, 26 Oct) | 7 | 9 | 8 | 0 | 6 | 3 | 7 |
-| 13 | Rye | 6.01 | 61 (Leave now, 27 Oct) | 9 | 7 | 7 | 10 | 6 | 1 | 2 |
-| 14 | Dromana | 5.92 | 47 (Leave now, 27 Oct) | 11 | 7 | 6 | 9 | 6 | 2 | 2 |
-| 15 | Torquay | 5.86 | 88 (Leave now, 26 Oct) | 23 | 7 | 5 | 10 | 8 | 2 | 4 |
+| 1 | Frankston | 7.91 | 25 (Leave now, 26 Oct) | 4 | 6 | 3 | 10 | 9 | 5.7 | 9 |
+| 2 | Berwick | 7.56 | 25 (Leave now, 27 Oct) | 6 | 5 | 6 | 6 | 9 | 8.4 | 8 |
+| 3 | West Footscray | 7.47 | 39 (Leave now, 27 Oct) | 6 | 2 | 5 | 10 | 8 | 6.9 | 8 |
+| 4 | Newport | 7.39 | 35 (Leave now, 27 Oct) | 14 | 5 | 6 | 10 | 7 | 4.9 | 9 |
+| 5 | Seaford | 7.30 | 24 (Leave now, 27 Oct) | 8 | 6 | 4 | 10 | 7 | 4.8 | 8 |
+| 6 | Altona | 7.27 | 35 (Leave now, 26 Oct) | 15 | 4 | 6 | 10 | 8 | 5.1 | 8 |
+| 7 | Heidelberg | 7.26 | 25 (Leave now, 26 Oct) | 4 | 6 | 4 | 6 | 8 | 6.9 | 8 |
+| 7 | Mentone | 7.26 | 25 (Leave now, 26 Oct) | 16 | 4 | 6 | 10 | 9 | 4 | 8 |
+| 9 | Ringwood | 7.22 | 12 (Leave now, 26 Oct) | 5 | 4 | 3 | 4 | 10 | 7 | 9 |
+| 10 | Rosanna | 7.16 | 34 (Leave now, 27 Oct) | 8 | 7 | 6 | 6 | 7 | 6.6 | 8 |
+| 11 | Ferntree Gully | 7.06 | 14 (Leave now, 27 Oct) | 8 | 6 | 4 | 6 | 8 | 5.8 | 8 |
+| 12 | Mordialloc | 7.02 | 28 (Leave now, 27 Oct) | 14 | 5 | 7 | 10 | 8 | 2.5 | 8 |
+| 13 | Croydon | 6.91 | 18 (Leave now, 26 Oct) | 6 | 5 | 4 | 4 | 9 | 6.4 | 8 |
+| 14 | Chelsea | 6.82 | 30 (Leave now, 27 Oct) | 19 | 4 | 5 | 10 | 8 | 2.9 | 8 |
+| 15 | Upwey | 6.73 | 17 (Leave now, 26 Oct) | 4 | 9 | 8 | 6 | 5 | 3.2 | 8 |
 
-## Master comparison: 51 ranked suburbs, grouped by region
+## Master comparison: 51 suburbs (37 ranked after the 2 Nov 2026 scoring change), grouped by region
 
 **Key.** Rg = region (DAN Dandenong foothills and ridge, YV Yarra Valley, NE north-east and inner-east, BAY bayside and south-east, PEN Mornington Peninsula, WST west coast, MAC Macedon Ranges, GEE Geelong and Surf Coast, GIP Gippsland). Opt = in viewing option A, B or C. Price = workbook house price plus basis: **S** sale median, **A** AVM (automated estimate, not a sale; ESTIMATE), **3B** 3-bed house median (Domain), **S5** median of only 5 sales. † = an independent source disagrees by 8% or more, or on a different basis (see disagreements). ‡ = identical AVM for Ferntree Gully and Upper Ferntree Gully (duplicate). GW = workbook drive minutes to Glen Waverley, with the basis label; ED = workbook drive minutes to the 24-hour ED it used; **!** = that ED is the nearest, not a major ED (Rosebud); **?** = researchers flagged the figure. Train = station in or beside suburb (workbook, from recall; Y includes slow V/Line services). Nat, Vil, Bch, Shp, Ind = the workbook's Nature, Village, Beach, Shops and doctor and Indian-community scores, 0 to 10, all **ESTIMATE**. Workbook score (rank) = SuburbScorecard X and Y. Hazard: F fire, W flood, C coast, I industry or noise; H, M, L = researcher's rough level; * = a checked source names the hazard. All hazard levels are unverified at property level.
 
 | Suburb | Rg | Opt | House price & basis | GW min | GW drive basis | ED min | Train | Nat | Vil | Bch | Shp | Ind | Workbook score (rank) | Hazard |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | **DANDENONG FOOTHILLS AND RIDGE** | DAN | | | | | | | | | | | | | |
-| Upper Ferntree Gully | DAN | – | $872k A ‡ | 16 | Leave now, 26 Oct | 2 | Y | 8 | 5 | 0 | 6 | 5 | 5.81 (#16) | F-H* |
-| Ferntree Gully | DAN | – | $872k A ‡ | 14 | Leave now, 27 Oct | 8 | Y | 6 | 4 | 0 | 8 | 5 | 5.65 (#21) | F-M |
-| Upwey | DAN | – | $930k S | 17 | Leave now, 26 Oct | 4 | Y | 9 | 8 | 0 | 5 | 3 | 6.07 (#10) | F-H* |
-| Tecoma | DAN | – | $894k A | 19 | Leave now, 26 Oct | 5 | Y | 9 | 6 | 0 | 4 | 3 | 5.60 (#24) | F-H* |
-| Belgrave | DAN | – | $856k A | 21 | Leave now, 26 Oct | 7 | Y | 9 | 8 | 0 | 6 | 3 | 6.02 (#12) | F-H* |
-| The Basin | DAN | – | $845k A | 17 | Leave now, 26 Oct | 10 | N | 8 | 7 | 0 | 4 | 4 | 5.11 (#31) | F-H |
-| Montrose | DAN | – | $968k A | 22 | Leave now, 26 Oct | 12 | N | 8 | 6 | 0 | 5 | 3 | 4.89 (#39) | F-H* |
-| Mount Evelyn | DAN | – | $915k A | 27 | Leave now, 26 Oct | 17 | N | 8 | 6 | 0 | 5 | 2 | 4.74 (#41) | F-H* |
-| Olinda | DAN | – | $1.02M A | 33 | Leave now, 27 Oct | 15 | N | 10 | 9 | 0 | 3 | 2 | 4.94 (#37) | F-H |
-| Sassafras | DAN | – | $1.01M A | 29 | Leave now, 27 Oct | 11 | N | 10 | 9 | 0 | 3 | 2 | 5.04 (#35) | F-H |
-| Mount Dandenong | DAN | – | $982k A | 30 | Leave now, 27 Oct | 19 | N | 10 | 7 | 0 | 2 | 2 | 4.49 (#47) | F-H |
-| Emerald | DAN | – | $981k A | 35 | Leave now, 27 Oct | 22 | N | 9 | 8 | 0 | 6 | 2 | 4.91 (#38) | F-H |
+| Upper Ferntree Gully | DAN | – | $872k A ‡ | 16 | Leave now, 26 Oct | 2 | Y | 8 | 5 | 6 | 6 | 3.8 | 6.65 (#16) | F-H* |
+| Ferntree Gully | DAN | – | $872k A ‡ | 14 | Leave now, 27 Oct | 8 | Y | 6 | 4 | 6 | 8 | 5.8 | 7.06 (#11) | F-M |
+| Upwey | DAN | – | $930k S | 17 | Leave now, 26 Oct | 4 | Y | 9 | 8 | 6 | 5 | 3.2 | 6.73 (#15) | F-H* |
+| Tecoma | DAN | – | $894k A | 19 | Leave now, 26 Oct | 5 | Y | 9 | 6 | 6 | 4 | 2.2 | 6.15 (#22) | F-H* |
+| Belgrave | DAN | – | $856k A | 21 | Leave now, 26 Oct | 7 | Y | 9 | 8 | 4 | 6 | 1.5 | 6.10 (#23) | F-H* |
+| The Basin | DAN | – | $845k A | 17 | Leave now, 26 Oct | 10 | N | 8 | 7 | 4 | 4 | 4.5 | 5.44 (#29) | F-H |
+| Montrose | DAN | – | $968k A | 22 | Leave now, 26 Oct | 12 | N | 8 | 6 | 4 | 5 | 4.3 | 5.44 (#28) | F-H* |
+| Mount Evelyn | DAN | – | $915k A | 27 | Leave now, 26 Oct | 17 | N | 8 | 6 | 4 | 5 | 2.9 | 5.12 (#32) | F-H* |
+| Olinda | DAN | – | $1.02M A | 33 | Leave now, 27 Oct | 15 | N | 10 | 9 | 4 | 3 | 1.7 | 4.78 (#34) | F-H |
+| Sassafras | DAN | – | $1.01M A | 29 | Leave now, 27 Oct | 11 | N | 10 | 9 | 4 | 3 | 2 | 4.93 (#33) | F-H |
+| Mount Dandenong | DAN | – | $982k A | 30 | Leave now, 27 Oct | 19 | N | 10 | 7 | 4 | 2 | 2.4 | 4.45 (#35) | F-H |
+| Emerald | DAN | – | $981k A | 35 | Leave now, 27 Oct | 22 | N | 9 | 8 | 4 | 6 | 0.9 | 4.85 (not ranked: fails: grocery drive) | F-H |
 | **YARRA VALLEY** | YV | | | | | | | | | | | | | |
-| Warburton | YV | – | $718k 3B | 65 | Leave now, 27 Oct | 53? | N | 10 | 8 | 0 | 4 | 1 | 4.13 (#50) | F-H, W-M |
-| Healesville | YV | – | $838k A | 43 | Leave now, 26 Oct | 33? | N | 9 | 8 | 0 | 6 | 1 | 4.67 (#43) | F-H, W-M |
-| Yarra Glen | YV | – | $936k A | 44 | Leave now, 27 Oct | 30? | N | 7 | 7 | 0 | 5 | 1 | 4.02 (#51) | F-M, W-M |
+| Warburton | YV | – | $718k 3B | 65 | Leave now, 27 Oct | 53? | N | 10 | 8 | 0 | 4 | 0.2 | 3.05 (not ranked: fails: grocery drive) | F-H, W-M |
+| Healesville | YV | – | $838k A | 43 | Leave now, 26 Oct | 33? | N | 9 | 8 | 0 | 6 | 0.1 | 3.87 (not ranked: fails: grocery drive) | F-H, W-M |
+| Yarra Glen | YV | – | $936k A | 44 | Leave now, 27 Oct | 30? | N | 7 | 7 | 2 | 5 | 0.9 | 3.78 (not ranked: fails: grocery drive) | F-M, W-M |
 | **NORTH-EAST AND INNER-EAST** | NE | | | | | | | | | | | | | |
-| Ringwood | NE | – | $1.04M S | 12 | Leave now, 26 Oct | 5 | Y | 4 | 3 | 0 | 10 | 6 | 5.64 (#23) | W-L |
-| Croydon | NE | – | $899k A | 18 | Leave now, 26 Oct | 6 | Y | 5 | 4 | 0 | 9 | 5 | 5.59 (#26) | F-L |
-| Heidelberg | NE | – | $1.45M S | 25 | Leave now, 26 Oct | 4 | Y | 6 | 4 | 0 | 8 | 5 | 5.38 (#27) | W-M |
-| Rosanna | NE | – | $1.24M A | 34 | Leave now, 27 Oct | 8 | Y | 7 | 6 | 0 | 7 | 4 | 5.59 (#25) | W-M |
-| Eltham | NE | – | $1.27M S | 26 | Leave now, 26 Oct | 16 | Y | 8 | 7 | 0 | 8 | 3 | 5.76 (#18) | F-H, W-M |
-| Diamond Creek | NE | – | $885k 3B | 33 | Leave now, 26 Oct | 19 | Y | 7 | 6 | 0 | 7 | 2 | 5.31 (#28) | F-H*, W-M* |
-| Warrandyte | NE | – | $1.35M A | 20 | Leave now, 26 Oct | 14 | N | 9 | 8 | 0 | 6 | 3 | 5.12 (#30) | F-H*, W-M* |
-| Hurstbridge | NE | – | $981k A | 41 | Leave now, 27 Oct | 29 | Y | 8 | 8 | 0 | 5 | 1 | 5.02 (#36) | F-H, W-M |
+| Ringwood | NE | – | $1.04M S | 12 | Leave now, 26 Oct | 5 | Y | 4 | 3 | 4 | 10 | 7 | 7.22 (#9) | W-L |
+| Croydon | NE | – | $899k A | 18 | Leave now, 26 Oct | 6 | Y | 5 | 4 | 4 | 9 | 6.4 | 6.91 (#13) | F-L |
+| Heidelberg | NE | – | $1.45M S | 25 | Leave now, 26 Oct | 4 | Y | 6 | 4 | 6 | 8 | 6.9 | 7.26 (#7) | W-M |
+| Rosanna | NE | – | $1.24M A | 34 | Leave now, 27 Oct | 8 | Y | 7 | 6 | 6 | 7 | 6.6 | 7.16 (#10) | W-M |
+| Eltham | NE | – | $1.27M S | 26 | Leave now, 26 Oct | 16 | Y | 8 | 7 | 4 | 8 | 1.6 | 6.28 (#20) | F-H, W-M |
+| Diamond Creek | NE | – | $885k 3B | 33 | Leave now, 26 Oct | 19 | Y | 7 | 6 | 4 | 7 | 2 | 5.80 (#26) | F-H*, W-M* |
+| Warrandyte | NE | – | $1.35M A | 20 | Leave now, 26 Oct | 14 | N | 9 | 8 | 4 | 6 | 2.8 | 5.50 (#27) | F-H*, W-M* |
+| Hurstbridge | NE | – | $981k A | 41 | Leave now, 27 Oct | 29 | Y | 8 | 8 | 2 | 5 | 1 | 4.84 (not ranked: fails: grocery drive) | F-H, W-M |
 | **BAYSIDE AND SOUTH-EAST** | BAY | | | | | | | | | | | | | |
-| Mentone | BAY | – | $1.497M S † | 25 | Leave now, 26 Oct | 16 | Y | 4 | 6 | 9 | 9 | 5 | 6.71 (#4) | C-M |
-| Mordialloc | BAY | C | $1.40M A | 28 | Leave now, 27 Oct | 14 | Y | 5 | 7 | 9 | 8 | 5 | 6.90 (#2) | W-M, C-M |
-| Chelsea | BAY | – | $1.16M A | 30 | Leave now, 27 Oct | 19 | Y | 4 | 5 | 9 | 8 | 4 | 6.51 (#6) | C-M, W-M |
-| Seaford | BAY | AB | $861k A | 24 | Leave now, 27 Oct | 8 | Y | 6 | 4 | 9 | 7 | 4 | 6.89 (#3) | W-M |
-| Frankston | BAY | A | $834k S | 25 | Leave now, 26 Oct | 4 | Y | 6 | 3 | 8 | 9 | 4 | 7.00 (#1) | C-M, W-M |
-| Frankston South | BAY | – | $1.20M A | 31 | Leave now, 27 Oct | 4? | N | 7 | 5 | 6 | 5 | 3 | 5.68 (#20) | F-M |
-| Berwick | BAY | – | $936k A | 25 | Leave now, 27 Oct | 6 | Y | 5 | 6 | 1 | 9 | 7 | 6.08 (#9) | F-M |
+| Mentone | BAY | – | $1.497M S † | 25 | Leave now, 26 Oct | 16 | Y | 4 | 6 | 10 | 9 | 4 | 7.26 (#7) | C-M |
+| Mordialloc | BAY | C | $1.40M A | 28 | Leave now, 27 Oct | 14 | Y | 5 | 7 | 10 | 8 | 2.5 | 7.02 (#12) | W-M, C-M |
+| Chelsea | BAY | – | $1.16M A | 30 | Leave now, 27 Oct | 19 | Y | 4 | 5 | 10 | 8 | 2.9 | 6.82 (#14) | C-M, W-M |
+| Seaford | BAY | AB | $861k A | 24 | Leave now, 27 Oct | 8 | Y | 6 | 4 | 10 | 7 | 4.8 | 7.30 (#5) | W-M |
+| Frankston | BAY | A | $834k S | 25 | Leave now, 26 Oct | 4 | Y | 6 | 3 | 10 | 9 | 5.7 | 7.91 (#1) | C-M, W-M |
+| Frankston South | BAY | – | $1.20M A | 31 | Leave now, 27 Oct | 4? | N | 7 | 5 | 10 | 5 | 5 | 6.55 (#19) | F-M |
+| Berwick | BAY | – | $936k A | 25 | Leave now, 27 Oct | 6 | Y | 5 | 6 | 6 | 9 | 8.4 | 7.56 (#2) | F-M |
 | **MORNINGTON PENINSULA** | PEN | | | | | | | | | | | | | |
-| Mornington | PEN | – | $1.10M A † | 40 | Leave now, 26 Oct | 15 | N | 6 | 7 | 9 | 9 | 3 | 6.31 (#7) | C-M |
-| Mount Martha | PEN | – | $1.34M A | 47 | Leave now, 27 Oct | 19 | N | 8 | 7 | 9 | 5 | 2 | 5.72 (#19) | C-M |
-| Arthurs Seat | PEN | – | $1.43M S5 | 52 | Leave now, 27 Oct | 13! | N | 9 | 4 | 6 | 2 | 1 | 4.51 (#46) | F-H* |
-| Dromana | PEN | – | $906k A | 47 | Leave now, 27 Oct | 11! | N | 7 | 6 | 9 | 6 | 2 | 5.92 (#14) | F-H, C-M |
-| McCrae | PEN | – | $959k A | 49 | Leave now, 27 Oct | 6! | N | 8 | 6 | 9 | 4 | 1 | 5.81 (#17) | C-M, F-M |
-| Rosebud | PEN | – | $754k A | 49 | Leave now, 27 Oct | 3! | N | 6 | 4 | 9 | 9 | 2 | 6.03 (#11) | C-M |
-| Rye | PEN | – | $918k A | 61 | Leave now, 27 Oct | 9! | N | 7 | 7 | 10 | 6 | 1 | 6.01 (#13) | C-M, W-M |
+| Mornington | PEN | – | $1.10M A † | 40 | Leave now, 26 Oct | 15 | N | 6 | 7 | 10 | 9 | 1.9 | 6.22 (#21) | C-M |
+| Mount Martha | PEN | – | $1.34M A | 47 | Leave now, 27 Oct | 19 | N | 8 | 7 | 10 | 5 | 0.1 | 5.24 (not ranked: fails: grocery drive) | C-M |
+| Arthurs Seat | PEN | – | $1.43M S5 | 52 | Leave now, 27 Oct | 13! | N | 9 | 4 | 10 | 2 | 0 | 4.64 (not ranked: fails: grocery drive) | F-H* |
+| Dromana | PEN | – | $906k A | 47 | Leave now, 27 Oct | 11! | N | 7 | 6 | 10 | 6 | 0.2 | 5.43 (not ranked: fails: grocery drive) | F-H, C-M |
+| McCrae | PEN | – | $959k A | 49 | Leave now, 27 Oct | 6! | N | 8 | 6 | 10 | 4 | 0 | 5.26 (not ranked: fails: grocery drive) | C-M, F-M |
+| Rosebud | PEN | – | $754k A | 49 | Leave now, 27 Oct | 3! | N | 6 | 4 | 10 | 9 | 0.3 | 5.83 (not ranked: fails: grocery drive) | C-M |
+| Rye | PEN | – | $918k A | 61 | Leave now, 27 Oct | 9! | N | 7 | 7 | 10 | 6 | 0.1 | 5.37 (not ranked: fails: grocery drive) | C-M, W-M |
 | **WEST COAST** | WST | | | | | | | | | | | | | |
-| Altona | WST | – | $1.16M A † | 35 | Leave now, 26 Oct | 15 | Y | 4 | 6 | 8 | 8 | 6 | 6.68 (#5) | C-M, I-M |
-| Newport | WST | – | $1.15M A | 35 | Leave now, 27 Oct | 14 | Y | 5 | 6 | 4 | 7 | 6 | 6.25 (#8) | W-M, I-M |
-| West Footscray | WST | – | $1.05M A | 39 | Leave now, 27 Oct | 6 | Y | 2 | 5 | 2 | 8 | 8 | 5.64 (#22) | I-M, W-L |
+| Altona | WST | – | $1.16M A † | 35 | Leave now, 26 Oct | 15 | Y | 4 | 6 | 10 | 8 | 5.1 | 7.27 (#6) | C-M, I-M |
+| Newport | WST | – | $1.15M A | 35 | Leave now, 27 Oct | 14 | Y | 5 | 6 | 10 | 7 | 4.9 | 7.39 (#4) | W-M, I-M |
+| West Footscray | WST | – | $1.05M A | 39 | Leave now, 27 Oct | 6 | Y | 2 | 5 | 10 | 8 | 6.9 | 7.47 (#3) | I-M, W-L |
 | **MACEDON RANGES** | MAC | | | | | | | | | | | | | |
-| Kyneton | MAC | – | $810k 3B | 77 | Leave now, 26 Oct | 47 | Y | 7 | 9 | 0 | 7 | 1 | 4.71 (#42) | F-M*, W-L |
-| Woodend | MAC | – | $890k 3B † | 68 | Leave now, 26 Oct | 55 | Y | 8 | 9 | 0 | 6 | 1 | 4.66 (#44) | F-H |
-| Macedon | MAC | – | $1.15M A † | 62 | Leave now, 26 Oct | 60 | Y | 9 | 8 | 0 | 3 | 1 | 4.20 (#49) | F-H* |
-| Gisborne | MAC | – | $1.04M A | 67 | Leave now, 27 Oct | 34 | Y | 7 | 7 | 0 | 7 | 2 | 4.56 (#45) | F-M, W-M |
-| Riddells Creek | MAC | – | $994k A | 71 | Leave now, 27 Oct | 38 | Y | 7 | 7 | 0 | 4 | 2 | 4.30 (#48) | F-M |
+| Kyneton | MAC | – | $810k 3B | 77 | Leave now, 26 Oct | 47 | Y | 7 | 9 | 0 | 7 | 0.3 | 4.05 (not ranked: fails: grocery drive) | F-M*, W-L |
+| Woodend | MAC | – | $890k 3B † | 68 | Leave now, 26 Oct | 55 | Y | 8 | 9 | 2 | 6 | 0.9 | 4.30 (not ranked: fails: grocery drive) | F-H |
+| Macedon | MAC | – | $1.15M A † | 62 | Leave now, 26 Oct | 60 | Y | 9 | 8 | 2 | 3 | 2.1 | 4.00 (#37) | F-H* |
+| Gisborne | MAC | – | $1.04M A | 67 | Leave now, 27 Oct | 34 | Y | 7 | 7 | 4 | 7 | 3.6 | 5.19 (#31) | F-M, W-M |
+| Riddells Creek | MAC | – | $994k A | 71 | Leave now, 27 Oct | 38 | Y | 7 | 7 | 2 | 4 | 3 | 4.38 (#36) | F-M |
 | **GEELONG AND SURF COAST** | GEE | | | | | | | | | | | | | |
-| Newtown (Geelong) | GEE | – | $1.18M A † | 72 | Leave now, 26 Oct | 7 | N | 5 | 6 | 3 | 8 | 4 | 5.09 (#32) | W-M |
-| Highton (Geelong) | GEE | – | $958k A † | 74 | Leave now, 26 Oct | 9 | N | 6 | 5 | 3 | 8 | 4 | 5.05 (#34) | F-M, W-M |
-| Torquay | GEE | – | $1.18M S † | 88 | Leave now, 26 Oct | 23 | N | 7 | 5 | 10 | 8 | 2 | 5.86 (#15) | F-M, W-M |
+| Newtown (Geelong) | GEE | – | $1.18M A † | 72 | Leave now, 26 Oct | 7 | N | 5 | 6 | 10 | 8 | 5.4 | 6.62 (#17) | W-M |
+| Highton (Geelong) | GEE | – | $958k A † | 74 | Leave now, 26 Oct | 9 | N | 6 | 5 | 10 | 8 | 6.1 | 6.57 (#18) | F-M, W-M |
+| Torquay | GEE | – | $1.18M S † | 88 | Leave now, 26 Oct | 23 | N | 7 | 5 | 10 | 8 | 2.9 | 5.96 (#24) | F-M, W-M |
 | **GIPPSLAND** | GIP | | | | | | | | | | | | | |
-| Warragul | GIP | – | $620k 3B | 58 | Leave now, 26 Oct | 2? | Y | 5 | 6 | 0 | 8 | 3 | 5.22 (#29) | F-M, W-M |
-| Drouin | GIP | – | $702k A | 57 | Leave now, 27 Oct | 9 | Y | 5 | 6 | 0 | 7 | 2 | 4.79 (#40) | F-M, W-M |
-| Wonthaggi | GIP | – | $588k A † | 88 | Leave now, 27 Oct | 3 | N | 6 | 5 | 6 | 7 | 1 | 5.06 (#33) | C-M, F-M |
+| Warragul | GIP | – | $620k 3B | 58 | Leave now, 26 Oct | 2? | Y | 5 | 6 | 2 | 8 | 5.6 | 5.94 (#25) | F-M, W-M |
+| Drouin | GIP | – | $702k A | 57 | Leave now, 27 Oct | 9 | Y | 5 | 6 | 2 | 7 | 3.9 | 5.26 (#30) | F-M, W-M |
+| Wonthaggi | GIP | – | $588k A † | 88 | Leave now, 27 Oct | 3 | N | 6 | 5 | 10 | 7 | 0.5 | 5.22 (not ranked: fails: grocery drive) | C-M, F-M |
 
 The six Community comparators are not in this table: they are display-only and not ranked (see the section above). Synthetic test rows are excluded. Sources for the price column are OnTheHouse/Cotality, Domain and similar, mostly 30 Sep 2026.
 
@@ -252,119 +266,119 @@ Each card separates **Checked** facts (with links) from **Estimate**. Card heade
 
 ### The three nature-first anchors
 
-**Frankston** · BAY · $834,296 (S) · GW 25 (Leave now, 26 Oct) · ED 4 · train Y · workbook 7.00 (#1)
-**Checked:** rail terminus of the Frankston and Stony Point lines and a bus hub (workbook, Wikipedia); Peninsula University Hospital runs a 24-hour ED ([Peninsula Health](https://www.peninsulahealth.org.au/services/emergency-medicine/frankston-emergency-department/)); India-born 1.1%, other language at home 12.1% (ABS 2021, workbook) ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL20947)). **Estimate (workbook scores and notes):** Nature 6, Village 3, Beach 8, Shops 9, Indian 4; central Frankston has mixed amenity; Frankston South is its greener counterpart. **Trade-off:** the workbook's top score and the cheapest bayside sale median; a busy regional centre rather than a village.
+**Frankston** · BAY · $834,296 (S) · GW 25 (Leave now, 26 Oct) · ED 4 · train Y · workbook 7.91 (#1)
+**Checked:** rail terminus of the Frankston and Stony Point lines and a bus hub (workbook, Wikipedia); Peninsula University Hospital runs a 24-hour ED ([Peninsula Health](https://www.peninsulahealth.org.au/services/emergency-medicine/frankston-emergency-department/)); India-born 1.1%, other language at home 12.1% (ABS 2021, workbook) ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL20947)). **Estimate (workbook scores and notes):** Nature 6, Village 3, Beach 10, Shops 9, Indian 5.7; central Frankston has mixed amenity; Frankston South is its greener counterpart. **Trade-off:** the workbook's top score and the cheapest bayside sale median; a busy regional centre rather than a village.
 
-**Mordialloc** · BAY · $1,401,241 (A) · GW 28 (Leave now, 27 Oct) · ED 14 · train Y · workbook 6.90 (#2)
-**Checked:** station on the Frankston line; beach and pier (workbook, Wikipedia); Sandringham Hospital ED open 24 hours, 7 days (Alfred Health, workbook note); India-born 1.4%, other language at home 18.7% (ABS 2021, workbook) ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL21760)). **Estimate (workbook scores and notes):** Nature 5, Village 7, Beach 9, Shops 8, Indian 5; the price is an AVM 6.6% under the cap. **Trade-off:** the strongest village feel of the bayside suburbs, on rail; the least green anchor, and the price is close to the cap.
+**Mordialloc** · BAY · $1,401,241 (A) · GW 28 (Leave now, 27 Oct) · ED 14 · train Y · workbook 7.02 (#12)
+**Checked:** station on the Frankston line; beach and pier (workbook, Wikipedia); Sandringham Hospital ED open 24 hours, 7 days (Alfred Health, workbook note); India-born 1.4%, other language at home 18.7% (ABS 2021, workbook) ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL21760)). **Estimate (workbook scores and notes):** Nature 5, Village 7, Beach 10, Shops 8, Indian 2.5; the price is an AVM 6.6% under the cap. **Trade-off:** the strongest village feel of the bayside suburbs, on rail; the least green anchor, and the price is close to the cap.
 
-**Seaford** · BAY · $861,235 (A) · GW 24 (Leave now, 27 Oct) · ED 8 · train Y · workbook 6.89 (#3)
-**Checked:** Kananook Creek Reserve is a 7.5 km corridor linking Seaford Wetlands to the Frankston foreshore ([Frankston Council](https://www.frankston.vic.gov.au/Things-To-Do/Parks-and-Reserves/Seaford/Kananook-Creek-Reserve)). 74.2% Australia-born; India not in the top responses ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL22249)). **Estimate (workbook scores and notes):** Nature 6, Village 4, Beach 9; flat, easy walking; creek-corridor flood overlay possible. **Trade-off:** the cheapest credible bay-plus-creek suburb with a train, inside Mum's 25-minute limit; ordinary shops and almost no Indian community.
+**Seaford** · BAY · $861,235 (A) · GW 24 (Leave now, 27 Oct) · ED 8 · train Y · workbook 7.30 (#5)
+**Checked:** Kananook Creek Reserve is a 7.5 km corridor linking Seaford Wetlands to the Frankston foreshore ([Frankston Council](https://www.frankston.vic.gov.au/Things-To-Do/Parks-and-Reserves/Seaford/Kananook-Creek-Reserve)). 74.2% Australia-born; India not in the top responses ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL22249)). **Estimate (workbook scores and notes):** Nature 6, Village 4, Beach 10; flat, easy walking; creek-corridor flood overlay possible. **Trade-off:** the cheapest credible bay-plus-creek suburb with a train, inside Mum's 25-minute limit; ordinary shops and almost no Indian community.
 
 ### Other profile cards (27 Oct research; not in a viewing option)
 
 ### Dandenong foothills and ridge
 
-**Upwey** · DAN · $929,500 (S, 104 sales) · GW 17 (Leave now, 26 Oct) · ED 4 · train Y · workbook 6.07 (#10)
-**Checked:** Domain's 2026 page lists a 3-bed house at $860k and a 4-bed at $1.07m, in line with the workbook ([Domain](https://www.domain.com.au/suburb-profile/upwey-vic-3158)). Main Street sits beside the station with small shops, health services, cafes and the Burrinja Cultural Centre; Birdsland Reserve and the Ringwood–Belgrave Rail Trail are in the township ([Wikipedia](https://en.wikipedia.org/wiki/Upwey,_Victoria)). Named in the Oct 2017 bushfire overlay update ([Star Mail](https://mountainviews.mailcommunity.com.au/mail/2017-10-06/more-join-fire-overlay/)). **Estimate (workbook scores and notes):** Nature 9, Village 8, Shops 5, Indian 3. Supermarket and pharmacy not confirmed; hilly streets and many split-level homes; nearest temple (The Basin) about 15 min. **Trade-off:** the best village-plus-train-plus-closeness mix in the hills; costs are the fire overlay and a thin Indian community.
+**Upwey** · DAN · $929,500 (S, 104 sales) · GW 17 (Leave now, 26 Oct) · ED 4 · train Y · workbook 6.73 (#15)
+**Checked:** Domain's 2026 page lists a 3-bed house at $860k and a 4-bed at $1.07m, in line with the workbook ([Domain](https://www.domain.com.au/suburb-profile/upwey-vic-3158)). Main Street sits beside the station with small shops, health services, cafes and the Burrinja Cultural Centre; Birdsland Reserve and the Ringwood–Belgrave Rail Trail are in the township ([Wikipedia](https://en.wikipedia.org/wiki/Upwey,_Victoria)). Named in the Oct 2017 bushfire overlay update ([Star Mail](https://mountainviews.mailcommunity.com.au/mail/2017-10-06/more-join-fire-overlay/)). **Estimate (workbook scores and notes):** Nature 9, Village 8, Shops 5, Indian 3.2. Supermarket and pharmacy not confirmed; hilly streets and many split-level homes; nearest temple (The Basin) about 15 min. **Trade-off:** the best village-plus-train-plus-closeness mix in the hills; costs are the fire overlay and a thin Indian community.
 
-**Belgrave** · DAN · $856,437 (A) · GW 21 (Leave now, 26 Oct) · ED 7 · train Y (terminus) · workbook 6.02 (#12)
-**Checked:** Belgrave Lake Park, Borthwick Park, Dandenong Ranges National Park, Monbulk Creek and Puffing Billy; main street with galleries and bookshops behind the station ([Wikipedia](https://en.wikipedia.org/wiki/Belgrave,_Victoria)). 78.8% Australia-born, India below 0.7% (not in the top five) ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL20188)); 99.2% separate houses ([gdp.com.au](https://gdp.com.au/suburb/belgrave-vic)); on the 2017 bushfire overlay list. **Estimate (workbook scores and notes):** Nature 9, Village 8, Shops 6 (supermarket and GP 5 to 10 min, unverified), Indian 3; steep in parts; 55 to 65 min by train to the city. **Trade-off:** the strongest forest village on rail within 21 minutes of family; weekend tourist crowds, fire exposure, AVM-only price.
+**Belgrave** · DAN · $856,437 (A) · GW 21 (Leave now, 26 Oct) · ED 7 · train Y (terminus) · workbook 6.10 (#23)
+**Checked:** Belgrave Lake Park, Borthwick Park, Dandenong Ranges National Park, Monbulk Creek and Puffing Billy; main street with galleries and bookshops behind the station ([Wikipedia](https://en.wikipedia.org/wiki/Belgrave,_Victoria)). 78.8% Australia-born, India below 0.7% (not in the top five) ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL20188)); 99.2% separate houses ([gdp.com.au](https://gdp.com.au/suburb/belgrave-vic)); on the 2017 bushfire overlay list. **Estimate (workbook scores and notes):** Nature 9, Village 8, Shops 6 (supermarket and GP 5 to 10 min, unverified), Indian 1.5; steep in parts; 55 to 65 min by train to the city. **Trade-off:** the strongest forest village on rail within 21 minutes of family; weekend tourist crowds, fire exposure, AVM-only price.
 
-**Upper Ferntree Gully** · DAN · $872,133 (A, duplicate) · GW 16 (Leave now, 26 Oct) · ED 2 · train Y · workbook 5.81 (#16)
-**Checked:** adjoins Dandenong Ranges National Park, with the Kokoda Trail memorial walk and the "1000 steps"; own station since 1889 ([Wikipedia](https://en.wikipedia.org/wiki/Ferntree_Gully)). About 3,400 people, 96.1% separate houses, India-born 1.0% (34 people), median age 41 ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL22614)). On the 2017 bushfire overlay list. **Estimate (workbook scores and notes):** Nature 8, Village 5, Shops 6 (supermarkets in Ferntree Gully 5 to 8 min), Indian 5; steep on the park side; single-level homes scarce on slopes. **Trade-off:** forest at the door, 16 minutes to Glen Waverley; the price may be a postcode-level AVM shared with Ferntree Gully.
+**Upper Ferntree Gully** · DAN · $872,133 (A, duplicate) · GW 16 (Leave now, 26 Oct) · ED 2 · train Y · workbook 6.65 (#16)
+**Checked:** adjoins Dandenong Ranges National Park, with the Kokoda Trail memorial walk and the "1000 steps"; own station since 1889 ([Wikipedia](https://en.wikipedia.org/wiki/Ferntree_Gully)). About 3,400 people, 96.1% separate houses, India-born 1.0% (34 people), median age 41 ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL22614)). On the 2017 bushfire overlay list. **Estimate (workbook scores and notes):** Nature 8, Village 5, Shops 6 (supermarkets in Ferntree Gully 5 to 8 min), Indian 3.8; steep on the park side; single-level homes scarce on slopes. **Trade-off:** forest at the door, 16 minutes to Glen Waverley; the price may be a postcode-level AVM shared with Ferntree Gully.
 
-**Sassafras** · DAN · $1,006,318 (A; thin sales) · GW 29 (Leave now, 27 Oct) · ED 11 · train N · workbook 5.04 (#35)
+**Sassafras** · DAN · $1,006,318 (A; thin sales) · GW 29 (Leave now, 27 Oct) · ED 11 · train N · workbook 4.93 (#33)
 **Checked:** village on a saddle of the ridge at about 500 m; much of the western locality is in Dandenong Ranges National Park; the 15 km Tourist Track follows Sassafras Creek; fire history to 1962 ([Wikipedia](https://en.wikipedia.org/wiki/Sassafras,_Victoria)). Population 970; 76.8% Australia-born; 354 dwellings, 98.6% separate ([ABS](https://www.abs.gov.au/census/find-census-data/quickstats/2021/SAL22239)); Belgrave (6 km) has the everyday shops. **Estimate (workbook scores and notes):** Nature 10, Village 9 (tourist-led), Shops 3; overlay likely over most of the locality; narrow roads; winter ice and tree fall. **Trade-off:** the best forest in the set; no everyday shops in the village, and thin, hard-to-price sales.
 
-**The Basin** · DAN · $845,187 (A) · GW 17 (Leave now, 26 Oct) · ED 10 · train N · workbook 5.11 (#31)
-**Checked:** Basin Triangle shops (two pubs, cafes, greengrocer, butcher, post office, gym) beside Dandenong Ranges National Park and Doongalla Forest; no supermarket or pharmacy listed; bus 755 to Bayswater, Boronia and Ferntree Gully stations ([Wikipedia](https://en.wikipedia.org/wiki/The_Basin,_Victoria)). The Sri Vakrathunda Vinayagar Hindu temple is in the suburb ([Sukkar release](https://michaelsukkar.com.au/media-releases/sri-vakrathunda-vinayagar-temple)). India below 0.8% ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL22496)). **Estimate (workbook scores and notes):** Nature 8, Village 7, Shops 4 (supermarkets 8 to 12 min), Indian 4; steep roads. It is in Knox, not Yarra Ranges, so absence from the 2017 list is not evidence. **Trade-off:** forest plus a temple 17 minutes from family; car-dependent.
+**The Basin** · DAN · $845,187 (A) · GW 17 (Leave now, 26 Oct) · ED 10 · train N · workbook 5.44 (#29)
+**Checked:** Basin Triangle shops (two pubs, cafes, greengrocer, butcher, post office, gym) beside Dandenong Ranges National Park and Doongalla Forest; no supermarket or pharmacy listed; bus 755 to Bayswater, Boronia and Ferntree Gully stations ([Wikipedia](https://en.wikipedia.org/wiki/The_Basin,_Victoria)). The Sri Vakrathunda Vinayagar Hindu temple is in the suburb ([Sukkar release](https://michaelsukkar.com.au/media-releases/sri-vakrathunda-vinayagar-temple)). India below 0.8% ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL22496)). **Estimate (workbook scores and notes):** Nature 8, Village 7, Shops 4 (supermarkets 8 to 12 min), Indian 4.5; steep roads. It is in Knox, not Yarra Ranges, so absence from the 2017 list is not evidence. **Trade-off:** forest plus a temple 17 minutes from family; car-dependent.
 
-**Mount Evelyn** · DAN · $915,472 (A) · GW 27 (Leave now, 26 Oct) · ED 17 · train N · workbook 4.74 (#41)
-**Checked:** Aqueduct Walk, the Lilydale–Warburton Rail Trail, and parts of the national park to the south; rail closed in 1965 ([Wikipedia](https://en.wikipedia.org/wiki/Mount_Evelyn,_Victoria)). Population 9,799; 85.6% Australia-born; India below 0.4%; 97.8% separate ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL21795)); on the 2017 overlay list. **Estimate (workbook scores and notes):** Nature 8, Village 6, Shops 5 (not verified), Indian 2. **Trade-off:** flat rail-trail walking and forest; a low Indian-community score (2), no train, 27 minutes to family (Mum's limit is 25).
+**Mount Evelyn** · DAN · $915,472 (A) · GW 27 (Leave now, 26 Oct) · ED 17 · train N · workbook 5.12 (#32)
+**Checked:** Aqueduct Walk, the Lilydale–Warburton Rail Trail, and parts of the national park to the south; rail closed in 1965 ([Wikipedia](https://en.wikipedia.org/wiki/Mount_Evelyn,_Victoria)). Population 9,799; 85.6% Australia-born; India below 0.4%; 97.8% separate ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL21795)); on the 2017 overlay list. **Estimate (workbook scores and notes):** Nature 8, Village 6, Shops 5 (not verified), Indian 2.9. **Trade-off:** flat rail-trail walking and forest; a low Indian-community score (2), no train, 27 minutes to family (Mum's limit is 25).
 
 ### North-east and inner-east
 
-**Eltham** · NE · $1,273,000 (S, 195 sales) · GW 26 (Leave now, 26 Oct) · ED 16 · train Y · workbook 5.76 (#18)
-**Checked:** Alistair Knox Park, Barak Bushlands, Laughing Waters, the Diamond Creek Trail and Maroondah Aqueduct Trail; Main Road strip, Sunday farmers' market, station and SmartBus 902 ([Wikipedia](https://en.wikipedia.org/wiki/Eltham,_Victoria)). 79.0% Australia-born, India below 0.7%, 85.9% separate houses ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL20865)). **Estimate (workbook scores and notes):** Nature 8, Village 7, Shops 8, Indian 3. Bushfire overlay likely over much of northern and eastern Eltham; many split-level mud-brick homes; Indian shops and temples 15 to 25 min away. **Trade-off:** the best all-round green village in the inner north-east; costs are stairs, fire and insurance, and weak Indian access.
+**Eltham** · NE · $1,273,000 (S, 195 sales) · GW 26 (Leave now, 26 Oct) · ED 16 · train Y · workbook 6.28 (#20)
+**Checked:** Alistair Knox Park, Barak Bushlands, Laughing Waters, the Diamond Creek Trail and Maroondah Aqueduct Trail; Main Road strip, Sunday farmers' market, station and SmartBus 902 ([Wikipedia](https://en.wikipedia.org/wiki/Eltham,_Victoria)). 79.0% Australia-born, India below 0.7%, 85.9% separate houses ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL20865)). **Estimate (workbook scores and notes):** Nature 8, Village 7, Shops 8, Indian 1.6. Bushfire overlay likely over much of northern and eastern Eltham; many split-level mud-brick homes; Indian shops and temples 15 to 25 min away. **Trade-off:** the best all-round green village in the inner north-east; costs are stairs, fire and insurance, and weak Indian access.
 
-**Diamond Creek** · NE · $885,000 (3B; 4-bed $1.24M) · GW 33 (Leave now, 26 Oct) · ED 19 · train Y · workbook 5.31 (#28)
+**Diamond Creek** · NE · $885,000 (3B; 4-bed $1.24M) · GW 33 (Leave now, 26 Oct) · ED 19 · train Y · workbook 5.80 (#26)
 **Checked:** the Diamond Creek Trail follows the creek and was extended to Hurstbridge in 2022; shopping centre on the creek bank; Hurstbridge-line station; repeated bushfires 1894 to 1969 and a floodplain are recorded ([Wikipedia](https://en.wikipedia.org/wiki/Diamond_Creek,_Victoria)). 83.2% Australia-born, India 0.7% (87 people), 94.3% separate houses ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL20752)). **Estimate (workbook scores and notes):** Nature 7, Village 6, Shops 7, Indian 2; Hindu and Sikh sites 25+ min; Austin Hospital about 25 min. **Trade-off:** a cheaper green option with rail; the price is a 3-bed median, so a 4-bed is around $1.24M.
 
-**Warrandyte** · NE · $1,348,901 (A) · GW 20 (Leave now, 26 Oct) · ED 14 · train N · workbook 5.12 (#30)
+**Warrandyte** · NE · $1,348,901 (A) · GW 20 (Leave now, 26 Oct) · ED 14 · train N · workbook 5.50 (#27)
 **Checked:** Warrandyte State Park, the Yarra gorge, Andersons Creek and Mullum Mullum Creek; Yarra Street centre; fires in 1939, 1962 and 2014 ([Wikipedia](https://en.wikipedia.org/wiki/Warrandyte)). Manningham applied a new bushfire overlay to about 600 Wonga Park properties in 2023 ([Manningham Council](https://manningham.vic.gov.au/news/recent-changes-bushfire-management-overlay-wonga-park)); VICSES lists Warrandyte among flood-risk locations ([VICSES](https://www.ses.vic.gov.au/plan-and-stay-safe/flood-guides/manningham-city-council)). 77.4% Australia-born, 98.4% separate ([ABS](https://www.abs.gov.au/census/find-census-data/quickstats/2021/SAL22702)). **Estimate (workbook scores and notes):** Nature 9, Village 8, Shops 6; steep driveways; the AVM probably understates large-block homes. **Trade-off:** top nature 20 minutes from family; the highest fire and insurance exposure in the north-east, and no train (direct city bus 906).
 
-**Hurstbridge** · NE · $980,767 (A) · GW 41 (Leave now, 27 Oct) · ED 29 · train Y (terminus) · workbook 5.02 (#36)
+**Hurstbridge** · NE · $980,767 (A) · GW 41 (Leave now, 27 Oct) · ED 29 · train Y (terminus) · workbook 4.84 (not ranked: fails: grocery drive)
 **Checked:** more than 60 small businesses, a community hub, the 1912 terminus station, and the Diamond Creek Trail extended here in 2022 ([Wikipedia](https://en.wikipedia.org/wiki/Hurstbridge,_Victoria)). 86.1% Australia-born; India below 0.3%; 96.9% separate ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL21223)). **Estimate (workbook scores and notes):** Nature 8, Village 8, Shops 5; among the most fire-exposed on the list; larger supermarkets at Diamond Creek (about 8 min). **Trade-off:** a true bush village on rail; remote, with the weakest Indian access.
 
-**Croydon** · NE · $898,896 (A) · GW 18 (Leave now, 26 Oct) · ED 6 · train Y · workbook 5.59 (#26)
+**Croydon** · NE · $898,896 (A) · GW 18 (Leave now, 26 Oct) · ED 6 · train Y · workbook 6.91 (#13)
 **Checked:** 71.1% Australia-born, India 2.3% (665 people), 83.4% separate houses ([ABS](https://www.abs.gov.au/census/find-census-data/quickstats/2021/SAL20682)). Main Street, Croydon Central and Arndale; the station is under 5 min from Main Street, and Wikipedia noted a closure from March 2024 for level-crossing works ([Wikipedia](https://en.wikipedia.org/wiki/Croydon,_Victoria)). **Estimate (workbook scores and notes):** Nature 5; foothills 10 to 15 min away; Maroondah Hospital about 10 min; Indian shops 15 to 25 min; station likely reopened, verify. **Trade-off:** a cheap "village plus train" option 18 minutes from family, with modest nature.
 
 ### Bayside, south-east and Peninsula
 
-**Berwick** · BAY · $935,845 (A) · GW 25 (Leave now, 27 Oct) · ED 6 · train Y · workbook 6.08 (#9)
-**Checked:** India-born 6.1%, Hinduism 5.5%, 62.3% Australia-born ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL20224)). Wilson Botanic Park: 39 ha, two former quarry lakes, boardwalk and lookout tower ([Wikipedia](https://en.wikipedia.org/wiki/Wilson_Botanic_Park)). **Estimate (workbook scores and notes):** Nature 5 (parks, not forest), Village 6 (historic village, hilltop feel), Indian 7, Shops 9; Casey Hospital ED (workbook; 24-hour status from recall); fringe fire overlay; busy Princes Highway. **Trade-off:** the highest India-born share of the ranked top 10 (6.1%) with strong services; little forest and no beach.
+**Berwick** · BAY · $935,845 (A) · GW 25 (Leave now, 27 Oct) · ED 6 · train Y · workbook 7.56 (#2)
+**Checked:** India-born 6.1%, Hinduism 5.5%, 62.3% Australia-born ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL20224)). Wilson Botanic Park: 39 ha, two former quarry lakes, boardwalk and lookout tower ([Wikipedia](https://en.wikipedia.org/wiki/Wilson_Botanic_Park)). **Estimate (workbook scores and notes):** Nature 5 (parks, not forest), Village 6 (historic village, hilltop feel), Indian 8.4, Shops 9; Casey Hospital ED (workbook; 24-hour status from recall); fringe fire overlay; busy Princes Highway. **Trade-off:** the highest India-born share of the ranked top 10 (6.1%) with strong services; little forest and no beach.
 
-**Frankston South** · BAY · $1,195,044 (A) · GW 31 (Leave now, 27 Oct) · ED 4? · train N · workbook 5.68 (#20)
-**Checked:** Sweetwater Creek Upper Nature Reserve is a 5.3 ha bushland strip ([Frankston Council](https://www.frankston.vic.gov.au/Things-To-Do/Parks-and-Reserves/Frankston-South/Sweetwater-Creek-Upper-Nature-Reserve)); Frankston's Peninsula University Hospital runs a 24-hour ED ([Peninsula Health](https://www.peninsulahealth.org.au/services/emergency-medicine/frankston-emergency-department/)). India-born 0.9% (169 people), median age 44 ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL20949)). **Estimate (workbook scores and notes):** Nature 7, Village 5 (small strips only), Beach 6, Shops 5; hilly; the 4-minute ED time looks optimistic (guess 8 to 12); many older single-level homes. **Trade-off:** the only candidate offering creek bush and the bay together; no station and no village centre.
+**Frankston South** · BAY · $1,195,044 (A) · GW 31 (Leave now, 27 Oct) · ED 4? · train N · workbook 6.55 (#19)
+**Checked:** Sweetwater Creek Upper Nature Reserve is a 5.3 ha bushland strip ([Frankston Council](https://www.frankston.vic.gov.au/Things-To-Do/Parks-and-Reserves/Frankston-South/Sweetwater-Creek-Upper-Nature-Reserve)); Frankston's Peninsula University Hospital runs a 24-hour ED ([Peninsula Health](https://www.peninsulahealth.org.au/services/emergency-medicine/frankston-emergency-department/)). India-born 0.9% (169 people), median age 44 ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL20949)). **Estimate (workbook scores and notes):** Nature 7, Village 5 (small strips only), Beach 10, Shops 5; hilly; the 4-minute ED time looks optimistic (guess 8 to 12); many older single-level homes. **Trade-off:** the only candidate offering creek bush and the bay together; no station and no village centre.
 
-**Mornington** · PEN · $1,096,505 (A); Jellis Craig house median $1.20m · GW 40 (Leave now, 26 Oct) · ED 15 · train N · workbook 6.31 (#7)
-**Checked:** Jellis Craig puts the house median at $1.20m (1 Aug 2026), 9% above the workbook AVM ([Jellis Craig](https://helpers.jelliscraig.com.au/suburbreportsdownloads/Mornington_Suburb_Reports_Aug_2026.pdf)). Buses 781, 784 and 785 together give a 20-minute service to Frankston ([Transport Victoria](https://transport.vic.gov.au/news-and-resources/news/better-bus-travel-for-the-mornington-peninsula)). Population 25,759; 74.0% Australia-born; India not in the top six; 77.0% separate houses ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL21763)). **Estimate (workbook scores and notes):** Nature 6, Village 7 (Main Street is a real centre), Beach 9, Shops 9; Frankston ED about 20 min; foreshore flooding in low pockets. **Trade-off:** the best bay-town services; busier, less forest, no train.
+**Mornington** · PEN · $1,096,505 (A); Jellis Craig house median $1.20m · GW 40 (Leave now, 26 Oct) · ED 15 · train N · workbook 6.22 (#21)
+**Checked:** Jellis Craig puts the house median at $1.20m (1 Aug 2026), 9% above the workbook AVM ([Jellis Craig](https://helpers.jelliscraig.com.au/suburbreportsdownloads/Mornington_Suburb_Reports_Aug_2026.pdf)). Buses 781, 784 and 785 together give a 20-minute service to Frankston ([Transport Victoria](https://transport.vic.gov.au/news-and-resources/news/better-bus-travel-for-the-mornington-peninsula)). Population 25,759; 74.0% Australia-born; India not in the top six; 77.0% separate houses ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL21763)). **Estimate (workbook scores and notes):** Nature 6, Village 7 (Main Street is a real centre), Beach 10, Shops 9; Frankston ED about 20 min; foreshore flooding in low pockets. **Trade-off:** the best bay-town services; busier, less forest, no train.
 
-**Mount Martha** · PEN · $1,344,095 (A); Jellis Craig house median $1.40m · GW 47 (Leave now, 27 Oct) · ED 19 (Rosebud) · train N · workbook 5.72 (#19)
-**Checked:** the Jellis Craig median is $1.40m (6 Sep 2026), close to the cap ([Jellis Craig](https://helpers.jelliscraig.com.au/suburbreportsdownloads/Mount_Martha_Suburb_Reports_Sep_2026.pdf)); route 781 runs hourly ([Transport Victoria](https://transport.vic.gov.au/news-and-resources/news/better-bus-travel-for-the-mornington-peninsula)); 76.4% Australia-born, 84.2% separate houses ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL21803)). **Estimate (workbook scores and notes):** Nature 8 (Mount Martha Park, Balcombe Estuary), Beach 9, Shops 5; Frankston ED about 25 min; split-level bay-view homes. **Trade-off:** leafy bay living at the top of the budget, with an hourly bus.
+**Mount Martha** · PEN · $1,344,095 (A); Jellis Craig house median $1.40m · GW 47 (Leave now, 27 Oct) · ED 19 (Rosebud) · train N · workbook 5.24 (not ranked: fails: grocery drive)
+**Checked:** the Jellis Craig median is $1.40m (6 Sep 2026), close to the cap ([Jellis Craig](https://helpers.jelliscraig.com.au/suburbreportsdownloads/Mount_Martha_Suburb_Reports_Sep_2026.pdf)); route 781 runs hourly ([Transport Victoria](https://transport.vic.gov.au/news-and-resources/news/better-bus-travel-for-the-mornington-peninsula)); 76.4% Australia-born, 84.2% separate houses ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL21803)). **Estimate (workbook scores and notes):** Nature 8 (Mount Martha Park, Balcombe Estuary), Beach 10, Shops 5; Frankston ED about 25 min; split-level bay-view homes. **Trade-off:** leafy bay living at the top of the budget, with an hourly bus.
 
-**Dromana** · PEN · $906,318 (A); Jellis Craig house median $965,000 · GW 47 (Leave now, 27 Oct) · ED 11! · train N · workbook 5.92 (#14)
-**Checked:** Jellis Craig median $965,000 (6 Sep 2026) ([Jellis Craig](https://helpers.jelliscraig.com.au/suburbreportsdownloads/Dromana_Suburb_Reports_Sep_2026.pdf)); route 781 ends here, hourly ([Transport Victoria](https://transport.vic.gov.au/news-and-resources/news/better-bus-travel-for-the-mornington-peninsula)); 74.0% Australia-born, median age 50 ([ABS](https://www.abs.gov.au/census/find-census-data/quickstats/2021/SAL20788)). Rosebud Hospital ED is open 24 hours but treats moderate and minor cases; serious cases go to Frankston ([Peninsula Health](https://www.peninsulahealth.org.au/patients-visitors/emergency-care/accessing-our-emergency-departments/)). **Estimate (workbook scores and notes):** Nature 7 (Arthurs Seat State Park behind), Beach 9; major ED about 40 min away; hillside fire overlay; low foreshore inundation. **Trade-off:** beach and hills together; a long way from a major ED and a seasonal feel.
+**Dromana** · PEN · $906,318 (A); Jellis Craig house median $965,000 · GW 47 (Leave now, 27 Oct) · ED 11! · train N · workbook 5.43 (not ranked: fails: grocery drive)
+**Checked:** Jellis Craig median $965,000 (6 Sep 2026) ([Jellis Craig](https://helpers.jelliscraig.com.au/suburbreportsdownloads/Dromana_Suburb_Reports_Sep_2026.pdf)); route 781 ends here, hourly ([Transport Victoria](https://transport.vic.gov.au/news-and-resources/news/better-bus-travel-for-the-mornington-peninsula)); 74.0% Australia-born, median age 50 ([ABS](https://www.abs.gov.au/census/find-census-data/quickstats/2021/SAL20788)). Rosebud Hospital ED is open 24 hours but treats moderate and minor cases; serious cases go to Frankston ([Peninsula Health](https://www.peninsulahealth.org.au/patients-visitors/emergency-care/accessing-our-emergency-departments/)). **Estimate (workbook scores and notes):** Nature 7 (Arthurs Seat State Park behind), Beach 10; major ED about 40 min away; hillside fire overlay; low foreshore inundation. **Trade-off:** beach and hills together; a long way from a major ED and a seasonal feel.
 
 ### Macedon, Geelong and Gippsland
 
-**Woodend** · MAC · $890,000 (3B) · GW 68 (Leave now, 26 Oct) · ED 55 · train Y · workbook 4.66 (#44)
-**Checked:** population 6,732, 79.5% Australia-born, India not listed (so 0.7% or less) ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL22833)). Jellis Craig shows an all-house median of $1.04M (to 1 Jun 2026), well above the workbook's 3-bed $890k ([Jellis Craig](https://helpers.jelliscraig.com.au/suburbreportsdownloads/Woodend_Suburb_Reports_Jun_2026.pdf)). **Estimate (workbook scores and notes):** Nature 8 (ranges forest a short drive away), Village 9 (walkable High Street), Shops 6, Indian 1; nearest 24-hour ED is Sunshine (about 70 km) or Bendigo (about 75 km); bushfire overlay over substantial areas; cold winters. **Trade-off:** forest-country village on the Bendigo line; 68 minutes to Glen Waverley is over the 60-minute preference.
+**Woodend** · MAC · $890,000 (3B) · GW 68 (Leave now, 26 Oct) · ED 55 · train Y · workbook 4.30 (not ranked: fails: grocery drive)
+**Checked:** population 6,732, 79.5% Australia-born, India not listed (so 0.7% or less) ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL22833)). Jellis Craig shows an all-house median of $1.04M (to 1 Jun 2026), well above the workbook's 3-bed $890k ([Jellis Craig](https://helpers.jelliscraig.com.au/suburbreportsdownloads/Woodend_Suburb_Reports_Jun_2026.pdf)). **Estimate (workbook scores and notes):** Nature 8 (ranges forest a short drive away), Village 9 (walkable High Street), Shops 6, Indian 0.9; nearest 24-hour ED is Sunshine (about 70 km) or Bendigo (about 75 km); bushfire overlay over substantial areas; cold winters. **Trade-off:** forest-country village on the Bendigo line; 68 minutes to Glen Waverley is over the 60-minute preference.
 
-**Highton (Geelong)** · GEE · $957,797 (A) · GW 74 (Leave now, 26 Oct) · ED 9 · train N · workbook 5.05 (#34)
-**Checked:** population 20,736; India-born 2.4%, 77.3% Australia-born ([ABS](https://www.abs.gov.au/census/find-census-data/quickstats/2021/SAL21187)). PRD's Q2 2026 house median is $781,500 on 241 sales, about $175k below the workbook AVM ([PRD](https://www.prd.com.au/documents/3240/PRD_Highton_Market_Update_2nd_Half_2026.pdf)). A Sri Sai Siva Vishnu Temple association is listed in the Geelong directory; address not retrieved ([City of Greater Geelong](https://app-test.geelongcity.vic.gov.au/directory/item/8d7fe5fe44788d3.aspx)). **Estimate (workbook scores and notes):** Nature 6 (Barrabool Hills, Barwon River), Village 5, Shops 8, Indian 4; University Hospital Geelong about 10 min; steep pockets; no local train. **Trade-off:** hills, an India-born share of 2.4% and strong services, but 74 minutes from family.
+**Highton (Geelong)** · GEE · $957,797 (A) · GW 74 (Leave now, 26 Oct) · ED 9 · train N · workbook 6.57 (#18)
+**Checked:** population 20,736; India-born 2.4%, 77.3% Australia-born ([ABS](https://www.abs.gov.au/census/find-census-data/quickstats/2021/SAL21187)). PRD's Q2 2026 house median is $781,500 on 241 sales, about $175k below the workbook AVM ([PRD](https://www.prd.com.au/documents/3240/PRD_Highton_Market_Update_2nd_Half_2026.pdf)). A Sri Sai Siva Vishnu Temple association is listed in the Geelong directory; address not retrieved ([City of Greater Geelong](https://app-test.geelongcity.vic.gov.au/directory/item/8d7fe5fe44788d3.aspx)). **Estimate (workbook scores and notes):** Nature 6 (Barrabool Hills, Barwon River), Village 5, Shops 8, Indian 6.1; University Hospital Geelong about 10 min; steep pockets; no local train. **Trade-off:** hills, an India-born share of 2.4% and strong services, but 74 minutes from family.
 
-**Torquay** · GEE · $1,180,000 (S) · GW 88 (Leave now, 26 Oct) · ED 23 · train N · workbook 5.86 (#15)
+**Torquay** · GEE · $1,180,000 (S) · GW 88 (Leave now, 26 Oct) · ED 23 · train N · workbook 5.96 (#24)
 **Checked:** patrolled Front Beach, sheltered Cosy Corner and the Surf Coast Walk ([Great Ocean Road](https://greatoceanroad.com.au/towns/torquay/beaches/)); population 18,534, 82.8% Australia-born ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL22551)); bus 54 runs to Marshall Station ([McHarrys](https://mcharrys.com.au/timetable/route-54-torquay-to-marshall-station-new-timetable-august-2026/)). A 2026 projection gives $1.05M, but the source is low quality ([Collings](https://www.collings.com.au/median-house-prices-in-torquay-vic-2026/)). **Estimate (workbook scores and notes):** Beach 10, Nature 7, Village 5; summer congestion; the ED time is optimistic but plausible off-peak. **Trade-off:** the one true surf-beach option; 88 minutes is effectively over the limit once traffic bites.
 
-**Warragul** · GIP · $620,000 (3B; 4-bed $732.5k) · GW 58 (Leave now, 26 Oct) · ED 2? · train Y · workbook 5.22 (#29)
-**Checked:** population 19,856; India-born 1.0%; 81.0% Australia-born; median age 40 ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL22698)). House median $680,000 on 549 sales ([Microburbs](https://www.microburbs.com.au/suburb-reports-lite/warragul-vic-3820)). V/Line to Southern Cross takes about 1 h 40 min, at least hourly (page dated Oct 2023) ([Monash Rural Health](https://www.monash.edu/medicine/rural-health/locations/gippsland/accordion-content/warragul/stay-warragul/warragul-public-transport)). **Estimate (workbook scores and notes):** Nature 5 (rolling hills, forest 20 to 30 min away), Village 6, Shops 8, Indian 3; nearest Indian groceries 45 to 60 min; West Gippsland Hospital ED 24-hour status and waits not read directly. **Trade-off:** by far the cheapest credible option with a town centre; low Indian community and a long train.
+**Warragul** · GIP · $620,000 (3B; 4-bed $732.5k) · GW 58 (Leave now, 26 Oct) · ED 2? · train Y · workbook 5.94 (#25)
+**Checked:** population 19,856; India-born 1.0%; 81.0% Australia-born; median age 40 ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL22698)). House median $680,000 on 549 sales ([Microburbs](https://www.microburbs.com.au/suburb-reports-lite/warragul-vic-3820)). V/Line to Southern Cross takes about 1 h 40 min, at least hourly (page dated Oct 2023) ([Monash Rural Health](https://www.monash.edu/medicine/rural-health/locations/gippsland/accordion-content/warragul/stay-warragul/warragul-public-transport)). **Estimate (workbook scores and notes):** Nature 5 (rolling hills, forest 20 to 30 min away), Village 6, Shops 8, Indian 5.6; nearest Indian groceries 45 to 60 min; West Gippsland Hospital ED 24-hour status and waits not read directly. **Trade-off:** by far the cheapest credible option with a town centre; low Indian community and a long train.
 
-### The other 28 ranked suburbs in one line each
+### The other 28 suburbs in one line each
 
 Sorted by workbook rank.
 
 | Suburb (rank, score) | Note |
 |---|---|
-| Mentone (#4, 6.71) | $1,497,099 is $3k under the cap (Woodards shows $1.30m); flat, Nature 4; no 24-hour public ED in the suburb. |
-| Altona (#5, 6.68) | Flat coast, 35 min cross-city; new Footscray Hospital opened 18 Feb 2026 ([Vic Health](https://health.vic.gov.au/news/new-footscray-hospital-open)); Microburbs median $1.25M vs AVM $1.155M. |
-| Chelsea (#6, 6.51) | Flat, few trees; the 19-minute ED time looks high; India-born 1.4%. |
-| Newport (#8, 6.25) | Newport Lakes; industrial edges; Microburbs median $1.22M. |
-| Rosebud (#11, 6.03) | Open-mind pick; Beach 9, Nature 6; flat; ED is lower-acuity, Frankston 27 min per the workbook. |
-| Rye (#13, 6.01) | Open-mind pick; 61 min; route 786 was removed on 5 Jul 2026; seasonal. |
-| McCrae (#17, 5.81) | Small strip, hilly behind; median age 55; ED is Rosebud (minor cases); price median not found. |
-| Ferntree Gully (#21, 5.65) | Flatter and busier than Upper Ferntree Gully (Nature 6, Shops 8); India-born 2.3% (632 people) ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL20917)). View as a pair with Upper Ferntree Gully. |
-| West Footscray (#22, 5.64) | Nature 2; India-born 3.7% (SA2); industrial and truck traffic. |
-| Ringwood (#23, 5.64) | Best logistics (12 min to family); mall and big-box feel, Nature 4; India-born 3.2% (618) ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL22174)). |
-| Tecoma (#24, 5.60) | Sherbrooke Forest adjoins; tiny highway strip; on the 2017 overlay list; a swap-in for Upwey. |
-| Rosanna (#25, 5.59) | Hilly, leafy, split-level homes; 34 min; India-born 2.8% (245). |
-| Heidelberg (#27, 5.38) | Austin Hospital precinct; only 42.3% separate houses; $1.452M on 35 sales is near the cap. |
-| Newtown, Geelong (#32, 5.09) | River sanctuary, Indian 4, ED about 7 min; 72 min to family; Jellis Craig median $1.08M. |
-| Wonthaggi (#33, 5.06) | Bass Coast Health ED verified 24-hour ([healthdirect](https://healthdirect.gov.au/australian-health-services/healthcare-service/wonthaggi-3995-vic/bass-coast-health-wonthaggi-hospital/emergency-department-service/59ec4c2f-e14e-a2e1-abde-99d4904b6cda)); 88 min; median age 55; no rail. |
-| Olinda (#37, 4.94) | Ridge village, no supermarket in the centre; fire and insurance; India-born 0.4%. |
-| Emerald (#38, 4.91) | Larger village with better odds of single-storey homes; 35 min; fire. |
-| Montrose (#39, 4.89) | Foothills township, no station (Mooroolbark 5.7 km); on the 2017 overlay list. |
-| Drouin (#40, 4.79) | Small town; ED is at Warragul; India-born 0.5% (postcode). |
-| Kyneton (#42, 4.71) | Best heritage main street (Village 9); Bendigo Health ED is 54.6 km away ([healthdirect](https://www.healthdirect.gov.au/australian-health-services/search/kyneton-3444-vic/emergency-department-service/310000008)); Jellis Craig median $840,000. |
-| Healesville (#43, 4.67) | A real town centre (Shops 6) but the hospital has no urgent care; residents report going to Maroondah, about 50 min, with 4 to 5 hour waits ([Upper Yarra Mail](https://upperyarra.mailcommunity.com.au/news/2025-04-05/yarra-valley-needs-urgent-care-clinic/)). |
-| Gisborne (#45, 4.56) | Macedon Ranges town with modern estates (Shops 7, Nature 7); rail access unclear. |
-| Arthurs Seat (#46, 4.51) | State Park forest (Nature 9) but no village, steep, and CFA fuel-reduction work at Pindara Rd in May 2026 ([Mornington News](https://www.mpnews.com.au/2026/05/27/cfa-brigades-target-fuel-loads-at-arthurs-seat/)); price rests on 5 sales. |
-| Mount Dandenong (#47, 4.49) | Steep, narrow roads, few everyday services; only the SA2 census page was read. |
-| Riddells Creek (#48, 4.30) | Small village, 71 min; median $1.01M on 30 sales, down 6.11% in the quarter. |
-| Macedon (#49, 4.20) | Forest and Avenue of Honour; Shops 3; the 1983 Ash Wednesday fire destroyed 64 houses ([Wikipedia](https://en.wikipedia.org/wiki/Macedon,_Victoria)); "limited afternoon services" by train ([Wikipedia](https://en.wikipedia.org/wiki/Bendigo_line)). |
-| Warburton (#50, 4.13) | Top-tier nature (10) but 65 min to family, 53 min to ED, one main road; median age 50. |
-| Yarra Glen (#51, 4.02) | Vineyard flats, less forest (Nature 7); flood and fire both in play. |
+| West Footscray (#3, 7.47) | Nature 2; India-born 3.7% (SA2); industrial and truck traffic. |
+| Newport (#4, 7.39) | Newport Lakes; industrial edges; Microburbs median $1.22M. |
+| Altona (#6, 7.27) | Flat coast, 35 min cross-city; new Footscray Hospital opened 18 Feb 2026 ([Vic Health](https://health.vic.gov.au/news/new-footscray-hospital-open)); Microburbs median $1.25M vs AVM $1.155M. |
+| Mentone (#7, 7.26) | $1,497,099 is $3k under the cap (Woodards shows $1.30m); flat, Nature 4; no 24-hour public ED in the suburb. |
+| Heidelberg (#7, 7.26) | Austin Hospital precinct; only 42.3% separate houses; $1.452M on 35 sales is near the cap. |
+| Ringwood (#9, 7.22) | Best logistics (12 min to family); mall and big-box feel, Nature 4; India-born 3.2% (618) ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL22174)). |
+| Rosanna (#10, 7.16) | Hilly, leafy, split-level homes; 34 min; India-born 2.8% (245). |
+| Ferntree Gully (#11, 7.06) | Flatter and busier than Upper Ferntree Gully (Nature 6, Shops 8); India-born 2.3% (632 people) ([ABS](https://abs.gov.au/census/find-census-data/quickstats/2021/SAL20917)). View as a pair with Upper Ferntree Gully. |
+| Chelsea (#14, 6.82) | Flat, few trees; the 19-minute ED time looks high; India-born 1.4%. |
+| Newtown, Geelong (#17, 6.62) | River sanctuary, Indian 5.4, ED about 7 min; 72 min to family; Jellis Craig median $1.08M. |
+| Tecoma (#22, 6.15) | Sherbrooke Forest adjoins; tiny highway strip; on the 2017 overlay list; a swap-in for Upwey. |
+| Montrose (#28, 5.44) | Foothills township, no station (Mooroolbark 5.7 km); on the 2017 overlay list. |
+| Drouin (#30, 5.26) | Small town; ED is at Warragul; India-born 0.5% (postcode). |
+| Gisborne (#31, 5.19) | Macedon Ranges town with modern estates (Shops 7, Nature 7); rail access unclear. |
+| Olinda (#34, 4.78) | Ridge village, no supermarket in the centre; fire and insurance; India-born 0.4%. |
+| Mount Dandenong (#35, 4.45) | Steep, narrow roads, few everyday services; only the SA2 census page was read. |
+| Riddells Creek (#36, 4.38) | Small village, 71 min; median $1.01M on 30 sales, down 6.11% in the quarter. |
+| Macedon (#37, 4.00) | Forest and Avenue of Honour; Shops 3; the 1983 Ash Wednesday fire destroyed 64 houses ([Wikipedia](https://en.wikipedia.org/wiki/Macedon,_Victoria)); "limited afternoon services" by train ([Wikipedia](https://en.wikipedia.org/wiki/Bendigo_line)). |
+| Rosebud (not ranked, 5.83) | Open-mind pick; Beach 10, Nature 6; flat; ED is lower-acuity, Frankston 27 min per the workbook. |
+| Rye (not ranked, 5.37) | Open-mind pick; 61 min; route 786 was removed on 5 Jul 2026; seasonal. |
+| McCrae (not ranked, 5.26) | Small strip, hilly behind; median age 55; ED is Rosebud (minor cases); price median not found. |
+| Wonthaggi (not ranked, 5.22) | Bass Coast Health ED verified 24-hour ([healthdirect](https://healthdirect.gov.au/australian-health-services/healthcare-service/wonthaggi-3995-vic/bass-coast-health-wonthaggi-hospital/emergency-department-service/59ec4c2f-e14e-a2e1-abde-99d4904b6cda)); 88 min; median age 55; no rail. |
+| Emerald (not ranked, 4.85) | Larger village with better odds of single-storey homes; 35 min; fire. |
+| Kyneton (not ranked, 4.05) | Best heritage main street (Village 9); Bendigo Health ED is 54.6 km away ([healthdirect](https://www.healthdirect.gov.au/australian-health-services/search/kyneton-3444-vic/emergency-department-service/310000008)); Jellis Craig median $840,000. |
+| Healesville (not ranked, 3.87) | A real town centre (Shops 6) but the hospital has no urgent care; residents report going to Maroondah, about 50 min, with 4 to 5 hour waits ([Upper Yarra Mail](https://upperyarra.mailcommunity.com.au/news/2025-04-05/yarra-valley-needs-urgent-care-clinic/)). |
+| Arthurs Seat (not ranked, 4.64) | State Park forest (Nature 9) but no village, steep, and CFA fuel-reduction work at Pindara Rd in May 2026 ([Mornington News](https://www.mpnews.com.au/2026/05/27/cfa-brigades-target-fuel-loads-at-arthurs-seat/)); price rests on 5 sales. |
+| Warburton (not ranked, 3.05) | Top-tier nature (10) but 65 min to family, 53 min to ED, one main road; median age 50. |
+| Yarra Glen (not ranked, 3.78) | Vineyard flats, less forest (Nature 7); flood and fire both in play. |
 
 ## Where the workbook and the research disagree
 
