@@ -76,7 +76,7 @@ From `Questionnaire redesign — rounds 5–7 (29 Oct 2026).md` sections 6–7. 
 | G4 | L re-evaluation, plus any C status change (incl. R7.4 vetoes) | After G2 | G2a/G2b | not started, runs locally, needs approval where gated |
 | G5 | Settings B28:B37 property thresholds | After N3 | N3 | not started, runs locally, needs approval where gated |
 | G6 | Switch P to the design-doc formula, incl. the R5.7 church basis (closes P7) | After task B4 data is complete for surviving suburbs | B4 | not started, runs locally, needs approval where gated |
-| G7 | Regenerate reports (`tools/report2.py`; `tools/found.py` needs fixing first) | Last | None stated; runs last | not started, runs locally, needs approval where gated |
+| G7 | Regenerate reports (`tools/report2.py`; `tools/found.py` needs fixing first) | Last | None stated; runs last | **DONE 5 Nov 2026 (PR `credits/parents-reports-g7`, awaiting the user's review):** `report2.py` fixed; parent report rebuilt (Draft); foundation report numbers refreshed by script (`found.py` not fixed, still broken on the current format); NEEDS REVIEW notes listed in the PR; not distributed |
 
 ## Phase 2 readiness (28 Oct 2026)
 
