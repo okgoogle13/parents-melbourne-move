@@ -5,3 +5,4 @@
 # Local-only provenance input (never commit; sha256 in research/macro/sources.yaml)
 research/inputs/parents-melbourne-move-handover.md
 .venv/
+__pycache__/
