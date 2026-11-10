@@ -16,7 +16,7 @@ Status counts, ranks and the change history are in `scoring-model-pointer.md`.
 
 ## Next task
 
-**10 Nov 2026 (IDE plan Phase 1 done):** `main` = `2ef2157` (CLAUDE.md fix merged; both `claude/*` branches deleted on origin). `tools/recalc_test.sh <wb>` added (workbook sha unchanged: recalc OK, 0 errors, 37 ranked). Survey v18 complete 6 Nov (Mum, Dad, Nish); not yet imported. Northam St dropped (A-14 no-go). **Next: N3a test import, then N3b (gate A1), per `docs/plan-2026-11-ide.md` Phase 2.**
+**10 Nov 2026 (IDE plan Phase 1 done):** `main` = `2ef2157` (CLAUDE.md fix merged; both `claude/*` branches deleted on origin). `tools/recalc_test.sh <wb>` added (workbook sha unchanged: recalc OK, 0 errors, 37 ranked). Survey v18 complete 6 Nov (Mum, Dad, Nish); not yet imported. Northam St dropped (A-14 no-go). **N3a done 10 Nov (test import to scratch: exit 0, rows 17–19, CB–CH, CleanedAnswers 97–103; recalc 0 errors, 37 ranked, canonical unchanged). N3b done 10 Nov (v18 imported to canonical, recalc OK). Next: N4 (needs your approval), per `docs/plan-2026-11-ide.md` Phase 2.**
 
 **6 Nov 2026 (G7 reports review addressed):** parent report and foundation report narrative rewritten and rebuilt from the recalculated workbook (sha `841c84acf860`, 0 errors, 37 ranked) to address all feedback from the 2 Nov scoring change and 25-min grocery limit. `tools/report2.py` updated (proper date, hard limit in table, U & P formula note, settled P question, no NEEDS REVIEW markers). Foundation report narrative updated across executive summary, weights, rank counts, option A text, top 10/15 text, and hard limits. PDF recompiled.
 

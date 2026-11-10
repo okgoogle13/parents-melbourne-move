@@ -16,7 +16,7 @@ Research record for choosing a suburb in or around Melbourne for the user's pare
 - `.venv/bin/python tools/report2.py <recalculated wb> <out.html>`: rebuilds the parent report. Needs cached values, so run it on the recalc temp copy.
 - `.venv/bin/python tools/import_v14.py <export.json> <in.xlsx> <out.xlsx>`: survey import (v14–v18); usage and flags in `docs/workflow.md`. Exports live in `Handoffs/data/`; `Handoffs/` holds dated handoff notes.
 - `bash tools/build_pdf.sh <in.md> <out.pdf>` / `bash tools/build_property_pdf.sh research/properties/<name>.md <out.pdf>`: pandoc + Playwright Chromium (`tools/render.js`) PDFs.
-- `tools/found.py` is broken on the current foundation-report format (29 Oct; still broken 5 Nov). Edit that report by script instead.
+- `tools/found.py` is broken on the current foundation-report format. Edit that report by script instead.
 - `research/macro/`: macro-market YAML, sources, snapshots. `research/properties/`: per-property summaries. `research/inputs/`: source PDFs and the handover brief.
 
 ## Sources (when they disagree)
@@ -29,7 +29,7 @@ Answer suburb, score, filter and response questions from the workbook, not memor
 
 ## Permanent rules
 - No Google Drive, Sheets, Docs or Forms, even if connectors exist. Approved Google Maps drive-time research is fine.
-- Cloud credit ended 4 Nov 2026: work locally; no cloud sessions or scheduled routines.
+- Work locally: no cloud sessions or scheduled routines (cloud credit ended).
 - Archive, never delete: copy to `Archive/` as `(superseded YYYY-MM-DD, before <change>)`, then edit the root file in place. No near-duplicates in root.
 - One session edits the workbook at a time. Re-read it just before writing; run the recalc test after.
 - Excel-compatible only: no `XMATCH`, `REGEXEXTRACT`, `ARRAYFORMULA`.
