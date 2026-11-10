@@ -1,6 +1,6 @@
 # Open work: task register (the only list of open tasks; reviewed 28 Oct 2026)
 
-**Now (10 Nov 2026):** Survey v18 complete 6 Nov (all three saved; not yet imported). Phase 0 done 10 Nov: P10 sheet, P11 answers (relayed by Nish), P12 WhatsApp capture, A-14 no-go (Northam St dropped). Phase 1 (IDE plan `docs/plan-2026-11-ide.md`): H1 done (`claude/claude-md-fixes` fast-forwarded; both origin branches deleted), H3 `tools/recalc_test.sh` done, H4 records corrections done. N3a test import DONE 10 Nov (scratch copy, recalc OK, 0 errors, 37 ranked). N3b DONE 10 Nov (v18 imported, recalc OK). N4 DONE 10 Nov (counts = 15). D1 spec drafted 10 Nov (`docs/model-spec-2026-11-10.md`, awaiting approval). Next: G3 (needs approval). Awaiting your approval: G3, G2a/b, G4, G5, M1–M3, M5. Overdue: M2 (was due before 3 Nov). M4 skipped (10 Nov, your decision).
+**Now (10 Nov 2026):** Survey v18 complete 6 Nov (all three saved; not yet imported). Phase 0 done 10 Nov: P10 sheet, P11 answers (relayed by Nish), P12 WhatsApp capture, A-14 no-go (Northam St dropped). Phase 1 (IDE plan `docs/plan-2026-11-ide.md`): H1 done (`claude/claude-md-fixes` fast-forwarded; both origin branches deleted), H3 `tools/recalc_test.sh` done, H4 records corrections done. N3a test import DONE 10 Nov (scratch copy, recalc OK, 0 errors, 37 ranked). N3b DONE 10 Nov (v18 imported, recalc OK). N4 DONE 10 Nov (counts = 15). D1 done 10 Nov (S2 survey weights live; parent report rebuilt). D1b dropped (diversity is a preference, 10 Nov call). Next: D2 community score (diversity part, after the measure review); R1 foundation report refresh; G3 (needs approval). Awaiting your approval: G3, G2a/b, G4, G5, M1–M3, M5. Overdue: M2 (was due before 3 Nov). M4 skipped (10 Nov, your decision).
 When a task finishes, mark it here and set the next task ID in `PROJECT_STATE.md`.
 
 Source: scoring-model-pointer.md, workbook headers, Claude_in_Chrome_prompt v2, foundation report, Talking with Mum.
@@ -117,8 +117,10 @@ From `Questionnaire redesign — rounds 5–7 (29 Oct 2026).md` sections 6–7. 
 | A-14 | Auction 5 Northam St, Sat 14 Nov 11:00 | **Closed 10 Nov: no-go (Nish).** No bid; Northam St dropped |
 | M4b | Macro refresh (4.85% RBA rate from 3 Nov) plus validator/schema support for post-PDF sources; version bump and `--write-snapshot` | Later; needs approval |
 | H1–H4 | Housekeeping | Done 10 Nov (H2 setup items S3–S8 tracked below) |
-| D1 | Model spec: scenario weights (family-set / parents-only / equal), community rule (highest of C1–C4), impact on the top 10 and excluded suburbs | Not started; needs approval to adopt |
-| D2 | Structure of the community score | Waits on D1 |
+| D1 | Model spec: scenario weights (family-set / parents-only / equal), community rule (highest of C1–C4), impact on the top 10 and excluded suburbs | **Done 10 Nov**: S2 (survey v18, equal say) live, user-approved; parent report rebuilt |
+| D1b | "Diverse multicultural area is a must" filter (P11 #8) | **Dropped 10 Nov**: phone call (D-1 to D-6) says strong preference, not a must. Diversity goes to D2 |
+| R1 | Foundation report refresh to the S2 weights (narrative, top 15, weights section) | Not started; needs approval for substantive report changes |
+| D2 | Structure of the community score: add a diversity part (measure under independent review, `docs/diversity-measure-handover-2026-11-10.md`); weigh access (shops, food) above demography (D-6) | Ready; needs approval (definition of P) |
 | D3 | Survey sets the split inside the community score (proposal 15A) | Waits on D1 |
 | SL1 | `tools/shortlist.py` + `config/shortlist.json` (display-only) | Not started |
 | SL2 | Saved-search criteria per portal (3+ bed, 2+ bath; price max from `config/shortlist.json`) | Waits on SL1, G5, D1, G2a/b, G4 |

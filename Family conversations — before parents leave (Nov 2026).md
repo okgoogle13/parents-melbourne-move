@@ -60,6 +60,18 @@ Mum did not say "minimum", and did not mention stairs.
 | 7 | House list as minimums; stairs | Parents (relayed by Nish) | 10 Nov | Stairs OK. Min 3 bedrooms, ideally 4+. Min 2 bathrooms, ideally 2.5 or 3. Weatherboard is a preference: they'd compromise for the right place but prefer not | G5, SL2: see criteria below |
 | 8 | Mixed area: must or preference | Parents / Nish (relayed) | 10 Nov | "A diverse multicultural area is a must" | P weight, C-status (Tecoma and similar). A must acts as a filter: needs approval and a definition (D1) |
 
+## Diversity follow-up — phone call, 10 Nov 2026 (relayed by Nish)
+Questions from the D1b review (`docs/diversity-measure-handover-2026-11-10.md`). Asked by Nish by phone with Mum and Dad; answers as Nish typed them, lightly trimmed.
+
+| # | Question | Who | Their answer | Cell or task affected |
+|---|---|---|---|---|
+| D-1 | Diverse area: must or strong preference? | Both | "A strong preference. But if a suburb was great in every other way, they would consider living there." | **Supersedes P11 #8 ("a must").** D1b: no hard filter |
+| D-2 | What does "diverse" mean to you? | Both (Mum led) | "Mix of many cultures ideally." Mum: being around Indian people is not the deciding factor (from their own experience) | D2 (structure of P); handover Q1 |
+| D-3 | Tecoma; a suburb about a quarter non-Anglo with few Indian families (example given: Ferntree Gully) | Both | Tecoma "looks too white", but "a mixed area is enough. A quarter non-Anglo is OK" | D2 scale anchors: Tecoma (AU 4.5%, AO 17.0%) too low; Ferntree Gully (AU 18.7%, AO 25.3%) OK. "A quarter" was Nish's framing of Ferntree Gully, which is its born-overseas share, not a measured non-Anglo share |
+| D-4 | Dad: is diverse a must? | Dad | Doesn't agree; doesn't care as much about diversity | D1b, weight on P |
+| D-5 | Indian grocery limit: Dad's survey said 20 min; workbook uses 25 | Dad | "25 is fine" | Filters B11 stays 25 |
+| D-6 | Mum: shops and food nearby, or people in the street? | Mum | Shops and food | D2: access counts more than demography in P |
+
 ## Decisions from Nish, 10 Nov 2026 (answers to plan §4a)
 1. Weights should be updated to reflect the **collective** priorities in the survey, not Nish's. Route: D1 scenario comparison, then approval before any change.
 2. Glen Waverley limit: **display-only view first**, decide after P11 (35 min is OK for the right place).

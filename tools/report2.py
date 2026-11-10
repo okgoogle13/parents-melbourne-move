@@ -159,7 +159,7 @@ def ev_cell(val,k,basis=''):
 H=[]
 H.append(f'<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Draft: Our Next Home report</title><style>{CSS}</style></head><body>')
 # ===== PAGE 1
-H.append('<section class="sheet page"><div class="draft">Draft — requires family review; not for publication or distribution.</div><h1>Our Next Home: where we have got to (5 Nov 2026)</h1>')
+H.append('<section class="sheet page"><div class="draft">Draft — requires family review; not for publication or distribution.</div><h1>Our Next Home: where we have got to (10 Nov 2026)</h1>')
 H.append('''<div class="box"><p><b>What this is.</b> A summary of the suburbs we have looked at, scored against what the three of us said matters most. It is a research summary, not a decision.</p>
 <p><b>How to read it.</b> Every place must meet our hard limits on price, drive time to Glen Waverley, drive time to a hospital emergency department, and drive time to the nearest Indian grocery. &ldquo;Provisional pass&rdquo; means a place meets them on current evidence; no place is a &ldquo;Confirmed pass&rdquo; yet, because we have not checked any specific home. Each fact is labelled <i>Checked</i> (we confirmed it from a named source), <i>Estimate</i> (best available figure, not confirmed) or <i>Needs verification</i> (not yet confirmed). Scores run from 0 to 10, where 10 is the best fit for that priority.</p>
 <p><b>No place in this report is described as suitable</b> until both its hard limits and a specific home have been checked.</p></div>''')
@@ -172,7 +172,7 @@ H.append(f'''<h2>Our hard limits</h2><table><thead><tr><th>Limit</th><th>Value</
 <tr><td>Stairs</td><td><span class="na">Not applicable</span></td><td>Stairs are allowed; not a hard limit</td></tr>
 <tr><td>Train</td><td><span class="na">Not applicable</span></td><td>Preferred, not required; scored instead</td></tr></tbody></table>''')
 H.append('<div class="cols"><div class="block"><h2>What matters most to us</h2><ol style="margin:0 0 1mm;padding-left:5mm">')
-for w,n in W: H.append(f'<li>{E(PLAIN.get(n,n))} — {round(w*100)}%</li>')
+for w,n in W: H.append(f'<li>{E(PLAIN.get(n,n))} — {w*100:.1f}%</li>')
 H.append('</ol><p class="small">Each place gets a 0–10 score for each priority; the weighted score combines them, out of 10.</p></div>')
 H.append(f'''<div class="block"><h2>Where we differ</h2><p><b>Distance and setting</b> (survey questions 13b and 13c):</p><ul>
 <li>Mum: {E(str(ds['E23'].value))}; {E(str(ds['F23'].value))}</li>
@@ -290,7 +290,7 @@ oq2='''<p><b>Also carried forward</b></p><ul><li>No specific home has been check
 <li>Glen Waverley drive times for the ranked locations were looked up with &ldquo;leave now&rdquo; on 26–27 Oct, not at peak hour. The six comparators use the top of the 10:00 weekday range (28 Oct), as in the workbook; their 08:00 peak ranges are for reference only and not used in the workbook J/K figures.</li>
 <li>Living arrangement and garden are still to discuss.</li><li>Many prices are automated valuations (marked Est.), not verified sale medians.</li></ul>'''
 sec('A10. Conditional and excluded locations',''.join(t)+'<h2>A11. Open questions</h2>'+OQ+oq2)
-src='''<ul><li><b>Workbook:</b> &ldquo;Our Next Home — Family Relocation Scoring Model.xlsx&rdquo;, version of 5 Nov 2026 (rebuilt 5 Nov 2026 from workbook sha 841c84acf860, main 1fd9676, after the 2 Nov 2026 scoring change). Each figure's source is recorded in its row (price basis column and notes column).</li>
+src='''<ul><li><b>Workbook:</b> &ldquo;Our Next Home — Family Relocation Scoring Model.xlsx&rdquo;, version of 10 Nov 2026 (rebuilt 10 Nov 2026 from workbook sha 1ebecdf1d816, after the 10 Nov 2026 weight change: survey v18 answers, equal say). Each figure's source is recorded in its row (price basis column and notes column).</li>
 <li><b>Research file:</b> &ldquo;Community comparators — research (28 Oct 2026).md&rdquo; (comparator facilities, Rowville, Point Cook, Tarneit, Mount Waverley).</li>
 <li><b>Drive times:</b> Google Maps typical traffic. Ranked locations: &ldquo;leave now&rdquo;, 26–27 Oct 2026. Comparators: top of the typical range departing 10:00 on a weekday, checked 28 Oct 2026 (same basis for ED). Peak (08:00), not used in the workbook J/K figures: shown in Appendix A4 for reference. Point Cook and Tarneit: 10:00 and 08:00, checked 28 Oct 2026.</li>
 <li><b>Prices:</b> as recorded in the workbook: suburb sale medians (e.g. Domain, Property.com.au, REA, OnTheHouse, Aussie/Cotality), automated valuations (OnTheHouse/Cotality; marked Est.), and Statements of Information for comparators (checked 28 Oct 2026). Wheelers Hill budget: Jellis Craig Wheelers Hill Suburb Report, Sep 2026, data to 6 Sep 2026.</li>
