@@ -39,7 +39,7 @@ Answer suburb, score, filter and response questions from the workbook, not memor
 - SuburbScorecard C (shortlist status) and L (hard filter status); adding or removing locations. Check row-1 headers before writing.
 - Substantive report changes (findings, numbers, recommendations) and any publication or distribution. Routine formatting within approved scope doesn't need it.
 
-Display-only, never feeding X, Y or any weight: AX (community band), Q13d, Community comparator rows, ABS demography (AK–AW).
+Display-only, never feeding X, Y or any weight: AX (community band), Q13d, Community comparator rows, ABS demography (AK–AW) except AQ, AR and AU, which feed score P (formula; weights and scale points in Filters A22:C29).
 
 ## Evidence
 - Source every researched fact in SuburbScorecard col Z (plus AC, AE–AJ where relevant).

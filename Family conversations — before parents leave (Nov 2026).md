@@ -71,6 +71,7 @@ Questions from the D1b review (`docs/diversity-measure-handover-2026-11-10.md`).
 | D-4 | Dad: is diverse a must? | Dad | Doesn't agree; doesn't care as much about diversity | D1b, weight on P |
 | D-5 | Indian grocery limit: Dad's survey said 20 min; workbook uses 25 | Dad | "25 is fine" | Filters B11 stays 25 |
 | D-6 | Mum: shops and food nearby, or people in the street? | Mum | Shops and food | D2: access counts more than demography in P |
+| D-7 | Do Italian, Greek and other Southern European cultures count as diverse? (11 Nov, from the D2 review) | Nish (relayed) | "My parents like and appreciate Italian and Greek culture. Southern European cultures like these should be included as culturally diverse." | D2: AU (other language at home, which counts these households) stays the mix measure; the review's non-European options are rejected |
 
 ## Decisions from Nish, 10 Nov 2026 (answers to plan §4a)
 1. Weights should be updated to reflect the **collective** priorities in the survey, not Nish's. Route: D1 scenario comparison, then approval before any change.

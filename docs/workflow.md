@@ -24,15 +24,16 @@ Ten tabs. Data flows roughly in this order:
 | I | Price + est. 6% purchase costs |
 | J / K | Drive minutes to Glen Waverley / nearest 24-hr public ED |
 | L | Hard filter status |
-| M–V | 0–10 criteria scores. M (near family: 10 at 0 min → 0 at 90 min), O (hospital, from K) and T (price: 10 at $500k → 0 at $1.5M) are formulas; N, P, Q, R, S, U, V are judgement scores |
+| M–V | 0–10 criteria scores. M (near family: 10 at 0 min → 0 at 90 min), O (hospital, from K), P (community & food: grocery AY, restaurant AZ, mix AU, South Asian MAX(AQ, AR); weights and scale points in Filters A22:C29), T (price: 10 at $500k → 0 at $1.5M) and U (beach, Filters A15:C21) are formulas; N, Q, R, S, V are judgement scores |
 | W / X / Y | Scores entered / weighted score / rank among pass rows only |
 | Z | Sources and notes ("CHECKED …", "C3 28 Oct 2026: …") |
 | AA | Legacy import text, unused |
 | AB / AC | Train option (Yes/No) / station and basis |
 | AD | ED used for K |
 | AE–AJ | Budget verification: cap, basis, evidence type, evidence date, result, note |
-| AK–AW | ABS 2021 demography (GCP DataPack, SAL VIC). Header comments define each measure; populations under 2,500 are perturbed by ABS |
+| AK–AW | ABS 2021 demography (GCP DataPack, SAL VIC). Header comments define each measure; populations under 2,500 are perturbed by ABS. AQ, AR and AU feed P; the rest are display-only |
 | AX | Community comparison band (High/Medium/Low), display-only; "Comparison band, not a liveability score" |
+| AY / AZ / BB | Drive to nearest Indian grocery / Indian restaurant (min; 10:00 weekday, top of range) / basis and evidence. AZ blank → P uses AY in its place. BA (church) is unused |
 
 ## Editing the workbook
 
