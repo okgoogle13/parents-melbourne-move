@@ -1,3 +1,27 @@
 {
-  "enabledPlugins": {}
+  "enabledPlugins": {},
+  "permissions": {
+    "allow": [
+      "Bash(.venv/bin/python tools/validate_macro.py)",
+      "Bash(bash tools/recalc_test.sh *)",
+      "Bash(git status*)",
+      "Bash(git log*)",
+      "Bash(git diff*)",
+      "Bash(git branch*)",
+      "Bash(git fetch*)",
+      "Bash(soffice --headless *)"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR/.venv/bin/python\" \"$CLAUDE_PROJECT_DIR/tools/validate_macro.py\" 2>&1 | grep -E \"freshness|error\"; exit 0"
+          }
+        ]
+      }
+    ]
+  }
 }

@@ -1,10 +1,10 @@
 # Open work: task register (the only list of open tasks; reviewed 28 Oct 2026)
 
-**Now:** Done 30 Oct: questionnaire simplified and republished (page v11: 29 questions, WhatsApp capture, owner import panel; see pointer change log). Next: send the link to Mum and Dad (P9); N3 import must add a RawResponses column for new tag Q3c. Done 30 Oct: N2 workbook intake; G1 questionnaire republished for rounds 5–6 (version 5). Waiting on: P9 family answers (now the whole survey in their own words, page version 8; importing them can move the weights, so N3 needs approval). Awaiting your approval: G3 (M/O decoupling). Found 30 Oct: all three Q13d answers have been in the page store since 27 Oct but were never imported (P5). P4 order is still your decision (plan recommends rounds 5–6 first). Done 29 Oct: workbook Glen Waverley median update (5704d65), reports refreshed. Blocked: P7 (waits on B4). Awaiting your approval: M1–M3 and M5 (proposed 29 Oct).
+**Now (10 Nov 2026):** Survey v18 complete 6 Nov (all three saved; not yet imported). Phase 0 done 10 Nov: P10 sheet, P11 answers (relayed by Nish), P12 WhatsApp capture, A-14 no-go (Northam St dropped). Phase 1 (IDE plan `docs/plan-2026-11-ide.md`): H1 done (`claude/claude-md-fixes` fast-forwarded; both origin branches deleted), H3 `tools/recalc_test.sh` done, H4 records corrections done. Next: Phase 2, N3a test import then N3b (gate A1). Awaiting your approval: N3b, N4, G3, G2a/b, G4, G5, M1–M3, M5. Overdue: M2 (was due before 3 Nov). M4 skipped (10 Nov, your decision).
 When a task finishes, mark it here and set the next task ID in `PROJECT_STATE.md`.
 
 Source: scoring-model-pointer.md, workbook headers, Claude_in_Chrome_prompt v2, foundation report, Talking with Mum.
-Cloud = a claude.ai/code session on github.com/okgoogle13/parents-melbourne-move (uses the promo credit; expires 4 Nov 2026, 11:59 PM PT).
+Cloud = a claude.ai/code session on github.com/okgoogle13/parents-melbourne-move (promo credit ended 4 Nov 2026; no cloud sessions planned).
 Rule: one session edits the workbook at a time. Commit and push before a cloud session; `git pull` locally after it.
 
 ## Cloud session (claude.ai/code)
@@ -27,9 +27,9 @@ Task 1 of the handover (local-only `research/inputs/parents-melbourne-move-hando
 | # | Task | Notes |
 |---|---|---|
 | M1 | `research/macro/macro-impact-review.md`: file-by-file consistency review of root reports, pointer, instructions and the 5 Northam St page against the macro YAML (statuses per handover §6). Proposes edits; changes nothing | Do first; M2–M3 use its findings |
-| M2 | Parent-facing `research/macro/macro-market-conditions.md` + printable PDF built from the macro YAML (reuse `tools/build_pdf.sh`) | Before 3 Nov: freshness flips to review_due after the RBA decision; cloud credit ends 4 Nov |
+| M2 | Parent-facing `research/macro/macro-market-conditions.md` + printable PDF built from the macro YAML (reuse `tools/build_pdf.sh`) | **Overdue (10 Nov):** was due before 3 Nov. Freshness is now review_due after the 3 Nov RBA decision; credit ended 4 Nov |
 | M3 | Agent ingestion note: a short "Macro data" section in `docs/workflow.md` (what is canonical, run the validator, freshness statuses), linked from CLAUDE.md "Read on demand" | Not a separate AGENTS.md |
-| M4 | Re-check after the 3 Nov RBA decision: update `macro-market-conditions.yaml` + new snapshot only from a named source, or mark review_due | Trigger in `research/macro/freshness.yaml` |
+| M4 | **Skipped 10 Nov 2026 (user decision); the refresh moves to M4b.** Re-check after the 3 Nov RBA decision: update `macro-market-conditions.yaml` + new snapshot only from a named source, or mark review_due | Trigger in `research/macro/freshness.yaml` |
 | M5 | Decision: drop the handover's `research/suburbs/suburb-shortlist.yaml/.md` and Task 2 (full repo refactor). The suburb file would duplicate the workbook with conflicting PDF figures (e.g. Frankston $860k vs workbook $834,296); its modelled forecast ranges can be listed in M1 as display-only gaps | Recommended: drop both |
 
 ## Claude in Chrome (needs your signed-in browser or live Maps)
@@ -44,7 +44,7 @@ Task 1 of the handover (local-only `research/inputs/parents-melbourne-move-hando
 | B6 | Suitable-property checks for the 6 Community comparators |
 | B7 | Comparator train access — recall-only check of train access for the six Community comparators. Distinct from C5, which covers train facts for passing suburbs |
 | B8 | **DONE 29 Oct: a, b, d; c partial** (Jellis Craig report read; realestate.com.au and Domain profiles blocked from cloud). Results in the 5 Northam St YAML. Task 8 (added 28 Oct 2026): evidence on whether Glen Waverley is a family-and-school buyer market (ABS family composition, school zones for 5 Northam St, suburb-profile buyer types), plus a listing-facts check for 5 Northam St. Feeds P8; run before the 14 Nov auction |
-| B9 | Floorplan/listing-fit fields for the 32 listings (Listings X–AG; design doc `Questionnaire redesign — rounds 5–7 (29 Oct 2026).md` section 5) |
+| B12 | Floorplan/listing-fit fields for the 32 listings (Listings X–AG; design doc `Questionnaire redesign — rounds 5–7 (29 Oct 2026).md` section 5) |
 | B10 | **Added 5 Nov 2026.** Indian restaurant drive times (planned column AZ, 10:00 weekday, top of range): pilot 10 suburbs first, then all passing rows + comparators + 4 needs-data rows. Prompt: `Claude_in_Chrome_prompt — Indian restaurant pilot (5 Nov 2026).md`. Results stay in `research/` until the workbook change is approved |
 | B11 | **Added 5 Nov 2026 (user decision, later).** New workbook measures so survey distances can be checked: walk to nearest train station (min / m; survey says about 10-min walk, roughly 800 m) and drive to nearest supermarket + GP (min, 10:00 weekday; survey says about 10-min drive). New columns need approval; Q (Shops & doctor) and S (Train/bus) stay judgement scores until then |
 
@@ -59,7 +59,7 @@ Task 1 of the handover (local-only `research/inputs/parents-melbourne-move-hando
 | P6 | Point Cook travel decision (currently Conditional) |
 | P7 | Definition of score P (needs the user's approval; waits on B4) → covered by rounds 5–7 (see P9 / G1 / G2 / G6) |
 | P8 | **DONE 29 Oct: approved by the user.** Review and approve the 5 Northam St decision summary (C9) before the parents see it. Open points: (1)–(2) DONE 29 Oct: suburb-fit line reworded to the ABS 2021 and school-zone evidence; 52.3% reinstated. (3) DONE 29 Oct: Budget bullet uses the realestate.com.au 4-bed median $1,603,000; page table uses the realestate.com.au all-house median $1,675,000; workbook G7 updated to $1,675,000 29 Oct (5704d65; recalc passed; reports refreshed); (4) DONE 29 Oct: Statement of Information read: no comparable sales listed; land 677 m² vs listing 581 m² (verify); REIV median $1,750,000. (5) Signed off. Auction Sat 14 Nov 2026, 11:00 am |
-| P9 | **5 Nov 2026: survey v18 live (review fixes to v17; same URL); link not yet sent. N3 note: fix CleanedAnswers B71:C71 to check R6.1 only.** 1 Nov 2026: survey replaced by short v16 (about 5–8 min; round 9 design note); link not yet sent.** Family answers to rounds 5–6 (includes P5 Q13d). From 30 Oct: page v11 (simplified survey); parents send answers by WhatsApp, imported via the page's owner-only panel |
+| P9 | **DONE 6 Nov 2026: survey v18 complete; Mum and Dad (WhatsApp import, 24 answers each) and Nish (page, 25 answers) saved; exported 10 Nov to `Handoffs/data/questionnaire-responses-export-2026-11-10.json`; workbook import is N3.** Was 5 Nov 2026: survey v18 live (review fixes to v17; same URL); link not yet sent. N3 note: fix CleanedAnswers B71:C71 to check R6.1 only.** 1 Nov 2026: survey replaced by short v16 (about 5–8 min; round 9 design note); link not yet sent.** Family answers to rounds 5–6 (includes P5 Q13d). From 30 Oct: page v11 (simplified survey); parents send answers by WhatsApp, imported via the page's owner-only panel |
 
 ## Rounds 5–7 local steps (29 Oct 2026)
 From `Questionnaire redesign — rounds 5–7 (29 Oct 2026).md` sections 6–7. Each gate is asked once, when its inputs exist.
@@ -67,7 +67,7 @@ From `Questionnaire redesign — rounds 5–7 (29 Oct 2026).md` sections 6–7. 
 | # | Change | When to ask | Depends on | Status |
 |---|---|---|---|---|
 | N2 | Workbook intake, one edit: RawResponses AO1:BE1 headers; CleanedAnswers rows 41–71; Settings A27:D39 (column B blank); Listings X1:AG1 headers plus AA/AG formulas filled down rows 2–33 (AG = "Pending rules"); SuburbScorecard AY1:BB1 and BF1 headers (empty); DiscussionSummary A40:F52 display block (no count). Recalc and diff | Not gated (intake) | None in the plan; G1 and G3 follow it | **DONE 30 Oct** (recalc and diff passed; see pointer change log) |
-| N3 | Import round 5–6 answers per the design doc's Storage rule; recalc and diff | Not gated (intake); after all three answer | P9, N2 | **Prep DONE 31 Oct:** `tools/import_v14.py` built and tested on temp copies only (usage in `docs/workflow.md`); real import waits for gate A1 (final records + context-column flag) |
+| N3 | Import round 5–6 answers per the design doc's Storage rule; recalc and diff | Not gated (intake); after all three answer | P9, N2 | **Prep DONE 31 Oct:** `tools/import_v14.py` built and tested on temp copies only (usage in `docs/workflow.md`); real import waits for gate A1 (final records + context-column flag). **10 Nov:** v18 export in hand; test import on a temp copy passed; fix B71:D71 (not B71:C71) to check R6.1 only; run without `--blank-context` |
 | B3-S | Bushfire screening, 25 suburbs (cards B, C + Eltham, Hurstbridge, McCrae, Mount Martha, Arthurs Seat) | Before any bush-edge suburb is promoted | none | **DONE 31 Oct (research only, Estimate):** `research/bushfire/bushfire-screening (31 Oct 2026).md` + `.csv`; card B/C and R8.6 wording applied to the page 31 Oct (user-approved); thresholds and display-only column spec await approval |
 | N4 | Write `CleanedAnswers!H59`/`H61` and the DiscussionSummary counts; re-run the dry run with real E59/E61 | After N3, with approval | N3 | not started, runs locally, needs approval where gated |
 | G1 | Republish the questionnaire (round-4 page archived first; R5/R6 items added; Q13d kept; Q4, Q4b, Q5, Q6, Q7, Q7b retired; R5.6, R5.7, R6.2 validation checks; mode label `round 5–6 (R5, R6, Q13d)`) | After N2 | N2 | **DONE 30 Oct** (approved; round-4 page in Archive; republished as version 5; validation rules tested; 15 stored responses intact) |
@@ -76,7 +76,7 @@ From `Questionnaire redesign — rounds 5–7 (29 Oct 2026).md` sections 6–7. 
 | G4 | L re-evaluation, plus any C status change (incl. R7.4 vetoes) | After G2 | G2a/G2b | not started, runs locally, needs approval where gated |
 | G5 | Settings B28:B37 property thresholds | After N3 | N3 | not started, runs locally, needs approval where gated |
 | G6 | Switch P to the design-doc formula, incl. the R5.7 church basis (closes P7) | After task B4 data is complete for surviving suburbs | B4 | not started, runs locally, needs approval where gated |
-| G7 | Regenerate reports (`tools/report2.py`; `tools/found.py` needs fixing first) | Last | None stated; runs last | **DONE 5 Nov 2026 (PR `credits/parents-reports-g7`, awaiting the user's review):** `report2.py` fixed; parent report rebuilt (Draft); foundation report numbers refreshed by script (`found.py` not fixed, still broken on the current format); NEEDS REVIEW notes listed in the PR; not distributed |
+| G7 | Regenerate reports (`tools/report2.py`; `tools/found.py` needs fixing first) | Last | None stated; runs last | **DONE 5 Nov 2026; merged 6 Nov (`536e29a`) after review fixes (PR `credits/parents-reports-g7`):** `report2.py` fixed; parent report rebuilt (Draft); foundation report numbers refreshed by script (`found.py` not fixed, still broken on the current format); NEEDS REVIEW notes listed in the PR; not distributed |
 
 ## Phase 2 readiness (28 Oct 2026)
 
@@ -107,3 +107,18 @@ From `Questionnaire redesign — rounds 5–7 (29 Oct 2026).md` sections 6–7. 
 | # | Item | Revival trigger | Notes |
 |---|---|---|---|
 | K1 | **Parked 5 Nov 2026 (Gemini diversity plan review).** (B) Multicultural mix / single-group dominance: penalise suburbs where one non-English language dominates. (C) Broader South Asian community footprint (Sri Lankan, Tamil, Punjabi etc.), beyond India-born share AQ | B: the parents' C1 answer says avoiding single-group dominance matters separately from overall diversity, **or** a candidate with top language (AV) over 20% enters the active shortlist. C: the family decides AQ under-represents South Asian communities and wants C4 to cover all South Asian origins | P keeps AU (% other language at home). If revived: Excel formula on SAL AU/AV, or SAL G09 evenness (DataPack not in repo; re-download); no Python pipeline, no SA2 data. Gemini's rank test (AU minus top language, ρ 0.96, 0 top-12 moves of 3+ places) is partly mechanical, so the breadth conclusion is **Estimate**. Dropped: overall-volume blend, settlement maturity, shrinkage model, SA2 pipeline. Reviving either into P needs the user's approval (definition of P) |
+
+## IDE plan 10 Nov 2026 (`docs/plan-2026-11-ide.md`)
+| # | Task | Status |
+|---|---|---|
+| P10 | Parent question sheet (`Parent question sheet — before they leave (10 Nov 2026).md`) | Done 10 Nov (draft) |
+| P11 | Parent conversation answers, recorded in `Family conversations — before parents leave (Nov 2026).md` | Done 10 Nov (relayed by Nish; not confirmed directly with Mum and Dad) |
+| P12 | Mum's 31 Oct WhatsApp, `research/inputs/whatsapp-mum (31 Oct 2026).md` | Done 10 Nov |
+| A-14 | Auction 5 Northam St, Sat 14 Nov 11:00 | **Closed 10 Nov: no-go (Nish).** No bid; Northam St dropped |
+| M4b | Macro refresh (4.85% RBA rate from 3 Nov) plus validator/schema support for post-PDF sources; version bump and `--write-snapshot` | Later; needs approval |
+| H1–H4 | Housekeeping | Done 10 Nov (H2 setup items S3–S8 tracked below) |
+| D1 | Model spec: scenario weights (family-set / parents-only / equal), community rule (highest of C1–C4), impact on the top 10 and excluded suburbs | Not started; needs approval to adopt |
+| D2 | Structure of the community score | Waits on D1 |
+| D3 | Survey sets the split inside the community score (proposal 15A) | Waits on D1 |
+| SL1 | `tools/shortlist.py` + `config/shortlist.json` (display-only) | Not started |
+| SL2 | Saved-search criteria per portal (3+ bed, 2+ bath; price max from `config/shortlist.json`) | Waits on SL1, G5, D1, G2a/b, G4 |
