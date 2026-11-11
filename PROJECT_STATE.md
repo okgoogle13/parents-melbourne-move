@@ -8,13 +8,17 @@ Read first. Baseline and next task ID only; open tasks live in the register, `Op
 
 | File | Version | Status |
 |---|---|---|
-| `Our Next Home — Family Relocation Scoring Model.xlsx` | Last changed 11 Nov (D2: P = community & food, Filters A22:C29); sha `062052d7bcde`. 10 Nov: live weights = survey v18, equal say. Scoring change 2 Nov (grocery filter 25 min, beach drive times, P = option B, U = beach drive, family-set weights, beach bands in Filters A15:C21) | Approved research baseline (28 Oct). Recalc test verified 5 Nov: 0 errors, 37 ranked rows. Currently stores no cached formula values |
+| `Our Next Home — Family Relocation Scoring Model.xlsx` | Last changed 11 Nov (D2: P = community & food, Filters A22:C29); sha `b6851f3580e5`. 10 Nov: live weights = survey v18, equal say. Scoring change 2 Nov (grocery filter 25 min, beach drive times, P = option B, U = beach drive, family-set weights, beach bands in Filters A15:C21) | Approved research baseline (28 Oct). Recalc test verified 5 Nov: 0 errors, 37 ranked rows. Currently stores no cached formula values |
 | `Our Next Home — parent report v3 (29 Oct 2026).html` | Rebuilt 11 Nov from workbook sha `062052d7bcde` (S2 weights, D2 score P) by `tools/report2.py`; previous copy in Archive | Draft: requires family review; not for publication or distribution |
 | `Suburb shortlist foundation report.md` / `.pdf` | **Stale since 10 Nov** (describes the family-set weights; refresh = R1). Narrative and numbers refreshed 6 Nov from workbook sha `841c84acf860`; all review feedback addressed and PDF recompiled; previous copies in Archive | Awaiting human review |
 
 Status counts, ranks and the change history are in `scoring-model-pointer.md`.
 
 ## Next task
+
+**11 Nov 2026 (AZ correction):** Montrose AZ 12 → 7 and Mount Evelyn AZ 9 → 2 (missed Tandoori Curry House; user-approved), recalc OK, ranks unchanged, workbook sha `b6851f3580e5`, parent report rebuilt. Next task unchanged (D2b decision, then R1).
+
+**11 Nov 2026 (D2c done):** AZ restaurant drives written for 61 rows (Gate 6 approved), recalc OK (0 errors, 37 ranked), parent report rebuilt, workbook sha `25287fe4dbcc`; top 12 unchanged but Altona 10→8. B10 done. **Next: D2b decision (Gemini SAL extraction), then R1 (foundation report refresh).** G3 still needs approval.
 
 **11 Nov 2026 (D2 done):** D1 committed (`2d3e18a`). D2 applied (user-approved): P = grocery 35 + restaurant 15 (grocery stands in while AZ is blank) + mix of cultures 35 (AU, 0 at 5%, 10 at 20%; Southern European cultures count, D-7) + South Asian 15 (MAX(AQ, AR)); Filters A22:C29; recalc OK (0 errors, 51 X, 37 ranked); new top 10 Frankston, Berwick, Ferntree Gully, Newport, Ringwood, Seaford, Rosanna, Croydon, West Footscray, Altona. Parent report rebuilt. **Next: B10 Batch 1 (Chrome prompt updated) and D2b (Gemini SAL extraction; acceptance checks in the register), in parallel; then D2c (AZ write-back, approval), the D2b decision, then R1.** G3 still needs approval.
 

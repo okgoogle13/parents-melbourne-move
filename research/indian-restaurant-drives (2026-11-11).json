@@ -1,0 +1,307 @@
+[
+ [
+  "Heidelberg",
+  1,
+  "B10 batch 1, 11 Nov 2026: nearest Indian restaurant Heritage Indian Restaurant, 1 min, 0.097 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Avtar Indian Takeaway, 2 min, 0.5 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Ringwood",
+  2,
+  "B10 batch 1, 11 Nov 2026: nearest Indian restaurant Taj Agra, 2 min, 0.5 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Swagath Grand Ringwood, 2 min, 0.7 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Berwick",
+  1,
+  "B10 batch 1, 11 Nov 2026: nearest Indian restaurant Namaste On High, 1 min, 0.5 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Streets of Punjab - Indian Sweets & Restaurant Beaconsfield, 6 min, 3.5 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Frankston",
+  2,
+  "B10 batch 1, 11 Nov 2026: nearest Indian restaurant Tandoori Grill Indian & Nepalese Restaurant, 2 min, 0.6 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Anshumann Da Dhaba, 4 min, 1.8 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Warragul",
+  2,
+  "B10 batch 1, 11 Nov 2026: nearest Indian restaurant Nepa Bliss - Warragul Modern Indian & Nepalese Cuisine, 2 min, 0.35 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Chilli Bites, 3 min, 0.9 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Newtown (Geelong)",
+  3,
+  "B10 batch 1, 11 Nov 2026: nearest Indian restaurant Desi Global Bites, 3 min, 1.4 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Aroma Cafe & Restaurant, 4 min, 1.9 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Upper Ferntree Gully",
+  1,
+  "B10 batch 1, 11 Nov 2026: nearest Indian restaurant Shiraaz Indian Restaurant, 1 min, 0.18 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Indian Rogan Josh, 3 min, 0.45 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Torquay",
+  2,
+  "B10 batch 1, 11 Nov 2026: nearest Indian restaurant Malta Indian Restaurant Torquay Victoria, 2 min, 1.1 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Taj Express, 4 min, 2.4 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Mordialloc",
+  3,
+  "B10 batch 1, 11 Nov 2026: nearest Indian restaurant Saffron Mordialloc, 3 min, 1.2 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd The Royal Peacock North Indian & Kerala Restaurant, 4 min, 1.9 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Eltham",
+  2,
+  "B10 batch 1, 11 Nov 2026: nearest Indian restaurant Machan Indian Restaurant, 2 min, 0.65 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Ginger Garlic, 2 min, 0.65 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Seaford",
+  5,
+  "B10 batch 2, 11 Nov 2026: nearest Indian restaurant Indian Mahal Seaford, 5 min, 2.3 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd The Frankston curry club, 7-10 min, 4.6 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Ferntree Gully",
+  3,
+  "B10 batch 2, 11 Nov 2026: nearest Indian restaurant Mountain Gate Indian and Nepalese Restaurant, 3 min, 0.45 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Swaad by Sonam, 4-7 min, 2.2 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Newport",
+  5,
+  "B10 batch 2, 11 Nov 2026: nearest Indian restaurant Mishra's Kitchen South Kingsville, 5 min, 2.3 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Tandoori Land - Grazeland, 4-6 min, 3.3 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Rosanna",
+  1,
+  "B10 batch 2, 11 Nov 2026: nearest Indian restaurant Aagaman Indian Nepalese Restaurant Rosanna, 1 min, 0.3 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Chachaa Bhatija, 2 min, 0.35 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "West Footscray",
+  7,
+  "B10 batch 2, 11 Nov 2026: nearest Indian restaurant Hyderabadi Nawabs West footscray, 4-7 min, 2.4 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Jaathara at Barkly, 4-7 min, 2.4 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Upwey",
+  3,
+  "B10 batch 2, 11 Nov 2026: nearest Indian restaurant Bukhara Indian Tandoori Restaurant, 3 min, 0.25 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Nevedya - Masala Spice Kitchen & Tapas, 2 min, 0.28 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Croydon",
+  2,
+  "B10 batch 2, 11 Nov 2026: nearest Indian restaurant Coriander traditional Indian tandoori cuisine, 2 min, 0.24 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Masala & Mozzarella Restaurant Indo-Italian, 2 min, 0.27 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Altona",
+  5,
+  "B10 batch 2, 11 Nov 2026: nearest Indian restaurant The Spice Yard, 5 min, 1.9 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Oye Bombay, 4 min, 1.9 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Mentone",
+  2,
+  "B10 batch 2, 11 Nov 2026: nearest Indian restaurant Marpha Indian & Nepali Restaurant, 2 min, 0.27 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd The Royal Peacock North Indian & Kerala Restaurant, 5 min, 1.7 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Belgrave",
+  2,
+  "B10 batch 2, 11 Nov 2026: nearest Indian restaurant Babaji's Kerala Kitchen - Belgrave, 2 min, 0.6 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd India Gate Restaurant - Belgrave, 2 min, 0.6 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Tecoma",
+  1,
+  "B10 batch 2, 11 Nov 2026: nearest Indian restaurant The Hungry Hiker, 1 min, 0.16 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Babaji's Kerala Kitchen - Belgrave, 2 min, 1.0 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Chelsea",
+  1,
+  "B10 batch 2, 11 Nov 2026: nearest Indian restaurant The Indian Hut - Indian and Nepalese Restaurant, 1 min, 0.22 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Shavan's Patterson Lakes Indian Restaurant, 6-10 min, 4.8 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Frankston South",
+  4,
+  "B10 batch 2, 11 Nov 2026: nearest Indian restaurant Indian Mahal - Indian Restaurant Frankston Baxter, 4 min, 2.7 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Tandoori Grill Indian & Nepalese Restaurant, 4-9 min, 3.7 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Highton (Geelong)",
+  4,
+  "B10 batch 2, 11 Nov 2026: nearest Indian restaurant Grace of Spice Indian Restaurant, 4 min, 2.1 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Cafe Taj Express, 5 min, 2.2 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Diamond Creek",
+  2,
+  "B10 batch 3, 11 Nov 2026: nearest Indian restaurant Mirza Food & Wine, 2 min, 0.45 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Machan Indian Restaurant, 9-14 min, 5.4 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "The Basin",
+  5,
+  "B10 batch 3, 11 Nov 2026: nearest Indian restaurant Royal Spice Tandoori Indian Restaurant, 5 min, 2.0 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Mumbai Grill, 6 min, 4.3 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Mornington",
+  12,
+  "B10 batch 3, 11 Nov 2026: nearest Indian restaurant Tadka Club Mornington, 8-12 min, 4.1 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Amazing Aromass, 8-12 min, 4.1 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Montrose",
+  7,
+  "B10 batch 3 (corrected 11 Nov 2026): nearest Indian restaurant Tandoori Curry House (3 Wray Cres, Mount Evelyn), 5-7 min, 5.1 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Tandoori Plaza Indian Restaurant (38-42 Manchester Rd, Mooroolbark), 7-10 min, 5.9 km. Corrected 11 Nov 2026 (batch 3 first gave Savera, 12 min, which missed both places); re-checked independently. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Warrandyte",
+  2,
+  "B10 batch 3, 11 Nov 2026: nearest Indian restaurant Indian affair restaurant, 2 min, 0.55 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Nardee Indian Restaurant, 4 min, 2.1 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Mount Evelyn",
+  2,
+  "B10 batch 3 (corrected 11 Nov 2026): nearest Indian restaurant Tandoori Curry House (3 Wray Cres, Mount Evelyn), 2 min, 0.65 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Royal Time Indian Restaurant (Shop 1 & 2, 260 Main St, Lilydale), 6-8 min, 4.7 km. Corrected 11 Nov 2026 (batch 3 first gave Savera, 9 min, which missed the Mount Evelyn restaurant); re-checked independently. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Drouin",
+  3,
+  "B10 batch 3, 11 Nov 2026: nearest Indian restaurant Raj's Kitchen, 3 min, 1.4 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Nepa Bliss - Warragul Modern Indian & Nepalese Cuisine, 9-14 min, 7.9 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Sassafras",
+  7,
+  "B10 batch 3, 11 Nov 2026: nearest Indian restaurant Indian by Nature, 7 min, 4.5 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd The Hungry Hiker, 8 min, 5.6 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Gisborne",
+  2,
+  "B10 batch 3, 11 Nov 2026: nearest Indian restaurant The Hot Pepper Indian Cuisine, 2 min, 0.9 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Grand Guru Indian Restaurant, 3 min, 1.0 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Olinda",
+  3,
+  "B10 batch 3, 11 Nov 2026: nearest Indian restaurant Indian by Nature, 3 min, 1.0 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd The Hungry Hiker, 12 min, 9.0 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Mount Dandenong",
+  4,
+  "B10 batch 3, 11 Nov 2026: nearest Indian restaurant Indian by Nature, 4 min, 2.5 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd The Hungry Hiker, 18 min, 12.3 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Riddells Creek",
+  1,
+  "B10 batch 3, 11 Nov 2026: nearest Indian restaurant Lakeview Indian Restaurant, 1 min, 0.18 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Grand Guru Indian Restaurant, 9-10 min, 8.8 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Macedon",
+  9,
+  "B10 batch 3, 11 Nov 2026: nearest Indian restaurant The Hot Pepper Indian Cuisine, 9 min, 8.1 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Grand Guru Indian Restaurant, 9 min, 8.2 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Healesville",
+  1,
+  "B10 batch 4, 11 Nov 2026: nearest Indian restaurant Dosa Hut Indian Restaurant Healesville, 1 min, 0.26 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Paramparaa Indian Restaurant, 1 min, 0.29 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Kyneton",
+  1,
+  "B10 batch 4, 11 Nov 2026: nearest Indian restaurant The Flames, 1 min, 0.35 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Dhaba at the Mill, 2 min, 0.65 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Woodend",
+  1,
+  "B10 batch 4, 11 Nov 2026: nearest Indian restaurant Sizzler Restobar, 1 min, 0.19 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Dhaba at the Mill (Kyneton), 14 min, 16.5 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Warburton",
+  1,
+  "B10 batch 4, 11 Nov 2026: nearest Indian restaurant Warburton Curry Club, 1 min, 0.19 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Babaji's Kerala Kitchen - Warburton, 3 min, 1.7 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Emerald",
+  16,
+  "B10 batch 4, 11 Nov 2026: nearest Indian restaurant Babaji's Kerala Kitchen - Belgrave, 14-16 min, 11.8 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd The Hungry Hiker, 14-18 min, 12.7 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Hurstbridge",
+  1,
+  "B10 batch 4, 11 Nov 2026: nearest Indian restaurant Butter Kitchen, 1 min, 0.12 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Mirza Food & Wine, 7-10 min, 6.7 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Dromana",
+  2,
+  "B10 batch 4, 11 Nov 2026: nearest Indian restaurant Indian Villa Dromana, 2 min, 1.1 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Maharaja Nepean Australian & Indian Restaurant, 12-16 min, 13.1 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Wonthaggi",
+  1,
+  "B10 batch 4, 11 Nov 2026: nearest Indian restaurant The Curry Club - Wonthaggi, 1 min, 0.09 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Gippsland Curry House-Inverloch, 12 min, 13.0 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Rosebud",
+  3,
+  "B10 batch 4, 11 Nov 2026: nearest Indian restaurant OH YA, 3 min, 1.6 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Nepa Bliss Rosebud - Modern Indian And Nepalese Cuisine, 4 min, 2.0 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Rye",
+  2,
+  "B10 batch 4, 11 Nov 2026: nearest Indian restaurant Indian Villa Tandoori Kitchen & Cafe, 2 min, 0.7 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Nepa Bliss - Rye Modern Indian & Nepalese Cuisine, 3 min, 1.2 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Yarra Glen",
+  20,
+  "B10 batch 4, 11 Nov 2026: nearest Indian restaurant Savera Indian and Nepalese Restaurant, 14-20 min, 13.5 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Yarra Valley Indian Restaurant, 16-20 min, 17.7 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "McCrae",
+  2,
+  "B10 batch 4, 11 Nov 2026: nearest Indian restaurant Nepa Bliss Rosebud - Modern Indian And Nepalese Cuisine, 2 min, 1.3 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd OH YA, 3 min, 1.4 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Mount Martha",
+  3,
+  "B10 batch 4, 11 Nov 2026: nearest Indian restaurant The Rasoi Tandoori Indian Kitchen - Mt Martha, 3 min, 0.9 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Tadka Club Mornington, 12 min, 7.2 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Arthurs Seat",
+  10,
+  "B10 batch 4, 11 Nov 2026: nearest Indian restaurant Indian Villa Dromana, 8-10 min, 5.6 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Maharaja Nepean Australian & Indian Restaurant, 14 min, 13.6 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Springvale",
+  6,
+  "B10 batch 4, 11 Nov 2026: nearest Indian restaurant 9 Our place Indian restaurant, 6 min, 1.9 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Paramount Indian, 6-9 min, 2.7 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Clayton South",
+  4,
+  "B10 batch 4, 11 Nov 2026: nearest Indian restaurant Red Chutney, 4 min, 1.5 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Maaplas, 4-6 min, 2.2 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Keysborough",
+  6,
+  "B10 batch 4, 11 Nov 2026: nearest Indian restaurant Mr. Punjabi Bar & Grill, 3-6 min, 1.9 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Mehfil Indian Restaurant, 4-7 min, 2.5 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Clyde North",
+  4,
+  "B10 batch 4, 11 Nov 2026: nearest Indian restaurant Spice Nation Ramlegh Village (Clyde North), 4 min, 2.0 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd The Madaan's kitchen, 4-6 min, 3.1 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Endeavour Hills",
+  4,
+  "B10 batch 4, 11 Nov 2026: nearest Indian restaurant Zaffrani Biryani, 4 min, 0.9 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd The Butter Chicken Shop, 8-12 min, 5.2 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Wheelers Hill",
+  8,
+  "B10 batch 4, 11 Nov 2026: nearest Indian restaurant Saffron Delights, 5-8 min, 3.0 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Gunpowder Social Indian Diner Bar & Terrace, 8-12 min, 5.2 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Glen Waverley",
+  6,
+  "B10 batch 4, 11 Nov 2026: nearest Indian restaurant Gunpowder Social Indian Diner Bar & Terrace, 3-6 min, 1.5 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Chili Express, 4 min, 1.9 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Blackburn",
+  2,
+  "B10 batch 4, 11 Nov 2026: nearest Indian restaurant Ganesh Indian Restaurant, 2 min, 0.3 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd The Saffron House, 5 min, 1.9 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Williamstown",
+  3,
+  "B10 batch 4, 11 Nov 2026: nearest Indian restaurant The Nawabi Taste, 3 min, 1.2 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Sangam Tandoori, 3-4 min, 1.3 km. Places not on the Maps search list or not routed could be nearer."
+ ],
+ [
+  "Mount Eliza",
+  3,
+  "B10 batch 4, 11 Nov 2026: nearest Indian restaurant The Rasoi Mount Eliza, 3 min, 0.65 km (Google Maps, depart Tue 17 Nov 2026 10:00, 'typically'; AZ = top of range; Checked); 2nd Tadka Club Mornington, 9-16 min, 7.7 km. Places not on the Maps search list or not routed could be nearer."
+ ]
+]
